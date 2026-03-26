@@ -234,7 +234,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../content/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../../content/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.pdf" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Chapter 7. Turbulent and Transitional Internal Flow</span></a>
   </div>
 </li>
@@ -255,9 +255,10 @@ window.Quarto = {
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
   <ul class="collapse">
   <li><a href="#laminar-turbulent-flow-transition" id="toc-laminar-turbulent-flow-transition" class="nav-link" data-scroll-target="#laminar-turbulent-flow-transition">Laminar-Turbulent Flow Transition</a></li>
+  <li><a href="#development-of-temperature-and-concentration-profiles" id="toc-development-of-temperature-and-concentration-profiles" class="nav-link" data-scroll-target="#development-of-temperature-and-concentration-profiles">Development of Temperature and Concentration Profiles</a></li>
   </ul></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="chapter-7-turbulent-and-transitional-internal-flow.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -285,12 +286,13 @@ window.Quarto = {
 <h1>Introduction</h1>
 <p>With external flows, the freestream conditions were unaffected by the boundaries. With internal flows, however, due to their confined nature, the wall may have a significant impact on the mean flow behavior. Taking fully developed turbulent flow through a smooth pipe as an example, the flow field can be divided into three sublayers. The layer closest to the wall is the <em>viscous sublayer</em> and typically is defined as the region between <span class="math inline">0\leq y^+\leq5</span>. The <em>buffer zone</em> or <em>transition layer</em> extends beyond this, between <span class="math inline">5\leq y^+\leq30</span>. The <em>outer layer</em> occupies the rest of the flow field. Close to the wall, the effect of wall curvature is small, so the fluid is “unaware” that the flow field is confined on all sides. Similarly, the buffer zone is also marginally affected by the macroscopic flow field. Only the outer layer, where turbulence is largely present, does the physics of internal flows differ depending on the characteristics of the flow field. The following correlations for dimensionless velocity, <span class="math inline">u^+</span>, have been developed.</p>
 <p><span class="math display">
-\begin{align*}
+\begin{aligned}
 u^+ &amp; =y^+ &amp;&amp;&amp; 0\leq y^+ &amp; \leq5 \\
-u^+ &amp; =5.0\ln y^+-3.05 &amp;&amp; \phantom{00000} &amp; 5\leq y^+ &amp; \leq30 \\
+u^+ &amp; =5.0\ln y^+-3.05 &amp;&amp; \phantom{00} &amp; 5\leq y^+ &amp; \leq30 \\
 u^+ &amp; =\frac 1{\kappa}\ln y^++B &amp;&amp;&amp; 30\leq y^+ &amp; \leq200
-\end{align*}
+\end{aligned}
 </span></p>
+<p>where <span class="math inline">\kappa=0.4</span> and <span class="math inline">B=5.0</span>.</p>
 <section id="laminar-turbulent-flow-transition" class="level2">
 <h2 class="anchored" data-anchor-id="laminar-turbulent-flow-transition">Laminar-Turbulent Flow Transition</h2>
 <p>There are three regimes that can be distinctly defined: laminar, transition, and fully turbulent. The transition point between laminar and turbulent flows is sensitive to a multitude of parameters, most notably duct geometry, surface roughness, and the presence of any flow disturbances. The Reynolds number is the most improtant parameter in characterizing this transition process.</p>
@@ -314,11 +316,15 @@ Note
 \tag{1}</span></span></p>
 <p>where empirical constant <span class="math inline">n</span> is determined using</p>
 <p><span id="eq-norris-1970-rough-nusselt-n"><span class="math display">
-\begin{align*}
-n &amp; =0.68\mathrm{Pr}^{0.215} &amp;&amp; \phantom{00000} &amp; \mathrm{Pr} &amp; &lt;6 \\
+\begin{aligned}
+n &amp; =0.68\mathrm{Pr}^{0.215} &amp;&amp; \phantom{00} &amp; \mathrm{Pr} &amp; &lt;6 \\
 n &amp; =1 &amp;&amp;&amp; \mathrm{Pr} &amp; &gt;6
-\end{align*}
+\end{aligned}
 \tag{2}</span></span></p>
+</section>
+<section id="development-of-temperature-and-concentration-profiles" class="level2">
+<h2 class="anchored" data-anchor-id="development-of-temperature-and-concentration-profiles">Development of Temperature and Concentration Profiles</h2>
+<p>The entrance length is defined as the distance it takes for the boundary layers to completely merge together and for the flow to become fully developed. Entrance lengths for turbulent flows are shorter than that of laminar flows and are significantly affected by entrance conditions, intensity of any disturbances in the flow, and surface roughness. A widely used estimate for circular and noncircular ducts is</p>
 
 
 </section>
@@ -398,7 +404,7 @@ n &amp; =1 &amp;&amp;&amp; \mathrm{Pr} &amp; &gt;6
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/Frank-ZW\.github\.io\/frank-zw\.github\.io\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
