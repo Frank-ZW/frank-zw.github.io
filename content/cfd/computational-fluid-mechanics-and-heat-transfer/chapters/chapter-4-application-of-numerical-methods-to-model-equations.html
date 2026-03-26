@@ -71,8 +71,22 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -270,25 +284,25 @@ window.Quarto = {
 <section id="inviscid-burgers-equation" class="level1">
 <h1>Inviscid Burgers’ Equation</h1>
 <p>The Burgers’ equation serves as an analog to the Navier Stokes equations. The equation includes an unsteady term, a nonlinear convection term, and a viscous term.</p>
-<p><span id="eq-burgers"><span class="math display">\[
+<p><span id="eq-burgers"><span class="math display">
 \frac {\partial u}{\partial t}+u\frac {\partial u}{\partial x}=\mu\frac {\partial^2u}{\partial x^2}
-\tag{1}\]</span></span></p>
-<p>When the viscous term is included, equation (<a href="#eq-burgers" class="quarto-xref">1</a>) is parabolic. The inviscid Burgers’ equation arises when viscous effects are zero, <span class="math inline">\(\mu=0\)</span>.</p>
-<p><span id="eq-inviscid-burgers"><span class="math display">\[
+\tag{1}</span></span></p>
+<p>When the viscous term is included, equation (<a href="#eq-burgers" class="quarto-xref">1</a>) is parabolic. The inviscid Burgers’ equation arises when viscous effects are zero, <span class="math inline">\mu=0</span>.</p>
+<p><span id="eq-inviscid-burgers"><span class="math display">
 \frac {\partial u}{\partial t}+u\frac {\partial u}{\partial x}=0
-\tag{2}\]</span></span></p>
+\tag{2}</span></span></p>
 <p>Equation (<a href="#eq-inviscid-burgers" class="quarto-xref">2</a>) may be viewed as a nonlinear wave equation where each point on the wave front can propagate at different speeds. The linear, 1D convection equation considered earlier is a simpler case of this, where the propagation speed of all waves was at a constant speed. Since Burgers’ equation contains varying wave speeds, shocks may be modeled due to the coalescing of wave information.</p>
-<p>Nonlinear hyperbolic PDEs exhibit two types of solutions according to Lax (1954). Consider the general case of the equation below. Introduce the Jacobian <span class="math inline">\(A=\frac {\partial F_i}{\partial u_j}\)</span> from the chain rule.</p>
-<p><span id="eq-general-hyperbolic-pde"><span class="math display">\[
+<p>Nonlinear hyperbolic PDEs exhibit two types of solutions according to Lax (1954). Consider the general case of the equation below. Introduce the Jacobian <span class="math inline">A=\frac {\partial F_i}{\partial u_j}</span> from the chain rule.</p>
+<p><span id="eq-general-hyperbolic-pde"><span class="math display">
 \frac {\partial u}{\partial t}+\frac {\partial F}{\partial x}=\frac {\partial u}{\partial t}+A\frac {\partial u}{\partial x}=0
-\tag{3}\]</span></span></p>
+\tag{3}</span></span></p>
 <section id="lax-method" class="level2">
 <h2 class="anchored" data-anchor-id="lax-method">Lax Method</h2>
 <p>First order methods are rarely used in solving hyperbolic equations owing to their dissipative nature. The Lax method is typically used to demonstrate its dissipative nature and the application of a first order method to a nonlinear equation.</p>
-<p><span id="eq-lax-method-inviscid-burgers"><span class="math display">\[
+<p><span id="eq-lax-method-inviscid-burgers"><span class="math display">
 u_j^{n+1}=\frac {u_{j-1}^n+u_{j+1}^n}2-\frac {\Delta t}{\Delta x}\frac {F_{j+1}^n-F_{j-1}^n}2
-\tag{4}\]</span></span></p>
-<p>The first term is <span class="math inline">\(u_j^n\)</span> averaged between its neighboring cells. This introduces artificial viscosity into the method that smooths out any instabilities or oscillations in the solution.</p>
+\tag{4}</span></span></p>
+<p>The first term is <span class="math inline">u_j^n</span> averaged between its neighboring cells. This introduces artificial viscosity into the method that smooths out any instabilities or oscillations in the solution.</p>
 <div class="callout callout-style-simple callout-note callout-titled" title="Derivation of the Lax Method">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -301,45 +315,45 @@ u_j^{n+1}=\frac {u_{j-1}^n+u_{j+1}^n}2-\frac {\Delta t}{\Delta x}\frac {F_{j+1}^
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Expand <span class="math inline">\(u_j^{n+1}\)</span> about <span class="math inline">\(u_j^n\)</span> using a Taylor series and substitute the time derivative term with the spatial derivative. From equation (<a href="#eq-general-hyperbolic-pde" class="quarto-xref">3</a>), we have that <span class="math inline">\(u_t=-F_x\)</span>. Therefore</p>
-<p><span class="math display">\[
+<p>Expand <span class="math inline">u_j^{n+1}</span> about <span class="math inline">u_j^n</span> using a Taylor series and substitute the time derivative term with the spatial derivative. From equation (<a href="#eq-general-hyperbolic-pde" class="quarto-xref">3</a>), we have that <span class="math inline">u_t=-F_x</span>. Therefore</p>
+<p><span class="math display">
 \begin{align*}
 u(x,t+\Delta t) &amp; =u(x,t)+\left.\frac {\partial u}{\partial t}\right|_{x,t}\Delta t+\left.\frac {\partial^2u}{\partial t^2}\right|_{x,t}\frac {\Delta t^2}{2!}+\cdots \\
 &amp; =u(x, t)-\left.\frac {\partial F}{\partial x}\right|_{x,t}\Delta t+\mathcal O(\Delta t^2)
 \end{align*}
-\]</span></p>
-<p>Neglecting the higher order terms and applying a central difference scheme on <span class="math inline">\(F_x\)</span>, the Lax method is obtained. An average is used for calculating the <span class="math inline">\(u_j^n\)</span> term to introduce numerical dissipation.</p>
-<p><span class="math display">\[u_j^{n+1}=u_j^n-\frac {\Delta t}{\Delta x}\frac {F_{j+1}^n-F_{j-1}^n}2\]</span></p>
+</span></p>
+<p>Neglecting the higher order terms and applying a central difference scheme on <span class="math inline">F_x</span>, the Lax method is obtained. An average is used for calculating the <span class="math inline">u_j^n</span> term to introduce numerical dissipation.</p>
+<p><span class="math display">u_j^{n+1}=u_j^n-\frac {\Delta t}{\Delta x}\frac {F_{j+1}^n-F_{j-1}^n}2</span></p>
 </div>
 </div>
 </div>
-<p>The amplification factor for this scheme is given below, where <span class="math inline">\(\beta=k\Delta x\)</span> and <span class="math inline">\(A=\frac {\partial F}{\partial u}\)</span>. Since <span class="math inline">\(F=\frac {u^2}2\)</span> for Burgers’ equation, <span class="math inline">\(A=u\)</span>.</p>
-<p><span id="eq-lax-method-inviscid-burgers-amplification-factor"><span class="math display">\[
+<p>The amplification factor for this scheme is given below, where <span class="math inline">\beta=k\Delta x</span> and <span class="math inline">A=\frac {\partial F}{\partial u}</span>. Since <span class="math inline">F=\frac {u^2}2</span> for Burgers’ equation, <span class="math inline">A=u</span>.</p>
+<p><span id="eq-lax-method-inviscid-burgers-amplification-factor"><span class="math display">
 G=\cos\beta-i\frac {\Delta t}{\Delta x}A\sin\beta
-\tag{5}\]</span></span></p>
-<p>Stability occurs when <span class="math inline">\(|G|\leq1\)</span> and equation (<a href="#eq-lax-method-inviscid-burgers-amplification-factor" class="quarto-xref">5</a>) reduces down to</p>
-<p><span class="math display">\[
+\tag{5}</span></span></p>
+<p>Stability occurs when <span class="math inline">|G|\leq1</span> and equation (<a href="#eq-lax-method-inviscid-burgers-amplification-factor" class="quarto-xref">5</a>) reduces down to</p>
+<p><span class="math display">
 \left|\frac {\Delta t}{\Delta x}u_{\mathrm{max}}\right|\leq1
-\]</span></p>
-<p>where <span class="math inline">\(u_{\mathrm{max}}\)</span> is the maximum eigenvalue of the Jacobian <span class="math inline">\(A\)</span>.</p>
+</span></p>
+<p>where <span class="math inline">u_{\mathrm{max}}</span> is the maximum eigenvalue of the Jacobian <span class="math inline">A</span>.</p>
 </section>
 <section id="lax-wendroff-method" class="level2">
 <h2 class="anchored" data-anchor-id="lax-wendroff-method">Lax-Wendroff Method</h2>
 <p>The Lax-Wendroff method was one of the first second order finite difference methods derived for hyperbolic PDEs. Once again, we consider the general form of the governing equation (<a href="#eq-general-hyperbolic-pde" class="quarto-xref">3</a>). The Lax-Wendroff method is</p>
-<p><span id="eq-lax-wendroff-method-inviscid-burgers"><span class="math display">\[
+<p><span id="eq-lax-wendroff-method-inviscid-burgers"><span class="math display">
 u_j^{n+1}=u_j^n-\frac {\Delta t}{\Delta x}\frac {F_{j+1}^n-F_{j-1}^n}2+\frac 12\left(\frac {\Delta t}{\Delta x}\right)^2\left[A_{j+\frac 12}^n\left(F_{j+1}^n-F_j^n\right)-A_{j-\frac 12}^n\left(F_j^n-F_{j-1}^n\right)\right]
-\tag{6}\]</span></span></p>
-<p>There are many different ways of evaluating the Jacobian matrix at the half interval <span class="math inline">\(j\pm\frac 12\)</span>. For Lax-Wendroff, one way is to use a simple average of the neighboring cells. Since <span class="math inline">\(A=A(u)\)</span>, then we have</p>
-<p><span class="math display">\[
+\tag{6}</span></span></p>
+<p>There are many different ways of evaluating the Jacobian matrix at the half interval <span class="math inline">j\pm\frac 12</span>. For Lax-Wendroff, one way is to use a simple average of the neighboring cells. Since <span class="math inline">A=A(u)</span>, then we have</p>
+<p><span class="math display">
 A_{j\pm\frac 12}=A\left(\frac {u_j+u_{j\pm1}}2\right)
-\]</span></p>
-<p>For Burgers’ equation, <span class="math inline">\(A(u)=u\)</span> so the half interval Jacobians reduce down to</p>
-<p><span class="math display">\[
+</span></p>
+<p>For Burgers’ equation, <span class="math inline">A(u)=u</span> so the half interval Jacobians reduce down to</p>
+<p><span class="math display">
 \begin{align*}
 A_{j+\frac 12} &amp; =\frac {u_j+u_{j+1}}2 \\
 A_{j-\frac 12} &amp; =\frac {u_{j-1}+u_j}2
 \end{align*}
-\]</span></p>
+</span></p>
 <div class="callout callout-style-simple callout-note callout-titled" title="Derivation of the Lax-Wendroff Method">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -352,40 +366,40 @@ A_{j-\frac 12} &amp; =\frac {u_{j-1}+u_j}2
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Start off in the same manner as the Lax method and expand <span class="math inline">\(u+j^{n+1}\)</span> about <span class="math inline">\(u_j^n\)</span> using a Taylor series.</p>
-<p><span class="math display">\[
+<p>Start off in the same manner as the Lax method and expand <span class="math inline">u+j^{n+1}</span> about <span class="math inline">u_j^n</span> using a Taylor series.</p>
+<p><span class="math display">
 u(x,t+\Delta t)=u(x,t)+\left.\frac {\partial u}{\partial t}\right|_{x,t}\Delta t+\left.\frac {\partial^2u}{\partial t^2}\right|_{x,t}\frac {\Delta t^2}{2!}+\left.\frac {\partial^3u}{\partial t^3}\right|_{x,t}\frac {\Delta t^3}{3!}+\cdots
-\]</span></p>
+</span></p>
 <p>Next, replace the time derivatives with spatial derivatives. From equation (<a href="#eq-general-hyperbolic-pde" class="quarto-xref">3</a>), the first time derivative is</p>
-<p><span class="math display">\[
+<p><span class="math display">
 \frac {\partial u}{\partial t}=-\frac {\partial F}{\partial x}
-\]</span></p>
+</span></p>
 <p>For the second derivative term, differentiate the equation above with respect to time and interchange the differentiation order.</p>
-<p><span class="math display">\[
+<p><span class="math display">
 \frac {\partial^2u}{\partial t^2}=-\frac {\partial}{\partial x}\frac {\partial F}{\partial t}=-\frac {\partial}{\partial x}\frac {\partial F}{\partial u}\frac {\partial u}{\partial t}=\frac {\partial}{\partial x}\left(A\frac {\partial F}{\partial x}\right)
-\]</span></p>
+</span></p>
 <p>The last step is due to the chain rule. Substitute into the Taylor series to obtain</p>
-<p><span class="math display">\[
+<p><span class="math display">
 u(x,t+\Delta t)=u(x,t)-\left.\frac {\partial F}{\partial x}\right|_{x,t}\Delta t+\left.\frac {\partial}{\partial x}\left(A\frac {\partial F}{\partial x}\right)\right|_{x,t}\frac {\Delta t^2}2+\mathcal O(\Delta t^3)
-\]</span></p>
+</span></p>
 <p>Apply central differencing schemes to all derivative terms. The second order derivative is</p>
-<p><span class="math display">\[
+<p><span class="math display">
 \begin{align*}
 \frac {\partial}{\partial x}\left(A\frac {\partial F}{\partial x}\right) &amp; \approx\frac 1{\Delta x}\left[A_{j+\frac 12}\left.\frac {\partial F}{\partial x}\right|_{j+\frac 12}-A_{j-\frac 12}\left.\frac {\partial F}{\partial x}\right|_{j-\frac 12}\right] \\ &amp; =\frac 1{\Delta x}\left[A_{j+\frac 12}\frac {F_{j+1}-F_j}{\Delta x}-A_{j-\frac 12}\frac {F_j-F_{j-1}}{\Delta x}\right] \\ &amp; =\frac 1{\Delta x^2}\left[A_{j+\frac 12}\left(F_{j+1}-F_j\right)-A_{j-\frac 12}\left(F_j-F_{j-1}\right)\right]
 \end{align*}
-\]</span></p>
-<p>The <span class="math inline">\(\partial F/\partial x\)</span> terms when evaluated at the cell interface utilize a central difference, as <span class="math inline">\(F_j\)</span> and <span class="math inline">\(F_{j\pm1}\)</span> are both exactly <span class="math inline">\(\frac {\Delta x}2\)</span> away from the boundary. Therefore, central differences are used to decompose all derivative terms into their stencil approximations and the second order accuracy is maintained. Putting everything together gives the Lax-Wendroff method.</p>
+</span></p>
+<p>The <span class="math inline">\partial F/\partial x</span> terms when evaluated at the cell interface utilize a central difference, as <span class="math inline">F_j</span> and <span class="math inline">F_{j\pm1}</span> are both exactly <span class="math inline">\frac {\Delta x}2</span> away from the boundary. Therefore, central differences are used to decompose all derivative terms into their stencil approximations and the second order accuracy is maintained. Putting everything together gives the Lax-Wendroff method.</p>
 </div>
 </div>
 </div>
 <p>The amplification factor is</p>
-<p><span id="eq-lax-wendroff-method-inviscid-burgers-amplification-factor"><span class="math display">\[
+<p><span id="eq-lax-wendroff-method-inviscid-burgers-amplification-factor"><span class="math display">
 G=1-2\left(\frac {\Delta t}{\Delta x}A\right)^2(1-\cos\beta)-2i\frac {\Delta t}{\Delta x}A\sin\beta
-\tag{7}\]</span></span></p>
-<p>When <span class="math inline">\(|G|\leq1\)</span>, the scheme is stable. For the amplification above, this simplifies down to</p>
-<p><span class="math display">\[
+\tag{7}</span></span></p>
+<p>When <span class="math inline">|G|\leq1</span>, the scheme is stable. For the amplification above, this simplifies down to</p>
+<p><span class="math display">
 \left|\frac {\Delta t}{\Delta x}u_{\mathrm{max}}\right|\leq1
-\]</span></p>
+</span></p>
 <p>When Lax-Wendroff is applied to the example problem, the method correctly predicts the position of the discontinuity. Moreover, the solution is relatively sharp and well-defined, with some oscillations occurring at either ends of the discontinuity. In comparison, the Lax method was purely monotone and did not exhibit any oscillatory motion. As the Courant number is decreased, the number of oscillations in the Lax-Wendroff solution increases as the solution quality is degraded.</p>
 
 
