@@ -3,19 +3,20 @@ title: "Chapter 4. Application of Numerical Methods to Model Equations"
 ---
 
 # Inviscid Burgers' Equation
+
 The Burgers’ equation serves as an analog to the Navier Stokes equations. The equation includes an unsteady term, a nonlinear convection term, and a viscous term.
 
 $$
 \frac {\partial u}{\partial t}+u\frac {\partial u}{\partial x}=\mu\frac {\partial^2u}{\partial x^2}
 $$ {#eq-burgers}
 
-When the viscous term is included, equation (@eq-burgers) is parabolic. The inviscid Burgers' equation arises when viscous effects are zero, $\mu=0$.
+When the viscous term is included, (@eq-burgers) is parabolic. The inviscid Burgers' equation arises when viscous effects are zero, $\mu=0$.
 
 $$
 \frac {\partial u}{\partial t}+u\frac {\partial u}{\partial x}=0
 $$ {#eq-inviscid-burgers}
 
-Equation (@eq-inviscid-burgers) may be viewed as a nonlinear wave equation where each point on the wave front can propagate at different speeds. The linear, 1D convection equation considered earlier is a simpler case of this, where the propagation speed of all waves was at a constant speed. Since Burgers' equation contains varying wave speeds, shocks may be modeled due to the coalescing of wave information.
+(@eq-inviscid-burgers) may be viewed as a nonlinear wave equation where each point on the wave front can propagate at different speeds. The linear, 1D convection equation considered earlier is a simpler case of this, where the propagation speed of all waves was at a constant speed. Since Burgers' equation contains varying wave speeds, shocks may be modeled due to the coalescing of wave information.
 
 Nonlinear hyperbolic PDEs exhibit two types of solutions according to Lax (1954). Consider the general case of the equation below. Introduce the Jacobian $A=\frac {\partial F_i}{\partial u_j}$ from the chain rule.
 
@@ -24,6 +25,7 @@ $$
 $$ {#eq-general-hyperbolic-pde}
 
 ## Lax Method
+
 First order methods are rarely used in solving hyperbolic equations owing to their dissipative nature. The Lax method is typically used to demonstrate its dissipative nature and the application of a first order method to a nonlinear equation.
 
 $$
@@ -33,7 +35,7 @@ $$ {#eq-lax-method-inviscid-burgers}
 The first term is $u_j^n$ averaged between its neighboring cells. This introduces artificial viscosity into the method that smooths out any instabilities or oscillations in the solution.
 
 ::: {.callout-note title="Derivation of the Lax Method" collapse="true"}
-Expand $u_j^{n+1}$ about $u_j^n$ using a Taylor series and substitute the time derivative term with the spatial derivative. From equation (@eq-general-hyperbolic-pde), we have that $u_t=-F_x$. Therefore
+Expand $u_j^{n+1}$ about $u_j^n$ using a Taylor series and substitute the time derivative term with the spatial derivative. From (@eq-general-hyperbolic-pde), we have that $u_t=-F_x$. Therefore
 
 $$
 \begin{align*}
@@ -53,7 +55,7 @@ $$
 G=\cos\beta-i\frac {\Delta t}{\Delta x}A\sin\beta
 $$ {#eq-lax-method-inviscid-burgers-amplification-factor}
 
-Stability occurs when $|G|\leq1$ and equation (@eq-lax-method-inviscid-burgers-amplification-factor) reduces down to
+Stability occurs when $|G|\leq1$ and (@eq-lax-method-inviscid-burgers-amplification-factor) reduces down to
 
 $$
 \left|\frac {\Delta t}{\Delta x}u_{\mathrm{max}}\right|\leq1
@@ -62,7 +64,8 @@ $$
 where $u_{\mathrm{max}}$ is the maximum eigenvalue of the Jacobian $A$.
 
 ## Lax-Wendroff Method
-The Lax-Wendroff method was one of the first second order finite difference methods derived for hyperbolic PDEs. Once again, we consider the general form of the governing equation (@eq-general-hyperbolic-pde). The Lax-Wendroff method is
+
+The Lax-Wendroff method was one of the first second order finite difference methods derived for hyperbolic PDEs. Once again, we consider the general form of the governing (@eq-general-hyperbolic-pde). The Lax-Wendroff method is
 
 $$
 u_j^{n+1}=u_j^n-\frac {\Delta t}{\Delta x}\frac {F_{j+1}^n-F_{j-1}^n}2+\frac 12\left(\frac {\Delta t}{\Delta x}\right)^2\left[A_{j+\frac 12}^n\left(F_{j+1}^n-F_j^n\right)-A_{j-\frac 12}^n\left(F_j^n-F_{j-1}^n\right)\right]
@@ -84,13 +87,13 @@ A_{j-\frac 12} & =\frac {u_{j-1}+u_j}2
 $$
 
 ::: {.callout-note title="Derivation of the Lax-Wendroff Method" collapse="true"}
-Start off in the same manner as the Lax method and expand $u+j^{n+1}$ about $u_j^n$ using a Taylor series.
+Start off in the same manner as the Lax method and expand $u_j^{n+1}$ about $u_j^n$ using a Taylor series.
 
 $$
 u(x,t+\Delta t)=u(x,t)+\left.\frac {\partial u}{\partial t}\right|_{x,t}\Delta t+\left.\frac {\partial^2u}{\partial t^2}\right|_{x,t}\frac {\Delta t^2}{2!}+\left.\frac {\partial^3u}{\partial t^3}\right|_{x,t}\frac {\Delta t^3}{3!}+\cdots
 $$
 
-Next, replace the time derivatives with spatial derivatives. From equation (@eq-general-hyperbolic-pde), the first time derivative is
+Next, replace the time derivatives with spatial derivatives. From (@eq-general-hyperbolic-pde), the first time derivative is
 
 $$
 \frac {\partial u}{\partial t}=-\frac {\partial F}{\partial x}

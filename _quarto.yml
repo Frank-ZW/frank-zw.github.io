@@ -31,6 +31,8 @@ website:
           - section: Convective Heat and Mass Transfer
             href: content/fluids/convective-heat-and-mass-transfer/index.qmd
             contents:
+              - text: Chapter 4. Internal Laminar Flow
+                href: content/fluids/convective-heat-and-mass-transfer/chapters/chapter-4-internal-laminar-flow.qmd
               - text: Chapter 7. Turbulent and Transitional Internal Flow
                 href: content/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.qmd
 
@@ -39,12 +41,15 @@ format:
     theme:
       - cosmo
       - brand
+    grid:
+      sidebar-width: 300px
+      body-width: 1300px
+      margin-width: 250px
+      gutter-width: 1.5rem
     css: styles.css
     toc: true
-    toc-location: body
-    callout-appearance: simple
     html-math-method: katex
 
 crossref:
-  eq-prefix: ""
+  eq-prefix: "Eqn. "
   eq-title: ""
