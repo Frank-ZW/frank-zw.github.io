@@ -23,6 +23,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
 </style>
 
 
@@ -71,49 +72,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../../../styles.css">
 </head>
@@ -279,7 +237,7 @@ window.Quarto = {
 </nav>
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
-<p>In external flows, freestream conditions are typically unaffected by the boundaries. In contrast, due to the confined nature of internal flows, the wall presence has significant impact on the mean flow behavior. If fully developed, turbulent, internal flow is occuring in a smooth pipe, the flow field may be divided into three sublayers. The viscous sublayer is closest to the wall and extends to <span class="math inline">y^+=5</span>. The buffer zone extends beyond to <span class="math inline">y^+=30</span>, and the outer layer occupies the rest of the flow field. The outer outer layer is dominated by turbulent eddies whereas very near the wall, the effect of wall curvature is small, so the fluid is “unaware” that the flow field is confined on all sides. Therefore, the three correlations for u+ all apply.</p>
+<p>In external flows, freestream conditions are typically unaffected by the boundaries. In contrast, due to the confined nature of internal flows, the wall presence has significant impact on the mean flow behavior. If fully developed, turbulent, internal flow is occuring in a smooth pipe, the flow field may be divided into three sublayers. The viscous sublayer is closest to the wall and extends to <img style="vertical-align:middle" src="https://latex.codecogs.com/svg.latex?%5Ctextstyle%20y%5E%2B%3D5" alt="y^+=5" title="y^+=5" class="math inline">. The buffer zone extends beyond to <img style="vertical-align:middle" src="https://latex.codecogs.com/svg.latex?%5Ctextstyle%20y%5E%2B%3D30" alt="y^+=30" title="y^+=30" class="math inline">, and the outer layer occupies the rest of the flow field. The outer outer layer is dominated by turbulent eddies whereas very near the wall, the effect of wall curvature is small, so the fluid is “unaware” that the flow field is confined on all sides. Therefore, the three correlations for u+ all apply.</p>
 
 
 </section>

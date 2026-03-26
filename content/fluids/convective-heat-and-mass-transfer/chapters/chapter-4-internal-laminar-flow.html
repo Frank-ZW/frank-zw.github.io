@@ -23,6 +23,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
 </style>
 
 
@@ -71,49 +72,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../../../styles.css">
 </head>
@@ -280,29 +238,24 @@ window.Quarto = {
 </nav>
 <section id="couette-flow" class="level1">
 <h1>Couette Flow</h1>
-<p>Consider two parallel plates with infinite span separated by a constant density fluid of height <span class="math inline">2b</span>. Each plate is a distance of <span class="math inline">b</span> away from the centerline. Neglect buoyancy effects and assume the top plate is moving at a constant velocity of <span class="math inline">U</span> while the bottom plate is stationary. Furthermore, assume the bottom and top plates are isothermal at temperatures of <span class="math inline">T_s</span> and <span class="math inline">T_1</span> respectively. The flow considered here is called <strong>parallel flow</strong> as all streamlines are parallel. Since all fluid elements move parallel to each other, <span class="math inline">v=0</span> and constant density mass conservation is</p>
-<p><span class="math display">
-\frac {\partial u}{\partial x}=-\frac {\partial v}{\partial y}=0
-</span></p>
-<p>Therefore, the velocity profile <span class="math inline">u</span> can <em>only</em> be a function of <span class="math inline">y</span>. Assuming steady flow of a Newtonian fluid, the momentum equation in the <span class="math inline">x</span> and <span class="math inline">y</span> directions simplify to</p>
-<p><span class="math display">
-\begin{align*}
+<p>Consider two parallel plates with infinite span separated by a constant density fluid of height <img style="vertical-align:middle" src="https://latex.codecogs.com/svg.latex?%5Ctextstyle%202b" alt="2b" title="2b" class="math inline">. Each plate is a distance of <img style="vertical-align:middle" src="https://latex.codecogs.com/svg.latex?%5Ctextstyle%20b" alt="b" title="b" class="math inline"> away from the centerline. Neglect buoyancy effects and assume the top plate is moving at a constant velocity of <img style="vertical-align:middle" src="https://latex.codecogs.com/svg.latex?%5Ctextstyle%20U" alt="U" title="U" class="math inline"> while the bottom plate is stationary. Furthermore, assume the bottom and top plates are isothermal at temperatures of <img style="vertical-align:middle" src="https://latex.codecogs.com/svg.latex?%5Ctextstyle%20T_s" alt="T_s" title="T_s" class="math inline"> and <img style="vertical-align:middle" src="https://latex.codecogs.com/svg.latex?%5Ctextstyle%20T_1" alt="T_1" title="T_1" class="math inline"> respectively. The flow considered here is called <strong>parallel flow</strong> as all streamlines are parallel. Since all fluid elements move parallel to each other, <img style="vertical-align:middle" src="https://latex.codecogs.com/svg.latex?%5Ctextstyle%20v%3D0" alt="v=0" title="v=0" class="math inline"> and constant density mass conservation is</p>
+<p><img style="vertical-align:middle" src="https://latex.codecogs.com/svg.latex?%5Cdisplaystyle%20%5Cfrac%20%7B%5Cpartial%20u%7D%7B%5Cpartial%20x%7D%3D-%5Cfrac%20%7B%5Cpartial%20v%7D%7B%5Cpartial%20y%7D%3D0" alt="\frac {\partial u}{\partial x}=-\frac {\partial v}{\partial y}=0" title="\frac {\partial u}{\partial x}=-\frac {\partial v}{\partial y}=0" class="math display"></p>
+<p>Therefore, the velocity profile <img style="vertical-align:middle" src="https://latex.codecogs.com/svg.latex?%5Ctextstyle%20u" alt="u" title="u" class="math inline"> can <em>only</em> be a function of <img style="vertical-align:middle" src="https://latex.codecogs.com/svg.latex?%5Ctextstyle%20y" alt="y" title="y" class="math inline">. Assuming steady flow of a Newtonian fluid, the momentum equation in the <img style="vertical-align:middle" src="https://latex.codecogs.com/svg.latex?%5Ctextstyle%20x" alt="x" title="x" class="math inline"> and <img style="vertical-align:middle" src="https://latex.codecogs.com/svg.latex?%5Ctextstyle%20y" alt="y" title="y" class="math inline"> directions simplify to</p>
+<p><img style="vertical-align:middle" src="https://latex.codecogs.com/svg.latex?%5Cdisplaystyle%20%5Cbegin%7Balign%2A%7D%0Au%5Ccancel%7B%5Cfrac%20%7B%5Cpartial%20u%7D%7B%5Cpartial%20x%7D%7D%2B%5Ccancel%7Bv%5Cfrac%20%7B%5Cpartial%20u%7D%7B%5Cpartial%20y%7D%7D%20%26%20%3D-%5Cfrac%201%7B%5Crho%7D%5Ccancel%7B%5Cfrac%20%7B%5Cpartial%20p%7D%7B%5Cpartial%20x%7D%7D%2B%5Cnu%5Cleft%28%5Ccancel%7B%5Cfrac%20%7B%5Cpartial%5E2u%7D%7B%5Cpartial%20x%5E2%7D%7D%2B%5Cfrac%20%7B%5Cpartial%5E2u%7D%7B%5Cpartial%20y%5E2%7D%5Cright%29%20%5C%5C%0Au%5Ccancel%7B%5Cfrac%20%7B%5Cpartial%20v%7D%7B%5Cpartial%20x%7D%7D%2B%5Ccancel%7Bv%5Cfrac%20%7B%5Cpartial%20v%7D%7B%5Cpartial%20y%7D%7D%20%26%20%3D-%5Cfrac%201%7B%5Crho%7D%5Cfrac%20%7B%5Cpartial%20p%7D%7B%5Cpartial%20v%7D%2B%5Cnu%5Cleft%28%5Ccancel%7B%5Cfrac%20%7B%5Cpartial%5E2v%7D%7B%5Cpartial%20x%5E2%7D%7D%2B%5Ccancel%7B%5Cfrac%20%7B%5Cpartial%5E2v%7D%7B%5Cpartial%20y%5E2%7D%7D%5Cright%29%0A%5Cend%7Balign%2A%7D" alt="\begin{align*}
 u\cancel{\frac {\partial u}{\partial x}}+\cancel{v\frac {\partial u}{\partial y}} &amp; =-\frac 1{\rho}\cancel{\frac {\partial p}{\partial x}}+\nu\left(\cancel{\frac {\partial^2u}{\partial x^2}}+\frac {\partial^2u}{\partial y^2}\right) \\
 u\cancel{\frac {\partial v}{\partial x}}+\cancel{v\frac {\partial v}{\partial y}} &amp; =-\frac 1{\rho}\frac {\partial p}{\partial v}+\nu\left(\cancel{\frac {\partial^2v}{\partial x^2}}+\cancel{\frac {\partial^2v}{\partial y^2}}\right)
-\end{align*}
-</span></p>
-<p>Momentum in the <span class="math inline">y</span> direction shows there is no pressure gradient in the <span class="math inline">y</span> direction. There also cannot be a pressure gradient in the <span class="math inline">x</span> direction as that would violate continuity. If we assumed <span class="math inline">\frac {\partial p}{\partial x}\neq0</span>, then this would require <span class="math inline">\frac {\partial^2u}{\partial x^2}\neq0</span> so <span class="math inline">u=u(x,y)</span>, which violates continuity. The PDE above reduces down to</p>
-<p><span class="math display">
-\frac {\mathrm d^2u}{\mathrm dy^2}=0
-</span></p>
-<p>subject to the boundary conditions <span class="math inline">u(-b)=0</span> and <span class="math inline">u(b)=U</span>. Integrating twice to determine the velocity profile gives</p>
-<p><span id="eq-couette-flow-velocity-profile"><span class="math display">
-u(y)=\frac U2\left(1+\frac yb\right)
-\tag{1}</span></span></p>
+\end{align*}" title="\begin{align*}
+u\cancel{\frac {\partial u}{\partial x}}+\cancel{v\frac {\partial u}{\partial y}} &amp; =-\frac 1{\rho}\cancel{\frac {\partial p}{\partial x}}+\nu\left(\cancel{\frac {\partial^2u}{\partial x^2}}+\frac {\partial^2u}{\partial y^2}\right) \\
+u\cancel{\frac {\partial v}{\partial x}}+\cancel{v\frac {\partial v}{\partial y}} &amp; =-\frac 1{\rho}\frac {\partial p}{\partial v}+\nu\left(\cancel{\frac {\partial^2v}{\partial x^2}}+\cancel{\frac {\partial^2v}{\partial y^2}}\right)
+\end{align*}" class="math display"></p>
+<p>Momentum in the <img style="vertical-align:middle" src="https://latex.codecogs.com/svg.latex?%5Ctextstyle%20y" alt="y" title="y" class="math inline"> direction shows there is no pressure gradient in the <img style="vertical-align:middle" src="https://latex.codecogs.com/svg.latex?%5Ctextstyle%20y" alt="y" title="y" class="math inline"> direction. There also cannot be a pressure gradient in the <img style="vertical-align:middle" src="https://latex.codecogs.com/svg.latex?%5Ctextstyle%20x" alt="x" title="x" class="math inline"> direction as that would violate continuity. If we assumed <img style="vertical-align:middle" src="https://latex.codecogs.com/svg.latex?%5Ctextstyle%20%5Cfrac%20%7B%5Cpartial%20p%7D%7B%5Cpartial%20x%7D%5Cneq0" alt="\frac {\partial p}{\partial x}\neq0" title="\frac {\partial p}{\partial x}\neq0" class="math inline">, then this would require <img style="vertical-align:middle" src="https://latex.codecogs.com/svg.latex?%5Ctextstyle%20%5Cfrac%20%7B%5Cpartial%5E2u%7D%7B%5Cpartial%20x%5E2%7D%5Cneq0" alt="\frac {\partial^2u}{\partial x^2}\neq0" title="\frac {\partial^2u}{\partial x^2}\neq0" class="math inline"> so <img style="vertical-align:middle" src="https://latex.codecogs.com/svg.latex?%5Ctextstyle%20u%3Du%28x%2Cy%29" alt="u=u(x,y)" title="u=u(x,y)" class="math inline">, which violates continuity. The PDE above reduces down to</p>
+<p><img style="vertical-align:middle" src="https://latex.codecogs.com/svg.latex?%5Cdisplaystyle%20%5Cfrac%20%7B%5Cmathrm%20d%5E2u%7D%7B%5Cmathrm%20dy%5E2%7D%3D0" alt="\frac {\mathrm d^2u}{\mathrm dy^2}=0" title="\frac {\mathrm d^2u}{\mathrm dy^2}=0" class="math display"></p>
+<p>subject to the boundary conditions <img style="vertical-align:middle" src="https://latex.codecogs.com/svg.latex?%5Ctextstyle%20u%28-b%29%3D0" alt="u(-b)=0" title="u(-b)=0" class="math inline"> and <img style="vertical-align:middle" src="https://latex.codecogs.com/svg.latex?%5Ctextstyle%20u%28b%29%3DU" alt="u(b)=U" title="u(b)=U" class="math inline">. Integrating twice to determine the velocity profile gives</p>
+<p><span id="eq-couette-flow-velocity-profile"><img style="vertical-align:middle" src="https://latex.codecogs.com/svg.latex?%5Cdisplaystyle%20u%28y%29%3D%5Cfrac%20U2%5Cleft%281%2B%5Cfrac%20yb%5Cright%29%0A%20%5Cqquad%281%29" alt="u(y)=\frac U2\left(1+\frac yb\right)
+ \qquad(1)" title="u(y)=\frac U2\left(1+\frac yb\right)
+ \qquad(1)" class="math display"></span></p>
 <p>The energy equation for a constant density fluid is</p>
-<p><span class="math display">
-\rho C_p\left(u\cancel{\frac {\partial T}{\partial x}}+\cancel v\frac {\partial T}{\partial y}\right)=k\frac {\partial^2T}{\partial y^2}+\mu\left(\frac {\partial u}{\partial y}\right)^2
-</span></p>
+<p><img style="vertical-align:middle" src="https://latex.codecogs.com/svg.latex?%5Cdisplaystyle%20%5Crho%20C_p%5Cleft%28u%5Ccancel%7B%5Cfrac%20%7B%5Cpartial%20T%7D%7B%5Cpartial%20x%7D%7D%2B%5Ccancel%20v%5Cfrac%20%7B%5Cpartial%20T%7D%7B%5Cpartial%20y%7D%5Cright%29%3Dk%5Cfrac%20%7B%5Cpartial%5E2T%7D%7B%5Cpartial%20y%5E2%7D%2B%5Cmu%5Cleft%28%5Cfrac%20%7B%5Cpartial%20u%7D%7B%5Cpartial%20y%7D%5Cright%29%5E2" alt="\rho C_p\left(u\cancel{\frac {\partial T}{\partial x}}+\cancel v\frac {\partial T}{\partial y}\right)=k\frac {\partial^2T}{\partial y^2}+\mu\left(\frac {\partial u}{\partial y}\right)^2" title="\rho C_p\left(u\cancel{\frac {\partial T}{\partial x}}+\cancel v\frac {\partial T}{\partial y}\right)=k\frac {\partial^2T}{\partial y^2}+\mu\left(\frac {\partial u}{\partial y}\right)^2" class="math display"></p>
 </section>
 <section id="poiseuille-flow" class="level1">
 <h1>Poiseuille Flow</h1>
