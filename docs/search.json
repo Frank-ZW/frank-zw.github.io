@@ -7,16 +7,22 @@
     "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
-    "objectID": "content/cfd/computational-fluid-mechanics-and-heat-transfer/index.html",
-    "href": "content/cfd/computational-fluid-mechanics-and-heat-transfer/index.html",
-    "title": "Computational Fluid Mechanics and Heat Transfer",
+    "objectID": "content/cfd/index.html",
+    "href": "content/cfd/index.html",
+    "title": "Computational Fluid Dynamics",
     "section": "",
-    "text": "Summary of textbook content including key concepts, equations, and important derivations. This is a work in progress!",
+    "text": "Documents regarding the field of computational fluid dynamics.",
     "crumbs": [
       "Home",
-      "CFD",
-      "Computational Fluid Mechanics and Heat Transfer"
+      "CFD"
     ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This is a knowledge base geared towards engineering."
   },
   {
     "objectID": "content/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-4-application-of-numerical-methods-to-model-equations.html",
@@ -58,21 +64,28 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "content/cfd/computational-fluid-mechanics-and-heat-transfer/index.html",
+    "href": "content/cfd/computational-fluid-mechanics-and-heat-transfer/index.html",
+    "title": "Computational Fluid Mechanics and Heat Transfer",
     "section": "",
-    "text": "This is a knowledge base geared towards engineering."
-  },
-  {
-    "objectID": "content/cfd/index.html",
-    "href": "content/cfd/index.html",
-    "title": "Computational Fluid Dynamics",
-    "section": "",
-    "text": "Documents regarding the field of computational fluid dynamics.",
+    "text": "Summary of textbook content including key concepts, equations, and important derivations. This is a work in progress!",
     "crumbs": [
       "Home",
-      "CFD"
+      "CFD",
+      "Computational Fluid Mechanics and Heat Transfer"
+    ]
+  },
+  {
+    "objectID": "content/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.html",
+    "href": "content/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.html",
+    "title": "Chapter 7. Turbulent and Transitional Internal Flow",
+    "section": "",
+    "text": "Introduction\nIn external flows, freestream conditions are typically unaffected by the boundaries. In contrast, due to the confined nature of internal flows, the wall presence has significant impact on the mean flow behavior. If fully developed, turbulent, internal flow is occuring in a smooth pipe, the flow field may be divided into three sublayers. The viscous sublayer is closest to the wall and extends to y^+=5. The buffer zone extends beyond to y^+=30, and the outer layer occupies the rest of the flow field. The outer outer layer is dominated by turbulent eddies whereas very near the wall, the effect of wall curvature is small, so the fluid is “unaware” that the flow field is confined on all sides. Therefore, the three correlations for u+ all apply.",
+    "crumbs": [
+      "Home",
+      "Fluids",
+      "Convective Heat and Mass Transfer",
+      "Chapter 7. Turbulent and Transitional Internal Flow"
     ]
   },
   {
