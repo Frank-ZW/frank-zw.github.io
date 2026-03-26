@@ -413,7 +413,7 @@ f_{j+\frac 12}^{\mathrm L}=\frac 12\left[F_j+F_{j-1}-\frac {\Delta x}{\Delta t}\
 </section>
 <section id="maccormack-method" class="level2">
 <h2 class="anchored" data-anchor-id="maccormack-method">MacCormack Method</h2>
-<p>This is the two-step predictor-corrector version of Lax-Wendroff. The Jacobian becomes computationally difficult and expensive for nonlinear equations in Lax-Wendroff. MacCormack avoids evaluating the Jacobian entirely and is therefore, more easily implemented for highly nonlinear problems.</p>
+<p>This is the two-step predictor-corrector version of Lax-Wendroff. The Jacobian becomes more computationally difficult and expensive for nonlinear equations with Lax-Wendroff. MacCormack avoids evaluating the Jacobian entirely and is therefore, more easily implemented for highly nonlinear problems.</p>
 <p><span id="eq-maccormack-method-inviscid-burgers"><span class="math display">
 \begin{aligned}
 u_j^{\overline{n+1}} &amp; =u_j-\frac {\Delta t}{\Delta x}\left(F_{j+1}^n-F_j^n\right) \\
