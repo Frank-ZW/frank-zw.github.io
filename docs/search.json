@@ -74,5 +74,16 @@
       "Home",
       "CFD"
     ]
+  },
+  {
+    "objectID": "content/fluids/index.html",
+    "href": "content/fluids/index.html",
+    "title": "Fluid Mechanics",
+    "section": "",
+    "text": "Documents regarding the field of fluid mechanics.",
+    "crumbs": [
+      "Home",
+      "Fluids"
+    ]
   }
 ]
