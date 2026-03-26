@@ -7,22 +7,29 @@
     "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
-    "objectID": "content/cfd/index.html",
-    "href": "content/cfd/index.html",
-    "title": "Computational Fluid Dynamics",
+    "objectID": "content/fluids/convective-heat-and-mass-transfer/chapters/chapter-4-internal-laminar-flow.html",
+    "href": "content/fluids/convective-heat-and-mass-transfer/chapters/chapter-4-internal-laminar-flow.html",
+    "title": "Internal Laminar Flow",
     "section": "",
-    "text": "Documents regarding the field of computational fluid dynamics.",
+    "text": "Laminar flows, internal",
     "crumbs": [
       "Home",
-      "CFD"
+      "Fluids",
+      "Convective Heat and Mass Transfer",
+      "Chapter 4. Internal Laminar Flow"
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "content/cfd/computational-fluid-mechanics-and-heat-transfer/index.html",
+    "href": "content/cfd/computational-fluid-mechanics-and-heat-transfer/index.html",
+    "title": "Computational Fluid Mechanics and Heat Transfer",
     "section": "",
-    "text": "This is a knowledge base geared towards engineering."
+    "text": "Summary of textbook content including key concepts, equations, and important derivations. This is a work in progress!",
+    "crumbs": [
+      "Home",
+      "CFD",
+      "Computational Fluid Mechanics and Heat Transfer"
+    ]
   },
   {
     "objectID": "content/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-4-application-of-numerical-methods-to-model-equations.html",
@@ -64,15 +71,21 @@
     ]
   },
   {
-    "objectID": "content/cfd/computational-fluid-mechanics-and-heat-transfer/index.html",
-    "href": "content/cfd/computational-fluid-mechanics-and-heat-transfer/index.html",
-    "title": "Computational Fluid Mechanics and Heat Transfer",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Summary of textbook content including key concepts, equations, and important derivations. This is a work in progress!",
+    "text": "This is a knowledge base geared towards engineering."
+  },
+  {
+    "objectID": "content/cfd/index.html",
+    "href": "content/cfd/index.html",
+    "title": "Computational Fluid Dynamics",
+    "section": "",
+    "text": "Documents regarding the field of computational fluid dynamics.",
     "crumbs": [
       "Home",
-      "CFD",
-      "Computational Fluid Mechanics and Heat Transfer"
+      "CFD"
     ]
   },
   {
