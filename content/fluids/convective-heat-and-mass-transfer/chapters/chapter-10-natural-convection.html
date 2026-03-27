@@ -71,8 +71,22 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -302,16 +316,16 @@ window.Quarto = {
 <section id="flat-plate-boundary-layers-in-natural-convection" class="level1">
 <h1>Flat Plate Boundary Layers in Natural Convection</h1>
 <p>Introduce the isothermal compressibility coefficient and coefficient of thermal expansion as</p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\begin{align}
 K &amp; =\frac 1{\rho}\left(\frac {\partial\rho}{\partial P}\right)_T \label{eq-isothermal-compressibility-definition} \\
 \beta &amp; =-\frac 1{\beta}\left(\frac {\partial\rho}{\partial T}\right)_P \label{eq-coefficient-thermal-expansion-definition}
-\end{align}\]</span></p>
+\end{align}</span></p>
 <p>Eqn. (<strong>?@eq-isothermal-compressibility-definition</strong>) is neglected in the derivation of these equations and does not appear, but is important nevertheless. The conservation equations governing free convection is</p>
-<p><span class="math display">\[\begin{gather}
+<p><span class="math display">\begin{gather}
 \frac {\partial u}{\partial x}+\frac {\partial v}{\partial y}=0 \\
 u\frac {\partial u}{\partial x}+v\frac {\partial u}{\partial y}=-g_x\beta(T-T_{\infty})-\frac 1{\rho}\left(\frac {\mathrm dP}{\mathrm dx}-\frac {\mathrm dP_{\infty}}{\mathrm dx}\right)+\nu\frac {\partial^2u}{\partial y^2} \\
 \rho C_p\left(u\frac {\partial T}{\partial x}+v\frac {\partial T}{\partial y}\right)=k\frac {\partial^2T}{\partial y^2}
-\end{gather}\]</span></p>
+\end{gather}</span></p>
 
 
 </section>
