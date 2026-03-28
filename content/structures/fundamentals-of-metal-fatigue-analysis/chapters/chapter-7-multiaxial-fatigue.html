@@ -303,7 +303,12 @@ window.Quarto = {
   </ul></li>
   <li><a href="#multiaxial-theories" id="toc-multiaxial-theories" class="nav-link" data-scroll-target="#multiaxial-theories">Multiaxial Theories</a>
   <ul class="collapse">
-  <li><a href="#equivalent-stressstrain-approaches" id="toc-equivalent-stressstrain-approaches" class="nav-link" data-scroll-target="#equivalent-stressstrain-approaches">Equivalent Stress/Strain Approaches</a></li>
+  <li><a href="#equivalent-stressstrain-approaches" id="toc-equivalent-stressstrain-approaches" class="nav-link" data-scroll-target="#equivalent-stressstrain-approaches">Equivalent Stress/Strain Approaches</a>
+  <ul class="collapse">
+  <li><a href="#maximum-principal-stressstrain" id="toc-maximum-principal-stressstrain" class="nav-link" data-scroll-target="#maximum-principal-stressstrain">Maximum Principal Stress/Strain</a></li>
+  <li><a href="#maximum-shear-stressstrain" id="toc-maximum-shear-stressstrain" class="nav-link" data-scroll-target="#maximum-shear-stressstrain">Maximum Shear Stress/Strain</a></li>
+  <li><a href="#octahedral-criteria" id="toc-octahedral-criteria" class="nav-link" data-scroll-target="#octahedral-criteria">Octahedral Criteria</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -426,18 +431,17 @@ Figure&nbsp;3: Applied vs.&nbsp;total shear strain in proportional and nonpropor
 <section id="multiaxial-theories" class="level1">
 <h1>Multiaxial Theories</h1>
 <p>Early multiaxial fatigue theories were extensions of static yield theories applied to combined loading conditions. Sinces (1955) developed a multiaxial theory similar to the von Mises yield theory that served as a basis for other multiaxial theories in the 1960s. By the 1970s, critical plane multiaxial theories were developed based on the premise that failure occurred when damage along a critical plane exceeded a certain value.</p>
-<section id="equivalent-stressstrain-approaches" class="level3">
-<h3 class="anchored" data-anchor-id="equivalent-stressstrain-approaches">Equivalent Stress/Strain Approaches</h3>
+<section id="equivalent-stressstrain-approaches" class="level2">
+<h2 class="anchored" data-anchor-id="equivalent-stressstrain-approaches">Equivalent Stress/Strain Approaches</h2>
 <p>Early multiaxial fatigue theories were extrapolations of static yield theories on combined loading. There are three main static yield theories listed, all given in terms of stress and strain.</p>
 <ol type="1">
 <li><p>Maximum principal stress/strain</p></li>
 <li><p>Maximum shear stress/strain</p></li>
 <li><p>Octahedral (von Mises) criteria, based on distortion energy</p></li>
 </ol>
-<p>These theories rely on a linear stress-strain relation, meaning they are limited to the <strong>high cycle fatigue</strong> (HCF) regime where the stresses are mostly elastic.</p>
-<p>For each theory, <span class="math inline">\sigma_i</span> and <span class="math inline">\varepsilon_i</span> denotes principal stress and strain, are are ordered so that <span class="math inline">\sigma_1\geq\sigma_2\geq\sigma_3</span> and <span class="math inline">\varepsilon_1\geq\varepsilon_2\geq\varepsilon_3</span>. Additionally, define <span class="math inline">\sigma_e</span> and <span class="math inline">\varepsilon_e</span> as the effective stress and strain.</p>
-<section id="maximum-principal-stressstrain" class="level4">
-<h4 class="anchored" data-anchor-id="maximum-principal-stressstrain">Maximum Principal Stress/Strain</h4>
+<p>These theories rely on a linear stress-strain relation, meaning they are limited to the <strong>high cycle fatigue</strong> (HCF) regime where the stresses are mostly elastic. For each theory, <span class="math inline">\sigma_i</span> and <span class="math inline">\varepsilon_i</span> denotes principal stress and strain, and are ordered so that <span class="math inline">\sigma_1\geq\sigma_2\geq\sigma_3</span> and <span class="math inline">\varepsilon_1\geq\varepsilon_2\geq\varepsilon_3</span>. Additionally, define <span class="math inline">\sigma_e</span> and <span class="math inline">\varepsilon_e</span> as the effective stress and strain.</p>
+<section id="maximum-principal-stressstrain" class="level3">
+<h3 class="anchored" data-anchor-id="maximum-principal-stressstrain">Maximum Principal Stress/Strain</h3>
 <p><span class="math display">
 \begin{aligned}
 \sigma_e &amp; =\sigma_1 \\
@@ -445,8 +449,8 @@ Figure&nbsp;3: Applied vs.&nbsp;total shear strain in proportional and nonpropor
 \end{aligned}
 </span></p>
 </section>
-<section id="maximum-shear-stressstrain" class="level4">
-<h4 class="anchored" data-anchor-id="maximum-shear-stressstrain">Maximum Shear Stress/Strain</h4>
+<section id="maximum-shear-stressstrain" class="level3">
+<h3 class="anchored" data-anchor-id="maximum-shear-stressstrain">Maximum Shear Stress/Strain</h3>
 <p>Also called the Tresca criteria</p>
 <p><span class="math display">
 \begin{aligned}
@@ -455,19 +459,19 @@ Figure&nbsp;3: Applied vs.&nbsp;total shear strain in proportional and nonpropor
 \end{aligned}
 </span></p>
 </section>
-<section id="octahedral-criteria" class="level4">
-<h4 class="anchored" data-anchor-id="octahedral-criteria">Octahedral Criteria</h4>
+<section id="octahedral-criteria" class="level3">
+<h3 class="anchored" data-anchor-id="octahedral-criteria">Octahedral Criteria</h3>
 <p>Also called the von Mises criteria, it is based off the distortion energy exceeding the amount needed for yielding.</p>
 <p><span id="eq-von-mises-yield-theory-resolved"><span class="math display">
 \begin{aligned}
-\sigma_e &amp; =\sqrt{\frac {(\sigma_1-\sigma_2)^2+(\sigma_2-\sigma_3)^2+(\sigma_3-\sigma_1)^2}2} \\
+\sigma_e &amp; =\sqrt{\frac 12\left[(\sigma_1-\sigma_2)^2+(\sigma_2-\sigma_3)^2+(\sigma_3-\sigma_1)^2\right]} \\
 \varepsilon_e &amp; =\beta\sqrt{(\varepsilon_1-\varepsilon_2)^2+(\varepsilon_2-\varepsilon_3)^2+(\varepsilon_3-\varepsilon_1)^2}
 \end{aligned}
 \tag{1}</span></span></p>
 <p>where <span class="math inline">\beta=\frac 1{(1+\nu)\sqrt2}</span> and <span class="math inline">\nu</span> is the Poisson ratio. If the principal stresses and strains are unresolved, then Eqn. (<a href="#eq-von-mises-yield-theory-resolved" class="quarto-xref">1</a>) is also</p>
 <p><span class="math display">
 \begin{aligned}
-\sigma_e &amp; =\sqrt{\frac {(\sigma_x-\sigma_y)^2+(\sigma_y-\sigma_z)^2+(\sigma_z-\sigma_x)^2+6\left(\tau_{xy}^2+\tau_{yz}^2+\tau_{xz}^2\right)}2} \\
+\sigma_e &amp; =\sqrt{\frac 12\left[(\sigma_x-\sigma_y)^2+(\sigma_y-\sigma_z)^2+(\sigma_z-\sigma_x)^2+6\left(\tau_{xy}^2+\tau_{yz}^2+\tau_{xz}^2\right)\right]} \\
 \varepsilon_e &amp; =\beta\sqrt{(\varepsilon_x-\varepsilon_y)^2+(\varepsilon_y-\varepsilon_z)^2+(\varepsilon_x-\varepsilon_z)^2+6\left[\left(\frac {\gamma_{xy}}2\right)^2+\left(\frac {\gamma_{yz}}2\right)^2+\left(\frac {\gamma_{xz}}2\right)^2\right]}
 \end{aligned}
 </span></p>

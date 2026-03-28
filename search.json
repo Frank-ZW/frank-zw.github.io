@@ -255,6 +255,19 @@
     ]
   },
   {
+    "objectID": "content/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-7-multiaxial-fatigue.html#equivalent-stressstrain-approaches",
+    "href": "content/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-7-multiaxial-fatigue.html#equivalent-stressstrain-approaches",
+    "title": "Multiaxial Fatigue",
+    "section": "Equivalent Stress/Strain Approaches",
+    "text": "Equivalent Stress/Strain Approaches\nEarly multiaxial fatigue theories were extrapolations of static yield theories on combined loading. There are three main static yield theories listed, all given in terms of stress and strain.\n\nMaximum principal stress/strain\nMaximum shear stress/strain\nOctahedral (von Mises) criteria, based on distortion energy\n\nThese theories rely on a linear stress-strain relation, meaning they are limited to the high cycle fatigue (HCF) regime where the stresses are mostly elastic. For each theory, \\sigma_i and \\varepsilon_i denotes principal stress and strain, and are ordered so that \\sigma_1\\geq\\sigma_2\\geq\\sigma_3 and \\varepsilon_1\\geq\\varepsilon_2\\geq\\varepsilon_3. Additionally, define \\sigma_e and \\varepsilon_e as the effective stress and strain.\n\nMaximum Principal Stress/Strain\n\n\\begin{aligned}\n\\sigma_e & =\\sigma_1 \\\\\n\\varepsilon_e & =\\varepsilon_1\n\\end{aligned}\n\n\n\nMaximum Shear Stress/Strain\nAlso called the Tresca criteria\n\n\\begin{aligned}\n\\tau_e & =\\left|\\frac {\\sigma_1-\\sigma_3}2\\right| \\\\\n\\frac {\\gamma_e}2=\\frac {(1+\\nu)\\varepsilon_e}2 & =\\left|\\frac {\\varepsilon_1-\\varepsilon_3}2\\right|\n\\end{aligned}\n\n\n\nOctahedral Criteria\nAlso called the von Mises criteria, it is based off the distortion energy exceeding the amount needed for yielding.\n\n\\begin{aligned}\n\\sigma_e & =\\sqrt{\\frac 12\\left[(\\sigma_1-\\sigma_2)^2+(\\sigma_2-\\sigma_3)^2+(\\sigma_3-\\sigma_1)^2\\right]} \\\\\n\\varepsilon_e & =\\beta\\sqrt{(\\varepsilon_1-\\varepsilon_2)^2+(\\varepsilon_2-\\varepsilon_3)^2+(\\varepsilon_3-\\varepsilon_1)^2}\n\\end{aligned}\n\\tag{1}\nwhere \\beta=\\frac 1{(1+\\nu)\\sqrt2} and \\nu is the Poisson ratio. If the principal stresses and strains are unresolved, then Eqn. (1) is also\n\n\\begin{aligned}\n\\sigma_e & =\\sqrt{\\frac 12\\left[(\\sigma_x-\\sigma_y)^2+(\\sigma_y-\\sigma_z)^2+(\\sigma_z-\\sigma_x)^2+6\\left(\\tau_{xy}^2+\\tau_{yz}^2+\\tau_{xz}^2\\right)\\right]} \\\\\n\\varepsilon_e & =\\beta\\sqrt{(\\varepsilon_x-\\varepsilon_y)^2+(\\varepsilon_y-\\varepsilon_z)^2+(\\varepsilon_x-\\varepsilon_z)^2+6\\left[\\left(\\frac {\\gamma_{xy}}2\\right)^2+\\left(\\frac {\\gamma_{yz}}2\\right)^2+\\left(\\frac {\\gamma_{xz}}2\\right)^2\\right]}\n\\end{aligned}",
+    "crumbs": [
+      "Home",
+      "Structures",
+      "Fundamentals of Metal Fatigue Analysis",
+      "Chapter 7. Multiaxial Fatigue"
+    ]
+  },
+  {
     "objectID": "content/structures/index.html",
     "href": "content/structures/index.html",
     "title": "Structural Analysis",
