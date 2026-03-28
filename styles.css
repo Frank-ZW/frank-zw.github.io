@@ -1,1 +1,4 @@
 /* css styles */
+figcaption, .figure-caption, .caption {
+    text-align: center;
+}

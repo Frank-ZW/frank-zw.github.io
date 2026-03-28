@@ -1,0 +1,13 @@
+---
+title: Chapter 5. Variable Amplitude Loading
+---
+
+# Introduction
+
+# Definition of Fatigue Damage
+
+# Damage Summing Methods for Initiation
+
+# Cycle Counting
+
+# Crack Propagation Under Variable Amplitude Loading

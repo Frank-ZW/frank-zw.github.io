@@ -35,6 +35,16 @@ website:
                 href: content/fluids/convective-heat-and-mass-transfer/chapters/chapter-4-internal-laminar-flow.qmd
               - text: Chapter 7. Turbulent and Transitional Internal Flow
                 href: content/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.qmd
+              - text: Chapter 10. Natural Convection
+                href: content/fluids/convective-heat-and-mass-transfer/chapters/chapter-10-natural-convection.qmd
+      - section: Structures
+        href: content/structures/index.qmd
+        contents:
+          - section: Fundamentals of Metal Fatigue Analysis
+            href: content/structures/fundamentals-of-metal-fatigue-analysis/index.qmd
+            contents:
+              - text: Chapter 5. Variable Amplitude Loading
+                href: content/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-5-variable-amplitude-loading.qmd
 
 format:
   html:
@@ -53,3 +63,4 @@ format:
 crossref:
   eq-prefix: ""
   eq-title: ""
+  fig-prefix: ""

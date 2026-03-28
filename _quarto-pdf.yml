@@ -15,3 +15,6 @@ format:
       - left=1in
       - right=1in
       - heightrounded
+    include-in-header:
+      - text: |
+          \usepackage{cancel}

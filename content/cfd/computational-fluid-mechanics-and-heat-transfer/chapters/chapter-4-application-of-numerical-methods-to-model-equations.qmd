@@ -173,9 +173,9 @@ Comparison of Lax-Wendroff and MacCormack solutions to the inviscid Burgers' equ
 
 The previous schemes used a Taylor series expansion to approximate spatial and temporal derivatives. This method works well when the series' convergence criteria are met and the function converges everywhere, meaning the function is continuous and differentiable up until the order of the difference scheme. For shocks and other discontinuities, though, this is not necessarily the case. Godunov (1959) found a way to avoid this differentiability requirement using a finite volume approach to evaluate the fluxes at the cell interface and approximate the conservation equations.
 
-Consider the control volume shown below. The $x$ and $y$ axes are space and time respectively. The control volume extends from $x_{j-\frac 12}$ to $x_{j+\frac 12}$ in space and from $t^n$ to $t^{n+1}$ in time. The center of the control volume is at $\left(x_j, t^{n+\frac 12}\right)$.
+Consider the control volume shown below. The $x$ and $y$ axes are space and time respectively. The control volume extends from $x_{j-\frac 12}$ to $x_{j+\frac 12}$ in space and from $t^n$ to $t^{n+1}$ in time. The center of the control volume is at $\left(j,n+\frac 12\right)$.
 
-![Control volume for the Godunov scheme](../assets/chapter-4/lax-control-volume.png){width=400 .lightbox}
+![Control volume for the Godunov scheme](../assets/chapter-4/lax-control-volume.png){width=550 .lightbox}
 
 Integrating Eqn. (@eq-general-hyperbolic-pde) across the control volume, then the volume-averaged $u$ and time-averaged flux $f$ are
 
@@ -231,7 +231,7 @@ $$
 
 Graphically, considering the $j+\frac 12$ cell boundary, the velocity has a value of $u_j$ to the "left" of the interface ($x<0$) and a value of $u_{j+1}$ to the "right". Similarly, taking the $j-\frac 12$ boundary, the fluid velocity has a value of $u_{j-1}$ to the left of the interface and $u_j$ to the right. The sharp discontinuity at the interface leads to a flux that dictates how the flow field will propagate through time. A shock wave will form if $u_j>u_{j+1}$ as this corresponds to faster-moving waves "catching up" to the slower-moving waves in front and coalescing. On the other hand, if $u_j<u_{j+1}$, an expansion (rarefaction) wave will form. How each of these waves will propagate in time is determined when solving the Riemann problem.
 
-![Initial wave diagram for the Godunov scheme](../assets/chapter-4/godunov-riemann-problem-initial-wave-diagram.png){width=400 .lightbox}
+![Initial wave diagram for the Godunov scheme](../assets/chapter-4/godunov-riemann-problem-initial-wave-diagram.png){width=550 .lightbox}
 
 If $c_{j+\frac 12}$ is defined as
 
@@ -299,7 +299,7 @@ u_{j+1} \qquad\qquad & ax>0
 \end{cases}
 $$
 
-Since $a>0$, the $ax<0$ and $ax>0$ conditions are identical to $x<0$ and $x>0$. Therefore, $u(ax,0)=u(x,0)$ and the initial condition is also invariant to the scaling parameter $a$. Since the PDE and initial condition are unchanged by scaling, then $u(ax,at)=u(x,t)$ for all $a>0$. Since $a$ may be any value, choose $a=\frac 1t$ to reveal that $u(ax,at)=u(\xi,1)$ where $\xi=\frac xt$ is the self-similarity parameter. In other words, the ratio between space and time is the critical parameter in the governing equation, not necessarily the exact point in time and space.
+Since $a>0$, the $ax<0$ and $ax>0$ conditions are identical to $x<0$ and $x>0$. Therefore, $u(ax,0)=u(x,0)$ and the initial condition is also invariant to the scaling parameter $a$. Since the PDE and initial condition are unchanged by scaling, then $u(ax,at)=u(x,t)$ for all $a>0$. Since $a$ may be any value, choose $a=\frac 1t$ to reveal that $u(ax,at)=u(\xi,1)$ where $\xi=\frac xt$ is the self-similarity parameter.
 
 :::
 
@@ -317,7 +317,7 @@ $$
 
 Using Equations (@eq-godunov-scheme-inviscid-burgers-shock-solution) and (@eq-godunov-scheme-inviscid-burgers-expansion-solution) in Eqn. (@eq-godunov-scheme-inviscid-burgers-conservation-equation) to obtain a solution. As shown below, the solution is superior for shock propagation than the methods discussed before and manages to capture the sharp discontinuity very well. This method is also capable of capturing expansion waves with comparable fidelity.
 
-![Godunov scheme applied to a shock problem](../assets/chapter-4/godunov-solution-example.png){width=400 .lightbox}
+![Godunov scheme applied to a shock problem](../assets/chapter-4/godunov-solution-example.png){width=550 .lightbox}
 
 ## Roe Scheme
 

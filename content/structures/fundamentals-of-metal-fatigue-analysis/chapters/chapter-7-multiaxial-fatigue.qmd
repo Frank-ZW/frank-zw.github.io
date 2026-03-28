@@ -1,0 +1,116 @@
+---
+title: Multiaxial Fatigue
+---
+
+# Introduction
+
+Stress states where the principal stresses change in direction or are nonproportional are called **complex stress states**. When these arise in notches or joint connections, their fatigue is called **multiaxial fatigue**. Most fatigue data is experimentally determined from uniaxial loading. The effects of multiaxial loading are known to a lesser extent and no consensus has been reached regarding the "best" multiaxial fatigue theory.
+
+# Background
+
+There are two key points to be noted in the development of multiaxial fatigue.
+
+1. The multiaxial stress and strain state at a point and how this state changes with time.
+
+2. The cracking behavior of a material under multiaxial fatigue loading.
+
+## Stress State
+
+The principal stresses in multiaxial fatigue are usually nonproportional, meaning their directions change and are functions of time. Mohr's circle is typically used to aid in understanding how the stress strain state changes over time.
+
+![Mohr's circle representation of uniaxial loading (constant strain amplitude) at three points](../assets/chapter-7/mohr-circle-uniaxial-loading.png){#fig-mohr-circle-uniaxial-loading width=700 .lightbox}
+
+In Fig. @fig-mohr-circle-uniaxial-loading, a specimen experiences cyclic uniaxial loading. As Mohr's circle increases and decreases depending on the applied strain, point $Y$ remains on the $\varepsilon$ axis. That is, the principal stresses are proportional as their directions do not change over time.
+
+::: {#fig-mohr-circle-multiaxial-loading .lightbox layout-nrow=2"}
+
+![Nonproportional load path](../assets/chapter-7/mohr-circle-multiaxial-loading.png){width=700 .lightbox}
+
+![Mohr's circle representation at eight points](../assets/chapter-7/multiaxial-loading-path.png){width=700 .lightbox}
+
+Mohr's circle representation of combined axial and torsional strain loading
+:::
+
+However, Fig. @fig-mohr-circle-multiaxial-loading shows a combined axial and torsional loading case in one cycle. Since the ratio between the shear strain, $\gamma/\sqrt 3$, and axial strain, $\varepsilon$, vary across the cycle, the loading is nonproportional. The direction of the principal stresses and strains change across all eight points and point $Y$ is no longer on the $\varepsilon$ axis at all times.
+
+::: {.callout-warning collapse=true}
+
+Blindly applying concepts derived from uniaxial fatigue theory to multiaxial cases may result in significant errors. An example of this is comparing combined axial and torsional loading to bending and torsional loading.
+
+Generally, a valid assumption for proportional loading is a negligible phase difference between normal and shear stresses and strains (i.e., as normal stress and strain change, shear stress and strain change instantaneously).
+
+However, experimental data has shown that combined out-of-phase loading is more damaging than in-phase loading. A phase angle of $90^{\circ}$ gives the lowest fatigue life while in-phase produced the highest. Assuming a negligible phase difference from uniaxial fatigue in multiaxial fatigue will result in a non-conservative analysis.
+
+:::
+
+When comparing proportional and nonproportional tests, either the **maximum applied shear strain** or the **total cycle's maximum shear strain** may be kept constant. The former is the shear strain under the applied load and the latter is the shear strain attained under no normal strain conditions.
+
+![Applied vs. total shear strain in proportional and nonproportional loading paths](../assets/chapter-7/applied-shear-strain-total-shear-strain-comparison.png){#fig-applied-total-shear-strain-comparison width=600 .lightbox}
+
+Fig. @fig-applied-total-shear-strain-comparison shows the same proportional loading path and two different nonproportional loading path, both with a phase angle of $90^{\circ}$. In Fig. [@fig-applied-total-shear-strain-comparison]b, the nonproportional load path has the same **applied** shear strain as the proportional one (point $C$). However, this is less than the total cycle's maximum shear strain in Fig. [@fig-applied-total-shear-strain-comparison]c.
+
+## Cracking Observations
+
+Cyclic loading results in fatigue crack nucleation primarily through to-and-fro slip. This mechanism occurs as a result of grain slippage along the slip plane. As the shear stress and strain is applied, the material's grains slip in-plane on the plane of maximum shear strain. This results in a weakened band of material called **slip bands**. When the cyclic load is reversed, the grains slip in the opposite direction and the cycle is repeated. This to-and-fro motion eventually pushes a thin layer of material out of the local surface (extrusion) or creates a tiny crevice (intrusion). These features act as microscopic stress concentrators that serve as hotspots for material separation.
+
+Forsyth (1961) noted that fatigue crack growth could be divided into a Stage I and Stage II growth regime. Stage I includes nucleation and early growth, whereas Stage II includes propagation in the direction perpendicular to the maximum principal stress range.
+
+Both normal and shear stresses and strains play an important role in Stage I growth. Normal stresses and strains inhibit and reduce the amount of Stage I growth.
+
+# Multiaxial Theories
+
+Early multiaxial fatigue theories were extensions of static yield theories applied to combined loading conditions. Sinces (1955) developed a multiaxial theory similar to the von Mises yield theory that served as a basis for other multiaxial theories in the 1960s. By the 1970s, critical plane multiaxial theories were developed based on the premise that failure occurred when damage along a critical plane exceeded a certain value.
+
+### Equivalent Stress/Strain Approaches
+
+Early multiaxial fatigue theories were extrapolations of static yield theories on combined loading. There are three main static yield theories listed, all given in terms of stress and strain.
+
+1. Maximum principal stress/strain
+
+2. Maximum shear stress/strain
+
+3. Octahedral (von Mises) criteria, based on distortion energy
+
+These theories rely on a linear stress-strain relation, meaning they are limited to the **high cycle fatigue** (HCF) regime where the stresses are mostly elastic.
+
+For each theory, $\sigma_i$ and $\varepsilon_i$ denotes principal stress and strain, are are ordered so that $\sigma_1\geq\sigma_2\geq\sigma_3$ and $\varepsilon_1\geq\varepsilon_2\geq\varepsilon_3$. Additionally, define $\sigma_e$ and $\varepsilon_e$ as the effective stress and strain.
+
+#### Maximum Principal Stress/Strain
+
+$$
+\begin{aligned}
+\sigma_e & =\sigma_1 \\
+\varepsilon_e & =\varepsilon_1
+\end{aligned}
+$$
+
+#### Maximum Shear Stress/Strain
+
+Also called the Tresca criteria
+
+$$
+\begin{aligned}
+\tau_e & =\left|\frac {\sigma_1-\sigma_3}2\right| \\
+\frac {\gamma_e}2=\frac {(1+\nu)\varepsilon_e}2 & =\left|\frac {\varepsilon_1-\varepsilon_3}2\right|
+\end{aligned}
+$$
+
+#### Octahedral Criteria
+
+Also called the von Mises criteria, it is based off the distortion energy exceeding the amount needed for yielding.
+
+$$
+\begin{aligned}
+\sigma_e & =\sqrt{\frac {(\sigma_1-\sigma_2)^2+(\sigma_2-\sigma_3)^2+(\sigma_3-\sigma_1)^2}2} \\
+\varepsilon_e & =\beta\sqrt{(\varepsilon_1-\varepsilon_2)^2+(\varepsilon_2-\varepsilon_3)^2+(\varepsilon_3-\varepsilon_1)^2}
+\end{aligned}
+$$ {#eq-von-mises-yield-theory-resolved}
+
+where $\beta=\frac 1{(1+\nu)\sqrt2}$ and $\nu$ is the Poisson ratio. If the principal stresses and strains are unresolved, then Eqn. (@eq-von-mises-yield-theory-resolved) is also
+
+$$
+\begin{aligned}
+\sigma_e & =\sqrt{\frac {(\sigma_x-\sigma_y)^2+(\sigma_y-\sigma_z)^2+(\sigma_z-\sigma_x)^2+6\left(\tau_{xy}^2+\tau_{yz}^2+\tau_{xz}^2\right)}2} \\
+\varepsilon_e & =\beta\sqrt{(\varepsilon_x-\varepsilon_y)^2+(\varepsilon_y-\varepsilon_z)^2+(\varepsilon_x-\varepsilon_z)^2+6\left[\left(\frac {\gamma_{xy}}2\right)^2+\left(\frac {\gamma_{yz}}2\right)^2+\left(\frac {\gamma_{xz}}2\right)^2\right]}
+\end{aligned}
+$$

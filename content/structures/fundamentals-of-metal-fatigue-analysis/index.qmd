@@ -1,0 +1,5 @@
+---
+title: Fundamentals of Metal Fatigue Analysis
+---
+
+Bannantine, J. A., Comer, J. J., and Handrock, J.L., "Fundamentals of Metal Fatigue Analysis", 1st ed., Pearson, New Jersey, 1990
