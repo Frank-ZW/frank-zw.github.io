@@ -19,79 +19,48 @@
     ]
   },
   {
-    "objectID": "content/fluids/index.html",
-    "href": "content/fluids/index.html",
-    "title": "Fluid Mechanics",
+    "objectID": "content/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-5-variable-amplitude-loading.html",
+    "href": "content/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-5-variable-amplitude-loading.html",
+    "title": "Chapter 5. Variable Amplitude Loading",
     "section": "",
-    "text": "Documents regarding the field of fluid mechanics.",
+    "text": "Introduction\n\n\nDefinition of Fatigue Damage\n\n\nDamage Summing Methods for Initiation\n\n\nCycle Counting\n\n\nCrack Propagation Under Variable Amplitude Loading",
     "crumbs": [
       "Home",
-      "Fluids"
+      "Structures",
+      "Fundamentals of Metal Fatigue Analysis",
+      "Chapter 5. Variable Amplitude Loading"
     ]
   },
   {
-    "objectID": "content/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.html",
-    "href": "content/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.html",
-    "title": "Chapter 7. Turbulent and Transitional Internal Flow",
+    "objectID": "content/fluids/convective-heat-and-mass-transfer/chapters/chapter-4-internal-laminar-flow.html",
+    "href": "content/fluids/convective-heat-and-mass-transfer/chapters/chapter-4-internal-laminar-flow.html",
+    "title": "Internal Laminar Flow",
     "section": "",
-    "text": "With external flows, the freestream conditions were unaffected by the boundaries. With internal flows, however, due to their confined nature, the wall may have a significant impact on the mean flow behavior. Taking fully developed turbulent flow through a smooth pipe as an example, the flow field can be divided into three sublayers. The layer closest to the wall is the viscous sublayer and typically is defined as the region between 0\\leq y^+\\leq5. The buffer zone or transition layer extends beyond this, between 5\\leq y^+\\leq30. The outer layer occupies the rest of the flow field. Close to the wall, the effect of wall curvature is small, so the fluid is “unaware” that the flow field is confined on all sides. Similarly, the buffer zone is also marginally affected by the macroscopic flow field. Only the outer layer, where turbulence is largely present, does the physics of internal flows differ depending on the characteristics of the flow field. The following correlations for dimensionless velocity, u^+, have been developed.\n\n\\begin{aligned}\nu^+ & =y^+ &&& 0\\leq y^+ & \\leq5 \\\\\nu^+ & =5.0\\ln y^+-3.05 && \\phantom{00000} & 5\\leq y^+ & \\leq30 \\\\\nu^+ & =\\frac 1{\\kappa}\\ln y^++B &&& 30\\leq y^+ & \\leq200\n\\end{aligned}\n\nwhere \\kappa=0.4 and B=5.0.\n\n\nThere are three regimes that can be distinctly defined: laminar, transition, and fully turbulent. The transition point between laminar and turbulent flows is sensitive to a multitude of parameters, most notably duct geometry, surface roughness, and the presence of any flow disturbances. The Reynolds number is the most improtant parameter in characterizing this transition process.\n\n\n\n\n\n\nNote\n\n\n\nThe characteristic length used for the Reynolds number should be related to the duct cross-sectional length. For a circular pipe, this would be the inner diameter. For non-circular geometries, this would be the hydraulic diameter, D_H, or in certain cases, the square root of the cross-sectional area.\n\n\nSurface roughness and presence of disturbances all serve to lower the critical \\mathrm{Re}_D that marks transition. Though laminar flows have been maintained up to \\mathrm{Re}_D\\simeq10^5 in ideal conditions, it is generally assumed that the flow remains laminar if \\mathrm{Re}_D\\leq2100 and fully turbulent if \\mathrm{Re}_D&gt;10^4. The transition flow regime occurs for 2100&lt;\\mathrm{Re}_D\\leq10^4.\nThe effect of surface roughness on an internal flow field is similar to that explained in Chapter 6. For \\varepsilon_s^+\\leq5, the roughness is fully submerged in the viscous sublayer, so the duct is considered hydraulically smooth and roughness has virtually no effect on friction. The skin friction coefficient C_f is only a function of the Reynolds number, \\mathrm{Re}_D. For \\varepsilon_s^+&gt;70, the surface is fully rough and protrudes past the viscous sublayer. The roughness has an overwhelming effect on the wall shear stress so C_f is only a function of \\varepsilon_s^+ and independent of \\mathrm{Re}_D. For 5&lt;\\varepsilon_s^+\\leq70, the surface is transitionally rough and the skin friction coefficient is a function of both \\varepsilon_s^+ and \\mathrm{Re}_D. Surface roughness affects heat and mass transfer primarily by increasing the total interfacial area between the fluid and wall, thereby promoting local mixing of the fluid. As a result, rougher surfaces increase the local friction factor as well as heat and mass transfer coefficients. Norris (1970) suggested the empirical correlation for Nusselt number of a rough surface.\n\n\\frac {\\mathrm{Nu}_{D_H}}{\\mathrm{Nu}_{D_H,\\mathrm{smooth}}}=\\min\\left[4^n, \\left(\\frac {C_f}{C_{f,\\mathrm{smooth}}}\\right)^n\\right]\n\\tag{1}\nwhere empirical constant n is determined using\n\n\\begin{aligned}\nn & =0.68\\mathrm{Pr}^{0.215} && \\phantom{00000} & \\mathrm{Pr} & &lt;6 \\\\\nn & =1 &&& \\mathrm{Pr} & &gt;6\n\\end{aligned}\n\\tag{2}\n\n\n\nThe entrance length is defined as the distance it takes for the boundary layers to completely merge together and for the flow to become fully developed. Entrance lengths for turbulent flows are shorter than that of laminar flows and are significantly affected by entrance conditions, intensity of any disturbances in the flow, and surface roughness. A widely used estimate for circular and noncircular ducts is",
+    "text": "Couette Flow\nConsider two parallel plates with infinite span separated by a constant density fluid of height 2b. Each plate is a distance of b away from the centerline. Neglect buoyancy effects and assume the top plate is moving at a constant velocity of U while the bottom plate is stationary. Furthermore, assume the bottom and top plates are isothermal at temperatures of T_s and T_1 respectively. The flow considered here is called parallel flow as all streamlines are parallel. Since all fluid elements move parallel to each other, v=0 and constant density mass conservation is\n\n\\frac {\\partial u}{\\partial x}=-\\frac {\\partial v}{\\partial y}=0\n\nTherefore, the velocity profile u can only be a function of y. Assuming steady flow of a Newtonian fluid, the momentum equation in the x and y directions simplify to\n\n\\begin{align*}\nu\\cancel{\\frac {\\partial u}{\\partial x}}+\\cancel{v\\frac {\\partial u}{\\partial y}} & =-\\frac 1{\\rho}\\cancel{\\frac {\\partial p}{\\partial x}}+\\nu\\left(\\cancel{\\frac {\\partial^2u}{\\partial x^2}}+\\frac {\\partial^2u}{\\partial y^2}\\right) \\\\\nu\\cancel{\\frac {\\partial v}{\\partial x}}+\\cancel{v\\frac {\\partial v}{\\partial y}} & =-\\frac 1{\\rho}\\frac {\\partial p}{\\partial v}+\\nu\\left(\\cancel{\\frac {\\partial^2v}{\\partial x^2}}+\\cancel{\\frac {\\partial^2v}{\\partial y^2}}\\right)\n\\end{align*}\n\nMomentum in the y direction shows there is no pressure gradient in the y direction. There also cannot be a pressure gradient in the x direction as that would violate continuity. If we assumed \\frac {\\partial p}{\\partial x}\\neq0, then this would require \\frac {\\partial^2u}{\\partial x^2}\\neq0 so u=u(x,y), which violates continuity. The PDE above reduces down to\n\n\\frac {\\mathrm d^2u}{\\mathrm dy^2}=0\n\nsubject to the boundary conditions u(-b)=0 and u(b)=U. Integrating twice to determine the velocity profile gives\n\nu(y)=\\frac U2\\left(1+\\frac yb\\right)\n\\tag{1}\nThe energy equation for a constant density fluid is\n\n\\rho C_p\\left(u\\cancel{\\frac {\\partial T}{\\partial x}}+\\cancel v\\frac {\\partial T}{\\partial y}\\right)=k\\frac {\\partial^2T}{\\partial y^2}+\\mu\\left(\\frac {\\partial u}{\\partial y}\\right)^2\n\n\n\nPoiseuille Flow",
     "crumbs": [
       "Home",
       "Fluids",
       "Convective Heat and Mass Transfer",
-      "Chapter 7. Turbulent and Transitional Internal Flow"
+      "Chapter 4. Internal Laminar Flow"
     ]
   },
   {
-    "objectID": "content/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.html#laminar-turbulent-flow-transition",
-    "href": "content/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.html#laminar-turbulent-flow-transition",
-    "title": "Chapter 7. Turbulent and Transitional Internal Flow",
+    "objectID": "content/cfd/index.html",
+    "href": "content/cfd/index.html",
+    "title": "Computational Fluid Dynamics",
     "section": "",
-    "text": "There are three regimes that can be distinctly defined: laminar, transition, and fully turbulent. The transition point between laminar and turbulent flows is sensitive to a multitude of parameters, most notably duct geometry, surface roughness, and the presence of any flow disturbances. The Reynolds number is the most improtant parameter in characterizing this transition process.\n\n\n\n\n\n\nNote\n\n\n\nThe characteristic length used for the Reynolds number should be related to the duct cross-sectional length. For a circular pipe, this would be the inner diameter. For non-circular geometries, this would be the hydraulic diameter, D_H, or in certain cases, the square root of the cross-sectional area.\n\n\nSurface roughness and presence of disturbances all serve to lower the critical \\mathrm{Re}_D that marks transition. Though laminar flows have been maintained up to \\mathrm{Re}_D\\simeq10^5 in ideal conditions, it is generally assumed that the flow remains laminar if \\mathrm{Re}_D\\leq2100 and fully turbulent if \\mathrm{Re}_D&gt;10^4. The transition flow regime occurs for 2100&lt;\\mathrm{Re}_D\\leq10^4.\nThe effect of surface roughness on an internal flow field is similar to that explained in Chapter 6. For \\varepsilon_s^+\\leq5, the roughness is fully submerged in the viscous sublayer, so the duct is considered hydraulically smooth and roughness has virtually no effect on friction. The skin friction coefficient C_f is only a function of the Reynolds number, \\mathrm{Re}_D. For \\varepsilon_s^+&gt;70, the surface is fully rough and protrudes past the viscous sublayer. The roughness has an overwhelming effect on the wall shear stress so C_f is only a function of \\varepsilon_s^+ and independent of \\mathrm{Re}_D. For 5&lt;\\varepsilon_s^+\\leq70, the surface is transitionally rough and the skin friction coefficient is a function of both \\varepsilon_s^+ and \\mathrm{Re}_D. Surface roughness affects heat and mass transfer primarily by increasing the total interfacial area between the fluid and wall, thereby promoting local mixing of the fluid. As a result, rougher surfaces increase the local friction factor as well as heat and mass transfer coefficients. Norris (1970) suggested the empirical correlation for Nusselt number of a rough surface.\n\n\\frac {\\mathrm{Nu}_{D_H}}{\\mathrm{Nu}_{D_H,\\mathrm{smooth}}}=\\min\\left[4^n, \\left(\\frac {C_f}{C_{f,\\mathrm{smooth}}}\\right)^n\\right]\n\\tag{1}\nwhere empirical constant n is determined using\n\n\\begin{aligned}\nn & =0.68\\mathrm{Pr}^{0.215} && \\phantom{00000} & \\mathrm{Pr} & &lt;6 \\\\\nn & =1 &&& \\mathrm{Pr} & &gt;6\n\\end{aligned}\n\\tag{2}",
+    "text": "Documents regarding the field of computational fluid dynamics.",
     "crumbs": [
       "Home",
-      "Fluids",
-      "Convective Heat and Mass Transfer",
-      "Chapter 7. Turbulent and Transitional Internal Flow"
+      "CFD"
     ]
   },
   {
-    "objectID": "content/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.html#development-of-temperature-and-concentration-profiles",
-    "href": "content/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.html#development-of-temperature-and-concentration-profiles",
-    "title": "Chapter 7. Turbulent and Transitional Internal Flow",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "The entrance length is defined as the distance it takes for the boundary layers to completely merge together and for the flow to become fully developed. Entrance lengths for turbulent flows are shorter than that of laminar flows and are significantly affected by entrance conditions, intensity of any disturbances in the flow, and surface roughness. A widely used estimate for circular and noncircular ducts is",
-    "crumbs": [
-      "Home",
-      "Fluids",
-      "Convective Heat and Mass Transfer",
-      "Chapter 7. Turbulent and Transitional Internal Flow"
-    ]
-  },
-  {
-    "objectID": "content/fluids/convective-heat-and-mass-transfer/chapters/chapter-10-natural-convection.html",
-    "href": "content/fluids/convective-heat-and-mass-transfer/chapters/chapter-10-natural-convection.html",
-    "title": "Natural Convection",
-    "section": "",
-    "text": "Macroscopic fluid motion is due to body forces, typically gravity, and is affected primarily through density changes. These changes may be influenced by differing species concentrations or temperature.\n\nFlat Plate Boundary Layers in Natural Convection\nIntroduce the isothermal compressibility coefficient and coefficient of thermal expansion as\n\n\\begin{align*}\nK & =\\frac 1{\\rho}\\left(\\frac {\\partial\\rho}{\\partial P}\\right)_T \\\\\n\\beta & =-\\frac 1{\\beta}\\left(\\frac {\\partial\\rho}{\\partial T}\\right)_P\n\\end{align*}\n\\tag{1}\nThe isothermal compressibility K term is neglected when deriving these equations, but is important enough to warrant mentioning it nevertheless. The conservation equations governing free convection is\n\n\\begin{gather*}\n\\frac {\\partial u}{\\partial x}+\\frac {\\partial v}{\\partial y}=0 \\\\\nu\\frac {\\partial u}{\\partial x}+v\\frac {\\partial u}{\\partial y}=-g_x\\beta(T-T_{\\infty})-\\frac 1{\\rho}\\left(\\frac {\\mathrm dP}{\\mathrm dx}-\\frac {\\mathrm dP_{\\infty}}{\\mathrm dx}\\right)+\\nu\\frac {\\partial^2u}{\\partial y^2} \\\\\n\\rho C_p\\left(u\\frac {\\partial T}{\\partial x}+v\\frac {\\partial T}{\\partial y}\\right)=k\\frac {\\partial^2T}{\\partial y^2}\n\\end{gather*}\n\\tag{2}",
-    "crumbs": [
-      "Home",
-      "Fluids",
-      "Convective Heat and Mass Transfer",
-      "Chapter 10. Natural Convection"
-    ]
-  },
-  {
-    "objectID": "content/cfd/computational-fluid-mechanics-and-heat-transfer/index.html",
-    "href": "content/cfd/computational-fluid-mechanics-and-heat-transfer/index.html",
-    "title": "Computational Fluid Mechanics and Heat Transfer",
-    "section": "",
-    "text": "Summary of textbook content including key concepts, equations, and important derivations. This is a work in progress!",
-    "crumbs": [
-      "Home",
-      "CFD",
-      "Computational Fluid Mechanics and Heat Transfer"
-    ]
+    "text": "This is a knowledge base geared towards engineering."
   },
   {
     "objectID": "content/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-4-application-of-numerical-methods-to-model-equations.html",
@@ -172,48 +141,100 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "content/cfd/computational-fluid-mechanics-and-heat-transfer/index.html",
+    "href": "content/cfd/computational-fluid-mechanics-and-heat-transfer/index.html",
+    "title": "Computational Fluid Mechanics and Heat Transfer",
     "section": "",
-    "text": "This is a knowledge base geared towards engineering."
-  },
-  {
-    "objectID": "content/cfd/index.html",
-    "href": "content/cfd/index.html",
-    "title": "Computational Fluid Dynamics",
-    "section": "",
-    "text": "Documents regarding the field of computational fluid dynamics.",
+    "text": "Summary of textbook content including key concepts, equations, and important derivations. This is a work in progress!",
     "crumbs": [
       "Home",
-      "CFD"
+      "CFD",
+      "Computational Fluid Mechanics and Heat Transfer"
     ]
   },
   {
-    "objectID": "content/fluids/convective-heat-and-mass-transfer/chapters/chapter-4-internal-laminar-flow.html",
-    "href": "content/fluids/convective-heat-and-mass-transfer/chapters/chapter-4-internal-laminar-flow.html",
-    "title": "Internal Laminar Flow",
+    "objectID": "content/fluids/convective-heat-and-mass-transfer/chapters/chapter-10-natural-convection.html",
+    "href": "content/fluids/convective-heat-and-mass-transfer/chapters/chapter-10-natural-convection.html",
+    "title": "Natural Convection",
     "section": "",
-    "text": "Couette Flow\nConsider two parallel plates with infinite span separated by a constant density fluid of height 2b. Each plate is a distance of b away from the centerline. Neglect buoyancy effects and assume the top plate is moving at a constant velocity of U while the bottom plate is stationary. Furthermore, assume the bottom and top plates are isothermal at temperatures of T_s and T_1 respectively. The flow considered here is called parallel flow as all streamlines are parallel. Since all fluid elements move parallel to each other, v=0 and constant density mass conservation is\n\n\\frac {\\partial u}{\\partial x}=-\\frac {\\partial v}{\\partial y}=0\n\nTherefore, the velocity profile u can only be a function of y. Assuming steady flow of a Newtonian fluid, the momentum equation in the x and y directions simplify to\n\n\\begin{align*}\nu\\cancel{\\frac {\\partial u}{\\partial x}}+\\cancel{v\\frac {\\partial u}{\\partial y}} & =-\\frac 1{\\rho}\\cancel{\\frac {\\partial p}{\\partial x}}+\\nu\\left(\\cancel{\\frac {\\partial^2u}{\\partial x^2}}+\\frac {\\partial^2u}{\\partial y^2}\\right) \\\\\nu\\cancel{\\frac {\\partial v}{\\partial x}}+\\cancel{v\\frac {\\partial v}{\\partial y}} & =-\\frac 1{\\rho}\\frac {\\partial p}{\\partial v}+\\nu\\left(\\cancel{\\frac {\\partial^2v}{\\partial x^2}}+\\cancel{\\frac {\\partial^2v}{\\partial y^2}}\\right)\n\\end{align*}\n\nMomentum in the y direction shows there is no pressure gradient in the y direction. There also cannot be a pressure gradient in the x direction as that would violate continuity. If we assumed \\frac {\\partial p}{\\partial x}\\neq0, then this would require \\frac {\\partial^2u}{\\partial x^2}\\neq0 so u=u(x,y), which violates continuity. The PDE above reduces down to\n\n\\frac {\\mathrm d^2u}{\\mathrm dy^2}=0\n\nsubject to the boundary conditions u(-b)=0 and u(b)=U. Integrating twice to determine the velocity profile gives\n\nu(y)=\\frac U2\\left(1+\\frac yb\\right)\n\\tag{1}\nThe energy equation for a constant density fluid is\n\n\\rho C_p\\left(u\\cancel{\\frac {\\partial T}{\\partial x}}+\\cancel v\\frac {\\partial T}{\\partial y}\\right)=k\\frac {\\partial^2T}{\\partial y^2}+\\mu\\left(\\frac {\\partial u}{\\partial y}\\right)^2\n\n\n\nPoiseuille Flow",
+    "text": "Macroscopic fluid motion is due to body forces, typically gravity, and is affected primarily through density changes. These changes may be influenced by differing species concentrations or temperature.\n\nFlat Plate Boundary Layers in Natural Convection\nIntroduce the isothermal compressibility coefficient and coefficient of thermal expansion as\n\n\\begin{align*}\nK & =\\frac 1{\\rho}\\left(\\frac {\\partial\\rho}{\\partial P}\\right)_T \\\\\n\\beta & =-\\frac 1{\\beta}\\left(\\frac {\\partial\\rho}{\\partial T}\\right)_P\n\\end{align*}\n\\tag{1}\nThe isothermal compressibility K term is neglected when deriving these equations, but is important enough to warrant mentioning it nevertheless. The conservation equations governing free convection is\n\n\\begin{gather*}\n\\frac {\\partial u}{\\partial x}+\\frac {\\partial v}{\\partial y}=0 \\\\\nu\\frac {\\partial u}{\\partial x}+v\\frac {\\partial u}{\\partial y}=-g_x\\beta(T-T_{\\infty})-\\frac 1{\\rho}\\left(\\frac {\\mathrm dP}{\\mathrm dx}-\\frac {\\mathrm dP_{\\infty}}{\\mathrm dx}\\right)+\\nu\\frac {\\partial^2u}{\\partial y^2} \\\\\n\\rho C_p\\left(u\\frac {\\partial T}{\\partial x}+v\\frac {\\partial T}{\\partial y}\\right)=k\\frac {\\partial^2T}{\\partial y^2}\n\\end{gather*}\n\\tag{2}",
     "crumbs": [
       "Home",
       "Fluids",
       "Convective Heat and Mass Transfer",
-      "Chapter 4. Internal Laminar Flow"
+      "Chapter 10. Natural Convection"
     ]
   },
   {
-    "objectID": "content/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-5-variable-amplitude-loading.html",
-    "href": "content/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-5-variable-amplitude-loading.html",
-    "title": "Chapter 5. Variable Amplitude Loading",
+    "objectID": "content/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.html",
+    "href": "content/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.html",
+    "title": "Chapter 7. Turbulent and Transitional Internal Flow",
     "section": "",
-    "text": "Introduction\n\n\nDefinition of Fatigue Damage\n\n\nDamage Summing Methods for Initiation\n\n\nCycle Counting\n\n\nCrack Propagation Under Variable Amplitude Loading",
+    "text": "With external flows, the freestream conditions were unaffected by the boundaries. With internal flows, however, due to their confined nature, the wall may have a significant impact on the mean flow behavior. Taking fully developed turbulent flow through a smooth pipe as an example, the flow field can be divided into three sublayers. The layer closest to the wall is the viscous sublayer and typically is defined as the region between 0\\leq y^+\\leq5. The buffer zone or transition layer extends beyond this, between 5\\leq y^+\\leq30. The outer layer occupies the rest of the flow field. Close to the wall, the effect of wall curvature is small, so the fluid is “unaware” that the flow field is confined on all sides. Similarly, the buffer zone is also marginally affected by the macroscopic flow field. Only the outer layer, where turbulence is largely present, does the physics of internal flows differ depending on the characteristics of the flow field. The following correlations for dimensionless velocity, u^+, have been developed.\n\n\\begin{aligned}\nu^+ & =y^+ &&& 0\\leq y^+ & \\leq5 \\\\\nu^+ & =5.0\\ln y^+-3.05 && \\phantom{00000} & 5\\leq y^+ & \\leq30 \\\\\nu^+ & =\\frac 1{\\kappa}\\ln y^++B &&& 30\\leq y^+ & \\leq200\n\\end{aligned}\n\nwhere \\kappa=0.4 and B=5.0.\n\n\nThere are three regimes that can be distinctly defined: laminar, transition, and fully turbulent. The transition point between laminar and turbulent flows is sensitive to a multitude of parameters, most notably duct geometry, surface roughness, and the presence of any flow disturbances. The Reynolds number is the most improtant parameter in characterizing this transition process.\n\n\n\n\n\n\nNote\n\n\n\nThe characteristic length used for the Reynolds number should be related to the duct cross-sectional length. For a circular pipe, this would be the inner diameter. For non-circular geometries, this would be the hydraulic diameter, D_H, or in certain cases, the square root of the cross-sectional area.\n\n\nSurface roughness and presence of disturbances all serve to lower the critical \\mathrm{Re}_D that marks transition. Though laminar flows have been maintained up to \\mathrm{Re}_D\\simeq10^5 in ideal conditions, it is generally assumed that the flow remains laminar if \\mathrm{Re}_D\\leq2100 and fully turbulent if \\mathrm{Re}_D&gt;10^4. The transition flow regime occurs for 2100&lt;\\mathrm{Re}_D\\leq10^4.\nThe effect of surface roughness on an internal flow field is similar to that explained in Chapter 6. For \\varepsilon_s^+\\leq5, the roughness is fully submerged in the viscous sublayer, so the duct is considered hydraulically smooth and roughness has virtually no effect on friction. The skin friction coefficient C_f is only a function of the Reynolds number, \\mathrm{Re}_D. For \\varepsilon_s^+&gt;70, the surface is fully rough and protrudes past the viscous sublayer. The roughness has an overwhelming effect on the wall shear stress so C_f is only a function of \\varepsilon_s^+ and independent of \\mathrm{Re}_D. For 5&lt;\\varepsilon_s^+\\leq70, the surface is transitionally rough and the skin friction coefficient is a function of both \\varepsilon_s^+ and \\mathrm{Re}_D. Surface roughness affects heat and mass transfer primarily by increasing the total interfacial area between the fluid and wall, thereby promoting local mixing of the fluid. As a result, rougher surfaces increase the local friction factor as well as heat and mass transfer coefficients. Norris (1970) suggested the empirical correlation for Nusselt number of a rough surface.\n\n\\frac {\\mathrm{Nu}_{D_H}}{\\mathrm{Nu}_{D_H,\\mathrm{smooth}}}=\\min\\left[4^n, \\left(\\frac {C_f}{C_{f,\\mathrm{smooth}}}\\right)^n\\right]\n\\tag{1}\nwhere empirical constant n is determined using\n\n\\begin{aligned}\nn & =0.68\\mathrm{Pr}^{0.215} && \\phantom{00000} & \\mathrm{Pr} & &lt;6 \\\\\nn & =1 &&& \\mathrm{Pr} & &gt;6\n\\end{aligned}\n\\tag{2}\n\n\n\nThe entrance length is defined as the distance it takes for the boundary layers to completely merge together and for the flow to become fully developed. Entrance lengths for turbulent flows are shorter than that of laminar flows and are significantly affected by entrance conditions, intensity of any disturbances in the flow, and surface roughness. A widely used estimate for circular and noncircular ducts is",
     "crumbs": [
       "Home",
-      "Structures",
-      "Fundamentals of Metal Fatigue Analysis",
-      "Chapter 5. Variable Amplitude Loading"
+      "Fluids",
+      "Convective Heat and Mass Transfer",
+      "Chapter 7. Turbulent and Transitional Internal Flow"
     ]
+  },
+  {
+    "objectID": "content/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.html#laminar-turbulent-flow-transition",
+    "href": "content/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.html#laminar-turbulent-flow-transition",
+    "title": "Chapter 7. Turbulent and Transitional Internal Flow",
+    "section": "",
+    "text": "There are three regimes that can be distinctly defined: laminar, transition, and fully turbulent. The transition point between laminar and turbulent flows is sensitive to a multitude of parameters, most notably duct geometry, surface roughness, and the presence of any flow disturbances. The Reynolds number is the most improtant parameter in characterizing this transition process.\n\n\n\n\n\n\nNote\n\n\n\nThe characteristic length used for the Reynolds number should be related to the duct cross-sectional length. For a circular pipe, this would be the inner diameter. For non-circular geometries, this would be the hydraulic diameter, D_H, or in certain cases, the square root of the cross-sectional area.\n\n\nSurface roughness and presence of disturbances all serve to lower the critical \\mathrm{Re}_D that marks transition. Though laminar flows have been maintained up to \\mathrm{Re}_D\\simeq10^5 in ideal conditions, it is generally assumed that the flow remains laminar if \\mathrm{Re}_D\\leq2100 and fully turbulent if \\mathrm{Re}_D&gt;10^4. The transition flow regime occurs for 2100&lt;\\mathrm{Re}_D\\leq10^4.\nThe effect of surface roughness on an internal flow field is similar to that explained in Chapter 6. For \\varepsilon_s^+\\leq5, the roughness is fully submerged in the viscous sublayer, so the duct is considered hydraulically smooth and roughness has virtually no effect on friction. The skin friction coefficient C_f is only a function of the Reynolds number, \\mathrm{Re}_D. For \\varepsilon_s^+&gt;70, the surface is fully rough and protrudes past the viscous sublayer. The roughness has an overwhelming effect on the wall shear stress so C_f is only a function of \\varepsilon_s^+ and independent of \\mathrm{Re}_D. For 5&lt;\\varepsilon_s^+\\leq70, the surface is transitionally rough and the skin friction coefficient is a function of both \\varepsilon_s^+ and \\mathrm{Re}_D. Surface roughness affects heat and mass transfer primarily by increasing the total interfacial area between the fluid and wall, thereby promoting local mixing of the fluid. As a result, rougher surfaces increase the local friction factor as well as heat and mass transfer coefficients. Norris (1970) suggested the empirical correlation for Nusselt number of a rough surface.\n\n\\frac {\\mathrm{Nu}_{D_H}}{\\mathrm{Nu}_{D_H,\\mathrm{smooth}}}=\\min\\left[4^n, \\left(\\frac {C_f}{C_{f,\\mathrm{smooth}}}\\right)^n\\right]\n\\tag{1}\nwhere empirical constant n is determined using\n\n\\begin{aligned}\nn & =0.68\\mathrm{Pr}^{0.215} && \\phantom{00000} & \\mathrm{Pr} & &lt;6 \\\\\nn & =1 &&& \\mathrm{Pr} & &gt;6\n\\end{aligned}\n\\tag{2}",
+    "crumbs": [
+      "Home",
+      "Fluids",
+      "Convective Heat and Mass Transfer",
+      "Chapter 7. Turbulent and Transitional Internal Flow"
+    ]
+  },
+  {
+    "objectID": "content/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.html#development-of-temperature-and-concentration-profiles",
+    "href": "content/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.html#development-of-temperature-and-concentration-profiles",
+    "title": "Chapter 7. Turbulent and Transitional Internal Flow",
+    "section": "",
+    "text": "The entrance length is defined as the distance it takes for the boundary layers to completely merge together and for the flow to become fully developed. Entrance lengths for turbulent flows are shorter than that of laminar flows and are significantly affected by entrance conditions, intensity of any disturbances in the flow, and surface roughness. A widely used estimate for circular and noncircular ducts is",
+    "crumbs": [
+      "Home",
+      "Fluids",
+      "Convective Heat and Mass Transfer",
+      "Chapter 7. Turbulent and Transitional Internal Flow"
+    ]
+  },
+  {
+    "objectID": "content/fluids/index.html",
+    "href": "content/fluids/index.html",
+    "title": "Fluid Mechanics",
+    "section": "",
+    "text": "Documents regarding the field of fluid mechanics.",
+    "crumbs": [
+      "Home",
+      "Fluids"
+    ]
+  },
+  {
+    "objectID": "content/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-7-multiaxial-fatigue.html",
+    "href": "content/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-7-multiaxial-fatigue.html",
+    "title": "Multiaxial Fatigue",
+    "section": "",
+    "text": "Stress states where the principal stresses change in direction or are nonproportional are called complex stress states. When these arise in notches or joint connections, their fatigue is called multiaxial fatigue. Most fatigue data is experimentally determined from uniaxial loading. The effects of multiaxial loading are known to a lesser extent and no consensus has been reached regarding the “best” multiaxial fatigue theory."
+  },
+  {
+    "objectID": "content/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-7-multiaxial-fatigue.html#stress-state",
+    "href": "content/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-7-multiaxial-fatigue.html#stress-state",
+    "title": "Multiaxial Fatigue",
+    "section": "Stress State",
+    "text": "Stress State\nThe principal stresses in multiaxial fatigue are usually nonproportional, meaning their directions change and are functions of time. Mohr’s circle is typically used to aid in understanding how the stress strain state changes over time.\n\n\n\n\n\n\nFigure 1: Mohr’s circle representation of uniaxial loading (constant strain amplitude) at three points\n\n\n\nIn Fig. 1, a specimen experiences cyclic uniaxial loading. As Mohr’s circle increases and decreases depending on the applied strain, point Y remains on the \\varepsilon axis. That is, the principal stresses are proportional as their directions do not change over time.\n\n\n\n\n\n\n\n\nNonproportional load path\n\n\n\n\n\n\n\n\n\nMohr’s circle representation at eight points\n\n\n\n\n\n\nFigure 2: Mohr’s circle representation of combined axial and torsional strain loading\n\n\n\nHowever, Fig. 2 shows a combined axial and torsional loading case in one cycle. Since the ratio between the shear strain, \\gamma/\\sqrt 3, and axial strain, \\varepsilon, vary across the cycle, the loading is nonproportional. The direction of the principal stresses and strains change across all eight points and point Y is no longer on the \\varepsilon axis at all times.\n\n\n\n\n\n\nWarning\n\n\n\n\n\nBlindly applying concepts derived from uniaxial fatigue theory to multiaxial cases may result in significant errors. An example of this is comparing combined axial and torsional loading to bending and torsional loading.\nGenerally, a valid assumption for proportional loading is a negligible phase difference between normal and shear stresses and strains (i.e., as normal stress and strain change, shear stress and strain change instantaneously).\nHowever, experimental data has shown that combined out-of-phase loading is more damaging than in-phase loading. A phase angle of 90^{\\circ} gives the lowest fatigue life while in-phase produced the highest. Assuming a negligible phase difference from uniaxial fatigue in multiaxial fatigue will result in a non-conservative analysis.\n\n\n\nWhen comparing proportional and nonproportional tests, either the maximum applied shear strain or the total cycle’s maximum shear strain may be kept constant. The former is the shear strain under the applied load and the latter is the shear strain attained under no normal strain conditions.\n\n\n\n\n\n\nFigure 3: Applied vs. total shear strain in proportional and nonproportional loading paths\n\n\n\nFig. 3 shows the same proportional loading path and two different nonproportional loading path, both with a phase angle of 90^{\\circ}. In Fig. 3b, the nonproportional load path has the same applied shear strain as the proportional one (point C). However, this is less than the total cycle’s maximum shear strain in Fig. 3c."
+  },
+  {
+    "objectID": "content/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-7-multiaxial-fatigue.html#cracking-observations",
+    "href": "content/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-7-multiaxial-fatigue.html#cracking-observations",
+    "title": "Multiaxial Fatigue",
+    "section": "Cracking Observations",
+    "text": "Cracking Observations\nCyclic loading results in fatigue crack nucleation primarily through to-and-fro slip. This mechanism occurs as a result of grain slippage along the slip plane. As the shear stress and strain is applied, the material’s grains slip in-plane on the plane of maximum shear strain. This results in a weakened band of material called slip bands. When the cyclic load is reversed, the grains slip in the opposite direction and the cycle is repeated. This to-and-fro motion eventually pushes a thin layer of material out of the local surface (extrusion) or creates a tiny crevice (intrusion). These features act as microscopic stress concentrators that serve as hotspots for material separation.\nForsyth (1961) noted that fatigue crack growth could be divided into a Stage I and Stage II growth regime. Stage I includes nucleation and early growth, whereas Stage II includes propagation in the direction perpendicular to the maximum principal stress range.\nBoth normal and shear stresses and strains play an important role in Stage I growth. Normal stresses and strains inhibit and reduce the amount of Stage I growth."
   },
   {
     "objectID": "content/structures/index.html",
