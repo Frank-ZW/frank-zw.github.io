@@ -305,8 +305,12 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#equivalent-stressstrain-approaches" id="toc-equivalent-stressstrain-approaches" class="nav-link" data-scroll-target="#equivalent-stressstrain-approaches">Equivalent Stress/Strain Approaches</a>
   <ul class="collapse">
-  <li><a href="#sines-model-and-similar-approaches" id="toc-sines-model-and-similar-approaches" class="nav-link" data-scroll-target="#sines-model-and-similar-approaches">Sines’ Model and Similar Approaches</a></li>
+  <li><a href="#maximum-principal-stressstrain" id="toc-maximum-principal-stressstrain" class="nav-link" data-scroll-target="#maximum-principal-stressstrain">Maximum Principal Stress/Strain</a></li>
+  <li><a href="#maximum-shear-stressstrain" id="toc-maximum-shear-stressstrain" class="nav-link" data-scroll-target="#maximum-shear-stressstrain">Maximum Shear Stress/Strain</a></li>
+  <li><a href="#octahedral-criteria" id="toc-octahedral-criteria" class="nav-link" data-scroll-target="#octahedral-criteria">Octahedral Criteria</a></li>
+  <li><a href="#torsional-strain-life-curve" id="toc-torsional-strain-life-curve" class="nav-link" data-scroll-target="#torsional-strain-life-curve">Torsional Strain-Life Curve</a></li>
   </ul></li>
+  <li><a href="#sines-model-and-similar-approaches" id="toc-sines-model-and-similar-approaches" class="nav-link" data-scroll-target="#sines-model-and-similar-approaches">Sines’ Model and Similar Approaches</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -389,21 +393,18 @@ Figure&nbsp;2: Mohr’s circle representation of combined axial and torsional st
 </div>
 <p>However, Fig. <a href="#fig-mohr-circle-multiaxial-loading" class="quarto-xref">2</a> shows a combined axial and torsional loading case in one cycle. Since the ratio between the shear strain, <span class="math inline">\gamma/\sqrt 3</span>, and axial strain, <span class="math inline">\varepsilon</span>, vary across the cycle, the loading is nonproportional. The direction of the principal stresses and strains change across all eight points and point <span class="math inline">Y</span> is no longer on the <span class="math inline">\varepsilon</span> axis at all times.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 Warning
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Blindly applying concepts derived from uniaxial fatigue theory to multiaxial cases may result in significant errors. An example of this is comparing combined axial and torsional loading to bending and torsional loading.</p>
 <p>Generally, a valid assumption for proportional loading is a negligible phase difference between normal and shear stresses and strains (i.e., as normal stress and strain change, shear stress and strain change instantaneously).</p>
 <p>However, experimental data has shown that combined out-of-phase loading is more damaging than in-phase loading. A phase angle of <span class="math inline">90^{\circ}</span> gives the lowest fatigue life while in-phase produced the highest. Assuming a negligible phase difference from uniaxial fatigue in multiaxial fatigue will result in a non-conservative analysis.</p>
-</div>
 </div>
 </div>
 <p>When comparing proportional and nonproportional tests, either the <strong>maximum applied shear strain</strong> or the <strong>total cycle’s maximum shear strain</strong> may be kept constant. The former is the shear strain under the applied load and the latter is the shear strain attained under no normal strain conditions.</p>
@@ -438,36 +439,33 @@ Figure&nbsp;3: Applied vs.&nbsp;total shear strain in proportional and nonpropor
 <li><p>Octahedral (von Mises) criteria, based on distortion energy</p></li>
 </ol>
 <p>These theories rely on a linear stress-strain relation, meaning they are limited to the <strong>high cycle fatigue</strong> (HCF) regime where the stresses are mostly elastic. For each theory, <span class="math inline">\sigma_i</span> and <span class="math inline">\varepsilon_i</span> denotes principal stress and strain, and are ordered so that <span class="math inline">\sigma_1\geq\sigma_2\geq\sigma_3</span> and <span class="math inline">\varepsilon_1\geq\varepsilon_2\geq\varepsilon_3</span>. Additionally, define <span class="math inline">\sigma_e</span> and <span class="math inline">\varepsilon_e</span> as the effective stress and strain.</p>
-<p><strong>Maximum Principal Stress/Strain:</strong></p>
-<p><span id="eq-max-principal-stress-yield-theory"><span class="math display">
-\begin{aligned}
+<section id="maximum-principal-stressstrain" class="level3">
+<h3 class="anchored" data-anchor-id="maximum-principal-stressstrain">Maximum Principal Stress/Strain</h3>
+<p><span class="math display">\begin{aligned}
 \sigma_e &amp; =\sigma_1 \\
 \varepsilon_e &amp; =\varepsilon_1
-\end{aligned}
-\tag{1}</span></span></p>
-<p><strong>Maximum Shear Stress/Strain:</strong></p>
+\end{aligned}</span> {#eq-max-principal-stress-yield-theory}</p>
+</section>
+<section id="maximum-shear-stressstrain" class="level3">
+<h3 class="anchored" data-anchor-id="maximum-shear-stressstrain">Maximum Shear Stress/Strain</h3>
 <p>Also called the Tresca criteria</p>
-<p><span id="eq-tresca-yield-theory"><span class="math display">
-\begin{aligned}
+<p><span class="math display">\begin{aligned}
 \tau_e &amp; =\left|\frac {\sigma_1-\sigma_3}2\right| \\
 \frac {\gamma_e}2=\frac {(1+\nu)\varepsilon_e}2 &amp; =\left|\frac {\varepsilon_1-\varepsilon_3}2\right|
-\end{aligned}
-\tag{2}</span></span></p>
-<p><strong>Octahedral Criteria:</strong></p>
+\end{aligned}</span> {#eq-tresca-yield-theory}</p>
+</section>
+<section id="octahedral-criteria" class="level3">
+<h3 class="anchored" data-anchor-id="octahedral-criteria">Octahedral Criteria</h3>
 <p>Also called the von Mises criteria, it is based off the distortion energy exceeding the amount needed for yielding.</p>
-<p><span id="eq-von-mises-yield-theory-resolved"><span class="math display">
-\begin{aligned}
+<p><span class="math display">\begin{aligned}
 \sigma_e &amp; =\sqrt{\frac 12\left[(\sigma_1-\sigma_2)^2+(\sigma_2-\sigma_3)^2+(\sigma_3-\sigma_1)^2\right]} \\
 \varepsilon_e &amp; =\beta\sqrt{(\varepsilon_1-\varepsilon_2)^2+(\varepsilon_2-\varepsilon_3)^2+(\varepsilon_3-\varepsilon_1)^2}
-\end{aligned}
-\tag{3}</span></span></p>
-<p>where <span class="math inline">\beta=\frac 1{(1+\nu)\sqrt2}</span> and <span class="math inline">\nu</span> is the Poisson ratio. If the principal stresses and strains are unresolved, then Eqn. (<a href="#eq-von-mises-yield-theory-resolved" class="quarto-xref">3</a>) is also</p>
-<p><span id="eq-von-mises-yield-theory-unresolved"><span class="math display">
-\begin{aligned}
+\end{aligned}</span> {#eq-von-mises-yield-theory-resolved}</p>
+<p>where <span class="math inline">\beta=\frac 1{(1+\nu)\sqrt2}</span> and <span class="math inline">\nu</span> is the Poisson ratio. If the principal stresses and strains are unresolved, then Eqn. (<strong>?@eq-von-mises-yield-theory-resolved</strong>) is also</p>
+<p><span class="math display">\begin{aligned}
 \sigma_e &amp; =\sqrt{\frac 12\left[(\sigma_x-\sigma_y)^2+(\sigma_y-\sigma_z)^2+(\sigma_z-\sigma_x)^2+6\left(\tau_{xy}^2+\tau_{yz}^2+\tau_{xz}^2\right)\right]} \\
 \varepsilon_e &amp; =\beta\sqrt{(\varepsilon_x-\varepsilon_y)^2+(\varepsilon_y-\varepsilon_z)^2+(\varepsilon_x-\varepsilon_z)^2+6\left[\left(\frac {\gamma_{xy}}2\right)^2+\left(\frac {\gamma_{yz}}2\right)^2+\left(\frac {\gamma_{xz}}2\right)^2\right]}
-\end{aligned}
-\tag{4}</span></span></p>
+\end{aligned}</span> {#eq-von-mises-yield-theory-unresolved}</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Poisson's Ratio for Elastic-Plastic Materials">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -480,42 +478,36 @@ Figure&nbsp;3: Applied vs.&nbsp;total shear strain in proportional and nonpropor
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Poisson’s ratio, <span class="math inline">\nu</span>, varies as the load is applied and stress state changes. In fully elastic cases, <span class="math inline">\nu=3</span>, whereas for fully plastic cases, <span class="math inline">\nu=0.5</span>. For elastic-plastic cases across the full spectrum, an equivalent Poisson’s ratio, <span class="math inline">\nu^*</span>, is used.</p>
-<p><span id="eq-poisson-ratio-elastic-plastic"><span class="math display">
-\nu^*=\frac {\nu_e\varepsilon_e+\nu_p\varepsilon_p}{\varepsilon_t}
-\tag{5}</span></span></p>
+<p>Poisson’s ratio, <span class="math inline">\nu</span>, varies as the load is applied and stress state changes. In fully elastic cases, <span class="math inline">\nu=0.3</span>, whereas for fully plastic cases, <span class="math inline">\nu=0.5</span>. For elastic-plastic cases across the full spectrum, an equivalent Poisson’s ratio, <span class="math inline">\nu^*</span>, is used.</p>
+<p><span class="math display">\nu^*=\frac {\nu_e\varepsilon_e+\nu_p\varepsilon_p}{\varepsilon_t}</span> {#eq-poisson-ratio-elastic-plastic}</p>
 <p>where <span class="math inline">\nu_e</span> and <span class="math inline">\nu_p</span> are the elastic and plastic Poisson’s ratio, <span class="math inline">\varepsilon_e</span> and <span class="math inline">\varepsilon_p</span> are the elastic and plastic strain, and <span class="math inline">\varepsilon_t</span> is the total strain. Generally, <span class="math inline">\nu_e=\frac 13</span> and <span class="math inline">\nu_p=\frac 13</span>.</p>
 </div>
 </div>
 </div>
-<p>Equations (<a href="#eq-max-principal-stress-yield-theory" class="quarto-xref">1</a>) through (<a href="#eq-von-mises-yield-theory-unresolved" class="quarto-xref">4</a>) can be used to develop a torsional strain-life curve in terms of uniaxial fatigue properties.</p>
-<p><span id="eq-torsional-strain-life-general"><span class="math display">
-\frac {\Delta\gamma}2=\frac {\tau_f'}G(2N_f)^b+\gamma_f'(2N_f)^c
-\tag{6}</span></span></p>
-<p><strong>Maximum Principal Stress/Strain:</strong></p>
-<p>Using Eqn. (<a href="#eq-max-principal-stress-yield-theory" class="quarto-xref">1</a>) for stress, then <span class="math inline">\sigma_e</span> is</p>
-<p><span class="math display">
-\begin{aligned}
+</section>
+<section id="torsional-strain-life-curve" class="level3">
+<h3 class="anchored" data-anchor-id="torsional-strain-life-curve">Torsional Strain-Life Curve</h3>
+<p>Equations (<strong>?@eq-max-principal-stress-yield-theory</strong>) through (<strong>?@eq-von-mises-yield-theory-unresolved</strong>) can be used to develop a torsional strain-life curve in terms of uniaxial fatigue properties.</p>
+<p><span class="math display">\frac {\Delta\gamma}2=\frac {\tau_f'}G(2N_f)^b+\gamma_f'(2N_f)^c</span> {#eq-torsional-strain-life-general}</p>
+<section id="maximum-principal-stressstrain-1" class="level4">
+<h4 class="anchored" data-anchor-id="maximum-principal-stressstrain-1">Maximum Principal Stress/Strain</h4>
+<p>Using Eqn. (<strong>?@eq-max-principal-stress-yield-theory</strong>) for stress, then <span class="math inline">\sigma_e</span> is</p>
+<p><span class="math display">\begin{aligned}
 \mathrm{Tension}\qquad\qquad\sigma_e &amp; =\sigma_1 \\
 \mathrm{Torsion}\qquad\qquad\sigma_e &amp; =\sigma_1=\tau
-\end{aligned}
-</span></p>
+\end{aligned}</span></p>
 <p>And for strain</p>
-<p><span class="math display">
-\begin{aligned}
+<p><span class="math display">\begin{aligned}
 \mathrm{Tension}\qquad\qquad\varepsilon_e &amp; =\varepsilon_1 \\
 \mathrm{Torsion}\qquad\qquad\varepsilon_e &amp; =\varepsilon_1=\dfrac {\gamma}2
-\end{aligned}
-</span></p>
-<p>The torsional strain-life equation, Eqn. (<a href="#eq-torsional-strain-life-general" class="quarto-xref">6</a>) becomes</p>
-<p><span id="eq-torsional-strain-life-max-principal"><span class="math display">
-\frac {\Delta\gamma}2=\frac {\sigma_f'}G(2N_f)^b+2\varepsilon_f'(2N_f)^c
-\tag{7}</span></span></p>
-<p><strong>Maximum Shear Stress/Strain:</strong></p>
+\end{aligned}</span></p>
+<p>The torsional strain-life equation, Eqn. (<strong>?@eq-torsional-strain-life-general</strong>) becomes</p>
+<p><span class="math display">\frac {\Delta\gamma}2=\frac {\sigma_f'}G(2N_f)^b+2\varepsilon_f'(2N_f)^c</span> {#eq-torsional-strain-life-max-principal}</p>
+</section>
+<section id="maximum-shear-stressstrain-1" class="level4">
+<h4 class="anchored" data-anchor-id="maximum-shear-stressstrain-1">Maximum Shear Stress/Strain</h4>
 <p>The torsional strain-life equation is</p>
-<p><span id="eq-torsional-strain-life-tresca"><span class="math display">
-\frac {\Delta\gamma}2=\frac {\sigma_f'}{2G}(2N_f)^b+(1+\nu)\varepsilon_f'(2N_f)^c
-\tag{8}</span></span></p>
+<p><span class="math display">\frac {\Delta\gamma}2=\frac {\sigma_f'}{2G}(2N_f)^b+(1+\nu)\varepsilon_f'(2N_f)^c</span> {#eq-torsional-strain-life-tresca}</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Derivation of Torsional Strain-Life Equation for Tresca's Criterion">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -529,40 +521,64 @@ Figure&nbsp;3: Applied vs.&nbsp;total shear strain in proportional and nonpropor
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The stress state from the maximum shear stress or strain criteria is</p>
-<p><span class="math display">
-\begin{aligned}
+<p><span class="math display">\begin{aligned}
 \mathrm{Tension}\qquad\qquad\tau_e &amp; =\dfrac {\sigma_1}2 \\
 \mathrm{Torsion}\qquad\qquad\tau_e &amp; =\tau
-\end{aligned}
-</span></p>
+\end{aligned}</span></p>
 <p>Therefore, <span class="math inline">\tau_f'=\frac {\sigma_f'}2</span>. For the torsional strain, use <span class="math inline">\varepsilon_3=-\nu\varepsilon_1</span> in tension to get</p>
-<p><span class="math display">
-\begin{aligned}
+<p><span class="math display">\begin{aligned}
 \mathrm{Tension}\qquad\qquad\dfrac {\gamma_e}2 &amp; =\dfrac {\varepsilon_1-\varepsilon_3}2=\frac {(1+\nu)\varepsilon_1}2 \\
 \mathrm{Torsion}\qquad\qquad\dfrac {\gamma_e}2 &amp; =\dfrac {\varepsilon_1-\varepsilon_3}2=\dfrac {\gamma}2
-\end{aligned}
-</span></p>
+\end{aligned}</span></p>
 <p>Putting everything together, <span class="math inline">\tau_f'</span> and <span class="math inline">\gamma_f'</span> are</p>
-<p><span class="math display">
-\begin{aligned}
+<p><span class="math display">\begin{aligned}
 \tau_f' &amp; =\frac {\sigma_f'}2 \\
 \gamma_f' &amp; =(1+\nu)\varepsilon_f'
-\end{aligned}
-</span></p>
+\end{aligned}</span></p>
 </div>
 </div>
 </div>
-<p><strong>Octahedral Criteria:</strong></p>
-<p>Using von Mises on Eqn. (<a href="#eq-torsional-strain-life-general" class="quarto-xref">6</a>)</p>
-<p><span id="eq-torsional-strain-life-von-mises"><span class="math display">
-\frac {\Delta\gamma}2=\frac {\sigma_f'}{G\sqrt3}(2N_f)^b+\varepsilon_f'\sqrt3(2N_f)^c
-\tag{9}</span></span></p>
-<p>Equivalent stress/strain approaches are often used as first approximations in applications as they have a large amount of fatigue data available.</p>
-<section id="sines-model-and-similar-approaches" class="level3">
-<h3 class="anchored" data-anchor-id="sines-model-and-similar-approaches">Sines’ Model and Similar Approaches</h3>
-
-
 </section>
+<section id="octahedral-criteria-1" class="level4">
+<h4 class="anchored" data-anchor-id="octahedral-criteria-1">Octahedral Criteria</h4>
+<p>Using von Mises on Eqn. (<strong>?@eq-torsional-strain-life-general</strong>)</p>
+<p><span class="math display">\frac {\Delta\gamma}2=\frac {\sigma_f'}{G\sqrt3}(2N_f)^b+\varepsilon_f'\sqrt3(2N_f)^c</span> {#eq-torsional-strain-life-von-mises}</p>
+<p>Equivalent stress/strain approaches are often used as first approximations in applications as they have a large amount of fatigue data available.</p>
+</section>
+</section>
+</section>
+<section id="sines-model-and-similar-approaches" class="level2">
+<h2 class="anchored" data-anchor-id="sines-model-and-similar-approaches">Sines’ Model and Similar Approaches</h2>
+<p>Sines investigated the influence of static mean stresses on the planes of maximum shear stresses. Through experimentation, he observed that</p>
+<ol type="1">
+<li><p>A torsional mean stress <strong>did not</strong> affect the fatigue life under alternating torsion or bending stresses.</p></li>
+<li><p>A tensile mean stress <strong>reduced</strong> the fatigue life under alternating torsional loading.</p></li>
+<li><p>A tensile mean stress <strong>reduced</strong> the fatigue life under cyclic axial loading (tension-compression loading) while a compressive mean stress <strong>increased</strong> the fatigue life.</p></li>
+</ol>
+<p>From experimental data, Sines developed the model</p>
+<p><span id="eq-sines-model"><span class="math display">
+\begin{aligned}
+\frac 13\sqrt{(P_1-P_3)^2+(P_2-P_3)^2+(P_1-P_3)^2}+\alpha(S_x+S_y+S_z)\leq A
+\end{aligned}
+\tag{1}</span></span></p>
+<p>where <span class="math inline">P_1</span>, <span class="math inline">P_2</span>, and <span class="math inline">P_3</span> are the amplitudes of the alternating principal stresses; <span class="math inline">S_x</span>, <span class="math inline">S_y</span>, and <span class="math inline">S_z</span> are the orthogonal mean stresses; <span class="math inline">A</span> is a constant proportional to the reversed fatigue strength; and <span class="math inline">\alpha</span> is a constant that gives the variation of the allowed stress range with the static stress. Any coordinate system can be used to report the orthogonal static mean stresses and parameters <span class="math inline">A</span> and <span class="math inline">\alpha</span> are material properties determined for a given life.</p>
+<p>The first term in Eqn. (<a href="#eq-sines-model" class="quarto-xref">1</a>) is the octahedral shear stress, <span class="math inline">\tau_{\mathrm{oct}}</span>, and it averages the effect of shear stress on many differently oriented slip planes if present. The second term in Eqn. (<a href="#eq-sines-model" class="quarto-xref">1</a>) accounts for hydrostatic stress.</p>
+<p>\vskip{}</p>
+<p>For a given “class” of loading, <span class="math inline">A</span> and <span class="math inline">\alpha</span> can be determined from Eqn. (<a href="#eq-sines-model" class="quarto-xref">1</a>). For completely reversed uniaxial loading, <span class="math inline">\sigma_{\mathrm{min}}=-\sigma_{\mathrm{max}}</span> and <span class="math inline">R=-1</span>. Since the loading is uniaxial, assume the amplitude of the reversed axial stress, <span class="math inline">f_1</span> is in the direction of <span class="math inline">P_1</span> so <span class="math inline">P_2=P_3=0</span>. Additionally, since <span class="math inline">\sigma_{\mathrm m}=0</span>, then <span class="math inline">S_x=S_y=S_z=0</span>. Therefore</p>
+<p><span class="math display">
+A=\frac {P_1\sqrt2}3=\frac {f_1\sqrt2}3
+</span></p>
+<p>Now, if the loading is from zero to max, <span class="math inline">R=0</span> and <span class="math inline">\sigma_{\mathrm{min}}=0</span> now. This is still the same “loading class” as both <span class="math inline">R=0</span> and <span class="math inline">R=-1</span> apply for uniaxial loads. This time, assuming the <span class="math inline">x</span> axis is axial, then <span class="math inline">S_x'=P_1'</span> and <span class="math inline">P_2'=P_3'=S_y'=S_z'=0</span>. Eqn. (<a href="#eq-sines-model" class="quarto-xref">1</a>) becomes</p>
+<p><span class="math display">
+\frac {P_1'\sqrt2}3=A-\alpha P_1'
+</span></p>
+<p>Solving for <span class="math inline">\alpha</span> and substituting <span class="math inline">A=\frac {\sqrt2}3f_1</span> gives</p>
+<p><span class="math display">
+\alpha=\frac A{P_1'}-\frac {\sqrt2}3=\frac {\sqrt2}3\left(\frac {f_1}{f_1'}-1\right)
+</span></p>
+<p>where <span class="math inline">f_1'</span> is the amplitude of the fluctuating stress that would cause final failure at the same life as <span class="math inline">f_1</span>.</p>
+
+
 </section>
 </section>
 
