@@ -1,7 +1,5 @@
 ---
-title: "Fundamentals of Engineering"
+title: Fundamentals of Engineering
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Technical knowledge base for engineering fundamentals ranging from fluids and thermodynamics to propulsion and injector design.
