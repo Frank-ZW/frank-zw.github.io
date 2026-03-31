@@ -3,51 +3,54 @@ project:
   output-dir: docs
 
 website:
-  title: Fundamentals of Engineering
+  title: Frank's Engineering Notebook
   bread-crumbs: false
   navbar:
+    background: primary
     left:
       - text: Home
         href: index.qmd
       - text: Knowledge Base
         href: knowledge-base/index.qmd
+      - text: Digital Notes
+        href: notes/index.qmd
+      - text: Projects
+        href: projects/index.qmd
   sidebar:
-    style: floating
-    search: true
-    contents:
-      - section: CFD
-        href: knowledge-base/cfd/index.qmd
-        contents:
-          - section: Computational Fluid Mechanics and Heat Transfer
-            href: knowledge-base/cfd/computational-fluid-mechanics-and-heat-transfer/index.qmd
-            contents:
-              - text: Chapter 4. Application of Numerical Methods to Model Equations
-                href: knowledge-base/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-4-application-of-numerical-methods-to-model-equations.qmd
-              - text: Chapter 6. Numerical Methods for Inviscid Flows
-                href: knowledge-base/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-6-numerical-methods-for-inviscid-flows.qmd
-      - section: Fluids
-        href: knowledge-base/fluids/index.qmd
-        contents:
-          - section: Convective Heat and Mass Transfer
-            href: knowledge-base/fluids/convective-heat-and-mass-transfer/index.qmd
-            contents:
-              - text: Chapter 4. Internal Laminar Flow
-                href: knowledge-base/fluids/convective-heat-and-mass-transfer/chapters/chapter-4-internal-laminar-flow.qmd
-              - text: Chapter 7. Turbulent and Transitional Internal Flow
-                href: knowledge-base/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.qmd
-              - text: Chapter 10. Natural Convection
-                href: knowledge-base/fluids/convective-heat-and-mass-transfer/chapters/chapter-10-natural-convection.qmd
-      - section: Structures
-        href: knowledge-base/structures/index.qmd
-        contents:
-          - section: Fundamentals of Metal Fatigue Analysis
-            href: knowledge-base/structures/fundamentals-of-metal-fatigue-analysis/index.qmd
-            contents:
-              - text: Chapter 5. Variable Amplitude Loading
-                href: knowledge-base/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-5-variable-amplitude-loading.qmd
-              - text: Chapter 7. Multiaxial Fatigue
-                href: knowledge-base/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-7-multiaxial-fatigue.qmd
-
+    - id: knowledge-base
+      title: Knowledge Base
+      style: floating
+      collapse-level: 1
+      contents:
+        - section: CFD
+          href: knowledge-base/cfd/index.qmd
+          contents:
+            - text: Chapter 4. Application of Numerical Methods to Model Equations
+              href: knowledge-base/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-4-application-of-numerical-methods-to-model-equations.qmd
+            - text: Chapter 6. Numerical Methods for Inviscid Flows
+              href: knowledge-base/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-6-numerical-methods-for-inviscid-flows.qmd
+        - section: Fluids
+          href: knowledge-base/fluids/index.qmd
+          contents:
+            - section: Convective Heat and Mass Transfer
+              href: knowledge-base/fluids/convective-heat-and-mass-transfer/index.qmd
+              contents:
+                - text: Chapter 4. Internal Laminar Flow
+                  href: knowledge-base/fluids/convective-heat-and-mass-transfer/chapters/chapter-4-internal-laminar-flow.qmd
+                - text: Chapter 7. Turbulent and Transitional Internal Flow
+                  href: knowledge-base/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.qmd
+                - text: Chapter 10. Natural Convection
+                  href: knowledge-base/fluids/convective-heat-and-mass-transfer/chapters/chapter-10-natural-convection.qmd
+        - section: Structures
+          href: knowledge-base/structures/index.qmd
+          contents:
+            - section: Fundamentals of Metal Fatigue Analysis
+              href: knowledge-base/structures/fundamentals-of-metal-fatigue-analysis/index.qmd
+              contents:
+                - text: Chapter 5. Variable Amplitude Loading
+                  href: knowledge-base/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-5-variable-amplitude-loading.qmd
+                - text: Chapter 7. Multiaxial Fatigue
+                  href: knowledge-base/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-7-multiaxial-fatigue.qmd
 format:
   html:
     theme: cosmo

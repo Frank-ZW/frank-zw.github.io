@@ -1,5 +1,5 @@
 ---
-title: "Computational Fluid Mechanics and Heat Transfer"
+title: Computational Fluid Mechanics and Heat Transfer
 ---
 
 Summary of textbook content including key concepts, equations, and important derivations. This is a work in progress!

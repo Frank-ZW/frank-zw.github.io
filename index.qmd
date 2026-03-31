@@ -1,5 +1,5 @@
 ---
-title: Frank Wei
+title: Frank's Engineering Notebook
 ---
 
 Frank's personal website, includes knowledge base, personal projects, course notes from Georgia Tech (2021 - 2026), etc.
