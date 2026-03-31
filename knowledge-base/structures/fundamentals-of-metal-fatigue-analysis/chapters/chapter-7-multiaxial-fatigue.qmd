@@ -231,7 +231,6 @@ where $P_1$, $P_2$, and $P_3$ are the amplitudes of the alternating principal st
 The first term in Eqn. (@eq-sines-model) is the octahedral shear stress, $\tau_{\mathrm{oct}}$, and it averages the effect of shear stress on many differently oriented slip planes if present. The second term in Eqn. (@eq-sines-model) accounts for hydrostatic stress.
 
 For a given "class" of loading, $A$ and $\alpha$ can be determined from Eqn. (@eq-sines-model). For completely reversed uniaxial loading, $\sigma_{\mathrm{min}}=-\sigma_{\mathrm{max}}$ and $R=-1$. Since the loading is uniaxial, assume the amplitude of the reversed axial stress, $f_1$ is in the direction of $P_1$ so $P_2=P_3=0$. Additionally, since $\sigma_{\mathrm m}=0$, then $S_x=S_y=S_z=0$. Therefore
-
 $$
 A=\frac {P_1\sqrt2}3=\frac {f_1\sqrt2}3
 $$

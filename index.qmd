@@ -1,5 +1,5 @@
 ---
-title: Fundamentals of Engineering
+title: Frank Wei
 ---
 
-Technical knowledge base for engineering fundamentals ranging from fluids and thermodynamics to propulsion and injector design.
+Frank's personal website, includes knowledge base, personal projects, course notes from Georgia Tech (2021 - 2026), etc.

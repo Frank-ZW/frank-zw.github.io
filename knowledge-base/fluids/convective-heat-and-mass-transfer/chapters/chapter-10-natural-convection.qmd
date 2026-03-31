@@ -6,21 +6,21 @@ Macroscopic fluid motion is due to body forces, typically gravity, and is affect
 
 # Flat Plate Boundary Layers in Natural Convection
 
-Introduce the isothermal compressibility coefficient and coefficient of thermal expansion as
+Introduce the isothermal compressibility coefficient, $K$, and coefficient of thermal expansion, $\beta$.
 
 $$
-\begin{align*}
+\begin{aligned}
 K & =\frac 1{\rho}\left(\frac {\partial\rho}{\partial P}\right)_T \\
 \beta & =-\frac 1{\beta}\left(\frac {\partial\rho}{\partial T}\right)_P
-\end{align*}
+\end{aligned}
 $$ {#eq-coefficient-definitions}
 
-The isothermal compressibility $K$ term is neglected when deriving these equations, but is important enough to warrant mentioning it nevertheless. The conservation equations governing free convection is
+The compressibility term, $K$, is neglected during the derivation, but is an important enough quantity to warrant mentioning. The conservation equations governing free convection are
 
 $$
-\begin{gather*}
+\begin{gathered}
 \frac {\partial u}{\partial x}+\frac {\partial v}{\partial y}=0 \\
 u\frac {\partial u}{\partial x}+v\frac {\partial u}{\partial y}=-g_x\beta(T-T_{\infty})-\frac 1{\rho}\left(\frac {\mathrm dP}{\mathrm dx}-\frac {\mathrm dP_{\infty}}{\mathrm dx}\right)+\nu\frac {\partial^2u}{\partial y^2} \\
 \rho C_p\left(u\frac {\partial T}{\partial x}+v\frac {\partial T}{\partial y}\right)=k\frac {\partial^2T}{\partial y^2}
-\end{gather*}
+\end{gathered}
 $$ {#eq-conservation-equations}

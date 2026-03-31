@@ -9,50 +9,48 @@ website:
     left:
       - text: Home
         href: index.qmd
-      - text: About
-        href: about.qmd
+      - text: Knowledge Base
+        href: knowledge-base/index.qmd
   sidebar:
     style: floating
     search: true
     contents:
       - section: CFD
-        href: content/cfd/index.qmd
+        href: knowledge-base/cfd/index.qmd
         contents:
           - section: Computational Fluid Mechanics and Heat Transfer
-            href: content/cfd/computational-fluid-mechanics-and-heat-transfer/index.qmd
+            href: knowledge-base/cfd/computational-fluid-mechanics-and-heat-transfer/index.qmd
             contents:
               - text: Chapter 4. Application of Numerical Methods to Model Equations
-                href: content/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-4-application-of-numerical-methods-to-model-equations.qmd
+                href: knowledge-base/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-4-application-of-numerical-methods-to-model-equations.qmd
               - text: Chapter 6. Numerical Methods for Inviscid Flows
-                href: content/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-6-numerical-methods-for-inviscid-flows.qmd
+                href: knowledge-base/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-6-numerical-methods-for-inviscid-flows.qmd
       - section: Fluids
-        href: content/fluids/index.qmd
+        href: knowledge-base/fluids/index.qmd
         contents:
           - section: Convective Heat and Mass Transfer
-            href: content/fluids/convective-heat-and-mass-transfer/index.qmd
+            href: knowledge-base/fluids/convective-heat-and-mass-transfer/index.qmd
             contents:
               - text: Chapter 4. Internal Laminar Flow
-                href: content/fluids/convective-heat-and-mass-transfer/chapters/chapter-4-internal-laminar-flow.qmd
+                href: knowledge-base/fluids/convective-heat-and-mass-transfer/chapters/chapter-4-internal-laminar-flow.qmd
               - text: Chapter 7. Turbulent and Transitional Internal Flow
-                href: content/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.qmd
+                href: knowledge-base/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.qmd
               - text: Chapter 10. Natural Convection
-                href: content/fluids/convective-heat-and-mass-transfer/chapters/chapter-10-natural-convection.qmd
+                href: knowledge-base/fluids/convective-heat-and-mass-transfer/chapters/chapter-10-natural-convection.qmd
       - section: Structures
-        href: content/structures/index.qmd
+        href: knowledge-base/structures/index.qmd
         contents:
           - section: Fundamentals of Metal Fatigue Analysis
-            href: content/structures/fundamentals-of-metal-fatigue-analysis/index.qmd
+            href: knowledge-base/structures/fundamentals-of-metal-fatigue-analysis/index.qmd
             contents:
               - text: Chapter 5. Variable Amplitude Loading
-                href: content/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-5-variable-amplitude-loading.qmd
+                href: knowledge-base/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-5-variable-amplitude-loading.qmd
               - text: Chapter 7. Multiaxial Fatigue
-                href: content/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-7-multiaxial-fatigue.qmd
+                href: knowledge-base/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-7-multiaxial-fatigue.qmd
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
+    theme: cosmo
     grid:
       sidebar-width: 300px
       body-width: 1300px
@@ -60,7 +58,7 @@ format:
       gutter-width: 1.5rem
     css: styles.css
     toc: true
-    html-math-method: mathjax
+    html-math-method: katex
 
 crossref:
   eq-prefix: ""
