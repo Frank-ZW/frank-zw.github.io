@@ -299,7 +299,7 @@ u_{j+1} \qquad\qquad & ax>0
 \end{cases}
 $$
 
-Since $a>0$, the $ax<0$ and $ax>0$ conditions are identical to $x<0$ and $x>0$. Therefore, $u(ax,0)=u(x,0)$ and the initial condition is also invariant to the scaling parameter $a$. Since the PDE and initial condition are unchanged by scaling, then $u(ax,at)=u(x,t)$ for all $a>0$. Since $a$ may be any value, choose $a=\frac 1t$ to reveal that $u(ax,at)=u(\xi,1)$ where $\xi=\frac xt$ is the self-similarity parameter.
+Since $a>0$, the $ax<0$ and $ax>0$ conditions are identical to $x<0$ and $x>0$. Therefore, $u(ax,0)=u(x,0)$ and the initial condition is also invariant to uniform scaling. Because both the PDE and initial condition are unchanged by scaling, then the solutions $u(ax,at)$ and $u(x,t)$ must be the same for all $a>0$. Let $a=\frac 1t$ to reveal that $u(ax,at)=u(\xi,1)$, where $\xi=\frac xt$ is the self-similarity parameter.
 
 :::
 
