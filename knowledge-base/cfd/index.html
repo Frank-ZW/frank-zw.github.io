@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Chapter 7. Turbulent and Transitional Internal Flow – Fundamentals of Engineering</title>
+<title>Computational Fluid Dynamics – Fundamentals of Engineering</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,23 +26,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../../">
-<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-ff7935635f3606eaa64392730a790438.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-ff7935635f3606eaa64392730a790438.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,51 +71,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../../../../styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed quarto-light">
@@ -125,7 +82,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../../../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Fundamentals of Engineering</span>
     </a>
   </div>
@@ -136,12 +93,12 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../../about.html"> 
-<span class="menu-text">About</span></a>
+    <a class="nav-link" href="../../knowledge-base/index.html"> 
+<span class="menu-text">Knowledge Base</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -155,7 +112,7 @@ window.Quarto = {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">Chapter 7. Turbulent and Transitional Internal Flow</h1>
+          <h1 class="quarto-secondary-nav-title">Computational Fluid Dynamics</h1>
         </a>     
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -176,7 +133,7 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../../content/cfd/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../knowledge-base/cfd/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">CFD</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -185,7 +142,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../../content/cfd/computational-fluid-mechanics-and-heat-transfer/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../knowledge-base/cfd/computational-fluid-mechanics-and-heat-transfer/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Computational Fluid Mechanics and Heat Transfer</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -194,13 +151,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../content/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-4-application-of-numerical-methods-to-model-equations.html" class="sidebar-item-text sidebar-link">
+  <a href="../../knowledge-base/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-4-application-of-numerical-methods-to-model-equations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapter 4. Application of Numerical Methods to Model Equations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../content/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-6-numerical-methods-for-inviscid-flows.html" class="sidebar-item-text sidebar-link">
+  <a href="../../knowledge-base/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-6-numerical-methods-for-inviscid-flows.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapter 6. Numerical Methods for Inviscid Flows</span></a>
   </div>
 </li>
@@ -210,7 +167,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../../content/fluids/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../knowledge-base/fluids/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Fluids</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -219,28 +176,28 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../../content/fluids/convective-heat-and-mass-transfer/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../knowledge-base/fluids/convective-heat-and-mass-transfer/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Convective Heat and Mass Transfer</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../content/fluids/convective-heat-and-mass-transfer/chapters/chapter-4-internal-laminar-flow.html" class="sidebar-item-text sidebar-link">
+  <a href="../../knowledge-base/fluids/convective-heat-and-mass-transfer/chapters/chapter-4-internal-laminar-flow.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapter 4. Internal Laminar Flow</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../content/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../knowledge-base/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapter 7. Turbulent and Transitional Internal Flow</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../content/fluids/convective-heat-and-mass-transfer/chapters/chapter-10-natural-convection.html" class="sidebar-item-text sidebar-link">
+  <a href="../../knowledge-base/fluids/convective-heat-and-mass-transfer/chapters/chapter-10-natural-convection.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapter 10. Natural Convection</span></a>
   </div>
 </li>
@@ -250,7 +207,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../../content/structures/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../knowledge-base/structures/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Structures</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -259,7 +216,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../../content/structures/fundamentals-of-metal-fatigue-analysis/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../knowledge-base/structures/fundamentals-of-metal-fatigue-analysis/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Fundamentals of Metal Fatigue Analysis</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -268,13 +225,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../content/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-5-variable-amplitude-loading.html" class="sidebar-item-text sidebar-link">
+  <a href="../../knowledge-base/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-5-variable-amplitude-loading.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapter 5. Variable Amplitude Loading</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../content/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-7-multiaxial-fatigue.html" class="sidebar-item-text sidebar-link">
+  <a href="../../knowledge-base/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-7-multiaxial-fatigue.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapter 7. Multiaxial Fatigue</span></a>
   </div>
 </li>
@@ -287,25 +244,15 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
-  <ul class="collapse">
-  <li><a href="#laminar-turbulent-flow-transition" id="toc-laminar-turbulent-flow-transition" class="nav-link" data-scroll-target="#laminar-turbulent-flow-transition">Laminar-Turbulent Flow Transition</a></li>
-  <li><a href="#development-of-temperature-and-concentration-profiles" id="toc-development-of-temperature-and-concentration-profiles" class="nav-link" data-scroll-target="#development-of-temperature-and-concentration-profiles">Development of Temperature and Concentration Profiles</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Chapter 7. Turbulent and Transitional Internal Flow</h1>
+<h1 class="title d-none d-lg-block">Computational Fluid Dynamics</h1>
 </div>
 
 
@@ -322,53 +269,9 @@ window.Quarto = {
 </header>
 
 
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>With external flows, the freestream conditions were unaffected by the boundaries. With internal flows, however, due to their confined nature, the wall may have a significant impact on the mean flow behavior. Taking fully developed turbulent flow through a smooth pipe as an example, the flow field can be divided into three sublayers. The layer closest to the wall is the <em>viscous sublayer</em> and typically is defined as the region between <span class="math inline">0\leq y^+\leq5</span>. The <em>buffer zone</em> or <em>transition layer</em> extends beyond this, between <span class="math inline">5\leq y^+\leq30</span>. The <em>outer layer</em> occupies the rest of the flow field. Close to the wall, the effect of wall curvature is small, so the fluid is “unaware” that the flow field is confined on all sides. Similarly, the buffer zone is also marginally affected by the macroscopic flow field. Only the outer layer, where turbulence is largely present, does the physics of internal flows differ depending on the characteristics of the flow field. The following correlations for dimensionless velocity, <span class="math inline">u^+</span>, have been developed.</p>
-<p><span class="math display">
-\begin{aligned}
-u^+ &amp; =y^+ &amp;&amp;&amp; 0\leq y^+ &amp; \leq5 \\
-u^+ &amp; =5.0\ln y^+-3.05 &amp;&amp; \phantom{00000} &amp; 5\leq y^+ &amp; \leq30 \\
-u^+ &amp; =\frac 1{\kappa}\ln y^++B &amp;&amp;&amp; 30\leq y^+ &amp; \leq200
-\end{aligned}
-</span></p>
-<p>where <span class="math inline">\kappa=0.4</span> and <span class="math inline">B=5.0</span>.</p>
-<section id="laminar-turbulent-flow-transition" class="level2">
-<h2 class="anchored" data-anchor-id="laminar-turbulent-flow-transition">Laminar-Turbulent Flow Transition</h2>
-<p>There are three regimes that can be distinctly defined: laminar, transition, and fully turbulent. The transition point between laminar and turbulent flows is sensitive to a multitude of parameters, most notably duct geometry, surface roughness, and the presence of any flow disturbances. The Reynolds number is the most improtant parameter in characterizing this transition process.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The characteristic length used for the Reynolds number should be related to the duct cross-sectional length. For a circular pipe, this would be the inner diameter. For non-circular geometries, this would be the hydraulic diameter, <span class="math inline">D_H</span>, or in certain cases, the square root of the cross-sectional area.</p>
-</div>
-</div>
-<p>Surface roughness and presence of disturbances all serve to lower the critical <span class="math inline">\mathrm{Re}_D</span> that marks transition. Though laminar flows have been maintained up to <span class="math inline">\mathrm{Re}_D\simeq10^5</span> in ideal conditions, it is generally assumed that the flow remains laminar if <span class="math inline">\mathrm{Re}_D\leq2100</span> and fully turbulent if <span class="math inline">\mathrm{Re}_D&gt;10^4</span>. The transition flow regime occurs for <span class="math inline">2100&lt;\mathrm{Re}_D\leq10^4</span>.</p>
-<p>The effect of surface roughness on an internal flow field is similar to that explained in Chapter 6. For <span class="math inline">\varepsilon_s^+\leq5</span>, the roughness is fully submerged in the viscous sublayer, so the duct is considered <em>hydraulically smooth</em> and roughness has virtually no effect on friction. The skin friction coefficient <span class="math inline">C_f</span> is only a function of the Reynolds number, <span class="math inline">\mathrm{Re}_D</span>. For <span class="math inline">\varepsilon_s^+&gt;70</span>, the surface is <em>fully rough</em> and protrudes past the viscous sublayer. The roughness has an overwhelming effect on the wall shear stress so <span class="math inline">C_f</span> is only a function of <span class="math inline">\varepsilon_s^+</span> and independent of <span class="math inline">\mathrm{Re}_D</span>. For <span class="math inline">5&lt;\varepsilon_s^+\leq70</span>, the surface is <em>transitionally rough</em> and the skin friction coefficient is a function of both <span class="math inline">\varepsilon_s^+</span> and <span class="math inline">\mathrm{Re}_D</span>. Surface roughness affects heat and mass transfer primarily by increasing the total interfacial area between the fluid and wall, thereby promoting local mixing of the fluid. As a result, rougher surfaces increase the local friction factor as well as heat and mass transfer coefficients. Norris (1970) suggested the empirical correlation for Nusselt number of a rough surface.</p>
-<p><span id="eq-norris-1970-rough-nusselt"><span class="math display">
-\frac {\mathrm{Nu}_{D_H}}{\mathrm{Nu}_{D_H,\mathrm{smooth}}}=\min\left[4^n, \left(\frac {C_f}{C_{f,\mathrm{smooth}}}\right)^n\right]
-\tag{1}</span></span></p>
-<p>where empirical constant <span class="math inline">n</span> is determined using</p>
-<p><span id="eq-norris-1970-rough-nusselt-n"><span class="math display">
-\begin{aligned}
-n &amp; =0.68\mathrm{Pr}^{0.215} &amp;&amp; \phantom{00000} &amp; \mathrm{Pr} &amp; &lt;6 \\
-n &amp; =1 &amp;&amp;&amp; \mathrm{Pr} &amp; &gt;6
-\end{aligned}
-\tag{2}</span></span></p>
-</section>
-<section id="development-of-temperature-and-concentration-profiles" class="level2">
-<h2 class="anchored" data-anchor-id="development-of-temperature-and-concentration-profiles">Development of Temperature and Concentration Profiles</h2>
-<p>The entrance length is defined as the distance it takes for the boundary layers to completely merge together and for the flow to become fully developed. Entrance lengths for turbulent flows are shorter than that of laminar flows and are significantly affected by entrance conditions, intensity of any disturbances in the flow, and surface roughness. A widely used estimate for circular and noncircular ducts is</p>
+<p>Documents regarding the field of computational fluid dynamics.</p>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

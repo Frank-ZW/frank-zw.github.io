@@ -1,59 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/index.html</loc>
-    <lastmod>2026-03-29T11:29:04.871Z</lastmod>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/structures/index.html</loc>
+    <lastmod>2026-03-27T07:29:27.154Z</lastmod>
   </url>
   <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/content/structures/fundamentals-of-metal-fatigue-analysis/index.html</loc>
-    <lastmod>2026-03-27T07:35:39.459Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/content/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-5-variable-amplitude-loading.html</loc>
-    <lastmod>2026-03-27T07:36:40.056Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/content/fluids/convective-heat-and-mass-transfer/chapters/chapter-4-internal-laminar-flow.html</loc>
-    <lastmod>2026-03-26T07:16:52.302Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/content/cfd/index.html</loc>
-    <lastmod>2026-03-26T05:34:57.330Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/content/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-6-numerical-methods-for-inviscid-flows.html</loc>
-    <lastmod>2026-03-26T05:34:57.328Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/about.html</loc>
-    <lastmod>2026-03-26T05:34:57.324Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/content/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-4-application-of-numerical-methods-to-model-equations.html</loc>
-    <lastmod>2026-03-27T10:25:33.125Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/content/cfd/computational-fluid-mechanics-and-heat-transfer/index.html</loc>
-    <lastmod>2026-03-26T05:34:57.329Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/content/fluids/convective-heat-and-mass-transfer/chapters/chapter-10-natural-convection.html</loc>
-    <lastmod>2026-03-31T09:32:04.889Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/content/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.html</loc>
-    <lastmod>2026-03-26T21:03:06.269Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/content/fluids/index.html</loc>
-    <lastmod>2026-03-26T05:34:57.333Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/content/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-7-multiaxial-fatigue.html</loc>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-7-multiaxial-fatigue.html</loc>
     <lastmod>2026-03-31T09:14:15.412Z</lastmod>
   </url>
   <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/content/structures/index.html</loc>
-    <lastmod>2026-03-27T07:29:27.154Z</lastmod>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/fluids/convective-heat-and-mass-transfer/chapters/chapter-4-internal-laminar-flow.html</loc>
+    <lastmod>2026-03-26T07:16:52.302Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/cfd/index.html</loc>
+    <lastmod>2026-03-26T05:34:57.330Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-6-numerical-methods-for-inviscid-flows.html</loc>
+    <lastmod>2026-03-26T05:34:57.328Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/index.html</loc>
+    <lastmod>2026-03-31T12:28:40.579Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-4-application-of-numerical-methods-to-model-equations.html</loc>
+    <lastmod>2026-03-27T10:25:33.125Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/cfd/computational-fluid-mechanics-and-heat-transfer/index.html</loc>
+    <lastmod>2026-03-26T05:34:57.329Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/fluids/convective-heat-and-mass-transfer/chapters/chapter-10-natural-convection.html</loc>
+    <lastmod>2026-03-31T09:32:04.889Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.html</loc>
+    <lastmod>2026-03-26T21:03:06.269Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/fluids/index.html</loc>
+    <lastmod>2026-03-26T05:34:57.333Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-5-variable-amplitude-loading.html</loc>
+    <lastmod>2026-03-27T07:36:40.056Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/structures/fundamentals-of-metal-fatigue-analysis/index.html</loc>
+    <lastmod>2026-03-27T07:35:39.459Z</lastmod>
   </url>
 </urlset>
