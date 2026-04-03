@@ -2,3 +2,11 @@
 figcaption, .figure-caption {
     text-align: center;
 }
+
+.math.inline, .MathJax {
+    font-size: 85% !important;
+}
+
+.math.display, .MathJax {
+    font-size: 95% !important;
+}

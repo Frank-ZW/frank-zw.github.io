@@ -324,6 +324,13 @@ window.Quarto = {
   <li><a href="#friction-factor-1" id="toc-friction-factor-1" class="nav-link" data-scroll-target="#friction-factor-1">Friction Factor</a></li>
   </ul></li>
   </ul></li>
+  <li><a href="#concentric-annular-duct" id="toc-concentric-annular-duct" class="nav-link" data-scroll-target="#concentric-annular-duct">Concentric Annular Duct</a>
+  <ul class="collapse">
+  <li><a href="#fully-developed-flow-3" id="toc-fully-developed-flow-3" class="nav-link" data-scroll-target="#fully-developed-flow-3">Fully Developed Flow</a>
+  <ul class="collapse">
+  <li><a href="#hagen-poiseuille-flow-3" id="toc-hagen-poiseuille-flow-3" class="nav-link" data-scroll-target="#hagen-poiseuille-flow-3">Hagen-Poiseuille Flow</a></li>
+  </ul></li>
+  </ul></li>
   <li><a href="#general-duct-geometries" id="toc-general-duct-geometries" class="nav-link" data-scroll-target="#general-duct-geometries">General Duct Geometries</a>
   <ul class="collapse">
   <li><a href="#friction-factor-2" id="toc-friction-factor-2" class="nav-link" data-scroll-target="#friction-factor-2">Friction Factor</a>
@@ -487,7 +494,7 @@ C_f\mathrm{Re}_{D_H}\approx24\left[1-1.3553\alpha^*+1.9467(\alpha^*)^2-1.7012(\a
 <h2 class="anchored" data-anchor-id="fully-developed-flow-2">Fully Developed Flow</h2>
 <section id="hagen-poiseuille-flow-2" class="level3">
 <h3 class="anchored" data-anchor-id="hagen-poiseuille-flow-2">Hagen-Poiseuille Flow</h3>
-<p>Centerline defined in midplane, either surfaces a distance <span class="math inline">b</span> from the centerline. If <span class="math inline">U_m=\frac 1{3\mu}\left(-\frac {\mathrm dP}{\mathrm dx}\right)</span></p>
+<p>Center defined as midplane, both surfaces are a distance <span class="math inline">b</span> from the center line. If a smooth surface and <span class="math inline">U_m=\frac 1{3\mu}\left(-\frac {\mathrm dP}{\mathrm dx}\right)</span></p>
 <p><span class="math display">
 u(y)=\frac {b^2}{2\mu}\left(-\frac {\mathrm dP}{\mathrm dx}\right)\left[1-\left(\frac yb\right)\right]\tag{4.3.11}
 </span></p>
@@ -512,6 +519,20 @@ C_f\mathrm{Re}_{D_H}=24\tag{4.3.13}
 <section id="turbulent-flow-4" class="level4">
 <h4 class="anchored" data-anchor-id="turbulent-flow-4">Turbulent Flow</h4>
 </section>
+</section>
+</section>
+</section>
+<section id="concentric-annular-duct" class="level1">
+<h1>Concentric Annular Duct</h1>
+<section id="fully-developed-flow-3" class="level2">
+<h2 class="anchored" data-anchor-id="fully-developed-flow-3">Fully Developed Flow</h2>
+<section id="hagen-poiseuille-flow-3" class="level3">
+<h3 class="anchored" data-anchor-id="hagen-poiseuille-flow-3">Hagen-Poiseuille Flow</h3>
+<p>Smooth surface, if <span class="math inline">R_i</span> and <span class="math inline">R_0</span> are the inner and outer radii respectively</p>
+<p><span class="math display">
+u(r)=\left[R_0^2-r^2+(R_0^2-R_i^2)\frac {\ln\left(r/R_0\right)}{\ln\left(R_0/R_i\right)}\right]\left(-\frac 1{4\mu}\frac {\mathrm dP}{\mathrm dx}\right)\tag{4.3.31}
+</span></p>
+<p>Mean velocity</p>
 </section>
 </section>
 </section>
