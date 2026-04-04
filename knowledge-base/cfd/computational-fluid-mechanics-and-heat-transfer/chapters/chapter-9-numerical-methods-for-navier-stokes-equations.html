@@ -345,7 +345,7 @@ window.Quarto = {
 \rho c_v\frac {\mathrm DT}{\mathrm Dt}=k\nabla^2T+\Phi
 \end{gathered}
 \tag{1}</span></span></p>
-<p>The unknowns are velocity vector, <span class="math inline">\textbf V</span>, pressure, <span class="math inline">p</span>, and temperature, <span class="math inline">T</span>. Since fluid properties are constant (independent of <span class="math inline">T</span>), the energy equation can be decoupled from continuity and momentum.</p>
+<p>The unknowns are velocity vector <span class="math inline">\textbf V</span>, pressure <span class="math inline">p</span>, and temperature <span class="math inline">T</span>. Since fluid properties are constant and independent of <span class="math inline">T</span>, the energy equation can be decoupled from continuity and momentum.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Fluid Property Variations in Incompressible Flows">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -373,10 +373,10 @@ window.Quarto = {
 </section>
 <section id="primitive-variable-approach" class="level3">
 <h3 class="anchored" data-anchor-id="primitive-variable-approach">Primitive Variable Approach</h3>
-<p>The derived variable approach (using <span class="math inline">\zeta</span>, the vorticity, and <span class="math inline">\psi</span>, the stream function), is rarely used for solving 3D incompressible flow fields. The primitive approach is more widely used for both 2D and 3D flows.</p>
+<p>The derived variable approach (using <span class="math inline">\zeta</span> and <span class="math inline">\psi</span>), is rarely used when solving 3D incompressible flow fields. The primitive approach is more widely used for both 2D and 3D flows.</p>
 <section id="general" class="level4">
 <h4 class="anchored" data-anchor-id="general">General</h4>
-<p>The nondimensional primitive form of Eqn. (<a href="#eq-incompressible-conservation-equations" class="quarto-xref">1</a>) is</p>
+<p>The nondimensional primitive form of Eqn. (<a href="#eq-incompressible-conservation-equations" class="quarto-xref">1</a>), ignoring energy, is</p>
 <p><span id="eq-incompressible-nondimensional-conservation-equations"><span class="math display">
 \begin{gathered}
 \frac {\partial u^*}{\partial x^*}+\frac {\partial v^*}{\partial y^*}+\frac {\partial w^*}{\partial z^*}=0 \\
@@ -388,9 +388,9 @@ window.Quarto = {
 <p>The nondimensional parameters are</p>
 <p><span id="eq-nondimensional-parameters"><span class="math display">
 \begin{array}{ccc}
-u^*=\dfrac u{V_{\infty}} &amp; v^*=\dfrac v{V_{\infty}} &amp; w^*=\dfrac w{V_{\infty}} \\ \\
-x^*=\dfrac xL &amp; y^*=\dfrac yL &amp; z^*=\dfrac zL \\ \\
-p^*=\dfrac p{\rho_{\infty}V_{\infty}^2} &amp; t^*=\dfrac {tV_{\infty}}L &amp; \mathrm{Re}_L=\dfrac {V_{\infty}L}{\nu}
+u^*=\dfrac u{V_{\infty}} &amp; x^*=\dfrac xL &amp; p^*=\dfrac p{\rho_{\infty}V_{\infty}^2} \\ \\
+v^*=\dfrac v{V_{\infty}} &amp; y^*=\dfrac yL &amp; t^*=\dfrac {tV_{\infty}}L \\ \\
+w^*=\dfrac w{V_{\infty}} &amp; z^*=\dfrac zL &amp; \mathrm{Re}_L=\dfrac {V_{\infty}L}{\nu}
 \end{array}
 \tag{4}</span></span></p>
 
