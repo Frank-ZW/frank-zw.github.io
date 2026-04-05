@@ -43,6 +43,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-a44d1825680bf4d2a1237acfefc713aa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -362,6 +365,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#hagen-poiseuille-flow-2" id="toc-hagen-poiseuille-flow-2" class="nav-link" data-scroll-target="#hagen-poiseuille-flow-2">Hagen-Poiseuille Flow</a></li>
   <li><a href="#friction-factor-1" id="toc-friction-factor-1" class="nav-link" data-scroll-target="#friction-factor-1">Friction Factor</a></li>
+  <li><a href="#heat-transfer-coefficient-1" id="toc-heat-transfer-coefficient-1" class="nav-link" data-scroll-target="#heat-transfer-coefficient-1">Heat Transfer Coefficient</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#concentric-annular-duct" id="toc-concentric-annular-duct" class="nav-link" data-scroll-target="#concentric-annular-duct">Concentric Annular Duct</a>
@@ -375,7 +379,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#friction-factor-2" id="toc-friction-factor-2" class="nav-link" data-scroll-target="#friction-factor-2">Friction Factor</a>
   <ul class="collapse">
-  <li><a href="#laminar-flow-5" id="toc-laminar-flow-5" class="nav-link" data-scroll-target="#laminar-flow-5">Laminar Flow</a></li>
+  <li><a href="#laminar-flow-6" id="toc-laminar-flow-6" class="nav-link" data-scroll-target="#laminar-flow-6">Laminar Flow</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -438,11 +442,11 @@ f=\frac {64}{\mathrm{Re}_D}=4C_f\tag{4.3.7}
 <h3 class="anchored" data-anchor-id="friction-factor">Friction Factor</h3>
 <section id="laminar-flow-1" class="level4">
 <h4 class="anchored" data-anchor-id="laminar-flow-1">Laminar Flow</h4>
-<p><strong>Shah and London (1978):</strong> Smooth surface, valid for all <span class="math inline">x^*</span> range, <span class="math inline">x^*=x/(D\mathrm{Re}_D)</span></p>
+<p><strong>Shah and London (1978):</strong> Smooth surface, valid for all <span class="math inline">x^*=\frac x{D\mathrm{Re}_D}</span> range</p>
 <p><span class="math display">
 C_{f,\mathrm{app},x}\mathrm{Re}_D=\frac {3.44}{(x^*)^{1/2}}+\frac {\frac {1.25}{4x^*}+16-\frac {3.44}{(x^*)^{1/2}}}{1+0.00021(x^*)^{-2}}\tag{4.2.13}
 </span></p>
-<p><strong>Hagen-Poiseuille (1840):</strong> Smooth surface, Reynolds number defined as <span class="math inline">\mathrm{Re}_D=U_mD/\nu</span></p>
+<p><strong>Hagen-Poiseuille (1840):</strong> Smooth surface, Reynolds number defined as <span class="math inline">\mathrm{Re}_D=\frac {U_mD}{\nu}</span></p>
 <p><span class="math display">
 f=\frac {64}{\mathrm{Re}_D}=4C_f\tag{4.3.7}
 </span></p>
@@ -476,6 +480,13 @@ f=\frac {64}{\mathrm{Re}_D}=4C_f\tag{4.3.7}
 <p><span class="math display">
 \frac {T_m-T_s}{T_{\mathrm{in}}-T_s}=0.81905\exp\left(-2\lambda_0^2x^*\right)\tag{4.4.23}
 </span></p>
+<p><strong>Michelsen and Villadsen (1974):</strong> Smooth surface, axial conduction, if <span class="math inline">\mathrm{Pe}=\mathrm{Re}_D\mathrm{Pr}</span></p>
+<p><span class="math display">
+\mathrm{Nu}_{D,\mathrm{UWT}}=\begin{cases}
+3.6568\left(1+\frac {1.227}{\mathrm{Pe}^2}+\cdots\right) &amp; \qquad\qquad\mathrm{Pe}&gt;5 \\
+4.1807(1-0.0439\mathrm{Pe}+\cdots) &amp; \qquad\qquad\mathrm{Pe}&lt;1.55
+\end{cases}
+</span></p>
 </section>
 </section>
 <section id="turbulent-flow-2" class="level4">
@@ -504,7 +515,7 @@ u(y,z)=\frac {16a^2}{\pi^3\mu}\left(-\frac {\mathrm dP}{\mathrm dx}\right)\sum\l
 <p><span class="math display">
 U_m=\frac {a^2}{3\mu}\left(-\frac {\mathrm dP}{\mathrm dx}\right)\left[1-\frac {192a}{\pi^5b}\sum\limits_{j\text{ odd}}^{\infty}\frac 1{j^5}\tanh\left(\frac {j\pi b}{2a}\right)\right]\tag{4.3.15}
 </span></p>
-<p>If <span class="math inline">\mathrm{Re}_{D_H}=U_mD_H/\nu</span> and <span class="math inline">\alpha^*=\frac ba\leq1</span></p>
+<p>If <span class="math inline">\mathrm{Re}_{D_H}=\frac {U_mD_H}{\nu}</span> and <span class="math inline">\alpha^*=\frac ba\leq1</span></p>
 <p><span class="math display">
 C_f\mathrm{Re}_{D_H}=\frac {24}{\left(1+\frac 1{\alpha^*}\right)^2\left[1-\frac {192}{\pi^5\alpha^*}\sum\limits_{j\text{ odd}}\frac 1{j^5}\tanh\left(\frac {j\pi\alpha^*}2\right)\right]}\tag{4.3.16}
 </span></p>
@@ -521,7 +532,7 @@ C_f\mathrm{Re}_{D_H}\approx24\left[1-1.3553\alpha^*+1.9467(\alpha^*)^2-1.7012(\a
 <h2 class="anchored" data-anchor-id="entrance-lengths-2">Entrance Lengths</h2>
 <section id="laminar-flow-3" class="level3">
 <h3 class="anchored" data-anchor-id="laminar-flow-3">Laminar Flow</h3>
-<p><strong>Chen (1973):</strong> Smooth surface, Reynolds number defined as <span class="math inline">\mathrm{Re}_{D_H}=U_mD_H/\nu</span></p>
+<p><strong>Chen (1973):</strong> Smooth surface, Reynolds number defined as <span class="math inline">\mathrm{Re}_{D_H}=\frac {U_mD_H}{\nu}</span></p>
 <p><span class="math display">
 \frac {l_{\mathrm{ent,hy}}}{D_H}=0.011\mathrm{Re}_{D_H}+\frac {0.315}{1+0.0175\mathrm{Re}_{D_H}}\tag{4.2.15}
 </span></p>
@@ -538,7 +549,7 @@ C_f\mathrm{Re}_{D_H}\approx24\left[1-1.3553\alpha^*+1.9467(\alpha^*)^2-1.7012(\a
 <p><span class="math display">
 u(y)=\frac {b^2}{2\mu}\left(-\frac {\mathrm dP}{\mathrm dx}\right)\left[1-\left(\frac yb\right)\right]\tag{4.3.11}
 </span></p>
-<p>If <span class="math inline">\mathrm{Re}_{D_H}=U_mD_H/\nu</span></p>
+<p>If <span class="math inline">\mathrm{Re}_{D_H}=\frac {U_mD_H}{\nu}</span></p>
 <p><span class="math display">
 C_f\mathrm{Re}_{D_H}=24\tag{4.3.13}
 </span></p>
@@ -547,17 +558,77 @@ C_f\mathrm{Re}_{D_H}=24\tag{4.3.13}
 <h3 class="anchored" data-anchor-id="friction-factor-1">Friction Factor</h3>
 <section id="laminar-flow-4" class="level4">
 <h4 class="anchored" data-anchor-id="laminar-flow-4">Laminar Flow</h4>
-<p><strong>Shah and London (1978):</strong> Smooth surface, Reynolds number defined as <span class="math inline">\mathrm{Re}_{D_H}=U_mD_H/\nu</span></p>
+<p><strong>Shah and London (1978):</strong> Smooth surface, Reynolds number defined as <span class="math inline">\mathrm{Re}_{D_H}=\frac {U_mD_H}{\nu}</span></p>
 <p><span class="math display">
 C_{f,\mathrm{app},x}\mathrm{Re}_{D_H}=\frac {3.44}{(x^*)^{1/2}}+\frac {24+\frac {0.674}{4x^*}-\frac {3.44}{(x^*)^{1/2}}}{1+0.000029(x^*)^{-2}}\tag{4.2.16}
 </span></p>
-<p><strong>Hagen-Poiseuille (1840):</strong> Smooth surface, Reynolds number defined as <span class="math inline">\mathrm{Re}_{D_H}=U_mD_H/\nu</span></p>
+<p><strong>Hagen-Poiseuille (1840):</strong> Smooth surface, Reynolds number defined as <span class="math inline">\mathrm{Re}_{D_H}=\frac {U_mD_H}{\nu}</span></p>
 <p><span class="math display">
 C_f\mathrm{Re}_{D_H}=24\tag{4.3.13}
 </span></p>
 </section>
 <section id="turbulent-flow-4" class="level4">
 <h4 class="anchored" data-anchor-id="turbulent-flow-4">Turbulent Flow</h4>
+</section>
+</section>
+<section id="heat-transfer-coefficient-1" class="level3">
+<h3 class="anchored" data-anchor-id="heat-transfer-coefficient-1">Heat Transfer Coefficient</h3>
+<p>Refer to the five wall boundary conditions for flat channel: (a) equal and constant surface temperature, (b) unequal and constant surface temperature, (c) equal and constant heat flux, (d) unequal and constant heat flux, (e) one surface constant temperature and the other constant heat flux</p>
+<div id="fig-flat-channel-thermal-boundary-conditions" class="lightbox quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-flat-channel-thermal-boundary-conditions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="assets/flat-channel-thermal-boundary-conditions.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Various flat channel wall boundary conditions"><img src="assets/flat-channel-thermal-boundary-conditions.png" class="img-fluid figure-img" width="550"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-flat-channel-thermal-boundary-conditions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Various flat channel wall boundary conditions
+</figcaption>
+</figure>
+</div>
+<section id="laminar-flow-5" class="level4">
+<h4 class="anchored" data-anchor-id="laminar-flow-5">Laminar Flow</h4>
+<p><strong>Analytical:</strong> Smooth surface, negligible axial conduction, uniform wall heat flux (Case C in <a href="#fig-flat-channel-thermal-boundary-conditions" class="quarto-xref">1</a>)</p>
+<p><span class="math display">
+\mathrm{Nu}_{D_H,\mathrm{UHF}}=\frac {140}{17}\approx8.235\tag{4.4.42}
+</span></p>
+<p><strong>Tyagi, (1966); Shah and London, (1978):</strong> With viscous dissipation and volumetric energy generation, if <span class="math inline">q_v^*=\frac {\dot q_vD_H}{q_s''}</span> and <span class="math inline">\mathrm{Br}'=\frac {\mu U_m^2}{q_s''D_H}</span></p>
+<p><span class="math display">
+\mathrm{Nu}_{D_H,\mathrm{UHF}}=\frac {140}{17}\frac 1{1+\frac 3{68}q_v^*+\frac {108}{17}\mathrm{Br}'}\tag{4.4.43}
+</span></p>
+<p><strong>Analytical:</strong> Smooth surface, negligible axial conduction, unequal and constant heat flux (Case C in <a href="#fig-flat-channel-thermal-boundary-conditions" class="quarto-xref">1</a>)</p>
+<p><span class="math display">
+\begin{aligned}
+\mathrm{Nu}_{D_H,1} &amp; =\frac {140}{26-9\frac {q_{s2}''}{q_{s1}''}}\tag{4.4.47} \\
+\mathrm{Nu}_{D_H,2} &amp; =\frac {140}{26-9\frac {q_{s1}''}{q_{s2}''}}\tag{4.4.48}
+\end{aligned}
+</span></p>
+<p><strong>Analytical:</strong> Smooth surface, negligible axial conduction, negligible viscous dissipation, one surface constant temperature and the other constant heat flux (Case E in <a href="#fig-flat-channel-thermal-boundary-conditions" class="quarto-xref">1</a>)</p>
+<p><span class="math display">
+\begin{aligned}
+\mathrm{Nu}_{D_H,T} &amp; =4\tag{4.4.49} \\
+\mathrm{Nu}_{D_H,q''} &amp; =4\tag{4.4.50}
+\end{aligned}
+</span></p>
+<p><strong>Cheng and Wu (1976):</strong> Smooth surface, axial conduction, viscous dissipation, one surface constant temperature and the other constant heat flux (Case E in <a href="#fig-flat-channel-thermal-boundary-conditions" class="quarto-xref">1</a>), assume <span class="math inline">T_{s1}&gt;T_{s2}</span>, if <span class="math inline">\mathrm{Br}=\frac {2\mu U_m^2}{k\left[\frac 12(T_{s1}+T_{s2})-T_m\right]}</span></p>
+<p><span class="math display">
+\begin{aligned}
+\mathrm{Nu}_{D_H,1} &amp; =\frac {4(1-6\mathrm{Br})}{1-\frac {48}{35}\mathrm{Br}}\tag{4.4.56} \\
+\mathrm{Nu}_{D_H,2} &amp; =\frac {4(1+6\mathrm{Br})}{1-\frac {48}{35}\mathrm{Br}}\tag{4.4.57}
+\end{aligned}
+</span></p>
+<p><strong>Analytical:</strong> Smooth surface, negligible axial condution, uniform wall temperature (Case A in <a href="#fig-flat-channel-thermal-boundary-conditions" class="quarto-xref">1</a>)</p>
+<p><span class="math display">
+\mathrm{Nu}_{D_H,\mathrm{UWT}}=7.5407\tag{4.4.53}
+</span></p>
+<p><strong>Pahor and Strand (1961):</strong> Smooth surface, axial conduction, if <span class="math inline">\mathrm{Pe}=\mathrm{Re}_D\mathrm{Pr}</span></p>
+<p><span class="math display">
+\mathrm{Nu}_{D_H,\mathrm{UWT}}=\begin{cases}
+7.540\left(1+\frac {3.79}{\mathrm{Pe}^2}+\cdots\right) &amp; \qquad\qquad\mathrm{Pe}\gg1 \\
+8.118(1-0.031\mathrm{Pe}+\cdots) &amp; \qquad\qquad\mathrm{Pe}\ll1
+\end{cases}
+</span></p>
+</section>
+<section id="turbulent-flow-5" class="level4">
+<h4 class="anchored" data-anchor-id="turbulent-flow-5">Turbulent Flow</h4>
 </section>
 </section>
 </section>
@@ -580,9 +651,9 @@ u(r)=\left[R_0^2-r^2+(R_0^2-R_i^2)\frac {\ln\left(r/R_0\right)}{\ln\left(R_0/R_i
 <h1>General Duct Geometries</h1>
 <section id="friction-factor-2" class="level2">
 <h2 class="anchored" data-anchor-id="friction-factor-2">Friction Factor</h2>
-<section id="laminar-flow-5" class="level3">
-<h3 class="anchored" data-anchor-id="laminar-flow-5">Laminar Flow</h3>
-<p><strong>Muzychka and Yovanovich (2004):</strong> Smooth surface, Reynolds number defined as <span class="math inline">\mathrm{Re}_{\sqrt A}=U_m\sqrt A/\nu</span>, dimensionless distance defined as <span class="math inline">x^*=x/(\sqrt A\mathrm{Re}_{\sqrt A})</span>, accurate to within <span class="math inline">\pm10\%</span></p>
+<section id="laminar-flow-6" class="level3">
+<h3 class="anchored" data-anchor-id="laminar-flow-6">Laminar Flow</h3>
+<p><strong>Muzychka and Yovanovich (2004):</strong> Smooth surface, Reynolds number defined as <span class="math inline">\mathrm{Re}_{\sqrt A}=\frac {U_m\sqrt A}{\nu}</span>, dimensionless distance defined as <span class="math inline">x^*=\frac x{\sqrt A\mathrm{Re}_{\sqrt A}}</span>, accurate to within <span class="math inline">\pm10\%</span></p>
 <p><span class="math display">
 C_{f,\mathrm{app},x}\mathrm{Re}_{\sqrt A}=\sqrt{\left(\frac {12}{\sqrt{\alpha^*}(1+\alpha^*)\left[1-\frac {192\alpha^*}{\pi^5}\tanh\left(\frac {\pi}{2\alpha^*}\right)\right]}\right)^2+\left(\frac {3.44}{\sqrt{x^*}}\right)^2}\tag{4.2.17}
 </span></p>
@@ -994,6 +1065,38 @@ C_{f,\mathrm{app},x}\mathrm{Re}_{\sqrt A}=\sqrt{\left(\frac {12}{\sqrt{\alpha^*}
   });
   </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
