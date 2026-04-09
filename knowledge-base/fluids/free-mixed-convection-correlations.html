@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SAE-AS4395: 37° Flared Fitting Standard – Frank’s Engineering Notebook</title>
+<title>Free and Mixed Convection Correlations – Frank’s Engineering Notebook</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -74,6 +74,49 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -123,7 +166,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">SAE-AS4395: 37&amp;deg Flared Fitting Standard</h1>
+          <h1 class="quarto-secondary-nav-title">Free and Mixed Convection Correlations</h1>
         </a>     
     </div>
   </nav>
@@ -138,14 +181,14 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="../../knowledge-base/standards/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Standards</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../knowledge-base/standards/sae-as4395-37deg-flared-fitting.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../knowledge-base/standards/sae-as4395-37deg-flared-fitting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SAE AS4395 37° Flared Fitting</span></a>
   </div>
 </li>
@@ -201,11 +244,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="../../knowledge-base/fluids/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Fluids</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../knowledge-base/fluids/convective-heat-and-mass-transfer/index.html" class="sidebar-item-text sidebar-link">
@@ -243,7 +286,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../knowledge-base/fluids/free-mixed-convection-correlations.html" class="sidebar-item-text sidebar-link">
+  <a href="../../knowledge-base/fluids/free-mixed-convection-correlations.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Free and Mixed Convection Correlations</span></a>
   </div>
 </li>
@@ -299,8 +342,22 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#table-1a-dimensions-a---e" id="toc-table-1a-dimensions-a---e" class="nav-link active" data-scroll-target="#table-1a-dimensions-a---e">Table 1A: Dimensions A - E</a></li>
-  <li><a href="#table-1b-dimensions-f---w" id="toc-table-1b-dimensions-f---w" class="nav-link" data-scroll-target="#table-1b-dimensions-f---w">Table 1B: Dimensions F - W</a></li>
+  <li><a href="#semi-infinite-vertical-plate" id="toc-semi-infinite-vertical-plate" class="nav-link active" data-scroll-target="#semi-infinite-vertical-plate">Semi-Infinite Vertical Plate</a>
+  <ul class="collapse">
+  <li><a href="#heat-transfer-coefficient" id="toc-heat-transfer-coefficient" class="nav-link" data-scroll-target="#heat-transfer-coefficient">Heat Transfer Coefficient</a>
+  <ul class="collapse">
+  <li><a href="#laminar-flow" id="toc-laminar-flow" class="nav-link" data-scroll-target="#laminar-flow">Laminar Flow</a></li>
+  <li><a href="#turbulent-flow" id="toc-turbulent-flow" class="nav-link" data-scroll-target="#turbulent-flow">Turbulent Flow</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#vertical-cylinder" id="toc-vertical-cylinder" class="nav-link" data-scroll-target="#vertical-cylinder">Vertical Cylinder</a>
+  <ul class="collapse">
+  <li><a href="#heat-transfer-coefficient-1" id="toc-heat-transfer-coefficient-1" class="nav-link" data-scroll-target="#heat-transfer-coefficient-1">Heat Transfer Coefficient</a>
+  <ul class="collapse">
+  <li><a href="#laminar-flow-1" id="toc-laminar-flow-1" class="nav-link" data-scroll-target="#laminar-flow-1">Laminar Flow</a></li>
+  <li><a href="#turbulent-flow-1" id="toc-turbulent-flow-1" class="nav-link" data-scroll-target="#turbulent-flow-1">Turbulent Flow</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -309,7 +366,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">SAE-AS4395: 37&amp;deg Flared Fitting Standard</h1>
+<h1 class="title d-none d-lg-block">Free and Mixed Convection Correlations</h1>
 </div>
 
 
@@ -326,23 +383,139 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><a href="assets/sae-as4395-figure-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="assets/sae-as4395-figure-1.png" class="img-fluid"></a></p>
+<section id="semi-infinite-vertical-plate" class="level1">
+<h1>Semi-Infinite Vertical Plate</h1>
+<p><strong>Turbulence Transition:</strong> Uniform wall temperature, Rayleigh number is defined as <span class="math inline">\mathrm{Ra}_x=\mathrm{Pr}\mathrm{Gr}_x=\frac {g\beta x^3(T_s-T_{\infty})}{\nu\alpha}</span></p>
+<p><span class="math display">
+\mathrm{Ra}_x\approx10^9
+</span></p>
+<p><strong>Turbulence Transition, Benjan (1993):</strong> More accurate transition, uniform wall temperature, for <span class="math inline">10^{-3}&lt;\mathrm{Pr}&lt;10^3</span> is, Grashof number is defined as <span class="math inline">\mathrm{Gr}_x=\frac {g\beta l^3(T_s-T_{\infty})}{\nu}</span></p>
+<p><span class="math display">
+\mathrm{Gr_x}\approx10^9
+</span></p>
+<p><strong>Turbulence Transition:</strong> Uniform heat flux, modified Rayleigh number defined as <span class="math inline">\mathrm{Ra}_x^*=\mathrm{Gr}_x^*\mathrm{Pr}=\frac {g\beta q_s''x^4}{k\nu\alpha}</span></p>
+<p><span class="math display">
+\mathrm{Ra}_{x,\mathrm{cr}}^*\approx10^{13}\tag{10.6.5}
+</span></p>
+<div id="fig-free-convection-heated-vertical-plate-setup" class="lightbox quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-free-convection-heated-vertical-plate-setup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="assets/free-convection-heated-vertical-plate-setup.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Free convection on a heated vertical surface setup"><img src="assets/free-convection-heated-vertical-plate-setup.png" class="img-fluid figure-img" width="550"></a>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><a href="assets/sae-as4395-figure-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="assets/sae-as4395-figure-2.png" class="img-fluid"></a></p>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-free-convection-heated-vertical-plate-setup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Free convection on a heated vertical surface setup
+</figcaption>
+</figure>
 </div>
-</div>
-</div>
-<section id="table-1a-dimensions-a---e" class="level1">
-<h1>Table 1A: Dimensions A - E</h1>
+<section id="heat-transfer-coefficient" class="level2">
+<h2 class="anchored" data-anchor-id="heat-transfer-coefficient">Heat Transfer Coefficient</h2>
+<section id="laminar-flow" class="level3">
+<h3 class="anchored" data-anchor-id="laminar-flow">Laminar Flow</h3>
+<p><strong>Analytical:</strong> Calculate <span class="math inline">\mathrm{Nu}_l</span> using any applicable correlation.</p>
+<p><span class="math display">
+\langle\mathrm{Nu}_l\rangle_l=\frac 43\mathrm{Nu}_l\tag{10.4.16}
+</span></p>
+<p><strong>LeFevre and Ede (1965):</strong> Uniform wall temperature</p>
+<p><span class="math display">
+\begin{aligned}
+\mathrm{Nu}_{x,\mathrm{UWT}} &amp; =\phi(\mathrm{Pr})\mathrm{Gr}_x^{1/4} \\
+\phi(\mathrm{Pr}) &amp; =\frac {0.75\mathrm{Pr}^{1/4}}{\left[4\left(0.609+1.221\mathrm{Pr}^{1/2}+1.238\mathrm{Pr}\right)\right]^{1/4}}
+\end{aligned}\tag{10.4.14}
+</span></p>
+<p><strong>Analytical:</strong> Uniform wall temperature, Grashof number defined as <span class="math inline">\mathrm{Gr}_x=\frac {g\beta x^3(T_s-T_{\infty})}{\nu}</span></p>
+<p><span class="math display">
+\mathrm{Nu}_{x,\mathrm{UWT}}=0.508\mathrm{Pr}^{1/2}\left(\mathrm{Pr}+\frac {20}{21}\right)^{-1/4}\mathrm{Gr}_x^{1/4}\tag{10.5.25}
+</span></p>
+<p><strong>Analytical:</strong> Uniform heat flux, modified Grashof number defined as <span class="math inline">\mathrm{Gr}_x^*=\frac {g\beta q_s''x^4}{k\nu^2}</span></p>
+<p><span class="math display">
+\begin{aligned}
+\frac {\delta}x &amp; =\left[\frac {360(\mathrm{Pr}+0.8)}{\mathrm{Pr}^2\mathrm{Gr}_x^*}\right]^{1/5} \\
+\mathrm{Nu}_{x,\mathrm{UHF}} &amp; =0.62\left(\frac {\mathrm{Pr}^2\mathrm{Gr}_x^*}{\mathrm{Pr}+0.8}\right)^{1/5} \\
+T_s-T_{\infty} &amp; =\frac {1.622q_s''x}k\left(\frac {\mathrm{Pr}+0.8}{\mathrm{Pr}^2\mathrm{Gr}_x^*}\right)^{1/5}
+\end{aligned}
+</span></p>
+<p><strong>McAdams (1954):</strong> Uniform wall temperature, for <span class="math inline">\mathrm{Pr}\approx1</span>, for <span class="math inline">10^4&lt;\mathrm{Ra}_l&lt;10^9</span>, Rayleigh number defined as <span class="math inline">\mathrm{Ra}_x=\mathrm{Pr}\mathrm{Gr}_x=\frac {g\beta x^3(T_s-T_{\infty})}{\nu\alpha}</span>, calculate fluid properties at <span class="math inline">T_{\mathrm{film}}=\frac 12(T_s+T_{\infty})</span></p>
+<p><span class="math display">
+\langle\mathrm{Nu}_{l,\mathrm{UWT}}\rangle_l=0.59\mathrm{Ra}_l^{1/4}\tag{10.6.1}
+</span></p>
+<p><strong>Churchill and Chu (1975):</strong> Uniform wall temperature, valid for all <span class="math inline">\mathrm{Ra}_l</span> and <span class="math inline">\mathrm{Pr}</span>, fluid properties calculated at <span class="math inline">T_{\mathrm{film}}=\frac 12(T_s+T_{\infty})</span></p>
+<p><span class="math display">
+\langle\mathrm{Nu}_{l,\mathrm{UWT}}\rangle_l=\left\{0.825+\frac {0.387\mathrm{Ra}_l^{1/6}}{\left[1+(0.492/\mathrm{Pr})^{9/16}\right]^{8/27}}\right\}^2\tag{10.6.3}
+</span></p>
+<p><strong>Churchill and Chu (1975):</strong> Uniform wall temperature, for <span class="math inline">\mathrm{Ra}_l&lt;10^9</span>, calculate fluid properties at <span class="math inline">T_{\mathrm{film}}=\frac 12(T_s+T_{\infty})</span></p>
+<p><span class="math display">
+\langle\mathrm{Nu}_{l,\mathrm{UWT}}\rangle_l=0.68+\frac {0.67\mathrm{Ra}_l^{1/4}}{\left[1+(0.492/\mathrm{Pr})^{9/16}\right]^{4/9}}\tag{10.6.4}
+</span></p>
+<p><strong>Vliet and Liu (1969):</strong> Uniform heat flux, water only, modified Rayleigh number is defined as <span class="math inline">\mathrm{Ra}_x^*=\mathrm{Gr}_x^*\mathrm{Pr}=\frac {g\beta q_s''x^4}{k\nu\alpha}</span>, average Nusselt number defined as <span class="math inline">\langle\mathrm{Nu}_l\rangle_l=\frac {q_s''l}{k\left(\langle T_s\rangle_l-T_{\infty}\right)}</span></p>
+<p><span class="math display">
+\begin{aligned}
+\mathrm{Nu}_{x,\mathrm{UHF}} &amp; =0.60\left(\mathrm{Ra}_x^*\right)^{1/5}\qquad\qquad10^5\mathrm{Ra}_x^*&lt;10^{13} \\
+\langle\mathrm{Nu}_{l,\mathrm{UHF}}\rangle_l &amp; =1.25\mathrm{Nu}_l\qquad\qquad\qquad10^5\mathrm{Ra}_x^*&lt;10^{11}
+\end{aligned}\tag{10.6.7}
+</span></p>
+<p><strong>Vliet and Liu (1969):</strong> Uniform heat flux, air only, modified Rayleigh number is defined as <span class="math inline">\mathrm{Ra}_x^*=\mathrm{Gr}_x^*\mathrm{Pr}=\frac {g\beta q_s''x^4}{k\nu\alpha}</span>, average Nusselt number defined as <span class="math inline">\langle\mathrm{Nu}_l\rangle_l=\frac {q_s''l}{k\left(\langle T_s\rangle_l-T_{\infty}\right)}</span></p>
+<p><span class="math display">
+\langle\mathrm{Nu}_{l,\mathrm{UHF}}\rangle_l=0.55\left(\mathrm{Ra}_l^*\right)^{1/5}\tag{10.6.12}
+</span></p>
 </section>
-<section id="table-1b-dimensions-f---w" class="level1">
-<h1>Table 1B: Dimensions F - W</h1>
+<section id="turbulent-flow" class="level3">
+<h3 class="anchored" data-anchor-id="turbulent-flow">Turbulent Flow</h3>
+<p><strong>Oosthuizen and Naylor (1999):</strong> Smooth surface, if <span class="math inline">\mathrm{Pr}=0.7</span> and using <span class="math inline">1/7</span> approximation for turbulent boundary layer, Grashof number defined as <span class="math inline">\mathrm{Gr}_x=\frac {g\beta x^3(T_s-T_{\infty})}{\nu}</span></p>
+<p><span class="math display">
+\begin{aligned}
+\mathrm{Nu}_{x} &amp; =0.0185\mathrm{Gr}_x^{0.4} \\
+\langle\mathrm{Nu}_{l}\rangle_l &amp; =0.0154\mathrm{Gr}_l^{0.4}
+\end{aligned}\tag{10.5.44}
+</span></p>
+<p><strong>Churchill and Chu (1975):</strong> Uniform wall temperature, valid for all <span class="math inline">\mathrm{Ra}_l</span> and <span class="math inline">\mathrm{Pr}</span>, calculate fluid properties at <span class="math inline">T_{\mathrm{film}}=\frac 12(T_s+T_{\infty})</span></p>
+<p><span class="math display">
+\langle\mathrm{Nu}_{l,\mathrm{UWT}}\rangle_l=\left\{0.825+\frac {0.387\mathrm{Ra}_l^{1/6}}{\left[1+(0.492/\mathrm{Pr})^{9/16}\right]^{8/27}}\right\}^2\tag{10.6.3}
+</span></p>
+<p><strong>McAdams (1954):</strong> Uniform wall temperature, for <span class="math inline">\mathrm{Pr}\approx1</span>, for <span class="math inline">10^9&lt;\mathrm{Ra}_l&lt;10^{13}</span>, Rayleigh number defined as <span class="math inline">\mathrm{Ra}_x=\mathrm{Pr}\mathrm{Gr}_x=\frac {g\beta x^3(T_s-T_{\infty})}{\nu\alpha}</span>, calculate fluid properties at <span class="math inline">T_{\mathrm{film}}=\frac 12(T_s+T_{\infty})</span></p>
+<p><span class="math display">
+\langle\mathrm{Nu}_l\rangle_l=0.1\mathrm{Ra}_l^{1/3}\tag{10.6.2}
+</span></p>
+<p><strong>Vliet and Liu (1969):</strong> Uniform heat flux, water only, modified Rayleigh number is defined as <span class="math inline">\mathrm{Ra}_x^*=\mathrm{Gr}_x^*\mathrm{Pr}=\frac {g\beta q_s''x^4}{k\nu\alpha}</span>, average Nusselt number defined as <span class="math inline">\langle\mathrm{Nu}_l\rangle_l=\frac {q_s''l}{k\left(\langle T_s\rangle_l-T_{\infty}\right)}</span></p>
+<p><span class="math display">
+\begin{aligned}
+\mathrm{Nu}_{x,\mathrm{UHF}} &amp; =0.568\left(\mathrm{Ra}_x^*\right)^{0.22}\qquad\qquad10^{13}\mathrm{Ra}_x^*&lt;10^{16} \\
+\langle\mathrm{Nu}_{l,\mathrm{UHF}}\rangle_l &amp; =1.136\mathrm{Nu}_l\qquad\qquad\qquad\,\,2\times10^{13}\mathrm{Ra}_x^*&lt;10^{16}
+\end{aligned}\tag{10.6.9}
+</span></p>
+<p><strong>Vliet and Liu (1969):</strong> Uniform heat flux, air only, modified Rayleigh number is defined as <span class="math inline">\mathrm{Ra}_x^*=\mathrm{Gr}_x^*\mathrm{Pr}=\frac {g\beta q_s''x^4}{k\nu\alpha}</span>, average Nusselt number defined as <span class="math inline">\langle\mathrm{Nu}_l\rangle_l=\frac {q_s''l}{k\left(\langle T_s\rangle_l-T_{\infty}\right)}</span></p>
+<p><span class="math display">
+\langle\mathrm{Nu}_{l,\mathrm{UHF}}\rangle_l=0.17\left(\mathrm{Ra}_l^*\right)^{1/4}\tag{10.6.13}
+</span></p>
+</section>
+</section>
+</section>
+<section id="vertical-cylinder" class="level1">
+<h1>Vertical Cylinder</h1>
+<section id="heat-transfer-coefficient-1" class="level2">
+<h2 class="anchored" data-anchor-id="heat-transfer-coefficient-1">Heat Transfer Coefficient</h2>
+<section id="laminar-flow-1" class="level3">
+<h3 class="anchored" data-anchor-id="laminar-flow-1">Laminar Flow</h3>
+<p><strong>LeFevre and Ede (1965); Sparrow and Gregg (1956):</strong> Uniform wall temperature, if <span class="math inline">\mathrm{Pr}\leq1</span> and <span class="math inline">\frac Dl&gt;35\mathrm{Gr}_l^{-1/4}</span> or if <span class="math inline">\mathrm{Pr}\gtrsim1</span> and <span class="math inline">\frac Dl&gt;(\mathrm{Gr}_l\mathrm{Pr})^{-1/4}</span></p>
+<p><span class="math display">
+\begin{aligned}
+\mathrm{Nu}_{x,\mathrm{UWT}} &amp; =\phi(\mathrm{Pr})\mathrm{Gr}_x^{1/4} \\
+\phi(\mathrm{Pr}) &amp; =\frac {0.75\mathrm{Pr}^{1/4}}{\left[4\left(0.609+1.221\mathrm{Pr}^{1/2}+1.238\mathrm{Pr}\right)\right]^{1/4}}
+\end{aligned}\tag{10.4.14}
+</span></p>
+<p><strong>LeFevre and Ede (1965):</strong> Uniform wall tempearture, if <span class="math inline">\mathrm{Pr}\leq1</span> and <span class="math inline">\frac Dl\leq35\mathrm{Gr}_l^{-1/4}</span> or if <span class="math inline">\mathrm{Pr}\gtrsim1</span> and <span class="math inline">\frac Dl\leq(\mathrm{Gr}_l\mathrm{Pr})^{-1/4}</span></p>
+<p><span class="math display">
+\begin{aligned}
+\mathrm{Nu}_{x,\mathrm{UWT}} &amp; =\left[\frac {7\mathrm{Ra}_x\mathrm{Pr}}{5(20+21\mathrm{Pr})}\right]^{1/4}+\frac {4x(272+345\mathrm{Pr})}{35D(64+63\mathrm{Pr})} \\
+\langle\mathrm{Nu}_{l,\mathrm{UWT}}\rangle_l &amp; =\frac 43\left[\frac {7\mathrm{Ra}_l\mathrm{Pr}}{5(20+21\mathrm{Pr})}\right]^{1/4}+\frac {4l(272+345\mathrm{Pr})}{35D(64+63\mathrm{Pr})}
+\end{aligned}\tag{10.4.22}
+</span></p>
+</section>
+<section id="turbulent-flow-1" class="level3">
+<h3 class="anchored" data-anchor-id="turbulent-flow-1">Turbulent Flow</h3>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
