@@ -43,9 +43,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-a44d1825680bf4d2a1237acfefc713aa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -342,22 +339,19 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#semi-infinite-vertical-plate" id="toc-semi-infinite-vertical-plate" class="nav-link active" data-scroll-target="#semi-infinite-vertical-plate">Semi-Infinite Vertical Plate</a>
+  <li><a href="#natural-convection" id="toc-natural-convection" class="nav-link active" data-scroll-target="#natural-convection">Natural Convection</a>
   <ul class="collapse">
-  <li><a href="#heat-transfer-coefficient" id="toc-heat-transfer-coefficient" class="nav-link" data-scroll-target="#heat-transfer-coefficient">Heat Transfer Coefficient</a>
+  <li><a href="#semi-infinite-vertical-plate" id="toc-semi-infinite-vertical-plate" class="nav-link" data-scroll-target="#semi-infinite-vertical-plate">Semi-Infinite Vertical Plate</a>
   <ul class="collapse">
-  <li><a href="#laminar-flow" id="toc-laminar-flow" class="nav-link" data-scroll-target="#laminar-flow">Laminar Flow</a></li>
-  <li><a href="#turbulent-flow" id="toc-turbulent-flow" class="nav-link" data-scroll-target="#turbulent-flow">Turbulent Flow</a></li>
-  </ul></li>
+  <li><a href="#heat-transfer-coefficient" id="toc-heat-transfer-coefficient" class="nav-link" data-scroll-target="#heat-transfer-coefficient">Heat Transfer Coefficient</a></li>
   </ul></li>
   <li><a href="#vertical-cylinder" id="toc-vertical-cylinder" class="nav-link" data-scroll-target="#vertical-cylinder">Vertical Cylinder</a>
   <ul class="collapse">
-  <li><a href="#heat-transfer-coefficient-1" id="toc-heat-transfer-coefficient-1" class="nav-link" data-scroll-target="#heat-transfer-coefficient-1">Heat Transfer Coefficient</a>
-  <ul class="collapse">
-  <li><a href="#laminar-flow-1" id="toc-laminar-flow-1" class="nav-link" data-scroll-target="#laminar-flow-1">Laminar Flow</a></li>
-  <li><a href="#turbulent-flow-1" id="toc-turbulent-flow-1" class="nav-link" data-scroll-target="#turbulent-flow-1">Turbulent Flow</a></li>
+  <li><a href="#heat-transfer-coefficient-1" id="toc-heat-transfer-coefficient-1" class="nav-link" data-scroll-target="#heat-transfer-coefficient-1">Heat Transfer Coefficient</a></li>
   </ul></li>
+  <li><a href="#horizontal-flat-plate" id="toc-horizontal-flat-plate" class="nav-link" data-scroll-target="#horizontal-flat-plate">Horizontal Flat Plate</a></li>
   </ul></li>
+  <li><a href="#mixed-convection" id="toc-mixed-convection" class="nav-link" data-scroll-target="#mixed-convection">Mixed Convection</a></li>
   </ul>
 </nav>
     </div>
@@ -383,8 +377,10 @@ window.Quarto = {
 </header>
 
 
-<section id="semi-infinite-vertical-plate" class="level1">
-<h1>Semi-Infinite Vertical Plate</h1>
+<section id="natural-convection" class="level1">
+<h1>Natural Convection</h1>
+<section id="semi-infinite-vertical-plate" class="level2">
+<h2 class="anchored" data-anchor-id="semi-infinite-vertical-plate">Semi-Infinite Vertical Plate</h2>
 <p><strong>Turbulence Transition:</strong> Uniform wall temperature, Rayleigh number is defined as <span class="math inline">\mathrm{Ra}_x=\mathrm{Pr}\mathrm{Gr}_x=\frac {g\beta x^3(T_s-T_{\infty})}{\nu\alpha}</span></p>
 <p><span class="math display">
 \mathrm{Ra}_x\approx10^9
@@ -397,20 +393,11 @@ window.Quarto = {
 <p><span class="math display">
 \mathrm{Ra}_{x,\mathrm{cr}}^*\approx10^{13}\tag{10.6.5}
 </span></p>
-<div id="fig-free-convection-heated-vertical-plate-setup" class="lightbox quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-free-convection-heated-vertical-plate-setup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="assets/free-convection-heated-vertical-plate-setup.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Free convection on a heated vertical surface setup"><img src="assets/free-convection-heated-vertical-plate-setup.png" class="img-fluid figure-img" width="550"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-free-convection-heated-vertical-plate-setup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Free convection on a heated vertical surface setup
-</figcaption>
-</figure>
-</div>
-<section id="heat-transfer-coefficient" class="level2">
-<h2 class="anchored" data-anchor-id="heat-transfer-coefficient">Heat Transfer Coefficient</h2>
-<section id="laminar-flow" class="level3">
-<h3 class="anchored" data-anchor-id="laminar-flow">Laminar Flow</h3>
+<!-- ![Free convection on a heated vertical surface setup](assets/free-convection-heated-vertical-plate-setup.png){#fig-free-convection-heated-vertical-plate-setup width=550 .lightbox} -->
+<section id="heat-transfer-coefficient" class="level3">
+<h3 class="anchored" data-anchor-id="heat-transfer-coefficient">Heat Transfer Coefficient</h3>
+<section id="laminar-flow" class="level4">
+<h4 class="anchored" data-anchor-id="laminar-flow">Laminar Flow</h4>
 <p><strong>Analytical:</strong> Calculate <span class="math inline">\mathrm{Nu}_l</span> using any applicable correlation.</p>
 <p><span class="math display">
 \langle\mathrm{Nu}_l\rangle_l=\frac 43\mathrm{Nu}_l\tag{10.4.16}
@@ -440,7 +427,7 @@ T_s-T_{\infty} &amp; =\frac {1.622q_s''x}k\left(\frac {\mathrm{Pr}+0.8}{\mathrm{
 </span></p>
 <p><strong>Churchill and Chu (1975):</strong> Uniform wall temperature, valid for all <span class="math inline">\mathrm{Ra}_l</span> and <span class="math inline">\mathrm{Pr}</span>, fluid properties calculated at <span class="math inline">T_{\mathrm{film}}=\frac 12(T_s+T_{\infty})</span></p>
 <p><span class="math display">
-\langle\mathrm{Nu}_{l,\mathrm{UWT}}\rangle_l=\left\{0.825+\frac {0.387\mathrm{Ra}_l^{1/6}}{\left[1+(0.492/\mathrm{Pr})^{9/16}\right]^{8/27}}\right\}^2\tag{10.6.3}
+\langle\mathrm{Nu}_{l,\mathrm{UWT}}\rangle_l=\left[0.825+\frac {0.387\mathrm{Ra}_l^{1/6}}{\left[1+(0.492/\mathrm{Pr})^{9/16}\right]^{8/27}}\right]^2\tag{10.6.3}
 </span></p>
 <p><strong>Churchill and Chu (1975):</strong> Uniform wall temperature, for <span class="math inline">\mathrm{Ra}_l&lt;10^9</span>, calculate fluid properties at <span class="math inline">T_{\mathrm{film}}=\frac 12(T_s+T_{\infty})</span></p>
 <p><span class="math display">
@@ -458,8 +445,8 @@ T_s-T_{\infty} &amp; =\frac {1.622q_s''x}k\left(\frac {\mathrm{Pr}+0.8}{\mathrm{
 \langle\mathrm{Nu}_{l,\mathrm{UHF}}\rangle_l=0.55\left(\mathrm{Ra}_l^*\right)^{1/5}\tag{10.6.12}
 </span></p>
 </section>
-<section id="turbulent-flow" class="level3">
-<h3 class="anchored" data-anchor-id="turbulent-flow">Turbulent Flow</h3>
+<section id="turbulent-flow" class="level4">
+<h4 class="anchored" data-anchor-id="turbulent-flow">Turbulent Flow</h4>
 <p><strong>Oosthuizen and Naylor (1999):</strong> Smooth surface, if <span class="math inline">\mathrm{Pr}=0.7</span> and using <span class="math inline">1/7</span> approximation for turbulent boundary layer, Grashof number defined as <span class="math inline">\mathrm{Gr}_x=\frac {g\beta x^3(T_s-T_{\infty})}{\nu}</span></p>
 <p><span class="math display">
 \begin{aligned}
@@ -469,7 +456,7 @@ T_s-T_{\infty} &amp; =\frac {1.622q_s''x}k\left(\frac {\mathrm{Pr}+0.8}{\mathrm{
 </span></p>
 <p><strong>Churchill and Chu (1975):</strong> Uniform wall temperature, valid for all <span class="math inline">\mathrm{Ra}_l</span> and <span class="math inline">\mathrm{Pr}</span>, calculate fluid properties at <span class="math inline">T_{\mathrm{film}}=\frac 12(T_s+T_{\infty})</span></p>
 <p><span class="math display">
-\langle\mathrm{Nu}_{l,\mathrm{UWT}}\rangle_l=\left\{0.825+\frac {0.387\mathrm{Ra}_l^{1/6}}{\left[1+(0.492/\mathrm{Pr})^{9/16}\right]^{8/27}}\right\}^2\tag{10.6.3}
+\langle\mathrm{Nu}_{l,\mathrm{UWT}}\rangle_l=\left[0.825+\frac {0.387\mathrm{Ra}_l^{1/6}}{\left[1+(0.492/\mathrm{Pr})^{9/16}\right]^{8/27}}\right]^2\tag{10.6.3}
 </span></p>
 <p><strong>McAdams (1954):</strong> Uniform wall temperature, for <span class="math inline">\mathrm{Pr}\approx1</span>, for <span class="math inline">10^9&lt;\mathrm{Ra}_l&lt;10^{13}</span>, Rayleigh number defined as <span class="math inline">\mathrm{Ra}_x=\mathrm{Pr}\mathrm{Gr}_x=\frac {g\beta x^3(T_s-T_{\infty})}{\nu\alpha}</span>, calculate fluid properties at <span class="math inline">T_{\mathrm{film}}=\frac 12(T_s+T_{\infty})</span></p>
 <p><span class="math display">
@@ -489,12 +476,12 @@ T_s-T_{\infty} &amp; =\frac {1.622q_s''x}k\left(\frac {\mathrm{Pr}+0.8}{\mathrm{
 </section>
 </section>
 </section>
-<section id="vertical-cylinder" class="level1">
-<h1>Vertical Cylinder</h1>
-<section id="heat-transfer-coefficient-1" class="level2">
-<h2 class="anchored" data-anchor-id="heat-transfer-coefficient-1">Heat Transfer Coefficient</h2>
-<section id="laminar-flow-1" class="level3">
-<h3 class="anchored" data-anchor-id="laminar-flow-1">Laminar Flow</h3>
+<section id="vertical-cylinder" class="level2">
+<h2 class="anchored" data-anchor-id="vertical-cylinder">Vertical Cylinder</h2>
+<section id="heat-transfer-coefficient-1" class="level3">
+<h3 class="anchored" data-anchor-id="heat-transfer-coefficient-1">Heat Transfer Coefficient</h3>
+<section id="laminar-flow-1" class="level4">
+<h4 class="anchored" data-anchor-id="laminar-flow-1">Laminar Flow</h4>
 <p><strong>LeFevre and Ede (1965); Sparrow and Gregg (1956):</strong> Uniform wall temperature, if <span class="math inline">\mathrm{Pr}\leq1</span> and <span class="math inline">\frac Dl&gt;35\mathrm{Gr}_l^{-1/4}</span> or if <span class="math inline">\mathrm{Pr}\gtrsim1</span> and <span class="math inline">\frac Dl&gt;(\mathrm{Gr}_l\mathrm{Pr})^{-1/4}</span></p>
 <p><span class="math display">
 \begin{aligned}
@@ -510,12 +497,19 @@ T_s-T_{\infty} &amp; =\frac {1.622q_s''x}k\left(\frac {\mathrm{Pr}+0.8}{\mathrm{
 \end{aligned}\tag{10.4.22}
 </span></p>
 </section>
-<section id="turbulent-flow-1" class="level3">
-<h3 class="anchored" data-anchor-id="turbulent-flow-1">Turbulent Flow</h3>
-
-
+<section id="turbulent-flow-1" class="level4">
+<h4 class="anchored" data-anchor-id="turbulent-flow-1">Turbulent Flow</h4>
 </section>
 </section>
+</section>
+<section id="horizontal-flat-plate" class="level2">
+<h2 class="anchored" data-anchor-id="horizontal-flat-plate">Horizontal Flat Plate</h2>
+</section>
+</section>
+<section id="mixed-convection" class="level1">
+<h1>Mixed Convection</h1>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -920,38 +914,6 @@ T_s-T_{\infty} &amp; =\frac {1.622q_s''x}k\left(\frac {\mathrm{Pr}+0.8}{\mathrm{
   });
   </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 
