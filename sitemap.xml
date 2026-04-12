@@ -1,88 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/structures/limits-and-fits.html</loc>
-    <lastmod>2026-04-05T06:11:57.904Z</lastmod>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/index.html</loc>
+    <lastmod>2026-03-31T12:49:10.034Z</lastmod>
   </url>
   <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/structures/fundamentals-of-metal-fatigue-analysis/index.html</loc>
-    <lastmod>2026-03-27T07:35:39.459Z</lastmod>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/engineering-fundamentals/structures/index.html</loc>
+    <lastmod>2026-03-27T07:29:27.154Z</lastmod>
   </url>
   <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-5-variable-amplitude-loading.html</loc>
-    <lastmod>2026-03-27T07:36:40.056Z</lastmod>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/engineering-fundamentals/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-7-multiaxial-fatigue.html</loc>
+    <lastmod>2026-03-31T09:14:15.412Z</lastmod>
   </url>
   <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/standards/index.html</loc>
-    <lastmod>2026-04-05T05:08:58.287Z</lastmod>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/engineering-fundamentals/standards/sae-as4395-37deg-flared-fitting.html</loc>
+    <lastmod>2026-04-05T05:07:56.805Z</lastmod>
   </url>
   <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/fluids/index.html</loc>
-    <lastmod>2026-03-26T05:34:57.333Z</lastmod>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/engineering-fundamentals/fluids/free-mixed-convection-correlations.html</loc>
+    <lastmod>2026-04-09T17:37:34.298Z</lastmod>
   </url>
   <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/fluids/forced-flows-correlations.html</loc>
-    <lastmod>2026-04-09T17:37:40.235Z</lastmod>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-4-internal-laminar-flow.html</loc>
+    <lastmod>2026-03-26T07:16:52.302Z</lastmod>
   </url>
   <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.html</loc>
-    <lastmod>2026-03-26T21:03:06.269Z</lastmod>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/engineering-fundamentals/cfd/index.html</loc>
+    <lastmod>2026-03-31T13:05:30.578Z</lastmod>
   </url>
   <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/fluids/convective-heat-and-mass-transfer/chapters/chapter-10-natural-convection.html</loc>
-    <lastmod>2026-03-31T16:04:49.380Z</lastmod>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-9-numerical-methods-for-navier-stokes-equations.html</loc>
+    <lastmod>2026-04-05T06:00:56.273Z</lastmod>
   </url>
   <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/cfd/computational-fluid-mechanics-and-heat-transfer/index.html</loc>
-    <lastmod>2026-03-31T15:18:27.591Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-6-numerical-methods-for-inviscid-flows.html</loc>
-    <lastmod>2026-04-11T08:34:39.706Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-2-partial-differential-equations.html</loc>
-    <lastmod>2026-04-06T08:40:38.472Z</lastmod>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-4-application-of-numerical-methods-to-model-equations.html</loc>
+    <lastmod>2026-03-31T15:25:00.501Z</lastmod>
   </url>
   <url>
     <loc>https://Frank-ZW.github.io/frank-zw.github.io/index.html</loc>
     <lastmod>2026-03-31T15:15:06.973Z</lastmod>
   </url>
   <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-4-application-of-numerical-methods-to-model-equations.html</loc>
-    <lastmod>2026-03-31T15:25:00.501Z</lastmod>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-2-partial-differential-equations.html</loc>
+    <lastmod>2026-04-06T08:40:38.472Z</lastmod>
   </url>
   <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-9-numerical-methods-for-navier-stokes-equations.html</loc>
-    <lastmod>2026-04-05T06:00:56.273Z</lastmod>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-6-numerical-methods-for-inviscid-flows.html</loc>
+    <lastmod>2026-04-11T08:34:39.706Z</lastmod>
   </url>
   <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/cfd/index.html</loc>
-    <lastmod>2026-03-31T13:05:30.578Z</lastmod>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/index.html</loc>
+    <lastmod>2026-03-31T15:18:27.591Z</lastmod>
   </url>
   <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/fluids/convective-heat-and-mass-transfer/chapters/chapter-4-internal-laminar-flow.html</loc>
-    <lastmod>2026-03-26T07:16:52.302Z</lastmod>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-10-natural-convection.html</loc>
+    <lastmod>2026-03-31T16:04:49.380Z</lastmod>
   </url>
   <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/fluids/free-mixed-convection-correlations.html</loc>
-    <lastmod>2026-04-09T17:37:34.298Z</lastmod>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.html</loc>
+    <lastmod>2026-03-26T21:03:06.269Z</lastmod>
   </url>
   <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/index.html</loc>
-    <lastmod>2026-03-31T12:49:10.034Z</lastmod>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/engineering-fundamentals/fluids/forced-flows-correlations.html</loc>
+    <lastmod>2026-04-09T17:37:40.235Z</lastmod>
   </url>
   <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/standards/sae-as4395-37deg-flared-fitting.html</loc>
-    <lastmod>2026-04-05T05:07:56.805Z</lastmod>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/engineering-fundamentals/fluids/index.html</loc>
+    <lastmod>2026-03-26T05:34:57.333Z</lastmod>
   </url>
   <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-7-multiaxial-fatigue.html</loc>
-    <lastmod>2026-03-31T09:14:15.412Z</lastmod>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/engineering-fundamentals/standards/index.html</loc>
+    <lastmod>2026-04-05T05:08:58.287Z</lastmod>
   </url>
   <url>
-    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/structures/index.html</loc>
-    <lastmod>2026-03-27T07:29:27.154Z</lastmod>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/engineering-fundamentals/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-5-variable-amplitude-loading.html</loc>
+    <lastmod>2026-03-27T07:36:40.056Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/engineering-fundamentals/structures/fundamentals-of-metal-fatigue-analysis/index.html</loc>
+    <lastmod>2026-03-27T07:35:39.459Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/engineering-fundamentals/structures/limits-and-fits.html</loc>
+    <lastmod>2026-04-05T06:11:57.904Z</lastmod>
   </url>
   <url>
     <loc>https://Frank-ZW.github.io/frank-zw.github.io/notes/index.html</loc>

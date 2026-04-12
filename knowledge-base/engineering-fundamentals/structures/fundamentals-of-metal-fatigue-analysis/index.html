@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Fundamentals of Engineering – Frank’s Engineering Notebook</title>
+<title>Fundamentals of Metal Fatigue Analysis – Frank’s Engineering Notebook</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,23 +26,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-a44d1825680bf4d2a1237acfefc713aa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-a44d1825680bf4d2a1237acfefc713aa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,17 +72,17 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../../../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-sidebar floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../../../index.html">
     <span class="navbar-title">Frank’s Engineering Notebook</span>
     </a>
   </div>
@@ -93,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -102,21 +102,21 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-knowledge-base">    
         <li>
-    <a class="dropdown-item" href="../knowledge-base/engineering-fundamentals/index.html">
+    <a class="dropdown-item" href="../../../../knowledge-base/engineering-fundamentals/index.html">
  <span class="dropdown-text">Fundamentals of Engineering</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../knowledge-base/propulsion-design/index.html">
+    <a class="dropdown-item" href="../../../../knowledge-base/propulsion-design/index.html">
  <span class="dropdown-text">Propulsion Design</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../notes/index.html"> 
+    <a class="nav-link" href="../../../../notes/index.html"> 
 <span class="menu-text">Digital Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../projects/index.html"> 
+    <a class="nav-link" href="../../../../projects/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
@@ -125,10 +125,182 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+          <h1 class="quarto-secondary-nav-title">Fundamentals of Metal Fatigue Analysis</h1>
+        </a>     
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../../knowledge-base/engineering-fundamentals/standards/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Standards</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../knowledge-base/engineering-fundamentals/standards/sae-as4395-37deg-flared-fitting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SAE AS4395 37° Flared Fitting</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../../knowledge-base/engineering-fundamentals/cfd/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CFD</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../../knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Computational Fluid Mechanics and Heat Transfer</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-2-partial-differential-equations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 2. Partial Differential Equations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-4-application-of-numerical-methods-to-model-equations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 4. Application of Numerical Methods to Model Equations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-6-numerical-methods-for-inviscid-flows.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 6. Numerical Methods for Inviscid Flows</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-9-numerical-methods-for-navier-stokes-equations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 9. Numerical Methods for Navier-Stokes Equations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../../knowledge-base/engineering-fundamentals/fluids/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fluids</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../../knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Convective Heat and Mass Transfer</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-4-internal-laminar-flow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 4. Internal Laminar Flow</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 7. Turbulent and Transitional Internal Flow</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-10-natural-convection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 10. Natural Convection</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../knowledge-base/engineering-fundamentals/fluids/forced-flows-correlations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Forced Flows Correlations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../knowledge-base/engineering-fundamentals/fluids/free-mixed-convection-correlations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Free and Mixed Convection Correlations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../../knowledge-base/engineering-fundamentals/structures/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Structures</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../../knowledge-base/engineering-fundamentals/structures/fundamentals-of-metal-fatigue-analysis/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Fundamentals of Metal Fatigue Analysis</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../knowledge-base/engineering-fundamentals/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-5-variable-amplitude-loading.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 5. Variable Amplitude Loading</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../knowledge-base/engineering-fundamentals/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-7-multiaxial-fatigue.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 7. Multiaxial Fatigue</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../knowledge-base/engineering-fundamentals/structures/limits-and-fits.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Limits and Fits</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
@@ -138,7 +310,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Fundamentals of Engineering</h1>
+<h1 class="title d-none d-lg-block">Fundamentals of Metal Fatigue Analysis</h1>
 </div>
 
 
@@ -155,7 +327,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Knowledge base dedicated to important engineering concepts</p>
+<p>Bannantine, J. A., Comer, J. J., and Handrock, J.L., “Fundamentals of Metal Fatigue Analysis”, 1st ed., Pearson, New Jersey, 1990</p>
 
 
 
