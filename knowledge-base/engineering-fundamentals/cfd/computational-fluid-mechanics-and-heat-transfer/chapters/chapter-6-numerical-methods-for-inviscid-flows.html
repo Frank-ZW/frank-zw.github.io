@@ -190,7 +190,7 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../../../knowledge-base/engineering-fundamentals/standards/index.html" class="sidebar-item-text sidebar-link">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Standards</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -207,7 +207,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../../../knowledge-base/engineering-fundamentals/cfd/index.html" class="sidebar-item-text sidebar-link">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">CFD</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -216,7 +216,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../../../knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/index.html" class="sidebar-item-text sidebar-link">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Computational Fluid Mechanics and Heat Transfer</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -253,7 +253,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../../../knowledge-base/engineering-fundamentals/fluids/index.html" class="sidebar-item-text sidebar-link">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
  <span class="menu-text">Fluids</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -262,7 +262,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../../../knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/index.html" class="sidebar-item-text sidebar-link">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
  <span class="menu-text">Convective Heat and Mass Transfer</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -305,7 +305,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../../../knowledge-base/engineering-fundamentals/structures/index.html" class="sidebar-item-text sidebar-link">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
  <span class="menu-text">Structures</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -314,7 +314,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../../../knowledge-base/engineering-fundamentals/structures/fundamentals-of-metal-fatigue-analysis/index.html" class="sidebar-item-text sidebar-link">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
  <span class="menu-text">Fundamentals of Metal Fatigue Analysis</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -391,9 +391,9 @@ window.Quarto = {
 </span></p>
 <p>where <span class="math inline">\Delta V</span> is the cell volume and <span class="math inline">\Delta x</span> and <span class="math inline">\Delta y</span> are the arc lengths of the cells in the 2D case. Using a forward difference in time, then the discretized equation becomes</p>
 <p><span id="eq-discretized-euler-equation"><span class="math display">
-\left(\textbf U_{i,j}^{n+1}-\textbf U_{i,j}^n\right)\frac {\Delta V}{\Delta t}+\textbf E\Delta y\,\Bigr|_{i-\frac 12,j}+\textbf E\Delta y\,\Bigr|_{i+\frac 12,j}-F\Delta x\,\Bigr|_{i,j-\frac 12}-\textbf F\Delta x\,\Bigr|_{i,j+\frac 12}=0
+\left(\textbf U_{i,j}^{n+1}-\textbf U_{i,j}^n\right)\frac {\Delta V}{\Delta t}+\left(\textbf E\Delta y\right)\,\biggr|_{i-\frac 12,j}^{i+\frac 12,j}+\left(\textbf F\Delta x\right)\,\biggr|_{i,j-\frac 12}^{i,j+\frac 12}=0
 \tag{1}</span></span></p>
-<p>The crux of the problem is solving for <span class="math inline">\textbf E</span> and <span class="math inline">\textbf F</span> at the cell boundaries.</p>
+<p>Solving for <span class="math inline">\textbf U_{i,j}^{n+1}</span> gives the conservative vector <span class="math inline">\textbf U</span> at the next time step. The crux of the problem now is solving for <span class="math inline">\textbf E</span> and <span class="math inline">\textbf F</span> at the cell boundaries.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Derivation of Discretized Euler Equation">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -440,7 +440,10 @@ Figure&nbsp;1: Control volume for discretized Euler equation
 <p><span class="math display">
 \iint\limits_{\mathcal V}\frac {\partial\textbf U}{\partial t}\,\mathrm dV+\iint\limits_{\mathcal V}\frac {\partial\textbf E}{\partial x}-\frac {\partial\textbf F}{\partial y}\,\mathrm dV=\iint\limits_{\mathcal V}\frac {\partial\textbf U}{\partial t}\,\mathrm dV+\oint\limits_{\mathcal S}\left(\textbf E\,\mathrm dy-\textbf F\,\mathrm dx\right)=0
 </span></p>
-<p>The subscript <span class="math inline">\mathcal S</span> denotes the boundary. In discrete form, the contour integral transforms into a sum about each boundary of the cell, completing the proof.</p>
+<p>The subscript <span class="math inline">\mathcal S</span> denotes the boundary. In discrete form, the contour integral transforms into a sum about each boundary of the cell, completing the proof. A natural question is to wonder how Eqn. (<a href="#eq-discretized-euler-equation" class="quarto-xref">1</a>) looks when extended to 3D in the general case. If curvilinear coordinates are used, where <span class="math inline">\xi</span>, <span class="math inline">\eta</span>, <span class="math inline">\zeta</span> map to the <span class="math inline">x</span>, <span class="math inline">y</span>, and <span class="math inline">z</span> axes respectively, and a volumetric source term, <span class="math inline">\textbf H</span> is included for generation effects, then Eqn. (<a href="#eq-discretized-euler-equation" class="quarto-xref">1</a>) becomes</p>
+<p><span class="math display">
+\frac {\mathrm d\left(\textbf U\Delta V\right)}{\mathrm dt}+\left(\textbf E_{\xi}-\textbf E_{v_{\xi}}\right)S_{\xi}\,\biggr|_{i+\frac 12,j,k}^{i-\frac 12,j,k}+\left(\textbf F_{\eta}-\textbf F_{v_{\eta}}\right)\,\biggr|_{i,j-\frac 12,k}^{i,j+\frac 12,k}+\left(\textbf G_{\zeta}-\textbf G_{v_{\zeta}}\right)_{i,j,k-\frac 12}^{i,j,k+\frac 12}=\textbf H\Delta V
+</span></p>
 </div>
 </div>
 </div>
