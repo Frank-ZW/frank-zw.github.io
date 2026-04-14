@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Fundamentals of Engineering – Frank’s Engineering Notebook</title>
+<title>Effects of Transpiration on Friction, Heat, and Mass Transfer – Frank’s Engineering Notebook</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,23 +26,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a44d1825680bf4d2a1237acfefc713aa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../../">
+<script src="../../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../../site_libs/bootstrap/bootstrap-a44d1825680bf4d2a1237acfefc713aa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,8 +74,51 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
 
-<link rel="stylesheet" href="../../styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../../../styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed quarto-light">
@@ -82,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../../../index.html">
     <span class="navbar-title">Frank’s Engineering Notebook</span>
     </a>
   </div>
@@ -93,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../../../../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -102,21 +148,21 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-knowledge-base">    
         <li>
-    <a class="dropdown-item" href="../../knowledge-base/engineering-fundamentals/index.html">
+    <a class="dropdown-item" href="../../../../../knowledge-base/engineering-fundamentals/index.html">
  <span class="dropdown-text">Fundamentals of Engineering</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../knowledge-base/propulsion-design/index.html">
+    <a class="dropdown-item" href="../../../../../knowledge-base/propulsion-design/index.html">
  <span class="dropdown-text">Propulsion Design</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../notes/index.html"> 
+    <a class="nav-link" href="../../../../../notes/index.html"> 
 <span class="menu-text">Digital Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../projects/index.html"> 
+    <a class="nav-link" href="../../../../../projects/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
@@ -131,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">Fundamentals of Engineering</h1>
+          <h1 class="quarto-secondary-nav-title">Effects of Transpiration on Friction, Heat, and Mass Transfer</h1>
         </a>     
     </div>
   </nav>
@@ -153,7 +199,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../knowledge-base/engineering-fundamentals/standards/sae-as4395-37deg-flared-fitting.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../../knowledge-base/engineering-fundamentals/standards/sae-as4395-37deg-flared-fitting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SAE AS4395 37° Flared Fitting</span></a>
   </div>
 </li>
@@ -179,25 +225,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-2-partial-differential-equations.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../../knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-2-partial-differential-equations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapter 2. Partial Differential Equations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-4-application-of-numerical-methods-to-model-equations.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../../knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-4-application-of-numerical-methods-to-model-equations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapter 4. Application of Numerical Methods to Model Equations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-6-numerical-methods-for-inviscid-flows.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../../knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-6-numerical-methods-for-inviscid-flows.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapter 6. Numerical Methods for Inviscid Flows</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-9-numerical-methods-for-navier-stokes-equations.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../../knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-9-numerical-methods-for-navier-stokes-equations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapter 9. Numerical Methods for Navier-Stokes Equations</span></a>
   </div>
 </li>
@@ -207,43 +253,43 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Fluids</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">Convective Heat and Mass Transfer</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-4-internal-laminar-flow.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../../knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-4-internal-laminar-flow.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapter 4. Internal Laminar Flow</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../../knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapter 7. Turbulent and Transitional Internal Flow</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-8-effects-of-transpiration.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../../knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-8-effects-of-transpiration.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Chapter 8. Effects of Transpiration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-10-natural-convection.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../../knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-10-natural-convection.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapter 10. Natural Convection</span></a>
   </div>
 </li>
@@ -251,13 +297,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../knowledge-base/engineering-fundamentals/fluids/forced-flows-correlations.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../../knowledge-base/engineering-fundamentals/fluids/forced-flows-correlations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Forced Flows Correlations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../knowledge-base/engineering-fundamentals/fluids/free-mixed-convection-correlations.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../../knowledge-base/engineering-fundamentals/fluids/free-mixed-convection-correlations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Free and Mixed Convection Correlations</span></a>
   </div>
 </li>
@@ -283,13 +329,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../knowledge-base/engineering-fundamentals/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-5-variable-amplitude-loading.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../../knowledge-base/engineering-fundamentals/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-5-variable-amplitude-loading.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapter 5. Variable Amplitude Loading</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../knowledge-base/engineering-fundamentals/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-7-multiaxial-fatigue.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../../knowledge-base/engineering-fundamentals/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-7-multiaxial-fatigue.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapter 7. Multiaxial Fatigue</span></a>
   </div>
 </li>
@@ -297,7 +343,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../knowledge-base/engineering-fundamentals/structures/limits-and-fits.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../../knowledge-base/engineering-fundamentals/structures/limits-and-fits.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limits and Fits</span></a>
   </div>
 </li>
@@ -308,15 +354,27 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#couette-flow-film-model" id="toc-couette-flow-film-model" class="nav-link" data-scroll-target="#couette-flow-film-model">Couette Flow Film Model</a>
+  <ul class="collapse">
+  <li><a href="#sec-couette-film-model-wall-friction" id="toc-sec-couette-film-model-wall-friction" class="nav-link" data-scroll-target="#sec-couette-film-model-wall-friction">Wall Friction</a></li>
+  <li><a href="#sec-couette-film-model-heat-transfer-coefficient" id="toc-sec-couette-film-model-heat-transfer-coefficient" class="nav-link" data-scroll-target="#sec-couette-film-model-heat-transfer-coefficient">Heat Transfer Coefficient</a></li>
+  </ul></li>
+  <li><a href="#gas-liquid-interphase" id="toc-gas-liquid-interphase" class="nav-link" data-scroll-target="#gas-liquid-interphase">Gas-Liquid Interphase</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Fundamentals of Engineering</h1>
+<h1 class="title d-none d-lg-block">Effects of Transpiration on Friction, Heat, and Mass Transfer</h1>
 </div>
 
 
@@ -333,8 +391,75 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>When mass flows through a wall, it modifies the velocity, thermal, and concentration boundary layer profiles, thereby modifying the frictional, thermal, and mass transfer resistances. If the diffusion of species <span class="math inline">1</span> is Fickian and does not affect the energy equation, the wall boundary conditions are</p>
+<p><span class="math display">
+\begin{aligned}
+\tau_s &amp; =\mu\left.\frac {\partial\overline u}{\partial y}\right|_{y=0} \\
+q_s'' &amp; =n_s(\textbf h_s^*-\textbf h_b^*)-\left.k\frac {k\partial\overline T}{\partial y}\right|_{y=0} \\
+m_{1,s}'' &amp; =n_sm_{1,s}-\left.\rho\mathfrak D_{12}\frac {\partial\overline m_1}{\partial y}\right|_{y=0}
+\end{aligned}
+</span></p>
+<p>where <span class="math inline">n_s</span> is the mass flux through the wall, <span class="math inline">\textbf h_s^*</span> is the total enthalpy of the fluid mixture at the wall, <span class="math inline">\textbf h_b^*</span> is the total enthalpy of species <span class="math inline">1</span>, <span class="math inline">m_1</span> is the mass fraction of species <span class="math inline">1</span>, and <span class="math inline">\mathfrak D_{12}</span> is the mass diffusivity of species <span class="math inline">1</span> with respect to the mixture (species <span class="math inline">2</span>). For blowing and suction, <span class="math inline">n_s&gt;0</span> and <span class="math inline">n_s&lt;0</span> respectively. Typically, since kinetic energy contribution of species <span class="math inline">1</span> on species <span class="math inline">2</span> is negligible, <span class="math inline">\textbf h^*=\overline{\textbf h}</span>.</p>
+</section>
+<section id="couette-flow-film-model" class="level1">
+<h1>Couette Flow Film Model</h1>
+<p>For engineering, use the Couette film model to account for effects of transpiration. Defining <span class="math inline">\dot C_f</span>, <span class="math inline">\dot h</span>, and <span class="math inline">\dot{\mathfrak K}</span> as the coefficients of skin friction, heat transfer coefficient, and mass transfer coefficient respectively, then</p>
+<p><span class="math display">
+\begin{aligned}
+\tau_s &amp; =\frac 12\rho\dot C_fU_{\infty}^2 \\
+\left.-k\frac {\partial T}{\partial y}\right|_{y=0} &amp; =\dot h(T_s-T_{\infty}) \\
+\left.-\rho\mathfrak D_{12}\frac {\partial m_1}{\partial y}\right|_{y=0} &amp; =\dot\mathfrak K(m_{1,s}-m_{1,\infty})
+\end{aligned}
+</span></p>
+<p>The dot implies a modified parameter for mass transpiration. Explicit and implicit equations for calculating each parameter is given below. Derivations for <span class="math inline">\dot C_f</span> and <span class="math inline">\dot h</span> are given in <a href="#sec-couette-film-model-wall-friction" class="quarto-xref">Section&nbsp;2.1</a> and <a href="#sec-couette-film-model-heat-transfer-coefficient" class="quarto-xref">Section&nbsp;2.2</a> respectively. The <strong>explicit</strong> formulations are</p>
+<p><span id="eq-couette-film-model-parameters-explicit"><span class="math display">
+\begin{aligned}
+\frac {\dot C_f}{C_f} &amp; =\frac {\beta}{\beta-1}\qquad &amp; \qquad &amp; \beta=\frac {2n_s}{\rho U_{\infty}C_f} \\
+\frac {\dot h}h &amp; =\frac {\beta_{\mathrm{th}}}{e^{\beta_{\mathrm{th}}}-1}\qquad &amp; \qquad &amp; \beta_{\mathrm{th}}=\frac {n_sC_p}h \\
+\frac {\dot{\mathfrak K}}{\mathfrak K} &amp; =\frac {\beta_{\mathrm{ma}}}{e^{\beta_{\mathrm{ma}}}-1}\qquad &amp; \qquad &amp; \beta_{\mathrm{ma}}=\frac {n_s}{\mathfrak K} \\
+\frac {\dot{\tilde{\mathfrak K}}}{\tilde{\mathfrak K}} &amp; =\frac {\tilde{\beta}_{\mathrm{ma}}}{e^{\tilde{\beta}_{\mathrm{ma}}}-1}\qquad &amp; \qquad &amp; \tilde{\beta}_{\mathrm{ma}}=\frac {N_s''}{\tilde{\mathfrak K}}
+\end{aligned}
+\tag{1}</span></span></p>
+<p>The <strong>implicit</strong> formulations must be solved iteratively</p>
+$$
+<span class="math display">\begin{aligned}
+
+\end{aligned}</span>
+<p>$$</p>
+<section id="sec-couette-film-model-wall-friction" class="level2">
+<h2 class="anchored" data-anchor-id="sec-couette-film-model-wall-friction">Wall Friction</h2>
+</section>
+<section id="sec-couette-film-model-heat-transfer-coefficient" class="level2">
+<h2 class="anchored" data-anchor-id="sec-couette-film-model-heat-transfer-coefficient">Heat Transfer Coefficient</h2>
+</section>
+</section>
+<section id="gas-liquid-interphase" class="level1">
+<h1>Gas-Liquid Interphase</h1>
+<p>At the interface between the gas and liquid, the heat and mass transfer resistance there is negligible small. Therefore, it can be assumed the interphase is in equilibrium. The interfacial transfer processes are controlled by thermal and mass transfer resistances between the bulk liquid and liquid-side interphase, as well as the bulk gas and gas-side interphase.</p>
+<p>Consider the situation where a hot, gaseous substance <span class="math inline">2</span> and a cooler, liquid substance <span class="math inline">1</span> are mixed together. If the gas-liquid interphase is treated as a flat surface, the evaporation of the species <span class="math inline">1</span> liquid and mixing of dissolved species <span class="math inline">2</span> gas simultaneously is given in <a href="#fig-gas-liquid-evaporation-interphase-setup" class="quarto-xref">Fig.&nbsp;1</a>. The coordinate system is origin is placed along the interphase, with the <span class="math inline">y</span> axis pointing towards the bulk gas. Subscripts <span class="math inline">\mathrm L</span> and <span class="math inline">\mathrm G</span> denote liquid and gaseous properties respectively.</p>
+<div id="fig-gas-liquid-evaporation-interphase-setup" class="lightbox quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-gas-liquid-evaporation-interphase-setup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../assets/chapter-8/gas-liquid-evaporation-interphase-setup.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Gas-liquid interphase of an inert species under evaporation: (a) mass fraction profiles and (b) velocities"><img src="../assets/chapter-8/gas-liquid-evaporation-interphase-setup.png" class="img-fluid figure-img" width="550"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gas-liquid-evaporation-interphase-setup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Gas-liquid interphase of an inert species under evaporation: (a) mass fraction profiles and (b) velocities
+</figcaption>
+</figure>
+</div>
+<p>Assuming the mass flux of species <span class="math inline">1</span>, <span class="math inline">m_1''</span>, is known (we treat the unknown case later), then <span class="math inline">m_{\mathrm{tot}}''=m_1''+m_2''</span> and the mass flux of species <span class="math inline">2</span> can be written as</p>
+<p><span id="eq-mass-flux-species-2"><span class="math display">
+m_2''=(1-m_{1,u})m_{\mathrm{tot}}''-\left.\rho_{L,u}\mathfrak D_{12,L}\frac {\partial\overline m_2}{\partial y}\right|_{u}
+\tag{2}</span></span></p>
+<p>Sensible (temperature rise) and latent (phase change) heat transfer take place on both sides of the interphase during evaporation. Mass from the liquid side will evaporate and evacuate towards the gas side. This velocity, <span class="math inline">U_{I,y}</span> is</p>
+<p><span class="math display">
+U_{I,y}=frac {m_{\mathrm{tot}}''}{\rho_L}
+</span></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -738,6 +863,38 @@ ul.task-list li input[type="checkbox"] {
   });
   </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

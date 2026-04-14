@@ -400,6 +400,45 @@
     ]
   },
   {
+    "objectID": "knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-8-effects-of-transpiration.html",
+    "href": "knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-8-effects-of-transpiration.html",
+    "title": "Effects of Transpiration on Friction, Heat, and Mass Transfer",
+    "section": "",
+    "text": "When mass flows through a wall, it modifies the velocity, thermal, and concentration boundary layer profiles, thereby modifying the frictional, thermal, and mass transfer resistances. If the diffusion of species 1 is Fickian and does not affect the energy equation, the wall boundary conditions are\n\n\\begin{aligned}\n\\tau_s & =\\mu\\left.\\frac {\\partial\\overline u}{\\partial y}\\right|_{y=0} \\\\\nq_s'' & =n_s(\\textbf h_s^*-\\textbf h_b^*)-\\left.k\\frac {k\\partial\\overline T}{\\partial y}\\right|_{y=0} \\\\\nm_{1,s}'' & =n_sm_{1,s}-\\left.\\rho\\mathfrak D_{12}\\frac {\\partial\\overline m_1}{\\partial y}\\right|_{y=0}\n\\end{aligned}\n\nwhere n_s is the mass flux through the wall, \\textbf h_s^* is the total enthalpy of the fluid mixture at the wall, \\textbf h_b^* is the total enthalpy of species 1, m_1 is the mass fraction of species 1, and \\mathfrak D_{12} is the mass diffusivity of species 1 with respect to the mixture (species 2). For blowing and suction, n_s&gt;0 and n_s&lt;0 respectively. Typically, since kinetic energy contribution of species 1 on species 2 is negligible, \\textbf h^*=\\overline{\\textbf h}.",
+    "crumbs": [
+      "Home",
+      "Fluids",
+      "Convective Heat and Mass Transfer",
+      "Chapter 8. Effects of Transpiration"
+    ]
+  },
+  {
+    "objectID": "knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-8-effects-of-transpiration.html#sec-couette-film-model-wall-friction",
+    "href": "knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-8-effects-of-transpiration.html#sec-couette-film-model-wall-friction",
+    "title": "Effects of Transpiration on Friction, Heat, and Mass Transfer",
+    "section": "Wall Friction",
+    "text": "Wall Friction",
+    "crumbs": [
+      "Home",
+      "Fluids",
+      "Convective Heat and Mass Transfer",
+      "Chapter 8. Effects of Transpiration"
+    ]
+  },
+  {
+    "objectID": "knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-8-effects-of-transpiration.html#sec-couette-film-model-heat-transfer-coefficient",
+    "href": "knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-8-effects-of-transpiration.html#sec-couette-film-model-heat-transfer-coefficient",
+    "title": "Effects of Transpiration on Friction, Heat, and Mass Transfer",
+    "section": "Heat Transfer Coefficient",
+    "text": "Heat Transfer Coefficient",
+    "crumbs": [
+      "Home",
+      "Fluids",
+      "Convective Heat and Mass Transfer",
+      "Chapter 8. Effects of Transpiration"
+    ]
+  },
+  {
     "objectID": "knowledge-base/engineering-fundamentals/fluids/free-mixed-convection-correlations.html",
     "href": "knowledge-base/engineering-fundamentals/fluids/free-mixed-convection-correlations.html",
     "title": "Free and Mixed Convection Correlations",
