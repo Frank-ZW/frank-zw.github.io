@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Natural Convection – Frank’s Engineering Notebook</title>
+<title>External Flow – Frank’s Engineering Notebook</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -43,9 +43,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../../../site_libs/bootstrap/bootstrap-a44d1825680bf4d2a1237acfefc713aa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../../../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -177,7 +174,7 @@ window.Quarto = {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">Natural Convection</h1>
+          <h1 class="quarto-secondary-nav-title">External Flow</h1>
         </a>     
     </div>
   </nav>
@@ -262,13 +259,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
  <span class="menu-text">Convective Heat and Mass Transfer</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../../../knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-4-internal-laminar-flow.html" class="sidebar-item-text sidebar-link">
@@ -289,7 +286,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../../knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-10-natural-convection.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../../../knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-10-natural-convection.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapter 10. Natural Convection</span></a>
   </div>
 </li>
@@ -297,16 +294,16 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">Fundamentals of Heat and Mass Transfer</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../../knowledge-base/engineering-fundamentals/fluids/fundamentals-of-heat-and-mass-transfer/chapters/chapter-7-external-flow.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../../knowledge-base/engineering-fundamentals/fluids/fundamentals-of-heat-and-mass-transfer/chapters/chapter-7-external-flow.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Chapter 7. External Flow</span></a>
   </div>
 </li>
@@ -376,12 +373,13 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#flat-plate-boundary-layers-in-natural-convection" id="toc-flat-plate-boundary-layers-in-natural-convection" class="nav-link active" data-scroll-target="#flat-plate-boundary-layers-in-natural-convection">Flat Plate Boundary Layers in Natural Convection</a>
+  <li><a href="#impinging-jet" id="toc-impinging-jet" class="nav-link active" data-scroll-target="#impinging-jet">Impinging Jet</a>
   <ul class="collapse">
-  <li><a href="#conservation-equations" id="toc-conservation-equations" class="nav-link" data-scroll-target="#conservation-equations">Conservation Equations</a></li>
-  <li><a href="#non-dimensionalization" id="toc-non-dimensionalization" class="nav-link" data-scroll-target="#non-dimensionalization">Non-dimensionalization</a></li>
+  <li><a href="#hydrodynamic-and-geometric-considerations" id="toc-hydrodynamic-and-geometric-considerations" class="nav-link" data-scroll-target="#hydrodynamic-and-geometric-considerations">Hydrodynamic and Geometric Considerations</a>
+  <ul class="collapse">
+  <li><a href="#round-nozzles" id="toc-round-nozzles" class="nav-link" data-scroll-target="#round-nozzles">Round Nozzles</a></li>
   </ul></li>
-  <li><a href="#correlations-for-flat-vertical-surfaces" id="toc-correlations-for-flat-vertical-surfaces" class="nav-link" data-scroll-target="#correlations-for-flat-vertical-surfaces">Correlations for Flat Vertical Surfaces</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -390,7 +388,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Natural Convection</h1>
+<h1 class="title d-none d-lg-block">External Flow</h1>
 </div>
 
 
@@ -407,120 +405,33 @@ window.Quarto = {
 </header>
 
 
-<section id="flat-plate-boundary-layers-in-natural-convection" class="level1">
-<h1>Flat Plate Boundary Layers in Natural Convection</h1>
-<p>In naturally convecting flows, bulk fluid movement is driven by body forces, such a gravity, and their dependence on density. The most common factors that affect a fluid’s density is the temperature or concentration of any species present. Though not ubiquitously present in aerospace engineering applications, they are not a negligible phenomenon.</p>
-<section id="conservation-equations" class="level2">
-<h2 class="anchored" data-anchor-id="conservation-equations">Conservation Equations</h2>
-<p>Assume the flow of a Newtonian fluid over a flat plate is steady and two dimensional as shown below. The ambient flow is quiescent and no phase change is occurring.</p>
-<div id="fig-free-convection-flat-plate-setup" class="lightbox quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-free-convection-flat-plate-setup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../assets/chapter-10/free-convection-flat-plate-setup.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Free convection boundary layer over a flat plate"><img src="../assets/chapter-10/free-convection-flat-plate-setup.png" class="img-fluid figure-img" width="450"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-free-convection-flat-plate-setup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Free convection boundary layer over a flat plate
-</figcaption>
-</figure>
-</div>
-<p>Define the isothermal compressibility coefficient, <span class="math inline">K</span>, and thermal expansion coefficient, <span class="math inline">\beta</span>, as</p>
-<p><span id="eq-coefficient-definitions"><span class="math display">
-\begin{aligned}
-K &amp; =\frac 1{\rho}\left(\frac {\partial\rho}{\partial P}\right)_T \\
-\beta &amp; =-\frac 1{\beta}\left(\frac {\partial\rho}{\partial T}\right)_P
-\end{aligned}
+<section id="impinging-jet" class="level1">
+<h1>Impinging Jet</h1>
+<p>A single or array of jets impinging normally to a surface may be used to enhance convective heat transfer. Applications include deicing systems on aircraft, cooling heated components in gas turbine engines, and annealing sheet metals.</p>
+<section id="hydrodynamic-and-geometric-considerations" class="level2">
+<h2 class="anchored" data-anchor-id="hydrodynamic-and-geometric-considerations">Hydrodynamic and Geometric Considerations</h2>
+<section id="round-nozzles" class="level3">
+<h3 class="anchored" data-anchor-id="round-nozzles">Round Nozzles</h3>
+<p>For a single round nozzle, the relative nozzle area is <span class="math inline">A_r=\frac {D^2}{4r^2}</span> and the average Nusselt number is</p>
+<p><span id="eq-impinging-jet-round-nozzle-martin"><span class="math display">
+\frac {\overline{\mathrm{Nu}}}{\mathrm{Pr}^{0.42}}=G\left(A_r,\frac HD\right)\left[2\mathrm{Re}^{1/2}\left(1+0.005\mathrm{Re}^{0.55}\right)^{1/2}\right]
 \tag{1}</span></span></p>
-<p>The subscripts denote properties taken to be constant. For <span class="math inline">K</span>, temperature is fixed for example. Note that <span class="math inline">K</span> does not explicitly show up in the conservation equations below as it is neglected during simplification, but this is an important enough quantity to warrant mentioning. The conservation equations governing free convection are</p>
-<p><span id="eq-conservation-equations"><span class="math display">
-\begin{gathered}
-\frac {\partial u}{\partial x}+\frac {\partial v}{\partial y}=0 \\
-u\frac {\partial u}{\partial x}+v\frac {\partial u}{\partial y}=-g_x\beta(T-T_{\infty})-\frac 1{\rho}\left(\frac {\mathrm dP}{\mathrm dx}-\frac {\mathrm dP_{\infty}}{\mathrm dx}\right)+\nu\frac {\partial^2u}{\partial y^2} \\
-\rho C_p\left(u\frac {\partial T}{\partial x}+v\frac {\partial T}{\partial y}\right)=k\frac {\partial^2T}{\partial y^2}
-\end{gathered}
-\tag{2}</span></span></p>
-<div class="callout callout-style-default callout-note callout-titled" title="Derivation of Free Convection Conservation Equations">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Derivation of Free Convection Conservation Equations
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>The conservation equations for boundary layer flow in Fig. <a href="#fig-free-convection-flat-plate-setup" class="quarto-xref">Fig.&nbsp;1</a> are</p>
+<p>where <span class="math inline">G</span> is the function below.</p>
+<p><span class="math display">
+G\left(A_r,\frac HD\right)=\frac {2A_r^{1/2}\left(1-2.2A_r^{1/2}\right)}{1+0.2\left(\frac HD-6\right)A_r^{1/2}}
+</span> #{eq-impinging-jet-round-nozzle-martin-g-definition}</p>
+<p>Eqn. (<a href="#eq-impinging-jet-round-nozzle-martin" class="quarto-xref">1</a>) is valid for</p>
 <p><span class="math display">
 \begin{gathered}
-\frac {\partial}{\partial x}(\rho u)+\frac {\partial}{\partial y}(\rho v)=0 \\
-u\frac {\partial u}{\partial x}+v\frac {\partial u}{\partial y}=-\frac 1{\rho}\frac {\mathrm dP}{\mathrm dx}+\nu\frac {\partial^2u}{\partial y^2}+\rho g_x \\
-\rho C_p\left(u\frac {\partial T}{\partial x}+v\frac {\partial T}{\partial y}\right)=k\frac {\partial^2T}{\partial y^2}+\mu\left(\frac {\partial u}{\partial y}\right)^2
+2\times10^3\lesssim\mathrm{Re}_D\lesssim4\times10^5 \\
+2\lesssim\frac HD\lesssim12 \\
+4\times10^{-3}\lesssim A_r\lesssim4\times10^{-2}
 \end{gathered}
 </span></p>
-<p>For free convection problems, the viscous dissipation term can be neglected. Furthermore, since the far field is quiescent, then applying Bernoulli’s gives</p>
-<p><span class="math display">
--\frac {\mathrm dP_{\infty}}{\mathrm dx}=-\rho_{\infty}g_x
-</span></p>
-<p>Substitute into the momentum equation so</p>
-<p><span class="math display">
-\rho u\frac {\partial u}{\partial x}+\rho v\frac {\partial u}{\partial y}=-(\rho_{\infty}-\rho)g_x-\left(\frac {\mathrm dP}{\mathrm dx}-\frac {\mathrm dP_{\infty}}{\mathrm dx}\right)+\mu\frac {\partial^2u}{\partial y^2}
-</span></p>
-<p>Boussinesq proposed a valid assumption is an incompressible fluid in all aspects except for the gravitational term, as this is one of the primary driving forces behind natural convection. Since natural convection dominates in slow-moving flows, this assumption is very reasonable.</p>
-<p>For any pure substance, the equation of state relates the fluid’s density to its temperature and pressure: <span class="math inline">\rho=\rho(P, T)</span>. Applying the total derivative gives</p>
-<p><span class="math display">
-\mathrm d\rho=\left(\frac {\partial\rho}{\partial P}\right)_T\,\mathrm dP+\left(\frac {\partial\rho}{\partial T}\right)_P\,\mathrm dT=\rho(K\,\mathrm dP-\beta\,\mathrm dT)
-</span></p>
-<p>where <span class="math inline">K</span> and <span class="math inline">\beta</span> are defined in Eqn. (<a href="#eq-coefficient-definitions" class="quarto-xref">1</a>). For natural convection-dominated flows, the change in pressure across the flow field will be very small to ensure small velocities. Therefore, <span class="math inline">K\,\mathrm dP\ll-\beta\,\mathrm dT</span> and <span class="math inline">\mathrm d\rho</span> simplifies to</p>
-<p><span class="math display">
-\mathrm d\rho=-\rho\beta\,\mathrm dT
-</span></p>
-<p>Integrating from any point in the boundary layer to the far field, then</p>
-<p><span class="math display">
-\rho_{\infty}-\rho=\rho\beta(T-T_{\infty})
-</span></p>
-<p>Substituting completes the proof for Eqn. (<a href="#eq-conservation-equations" class="quarto-xref">2</a>).</p>
-</div>
-</div>
-</div>
-</section>
-<section id="non-dimensionalization" class="level2">
-<h2 class="anchored" data-anchor-id="non-dimensionalization">Non-dimensionalization</h2>
-</section>
-</section>
-<section id="correlations-for-flat-vertical-surfaces" class="level1">
-<h1>Correlations for Flat Vertical Surfaces</h1>
-<p>If <span class="math inline">\mathrm{Pr}\approx1</span>, McAdams (1954) proposed the following for average Nusselt number.</p>
-<p><span id="eq-mcadams-1954-average-nusselt"><span class="math display">
-\begin{aligned}
-\langle\mathrm{Nu}_l\rangle_l &amp; =0.59\mathrm{Ra}_l^{1/4}\qquad\qquad 10^4&lt;\mathrm{Ra}_l&lt;10^9\qquad\qquad\mathrm{(Laminar)} \\
-\langle\mathrm{Nu}_l\rangle_l &amp; =0.10\mathrm{Ra}_l^{1/3}\qquad\qquad 10^9&lt;\mathrm{Ra}_l&lt;10^{13}\qquad\qquad\mathrm{(Turbulent)}
-\end{aligned}
-\tag{3}</span></span></p>
-<p>Churchill and Chu (1975) developed the empirical correlation below, valid for any <span class="math inline">\mathrm{Ra}_l</span> and <span class="math inline">\mathrm{Pr}</span>.</p>
-<p><span id="eq-churchill-chu-1975-average-nusselt"><span class="math display">
-\langle\mathrm{Nu}_l\rangle_l=\left[0.825+\frac {0.387\mathrm{Ra}_l^{1/6}}{\left[1+\left(\frac {0.492}{\mathrm{Pr}}\right)^{9/16}\right]^{8/27}}\right]^2
-\tag{4}</span></span></p>
-<p>For a laminar boundary layer, when <span class="math inline">\mathrm{Ra}_l&lt;10^9</span>, Churchill and Chu (1975) recommend Eqn. (<a href="#eq-churchill-chu-1975-average-nusselt-laminar" class="quarto-xref">5</a>) as it is slightly more accurate than Eqn. (<a href="#eq-churchill-chu-1975-average-nusselt" class="quarto-xref">4</a>).</p>
-<p><span id="eq-churchill-chu-1975-average-nusselt-laminar"><span class="math display">
-\langle\mathrm{Nu}_l\rangle_l=0.68+\frac {0.670\mathrm{Ra}_l^{1/4}}{\left[1+\left(\frac {0.492}{\mathrm{Pr}}\right)^{9/16}\right]^{4/9}}
-\tag{5}</span></span></p>
-<p>The correlations above are valid for <strong>UWT</strong> conditions. The fluid properties should be calcualted at the film temperature of <span class="math inline">\frac 12(T_s+T_{\infty})</span>. For <strong>UHF</strong> conditions, Vliet and Liu (1969) proposed the following correlations based on water. For laminar flow</p>
-<p><span id="eq-vliet-liu-1969-nusselt-laminar"><span class="math display">
-\begin{aligned}
-\mathrm{Nu}_x &amp; =0.60\left(\mathrm{Ra}_x^*\right)^{1/5}\qquad\qquad 10^5&lt;\mathrm{Ra}_x^*&lt;10^{13} \\
-\langle\mathrm{Nu}_l\rangle_l &amp; =1.25\mathrm{Nu}_l\qquad\qquad\qquad 10^5&lt;\mathrm{Ra}_l^*&lt;10^{11}
-\end{aligned}
-\tag{6}</span></span></p>
-<p>And for turbulent flow</p>
-<p><span id="eq-vliet-liu-1969-nusselt-turbulent"><span class="math display">
-\begin{aligned}
-\mathrm{Nu}_x &amp; =0.568\left(\mathrm{Ra}_x^*\right)^{0.22}\qquad\qquad 10^{13}&lt;\mathrm{Ra}_x^*&lt;10^{16} \\
-\langle\mathrm{Nu}_l\rangle_l &amp; =1.136\mathrm{Nu}_l\qquad\qquad\qquad 2\times10^{13}&lt;\mathrm{Ra}_l^*&lt;10^{16}
-\end{aligned}
-\tag{7}</span></span></p>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -925,38 +836,6 @@ u\frac {\partial u}{\partial x}+v\frac {\partial u}{\partial y}=-\frac 1{\rho}\f
   });
   </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 
