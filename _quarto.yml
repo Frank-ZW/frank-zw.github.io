@@ -42,6 +42,8 @@ website:
                   href: knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-6-numerical-methods-for-inviscid-flows.qmd
                 - text: Chapter 9. Numerical Methods for Navier-Stokes Equations
                   href: knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-9-numerical-methods-for-navier-stokes-equations.qmd
+            - text: AUSM Flux Splitting Scheme
+              href: knowledge-base/engineering-fundamentals/cfd/ausm-flux-splitting-scheme.qmd
         - section: Fluids
           contents:
             - section: Convective Heat and Mass Transfer
@@ -54,6 +56,10 @@ website:
                   href: knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-8-effects-of-transpiration.qmd
                 - text: Chapter 10. Natural Convection
                   href: knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-10-natural-convection.qmd
+            - section: Fundamentals of Heat and Mass Transfer
+              contents:
+                - text: Chapter 7. External Flow
+                  href: knowledge-base/engineering-fundamentals/fluids/fundamentals-of-heat-and-mass-transfer/chapters/chapter-7-external-flow.qmd
             - text: Forced Flows Correlations
               href: knowledge-base/engineering-fundamentals/fluids/forced-flows-correlations.qmd
             - text: Free and Mixed Convection Correlations

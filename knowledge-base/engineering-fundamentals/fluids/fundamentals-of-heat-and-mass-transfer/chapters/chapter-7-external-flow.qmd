@@ -1,0 +1,33 @@
+---
+title: External Flow
+---
+
+# Impinging Jet
+
+A single or array of jets impinging normally to a surface may be used to enhance convective heat transfer. Applications include deicing systems on aircraft, cooling heated components in gas turbine engines, and annealing sheet metals.
+
+## Hydrodynamic and Geometric Considerations
+
+### Round Nozzles
+
+For a single round nozzle, the relative nozzle area is $A_r=\frac {D^2}{4r^2}$ and the average Nusselt number is
+
+$$
+\frac {\overline{\mathrm{Nu}}}{\mathrm{Pr}^{0.42}}=G\left(A_r,\frac HD\right)\left[2\mathrm{Re}^{1/2}\left(1+0.005\mathrm{Re}^{0.55}\right)^{1/2}\right]
+$$ {#eq-impinging-jet-round-nozzle-martin}
+
+where $G$ is the function below.
+
+$$
+G\left(A_r,\frac HD\right)=\frac {2A_r^{1/2}\left(1-2.2A_r^{1/2}\right)}{1+0.2\left(\frac HD-6\right)A_r^{1/2}}
+$$ {#eq-impinging-jet-round-nozzle-martin-g-definition}
+
+Eqn. (@eq-impinging-jet-round-nozzle-martin) is valid for
+
+$$
+\begin{gathered}
+2\times10^3\lesssim\mathrm{Re}_D\lesssim4\times10^5 \\
+2\lesssim\frac HD\lesssim12 \\
+4\times10^{-3}\lesssim A_r\lesssim4\times10^{-2}
+\end{gathered}
+$$

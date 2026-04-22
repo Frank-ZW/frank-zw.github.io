@@ -51,11 +51,13 @@ $$
 \iint\limits_{\mathcal V}\frac {\partial\textbf U}{\partial t}\,\mathrm dV+\iint\limits_{\mathcal V}\frac {\partial\textbf E}{\partial x}-\frac {\partial\textbf F}{\partial y}\,\mathrm dV=\iint\limits_{\mathcal V}\frac {\partial\textbf U}{\partial t}\,\mathrm dV+\oint\limits_{\mathcal S}\left(\textbf E\,\mathrm dy-\textbf F\,\mathrm dx\right)=0
 $$
 
-The subscript $\mathcal S$ denotes the boundary. In discrete form, the contour integral transforms into a sum about each boundary of the cell, completing the proof. A natural question is to wonder how Eqn. (@eq-discretized-euler-equation) looks when extended to 3D in the general case. If curvilinear coordinates are used, where $\xi$, $\eta$, $\zeta$ map to the $x$, $y$, and $z$ axes respectively, and a volumetric source term, $\textbf H$ is included for generation effects, then Eqn. (@eq-discretized-euler-equation) becomes
+The subscript $\mathcal S$ denotes the boundary. In discrete form, the contour integral transforms into a sum about each boundary of the cell, completing the proof. A natural question is to wonder how Eqn. (@eq-discretized-euler-equation) looks when extended to 3D in the general case. If curvilinear coordinates are used, where $\xi$, $\eta$, $\zeta$ map to the $x$, $y$, and $z$ axes respectively, and a volumetric source term, $\textbf H$ is included for generation effects, then the complete version of Eqn. (@eq-discretized-euler-equation) becomes
 
 $$
-\frac {\mathrm d\left(\textbf U\Delta V\right)}{\mathrm dt}+\left(\textbf E_{\xi}-\textbf E_{v_{\xi}}\right)S_{\xi}\,\biggr|_{i+\frac 12,j,k}^{i-\frac 12,j,k}+\left(\textbf F_{\eta}-\textbf F_{v_{\eta}}\right)\,\biggr|_{i,j-\frac 12,k}^{i,j+\frac 12,k}+\left(\textbf G_{\zeta}-\textbf G_{v_{\zeta}}\right)_{i,j,k-\frac 12}^{i,j,k+\frac 12}=\textbf H\Delta V
+\frac {\mathrm d\left(\textbf U\Delta V\right)}{\mathrm dt}+\left(\textbf E_{\xi}-\textbf E_{v_{\xi}}\right)S_{\xi}\,\biggr|_{i+\frac 12,j,k}^{i-\frac 12,j,k}+\left(\textbf F_{\eta}-\textbf F_{v_{\eta}}\right)S_{\eta}\,\biggr|_{i,j-\frac 12,k}^{i,j+\frac 12,k}+\left(\textbf G_{\zeta}-\textbf G_{v_{\zeta}}\right)S_{\zeta}\,\biggr|_{i,j,k-\frac 12}^{i,j,k+\frac 12}=\textbf H\Delta V
 $$
+
+where $\mathrm E_v$, $\mathrm F_v$, and $\mathrm G_v$ are the viscous fluxes and $S_{\xi}$, $S_{\eta}$, and $S_{\zeta}$ are the cell face areas in curvilinear coordinates.
 
 :::
 

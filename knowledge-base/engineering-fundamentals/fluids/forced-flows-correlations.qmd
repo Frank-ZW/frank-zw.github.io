@@ -6,6 +6,24 @@ title: Forced Flows Correlations
 
 # Circular Channel
 
+**Laminar:**
+
+$$
+\mathrm{Re}_D\lesssim2100
+$$
+
+**Transition:**
+
+$$
+2100<\mathrm{Re}_D<10^4
+$$
+
+**Turbulent:**
+
+$$
+\mathrm{Re}_D>10^4
+$$
+
 ## Entrance Lengths
 
 ### Laminar Flow
@@ -24,25 +42,99 @@ $$
 
 ### Turbulent Flow
 
+**Experimental:** For $\mathrm{Pr}\approx1$ or $\mathrm{Sc}\approx1$ fluids
+
+$$
+\begin{aligned}
+\frac {l_{\mathrm{ent,hy}}}D & \approx10 \\
+\frac {l_{\mathrm{ent,th}}}D & \approx10 \\
+\frac {l_{\mathrm{ent,ma}}}D & \approx10
+\end{aligned}\tag{7.1.4}
+$$
+
+**Wang (1982):** Smooth surface, flat inlet velocity profile, $\frac 17$ power law velocity profile
+
+$$
+\frac {l_{\mathrm{ent,hy}}}D=1.3590\mathrm{Re}_D^{1/4}\tag{7.2.3}
+$$
+
 ## Fully Developed Flow
 
-### Hagen-Poiseuille Flow
+### Profiles
 
-For smooth surfaces, if $U_m=\frac {R_0^2}{8\mu}\left(-\frac {\mathrm dP}{\mathrm dx}\right)$
+#### Laminar Flow
 
-$$
-u(r)=\frac {R_0^2}{4\pi}\left(-\frac {\mathrm dP}{\mathrm dx}\right)\left[1-\left(\frac r{R_0}\right)\right]^2=2U_m\left[1-\left(\frac r{R_0}\right)\right]^2\tag{4.3.2}
-$$
-
-If $\mathrm{Re}_D=\frac {U_mD}{\nu}$
+**Hagen-Poiseuille (1840):** Smooth surface
 
 $$
-f=\frac {64}{\mathrm{Re}_D}=4C_f\tag{4.3.7}
+\begin{aligned}
+u(r) & =2U_m\left[1-\left(\frac r{R_0}\right)^2\right] \\
+U_m & =\frac {R_0^2}{8\mu}\left(-\frac {\mathrm dP}{\mathrm dx}\right)
+\end{aligned}\tag{4.3.2}
+$$
+
+#### Turbulent Flow
+
+**Wang (1982):** Smooth surface, flat inlet velocity profile, $\frac 17$ power law velocity profile
+
+$$
+\frac {x/D}{\mathrm{Re}_D^{1/4}}=1.4039\left(\frac {\delta}{R_0}\right)^{5/4}\left[1+0.1577\left(\frac {\delta}{R_0}\right)-0.1793\left(\frac {\delta}{R_0}\right)^2-0.0168\left(\frac {\delta}{R_0}\right)^3+0.0064\left(\frac {\delta}{R_0}\right)^4\right]\tag{7.2.2}
+$$
+
+**Nikuradse (1932):** Smooth surface, $n$ power law velocity profile, valid for $y^+>30$
+
+$$
+\begin{aligned}
+\frac {\overline u}{U_{\mathrm{max}}} & =\left(\frac y{R_0}\right)^{1/n} \\
+\frac {U_m}{U_{\mathrm{max}}} & =\frac {2n^2}{(n+1)(2n+1)}
+\end{aligned}\tag{7.2.6}
+$$
+
+where
+
+| $\mathrm{Re}_D$ | $4000$ | $2.3\times10^3$ | $1.1\times10^5$ | $1.1\times10^6$ | $2.0\times10^6$ | $3.2\times10^6$ |
+|:---------------:|:------:|:---------------:|:---------------:|:---------------:|:---------------:|:--------------:|
+|       $n$       |   $6$  |      $6.6$      |       $7$       |      $8.8$      |       $10$      |      $10$      |
+
+**Prandtl (1933):** Smooth surface, valid for $y^+>30$
+
+$$
+\frac {U_{\mathrm{max}}-\overline u}{U_{\tau}}=2.5\ln\left(\frac {R_0}y\right)\tag{7.2.8}
+$$
+
+**Wang (1946):** Smooth surface
+
+$$
+\frac {U_{\mathrm{max}}-\overline u}{U_{\tau}}=2.5\left[\ln\left(\frac {1+\sqrt{1-\frac y{R_0}}}{1-\sqrt{1-\frac y{R_0}}}\right)-2\arctan\left(\sqrt{1-\frac y{R_0}}\right)-0.572\ln\left(\frac {2.53-\frac y{R_0}+1.75\sqrt{1-\frac y{R_0}}}{2.53-\frac y{R_0}-1.75\sqrt{1-\frac y{R_0}}}\right)+1.143\arctan\left(\frac {1.75\sqrt{1-\frac y{R_0}}}{0.53+\frac y{R_0}}\right)\right]\tag{7.2.9}
+$$
+
+**Yu et al. (2001):** Smooth surface, valid for $150<R_0^+<50,000$ where $R_0^+=\frac {U_{\tau}R_0}{\nu}$ and $U_{\tau}=\sqrt{\frac {\tau_s}{\rho}}$
+
+$$
+U_m^+=3.2-\frac {227}{R_0^+}+\left(\frac {50}{R_0^+}\right)^2+\frac 1{0.436}\ln R_0^+\tag{7.2.34}
+$$
+
+**Yu et al. (2001):** Smooth surface, valid for $R_0^+>500$ where $R_0^+=\frac {U_{\tau}R_0}{\nu}$ and $U_{\tau}=\sqrt{\frac {\tau_s}{\rho}}$
+
+$$
+U_{\mathrm{CL}}^+=7.52+\frac 1{0.436}\ln R_0^+
+$$
+
+**White (2006):** Smooth surface, $\kappa=0.4$ and $B=5.5$, valid for $R_0^+>30$
+
+$$
+U_m^+=\frac 1{\kappa}\ln R_0^++B-\frac 3{2\kappa}
 $$
 
 ### Friction Factor
 
 #### Laminar Flow
+
+**Hagen-Poiseuille (1840):** Smooth surface
+
+$$
+f=4C_f=\frac {64}{\mathrm{Re}_D}\tag{4.3.7}
+$$
 
 **Shah and London (1978):** Smooth surface, valid for all $x^*=\frac x{D\mathrm{Re}_D}$ range
 
@@ -50,13 +142,49 @@ $$
 C_{f,\mathrm{app},x}\mathrm{Re}_D=\frac {3.44}{\sqrt{x^*}}+\frac 1{1+2.1\times10^{-4}\left(x^*\right)^{-2}}\left(\frac {1.25}{4x^*}+16-\frac {3.44}{\sqrt{x^*}}\right)\tag{4.2.13}
 $$
 
-**Hagen-Poiseuille (1840):** Smooth surface, Reynolds number defined as $\mathrm{Re}_D=\frac {U_mD}{\nu}$
-
-$$
-f=\frac {64}{\mathrm{Re}_D}=4C_f\tag{4.3.7}
-$$
-
 #### Turbulent Flow
+
+**Wang (1982):** Smooth surface, flat inlet velocity profile, $\frac 17$ power law velocity profile
+
+$$
+C_{f,\mathrm{app},x}\mathrm{Re}_D^{1/4}=\frac {(U_{\mathrm{max}}/U_m)^2-1}{4x/\left(4x\mathrm{Re}_D^{1/4}\right)}\tag{7.2.4}
+$$
+
+where
+
+$$
+\frac {U_m}{U_{\mathrm{max}}}=1-\frac 14\left(\frac {\delta}{R_0}\right)+\frac 1{15}\left(\frac {\delta}{R_0}\right)^2\tag{7.2.5}
+$$
+
+**White (2006):** Smooth surface, valid for all $R_0^+=\frac {U_{\tau}R_0}{\nu}$ where $U_{\tau}=\sqrt{\frac {\tau_s}{\rho}}$
+
+$$
+\frac 1{\sqrt{C_f}}=1.7272\ln\left(\mathrm{Re}_D\sqrt{C_f}\right)-0.395\tag{7.2.37}
+$$
+
+**Blasius (1913):** Smooth surface, $\frac 17$ power law velocity profile, valid for $\mathrm{Re}_D\lesssim10^5$
+
+$$
+C_f=0.079\mathrm{Re}_D^{-1/4}\tag{7.2.38}
+$$
+
+**White (2006):** Fully rough surface
+
+$$
+\frac 1{\sqrt f}=2.0\log_{10}\left(\frac {\mathrm{Re}_D\sqrt f}{1+0.1\mathrm{Re}_D\sqrt f\varepsilon_s/D}\right)-0.8\tag{7.2.40}
+$$
+
+**Colebrook (1939):** Fully rough surface, valid for $5\leq\varepsilon_s^+\leq70$
+
+$$
+\frac 1{\sqrt f}=-2.0\log_{10}\left(\frac {\varepsilon_s/D}{3.7}+\frac {2.51}{\mathrm{Re}_D\sqrt f}\right)\tag{7.2.41}
+$$
+
+**Haaland (1983):** Fully rough surface
+
+$$
+\frac 1{\sqrt f}=-1.8\log_{10}\left[\left(\frac {\varepsilon_s/D}{3.7}\right)^{1.11}+\frac {6.9}{\mathrm{Re}_D}\right]\tag{7.2.42}
+$$
 
 ### Heat Transfer Coefficient
 
@@ -97,6 +225,21 @@ $$
 
 #### Turbulent Flow
 
+**Norris (1970):** Rough surfacess (accounted for in $C_f$)
+
+$$
+\frac {\mathrm{Nu}_{D_H}}{\mathrm{Nu}_{D_H,\mathrm{smooth}}}=\min\left[\left(\frac {C_f}{C_{f,\mathrm{smooth}}}\right)^n,4^n\right]\tag{7.1.1}
+$$
+
+where
+
+$$
+n=\begin{cases}
+0.68\mathrm{Pr}^{0.215} & \qquad\qquad\mathrm{Pr}<6 \\\\
+1 & \qquad\qquad\mathrm{Pr}>6
+\end{cases}\tag{7.1.2}
+$$
+
 **Yu et al. (2001):** Smooth surface, all thermal boundary conditions, valid for $R_0^+>500$ and $\mathrm{Pr}>\mathrm{Pr}_{\mathrm{tu}}$
 
 $$
@@ -115,8 +258,6 @@ $$
 \mathrm{Nu}_{D_H,1,\mathrm{UHF}} & =\frac {\mathrm{Re}_{D_H}C_f/2}{1+195\left(U_m^+\right)^{-2.7}}
 \end{aligned}
 $$
-
----
 
 **Chilton and Colburn (1934):** Smooth surface, valid for $10^4<\mathrm{Re}_D<3\times10^5$ and $0.6<\mathrm{Pr}<100$
 
