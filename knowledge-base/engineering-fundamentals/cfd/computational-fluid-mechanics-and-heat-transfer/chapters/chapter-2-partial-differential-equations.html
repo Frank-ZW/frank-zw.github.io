@@ -413,15 +413,15 @@ window.Quarto = {
 <li><p><strong>Parabolic</strong>, where equations admit solutions that correspond to damped waves</p></li>
 <li><p><strong>Elliptic</strong>, where equations admit solutions that are not wavelike</p></li>
 </ol>
-<p>Consider the general PDE below, where the coefficients only depend on <span class="math inline">x</span> and <span class="math inline">y</span> so Eqn. (<a href="#eq-pde-general-form" class="quarto-xref">Eqn.&nbsp;1</a>) is linear.</p>
+<p>Consider the general PDE below, where the coefficients only depend on <span class="math inline">x</span> and <span class="math inline">y</span> so <a href="#eq-pde-general-form" class="quarto-xref">Eqn.&nbsp;1</a> is linear.</p>
 <p><span id="eq-pde-general-form"><span class="math display">
 a\frac {\partial^2\phi}{\partial x^2}+b\frac {\partial^2\phi}{\partial x\partial y}+c\frac {\partial^2\phi}{\partial y^2}+d\frac {\partial\phi}{\partial x}+e\frac {\partial\phi}{\partial y}+f\phi=g(x,y)
 \tag{1}</span></span></p>
-<p>Classifying PDEs only relies on the second order terms, so rearrange Eqn. (<a href="#eq-pde-general-form" class="quarto-xref">Eqn.&nbsp;1</a>) into</p>
+<p>Classifying PDEs only relies on the second order terms, so rearrange <a href="#eq-pde-general-form" class="quarto-xref">Eqn.&nbsp;1</a> into</p>
 <p><span id="eq-pde-general-form-rearranged"><span class="math display">
 a\phi_{xx}+b\phi_{xy}+c\phi_{yy}=-d\phi_x-e\phi_y-f\phi+g=H
 \tag{2}</span></span></p>
-<p>The characteristics of this equation are the locus of points along which the second derivative terms are discontinuous. Along these curves, discontinuities such as shockwaves in supersonic flow can appear. These curves may be determined by observing Eqn. (<a href="#eq-pde-general-form-rearranged" class="quarto-xref">Eqn.&nbsp;2</a>) for points where the solution is not uniquely determined. For a well-posed point, the second derivatives <span class="math inline">\phi_{xx}</span>, <span class="math inline">\phi_{xy}</span>, and <span class="math inline">\phi_{yy}</span> are uniquely determined for a given <span class="math inline">\phi</span>, <span class="math inline">\phi_x</span>, and <span class="math inline">\phi_y</span> by Eqn. (<a href="#eq-pde-general-form-rearranged" class="quarto-xref">Eqn.&nbsp;2</a>). However, if two possible second derivative solutions exist for a given set of <span class="math inline">(\phi, \phi_x, \phi_y)</span>, then the second derivatives are no longer continuous as approaching the point from the two sides can give valid, but different, results.</p>
+<p>The characteristics of this equation are the locus of points along which the second derivative terms are discontinuous. Along these curves, discontinuities such as shockwaves in supersonic flow can appear. These curves may be determined by observing <a href="#eq-pde-general-form-rearranged" class="quarto-xref">Eqn.&nbsp;2</a> for points where the solution is not uniquely determined. For a well-posed point, the second derivatives <span class="math inline">\phi_{xx}</span>, <span class="math inline">\phi_{xy}</span>, and <span class="math inline">\phi_{yy}</span> are uniquely determined for a given <span class="math inline">\phi</span>, <span class="math inline">\phi_x</span>, and <span class="math inline">\phi_y</span> by <a href="#eq-pde-general-form-rearranged" class="quarto-xref">Eqn.&nbsp;2</a>. However, if two possible second derivative solutions exist for a given set of <span class="math inline">(\phi, \phi_x, \phi_y)</span>, then the second derivatives are no longer continuous as approaching the point from the two sides can give valid, but different, results.</p>
 <p>Let <span class="math inline">\tau</span> be a parameter that varies along a curve <span class="math inline">C</span> in the <span class="math inline">x-y</span> plane. Therefore, <span class="math inline">x=x(\tau)</span> and <span class="math inline">y=y(\tau)</span> along <span class="math inline">C</span>. For convenience, define</p>
 <p><span id="eq-phi-tau-definitions"><span class="math display">
 \begin{array}{cc}
@@ -430,7 +430,7 @@ a\phi_{xx}+b\phi_{xy}+c\phi_{yy}=-d\phi_x-e\phi_y-f\phi+g=H
 \phi_{yy}=w(\tau) &amp;
 \end{array}
 \tag{3}</span></span></p>
-<p>Eqn. (<a href="#eq-pde-general-form-rearranged" class="quarto-xref">Eqn.&nbsp;2</a>) becomes</p>
+<p><a href="#eq-pde-general-form-rearranged" class="quarto-xref">Eqn.&nbsp;2</a> becomes</p>
 <p><span id="eq-pde-general-form-rearranged-tau"><span class="math display">
 au(\tau)+bv(\tau)+cw(\tau)=H
 \tag{4}</span></span></p>
@@ -441,7 +441,7 @@ au(\tau)+bv(\tau)+cw(\tau)=H
 \frac {\mathrm dq}{\mathrm d\tau} &amp; =\frac {\partial\phi_y}{\partial x}\frac {\mathrm dx}{\mathrm d\tau}+\frac {\partial\phi_y}{\partial y}\frac {\mathrm dy}{\mathrm d\tau}=v\frac {\mathrm dx}{\mathrm d\tau}+w\frac {\mathrm dy}{\mathrm d\tau}
 \end{aligned}
 \tag{5}</span></span></p>
-<p>Eqn. (<a href="#eq-pde-general-form-rearranged-tau" class="quarto-xref">Eqn.&nbsp;4</a>) and Eqn. (<a href="#eq-phi-tau-chain-rule" class="quarto-xref">Eqn.&nbsp;5</a>) form a <span class="math inline">3\times3</span> system to calculate second order derivatives from <span class="math inline">\phi</span> and its first derivatives along <span class="math inline">C</span>.</p>
+<p><a href="#eq-pde-general-form-rearranged-tau" class="quarto-xref">Eqn.&nbsp;4</a> and <a href="#eq-phi-tau-chain-rule" class="quarto-xref">Eqn.&nbsp;5</a> form a <span class="math inline">3\times3</span> system to calculate second order derivatives from <span class="math inline">\phi</span> and its first derivatives along <span class="math inline">C</span>.</p>
 <p><span class="math display">
 \begin{bmatrix}
 a &amp; b &amp; c \\[1ex]
@@ -464,7 +464,7 @@ a(\mathrm dy)^2-b\,\mathrm dx\,\mathrm dy+c(\mathrm dx)^2=0
 <p><span id="eq-pde-general-characteristics-differential"><span class="math display">
 h=\frac {\mathrm dy}{\mathrm dx}=\frac {b\pm\sqrt{b^2-4ac}}{2a}
 \tag{6}</span></span></p>
-<p>The curves <span class="math inline">y(x)</span> that satisfy Eqn. (<a href="#eq-pde-general-characteristics-differential" class="quarto-xref">Eqn.&nbsp;6</a>) are the <em>characteristics</em> of the PDE. The discriminant <span class="math inline">\Delta\equiv b^2-4ac</span> plays an important role in determining the PDE’s classification.</p>
+<p>The curves <span class="math inline">y(x)</span> that satisfy <a href="#eq-pde-general-characteristics-differential" class="quarto-xref">Eqn.&nbsp;6</a> are the <em>characteristics</em> of the PDE. The discriminant <span class="math inline">\Delta\equiv b^2-4ac</span> plays an important role in determining the PDE’s classification.</p>
 <ol type="1">
 <li><p>If <span class="math inline">\Delta&gt;0</span>, then two distinct families of real characteristic curves exist and the PDE is <strong>hyperbolic</strong>.</p></li>
 <li><p>If <span class="math inline">\Delta=0</span>, then only a single family of characteristic curves exist and the PDE is <strong>parabolic</strong>.</p></li>
