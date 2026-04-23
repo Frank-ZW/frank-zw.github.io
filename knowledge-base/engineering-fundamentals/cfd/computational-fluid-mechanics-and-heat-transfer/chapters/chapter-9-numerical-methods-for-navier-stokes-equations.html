@@ -249,7 +249,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../../../knowledge-base/engineering-fundamentals/cfd/ausm-flux-splitting-scheme.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">AUSM Flux Splitting Scheme</span></a>
+ <span class="menu-text">Introduction to the AUSM Scheme</span></a>
   </div>
 </li>
       </ul>
@@ -462,7 +462,7 @@ window.Quarto = {
 <p>The derived variable approach (using <span class="math inline">\zeta</span> and <span class="math inline">\psi</span>), is rarely used when solving 3D incompressible flow fields. The primitive approach is more widely used for both 2D and 3D flows.</p>
 <section id="general" class="level4">
 <h4 class="anchored" data-anchor-id="general">General</h4>
-<p>The nondimensional primitive form of Eqn. (<a href="#eq-incompressible-conservation-equations" class="quarto-xref">1</a>), ignoring energy, is</p>
+<p>The nondimensional primitive form of Eqn. (<a href="#eq-incompressible-conservation-equations" class="quarto-xref">Eqn.&nbsp;1</a>), ignoring energy, is</p>
 <p><span id="eq-incompressible-nondimensional-conservation-equations"><span class="math display">
 \begin{gathered}
 \frac {\partial u^*}{\partial x^*}+\frac {\partial v^*}{\partial y^*}+\frac {\partial w^*}{\partial z^*}=0 \\
@@ -514,7 +514,7 @@ v &amp; =v_0-\frac A{2\Delta y}\left(p_{i,j+1}'-p_{i,j-1}'\right)
 \end{aligned}
 \tag{7}</span></span></p>
 <ol start="4" type="1">
-<li>Replace the <span class="math inline">p_0</span>, <span class="math inline">u_0</span>, and <span class="math inline">v_0</span> values calculated from Step 1 with the <span class="math inline">p</span>, <span class="math inline">u</span>, and <span class="math inline">v</span> calculated from Eqn. (<a href="#eq-simple-correction-update-equations" class="quarto-xref">7</a>) and return to Step 2. Repeat this process until the solution converges.</li>
+<li>Replace the <span class="math inline">p_0</span>, <span class="math inline">u_0</span>, and <span class="math inline">v_0</span> values calculated from Step 1 with the <span class="math inline">p</span>, <span class="math inline">u</span>, and <span class="math inline">v</span> calculated from Eqn. (<a href="#eq-simple-correction-update-equations" class="quarto-xref">Eqn.&nbsp;7</a>) and return to Step 2. Repeat this process until the solution converges.</li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Derivation of the SIMPLE Pressure Correction Equation">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -535,26 +535,26 @@ v &amp; =v_0-\frac A{2\Delta y}\left(p_{i,j+1}'-p_{i,j-1}'\right)
 \rho\frac {\partial v'}{\partial t} &amp; =-\frac {\partial p'}{\partial y}
 \end{aligned}
 \tag{8}</span></span></p>
-<p>Since for any given iteration, <span class="math inline">u_k=u_{0,k}+u_k'</span>, then the previous iteration is <span class="math inline">u_{k-1}=u_{0,k-1}</span> and the correction term for the previous step is zero. Therefore, Eqn. (<a href="#eq-simple-velocity-correction-momentum-equations" class="quarto-xref">8</a>) can be written as</p>
+<p>Since for any given iteration, <span class="math inline">u_k=u_{0,k}+u_k'</span>, then the previous iteration is <span class="math inline">u_{k-1}=u_{0,k-1}</span> and the correction term for the previous step is zero. Therefore, Eqn. (<a href="#eq-simple-velocity-correction-momentum-equations" class="quarto-xref">Eqn.&nbsp;8</a>) can be written as</p>
 <p><span id="eq-simple-velocity-correction-equations"><span class="math display">
 \begin{aligned}
 u' &amp; =-A\frac {\partial p'}{\partial x} \\
 v' &amp; =-A\frac {\partial p'}{\partial y}
 \end{aligned}
 \tag{9}</span></span></p>
-<p>where <span class="math inline">A=\frac {\Delta t}{\rho}</span>. The <span class="math inline">\Delta t</span> in the <span class="math inline">A</span> equation is a fictitious time for steady flows relevant only to the iterative sequence. Substituting Eqn. (<a href="#eq-simple-velocity-correction-equations" class="quarto-xref">9</a>) and Eqn. (<a href="#eq-simple-property-decomposition" class="quarto-xref">5</a>) into mass conservation gives</p>
+<p>where <span class="math inline">A=\frac {\Delta t}{\rho}</span>. The <span class="math inline">\Delta t</span> in the <span class="math inline">A</span> equation is a fictitious time for steady flows relevant only to the iterative sequence. Substituting Eqn. (<a href="#eq-simple-velocity-correction-equations" class="quarto-xref">Eqn.&nbsp;9</a>) and Eqn. (<a href="#eq-simple-property-decomposition" class="quarto-xref">Eqn.&nbsp;5</a>) into mass conservation gives</p>
 <p><span class="math display">
 \cancel{\frac {\partial u}{\partial x}+\frac {\partial v}{\partial y}}-\left(\frac {\partial u_0}{\partial x}+\frac {\partial v_0}{\partial y}\right)+\frac {\Delta t}{\rho}\left(\frac {\partial^2p'}{\partial x^2}+\frac {\partial^2p'}{\partial y^2}\right)=0
 </span></p>
-<p>The first term disappears since <span class="math inline">\nabla\cdot\textbf V=0</span> and rearranging the remaining terms gives Eqn. (<a href="#eq-simple-pressure-correction-equation" class="quarto-xref">6</a>).</p>
+<p>The first term disappears since <span class="math inline">\nabla\cdot\textbf V=0</span> and rearranging the remaining terms gives Eqn. (<a href="#eq-simple-pressure-correction-equation" class="quarto-xref">Eqn.&nbsp;6</a>).</p>
 </div>
 </div>
 </div>
-<p>In practice, Eqn. (<a href="#eq-simple-pressure-correction-equation" class="quarto-xref">6</a>) tends to overestimate the needed <span class="math inline">p'</span> to fully correct <span class="math inline">u_0</span> and <span class="math inline">v_0</span>. To accelerate the rate of convergence, an underrelaxation constant, <span class="math inline">\alpha_p</span>, is added to the pressure correction equation.</p>
+<p>In practice, Eqn. (<a href="#eq-simple-pressure-correction-equation" class="quarto-xref">Eqn.&nbsp;6</a>) tends to overestimate the needed <span class="math inline">p'</span> to fully correct <span class="math inline">u_0</span> and <span class="math inline">v_0</span>. To accelerate the rate of convergence, an underrelaxation constant, <span class="math inline">\alpha_p</span>, is added to the pressure correction equation.</p>
 <p><span class="math display">
 p=p_0+\alpha_p p'
 </span></p>
-<p>Two notable extensions of the SIMPLE algorithm are the revised (SIMPLER) scheme (Patankar, 1981) and the SIMPLEC scheme (van Doormal and Raithby, 1984). The SIMPLEC scheme uses a more complete approximation of the momentum equation to compute <span class="math inline">p'</span> to improve convergence. Recall that with SIMPLE, the convective and viscous (diffusive) terms of the velocity correction were neglected. Physically, SIMPLE assumes that all changes to the velocity are due to the error in the guessed pressure field. By incorporating some of these convective and diffusive terms back, the scheme more completely captures the changes in the flow field. This translates to a modification to the <span class="math inline">A</span> coefficient in Eqn. (<a href="#eq-simple-velocity-correction-equations" class="quarto-xref">9</a>). With this modification, van Doormal and Raithby reported that it was no longer needed to underrelax <span class="math inline">p'</span>. SIMPLEC generally performs more efficiently than both SIMPLE and SIMPLER and is usually one of the default pressure correction schemes in most CFD softwares.</p>
+<p>Two notable extensions of the SIMPLE algorithm are the revised (SIMPLER) scheme (Patankar, 1981) and the SIMPLEC scheme (van Doormal and Raithby, 1984). The SIMPLEC scheme uses a more complete approximation of the momentum equation to compute <span class="math inline">p'</span> to improve convergence. Recall that with SIMPLE, the convective and viscous (diffusive) terms of the velocity correction were neglected. Physically, SIMPLE assumes that all changes to the velocity are due to the error in the guessed pressure field. By incorporating some of these convective and diffusive terms back, the scheme more completely captures the changes in the flow field. This translates to a modification to the <span class="math inline">A</span> coefficient in Eqn. (<a href="#eq-simple-velocity-correction-equations" class="quarto-xref">Eqn.&nbsp;9</a>). With this modification, van Doormal and Raithby reported that it was no longer needed to underrelax <span class="math inline">p'</span>. SIMPLEC generally performs more efficiently than both SIMPLE and SIMPLER and is usually one of the default pressure correction schemes in most CFD softwares.</p>
 
 
 </section>

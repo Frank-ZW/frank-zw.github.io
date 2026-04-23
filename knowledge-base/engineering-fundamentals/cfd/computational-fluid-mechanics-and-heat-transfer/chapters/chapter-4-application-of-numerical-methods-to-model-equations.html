@@ -252,7 +252,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../../../knowledge-base/engineering-fundamentals/cfd/ausm-flux-splitting-scheme.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">AUSM Flux Splitting Scheme</span></a>
+ <span class="menu-text">Introduction to the AUSM Scheme</span></a>
   </div>
 </li>
       </ul>
@@ -421,11 +421,11 @@ window.Quarto = {
 <p><span id="eq-burgers"><span class="math display">
 \frac {\partial u}{\partial t}+u\frac {\partial u}{\partial x}=\mu\frac {\partial^2u}{\partial x^2}
 \tag{1}</span></span></p>
-<p>When the viscous term is included, Eqn. (<a href="#eq-burgers" class="quarto-xref">1</a>) is parabolic. The inviscid Burgers’ equation arises when viscous effects are zero, <span class="math inline">\mu=0</span>.</p>
+<p>When the viscous term is included, Eqn. (<a href="#eq-burgers" class="quarto-xref">Eqn.&nbsp;1</a>) is parabolic. The inviscid Burgers’ equation arises when viscous effects are zero, <span class="math inline">\mu=0</span>.</p>
 <p><span id="eq-inviscid-burgers"><span class="math display">
 \frac {\partial u}{\partial t}+u\frac {\partial u}{\partial x}=0
 \tag{2}</span></span></p>
-<p>Whereas the linear 1D convection equation models the simple case of a wave propagating at a constant speed, Eqn. (<a href="#eq-inviscid-burgers" class="quarto-xref">2</a>) may be viewed as a nonlinear wave equation that can model waves propagating at varying speeds. Since Burgers’ equation can correctly model varying wave speeds, it can be used to model shocks as waves of differing speeds coalesce. This wave equation is similarly hyperbolic.</p>
+<p>Whereas the linear 1D convection equation models the simple case of a wave propagating at a constant speed, Eqn. (<a href="#eq-inviscid-burgers" class="quarto-xref">Eqn.&nbsp;2</a>) may be viewed as a nonlinear wave equation that can model waves propagating at varying speeds. Since Burgers’ equation can correctly model varying wave speeds, it can be used to model shocks as waves of differing speeds coalesce. This wave equation is similarly hyperbolic.</p>
 <p>Nonlinear hyperbolic PDEs exhibit two types of solutions according to Lax (1954). Consider the general case of the equation below. The Jacobian <span class="math inline">A=\frac {\partial F_i}{\partial u_j}</span> is introduced from the chain rule. If <span class="math inline">u</span> and <span class="math inline">F</span> are both vectors, <span class="math inline">A</span> is a matrix.</p>
 <p><span id="eq-general-hyperbolic-pde"><span class="math display">
 \frac {\partial u}{\partial t}+\frac {\partial F}{\partial x}=\frac {\partial u}{\partial t}+A\frac {\partial u}{\partial x}=0
@@ -449,7 +449,7 @@ u_j^{n+1}=\frac {u_{j-1}^n+u_{j+1}^n}2-\frac {\Delta t}{\Delta x}\frac {F_{j+1}^
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Expand <span class="math inline">u_j^{n+1}</span> about <span class="math inline">u_j^n</span> using a Taylor series and substitute the time derivative term with the spatial derivative. From Eqn. (<a href="#eq-general-hyperbolic-pde" class="quarto-xref">3</a>), we have that <span class="math inline">u_t=-F_x</span>. Therefore</p>
+<p>Expand <span class="math inline">u_j^{n+1}</span> about <span class="math inline">u_j^n</span> using a Taylor series and substitute the time derivative term with the spatial derivative. From Eqn. (<a href="#eq-general-hyperbolic-pde" class="quarto-xref">Eqn.&nbsp;3</a>), we have that <span class="math inline">u_t=-F_x</span>. Therefore</p>
 <p><span class="math display">
 \begin{aligned}
 u(x,t+\Delta t) &amp; =u(x,t)+\left.\frac {\partial u}{\partial t}\right|_{x,t}\Delta t+\left.\frac {\partial^2u}{\partial t^2}\right|_{x,t}\frac {\Delta t^2}{2!}+\cdots \\
@@ -465,7 +465,7 @@ u(x,t+\Delta t) &amp; =u(x,t)+\left.\frac {\partial u}{\partial t}\right|_{x,t}\
 <p><span id="eq-lax-method-inviscid-burgers-amplification-factor"><span class="math display">
 G=\cos\beta-i\frac {\Delta t}{\Delta x}A\sin\beta
 \tag{5}</span></span></p>
-<p>where the dimensionless wave number <span class="math inline">\beta</span> is <span class="math inline">k\Delta x</span>. For Burgers’ equation, <span class="math inline">F=u^2/2</span>, so the Jacobian is simply <span class="math inline">A(u)=u</span>. Stability occurs when <span class="math inline">|G|\leq1</span>. For the <span class="math inline">G</span> above, Eqn. (<a href="#eq-lax-method-inviscid-burgers-amplification-factor" class="quarto-xref">5</a>) reduces down to</p>
+<p>where the dimensionless wave number <span class="math inline">\beta</span> is <span class="math inline">k\Delta x</span>. For Burgers’ equation, <span class="math inline">F=u^2/2</span>, so the Jacobian is simply <span class="math inline">A(u)=u</span>. Stability occurs when <span class="math inline">|G|\leq1</span>. For the <span class="math inline">G</span> above, Eqn. (<a href="#eq-lax-method-inviscid-burgers-amplification-factor" class="quarto-xref">Eqn.&nbsp;5</a>) reduces down to</p>
 <p><span class="math display">
 \left|\frac {\Delta t}{\Delta x}u_{\mathrm{max}}\right|\leq1
 </span></p>
@@ -473,7 +473,7 @@ G=\cos\beta-i\frac {\Delta t}{\Delta x}A\sin\beta
 </section>
 <section id="lax-wendroff-method" class="level2">
 <h2 class="anchored" data-anchor-id="lax-wendroff-method">Lax-Wendroff Method</h2>
-<p>The Lax-Wendroff method was one of the first second order finite difference methods derived for hyperbolic PDEs. Once again, consider the general form of the governing Eqn. (<a href="#eq-general-hyperbolic-pde" class="quarto-xref">3</a>). The Lax-Wendroff method is</p>
+<p>The Lax-Wendroff method was one of the first second order finite difference methods derived for hyperbolic PDEs. Once again, consider the general form of the governing Eqn. (<a href="#eq-general-hyperbolic-pde" class="quarto-xref">Eqn.&nbsp;3</a>). The Lax-Wendroff method is</p>
 <p><span id="eq-lax-wendroff-method-inviscid-burgers"><span class="math display">
 u_j^{n+1}=u_j^n-\frac {\Delta t}{\Delta x}\frac {F_{j+1}^n-F_{j-1}^n}2+\frac 12\left(\frac {\Delta t}{\Delta x}\right)^2\left[A_{j+\frac 12}^n\left(F_{j+1}^n-F_j^n\right)-A_{j-\frac 12}^n\left(F_j^n-F_{j-1}^n\right)\right]
 \tag{6}</span></span></p>
@@ -497,7 +497,7 @@ A_{j\pm\frac 12}=A\left(\frac {u_j+u_{j\pm1}}2\right)=\frac {u_j+u_{j\pm1}}2
 <p><span class="math display">
 u(x,t+\Delta t)=u(x,t)+\left.\frac {\partial u}{\partial t}\right|_{x,t}\Delta t+\left.\frac {\partial^2u}{\partial t^2}\right|_{x,t}\frac {\Delta t^2}{2!}+\left.\frac {\partial^3u}{\partial t^3}\right|_{x,t}\frac {\Delta t^3}{3!}+\cdots
 </span></p>
-<p>Next, replace the time derivatives with spatial derivatives. From Eqn. (<a href="#eq-general-hyperbolic-pde" class="quarto-xref">3</a>), the first time derivative is</p>
+<p>Next, replace the time derivatives with spatial derivatives. From Eqn. (<a href="#eq-general-hyperbolic-pde" class="quarto-xref">Eqn.&nbsp;3</a>), the first time derivative is</p>
 <p><span class="math display">
 \frac {\partial u}{\partial t}=-\frac {\partial F}{\partial x}
 </span></p>
@@ -551,7 +551,7 @@ u_j^{\overline{n+1}} &amp; =u_j-\frac {\Delta t}{\Delta x}\left(F_{j+1}^n-F_j^n\
 u_j^{n+1} &amp; =\frac 12\left[u_j^n+u_j^{\overline{n+1}}-\frac {\Delta t}{\Delta x}\left(F_j^{\overline{n+1}}-F_{j-1}^{\overline{n+1}}\right)\right]
 \end{aligned}
 \tag{10}</span></span></p>
-<p>The amplification factor, Eqn. (<a href="#eq-lax-wendroff-method-inviscid-burgers-amplification-factor" class="quarto-xref">7</a>), and stability requirement, Eqn. (<a href="#eq-lax-wendroff-method-inviscid-burgers-stability" class="quarto-xref">8</a>), are the same as that of Lax-Wendroff. When compared to Lax-Wendroff for the example problem, the two solutions differ. This is due to the switched differencing in the predictor and corrector steps, as well as the nonlinear nature of the PDE. In general, MacCormack provides better resolution at discontinuities. For the best resolution, the difference in the predictor, <span class="math inline">F_{j+1}-F_j</span>, should be in the same direction as the propagation direction of the discontinuity. If the wave is propagating to the left, then the difference should be <span class="math inline">F_{j-1}-F_j</span> instead.</p>
+<p>The amplification factor, Eqn. (<a href="#eq-lax-wendroff-method-inviscid-burgers-amplification-factor" class="quarto-xref">Eqn.&nbsp;7</a>), and stability requirement, Eqn. (<a href="#eq-lax-wendroff-method-inviscid-burgers-stability" class="quarto-xref">Eqn.&nbsp;8</a>), are the same as that of Lax-Wendroff. When compared to Lax-Wendroff for the example problem, the two solutions differ. This is due to the switched differencing in the predictor and corrector steps, as well as the nonlinear nature of the PDE. In general, MacCormack provides better resolution at discontinuities. For the best resolution, the difference in the predictor, <span class="math inline">F_{j+1}-F_j</span>, should be in the same direction as the propagation direction of the discontinuity. If the wave is propagating to the left, then the difference should be <span class="math inline">F_{j-1}-F_j</span> instead.</p>
 <div id="fig-lax-wendroff-maccormack-solution-comparison-inviscid-burgers" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-lax-wendroff-maccormack-solution-comparison-inviscid-burgers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -590,7 +590,7 @@ Figure&nbsp;1: Comparison of Lax-Wendroff and MacCormack solutions to the invisc
 <figcaption>Control volume for the Godunov scheme</figcaption>
 </figure>
 </div>
-<p>Integrating Eqn. (<a href="#eq-general-hyperbolic-pde" class="quarto-xref">3</a>) across the control volume, then the volume-averaged <span class="math inline">u</span> and time-averaged flux <span class="math inline">f</span> are</p>
+<p>Integrating Eqn. (<a href="#eq-general-hyperbolic-pde" class="quarto-xref">Eqn.&nbsp;3</a>) across the control volume, then the volume-averaged <span class="math inline">u</span> and time-averaged flux <span class="math inline">f</span> are</p>
 <p><span id="eq-godunov-scheme-inviscid-burgers-conservation-equation"><span class="math display">
 \begin{aligned}
 \overline u_j^{n+1}=\overline u_j^n-\frac {\Delta t}{\Delta x}\left[f\left(u_{j+\frac 12}\right)-f\left(u_{j-\frac 12}\right)\right]
@@ -608,7 +608,7 @@ Figure&nbsp;1: Comparison of Lax-Wendroff and MacCormack solutions to the invisc
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Integrating Eqn. (<a href="#eq-general-hyperbolic-pde" class="quarto-xref">3</a>) and swapping the integration order, then</p>
+<p>Integrating Eqn. (<a href="#eq-general-hyperbolic-pde" class="quarto-xref">Eqn.&nbsp;3</a>) and swapping the integration order, then</p>
 <p><span class="math display">
 \int\limits_t^{t+\Delta t}\int\limits_{x-\Delta x/2}^{x+\Delta x/2}\frac {\partial u}{\partial t}+\frac {\partial F}{\partial x}=\int\limits_{x-\Delta x/2}^{x+\Delta x/2}u(x,t+\Delta t)-u(x,t)\,\mathrm dx+\int\limits_t^{t+\Delta t}F\left(x+\frac {\Delta x}2,t\right)-F\left(x-\frac {\Delta x}2,t\right)\,\mathrm dt=0
 </span></p>
@@ -623,7 +623,7 @@ f_j^n &amp; =\frac 1{\Delta t}\int\limits_t^{t+\Delta t}f(x,t)\,\mathrm dt
 <p><span class="math display">
 \Delta x\left(\overline u_j^{n+1}-\overline u_j^n\right)+\Delta t\left(f_{j+\frac 12}^n-f_{j-\frac 12}^n\right)=0
 </span></p>
-<p>Solving for <span class="math inline">\overline u_j^{n+1}</span> completes the proof for Eqn. (<a href="#eq-godunov-scheme-inviscid-burgers-conservation-equation" class="quarto-xref">11</a>).</p>
+<p>Solving for <span class="math inline">\overline u_j^{n+1}</span> completes the proof for Eqn. (<a href="#eq-godunov-scheme-inviscid-burgers-conservation-equation" class="quarto-xref">Eqn.&nbsp;11</a>).</p>
 </div>
 </div>
 </div>
@@ -651,7 +651,7 @@ u_{j+1} &amp; \qquad x&gt;0
 <p><span class="math display">
 c_{j+\frac 12}=\left.\frac {\mathrm dx}{\mathrm dt}\right|_{j+\frac 12}=\frac {u_j+u_{j+1}}2
 </span></p>
-<p>then the solution to the Riemann problem for Eqn. (<a href="#eq-general-hyperbolic-pde" class="quarto-xref">3</a>) is: for shocks (<span class="math inline">u_j&gt;u_{j+1}</span>)</p>
+<p>then the solution to the Riemann problem for Eqn. (<a href="#eq-general-hyperbolic-pde" class="quarto-xref">Eqn.&nbsp;3</a>) is: for shocks (<span class="math inline">u_j&gt;u_{j+1}</span>)</p>
 <p><span id="eq-godunov-scheme-inviscid-burgers-shock-solution"><span class="math display">
 \begin{aligned}
 u &amp; =\left\{\begin{array}{ll}
@@ -679,7 +679,7 @@ f_{j+\frac 12} &amp; =\left\{\begin{array}{lll}
 \end{array}\right.
 \end{aligned}
 \tag{14}</span></span></p>
-<p>Equations (<a href="#eq-godunov-scheme-inviscid-burgers-shock-solution" class="quarto-xref">13</a>) and (<a href="#eq-godunov-scheme-inviscid-burgers-expansion-solution" class="quarto-xref">14</a>) assume that waves from adjacent cells do not interact with one another (i.e., shocks propagating from the left do not interfere with shocks on their right).</p>
+<p>Equations (<a href="#eq-godunov-scheme-inviscid-burgers-shock-solution" class="quarto-xref">Eqn.&nbsp;13</a>) and (<a href="#eq-godunov-scheme-inviscid-burgers-expansion-solution" class="quarto-xref">Eqn.&nbsp;14</a>) assume that waves from adjacent cells do not interact with one another (i.e., shocks propagating from the left do not interfere with shocks on their right).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Proof of self-similarity for the Riemann problem">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -697,11 +697,11 @@ f_{j+\frac 12} &amp; =\left\{\begin{array}{lll}
 \frac {\partial u}{\partial x} &amp; =\frac {\partial u}{\partial x'}\frac {\partial x'}{\partial x}=a\frac {\partial u}{\partial x'}
 \end{aligned}
 </span></p>
-<p>Eqn. (<a href="#eq-inviscid-burgers" class="quarto-xref">2</a>) becomes, after normalizing by <span class="math inline">a</span>,</p>
+<p>Eqn. (<a href="#eq-inviscid-burgers" class="quarto-xref">Eqn.&nbsp;2</a>) becomes, after normalizing by <span class="math inline">a</span>,</p>
 <p><span class="math display">
 \frac {\partial u}{\partial t'}+u\frac {\partial u}{\partial x'}=0
 </span></p>
-<p>Therefore, Eqn. (<a href="#eq-inviscid-burgers" class="quarto-xref">2</a>) has no inherent time or length scale. If <span class="math inline">u(x,t)</span> is a solution to Eqn. (<a href="#eq-inviscid-burgers" class="quarto-xref">2</a>), then <span class="math inline">u(ax,at)</span> must also be a solution to the PDE in the scaled coordinate system. Invariance can also be shown for the initial condition by inspecting <span class="math inline">u(ax,0)</span>. Taking <span class="math inline">u(ax,0)</span> at the <span class="math inline">j+\frac 12</span> cell boundary, then</p>
+<p>Therefore, Eqn. (<a href="#eq-inviscid-burgers" class="quarto-xref">Eqn.&nbsp;2</a>) has no inherent time or length scale. If <span class="math inline">u(x,t)</span> is a solution to Eqn. (<a href="#eq-inviscid-burgers" class="quarto-xref">Eqn.&nbsp;2</a>), then <span class="math inline">u(ax,at)</span> must also be a solution to the PDE in the scaled coordinate system. Invariance can also be shown for the initial condition by inspecting <span class="math inline">u(ax,0)</span>. Taking <span class="math inline">u(ax,0)</span> at the <span class="math inline">j+\frac 12</span> cell boundary, then</p>
 <p><span class="math display">
 u(ax,0)=\begin{cases}
 u_j \qquad\qquad &amp; ax&lt;0 \\
@@ -731,7 +731,7 @@ u_{j+1} \qquad\qquad &amp; ax&gt;0
 <p><span class="math display">
 \left|\frac {\Delta t}{\Delta x}u_{\mathrm{max}}\right|\leq\frac 12
 </span></p>
-<p>Using Equations (<a href="#eq-godunov-scheme-inviscid-burgers-shock-solution" class="quarto-xref">13</a>) and (<a href="#eq-godunov-scheme-inviscid-burgers-expansion-solution" class="quarto-xref">14</a>) in Eqn. (<a href="#eq-godunov-scheme-inviscid-burgers-conservation-equation" class="quarto-xref">11</a>) to obtain a solution. As shown below, the solution is superior for shock propagation than the methods discussed before and manages to capture the sharp discontinuity very well. This method is also capable of capturing expansion waves with comparable fidelity.</p>
+<p>Using Equations (<a href="#eq-godunov-scheme-inviscid-burgers-shock-solution" class="quarto-xref">Eqn.&nbsp;13</a>) and (<a href="#eq-godunov-scheme-inviscid-burgers-expansion-solution" class="quarto-xref">Eqn.&nbsp;14</a>) in Eqn. (<a href="#eq-godunov-scheme-inviscid-burgers-conservation-equation" class="quarto-xref">Eqn.&nbsp;11</a>) to obtain a solution. As shown below, the solution is superior for shock propagation than the methods discussed before and manages to capture the sharp discontinuity very well. This method is also capable of capturing expansion waves with comparable fidelity.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="../assets/chapter-4/godunov-solution-example.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Godunov scheme applied to a shock problem"><img src="../assets/chapter-4/godunov-solution-example.png" class="img-fluid figure-img" width="550" alt="Godunov scheme applied to a shock problem"></a></p>

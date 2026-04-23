@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/propulsion-design/sprays-and-atomization/spray-impingement-simulation.html</loc>
+    <lastmod>2026-04-23T04:07:11.522Z</lastmod>
+  </url>
+  <url>
     <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/propulsion-design/injector/pintle/design-procedures-moveable-pintle.html</loc>
     <lastmod>2026-04-12T10:43:08.676Z</lastmod>
   </url>
@@ -38,7 +42,7 @@
   </url>
   <url>
     <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/engineering-fundamentals/cfd/ausm-flux-splitting-scheme.html</loc>
-    <lastmod>2026-04-22T17:00:02.489Z</lastmod>
+    <lastmod>2026-04-23T13:59:58.700Z</lastmod>
   </url>
   <url>
     <loc>https://Frank-ZW.github.io/frank-zw.github.io/index.html</loc>
@@ -79,6 +83,10 @@
   <url>
     <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/engineering-fundamentals/structures/limits-and-fits.html</loc>
     <lastmod>2026-04-05T06:11:57.904Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Frank-ZW.github.io/frank-zw.github.io/knowledge-base/propulsion-design/sprays-and-atomization/spray-dropsize-correlations.html</loc>
+    <lastmod>2026-04-23T14:00:01.424Z</lastmod>
   </url>
   <url>
     <loc>https://Frank-ZW.github.io/frank-zw.github.io/notes/index.html</loc>

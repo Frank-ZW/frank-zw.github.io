@@ -252,7 +252,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../../../knowledge-base/engineering-fundamentals/cfd/ausm-flux-splitting-scheme.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">AUSM Flux Splitting Scheme</span></a>
+ <span class="menu-text">Introduction to the AUSM Scheme</span></a>
   </div>
 </li>
       </ul>
@@ -554,7 +554,7 @@ Figure&nbsp;3: Applied vs.&nbsp;total shear strain in proportional and nonpropor
 \varepsilon_e &amp; =\beta\sqrt{(\varepsilon_1-\varepsilon_2)^2+(\varepsilon_2-\varepsilon_3)^2+(\varepsilon_3-\varepsilon_1)^2}
 \end{aligned}
 \tag{3}</span></span></p>
-<p>where <span class="math inline">\beta=\frac 1{(1+\nu)\sqrt2}</span> and <span class="math inline">\nu</span> is the Poisson ratio. If the principal stresses and strains are unresolved, then Eqn. (<a href="#eq-von-mises-yield-theory-resolved" class="quarto-xref">3</a>) is also</p>
+<p>where <span class="math inline">\beta=\frac 1{(1+\nu)\sqrt2}</span> and <span class="math inline">\nu</span> is the Poisson ratio. If the principal stresses and strains are unresolved, then Eqn. (<a href="#eq-von-mises-yield-theory-resolved" class="quarto-xref">Eqn.&nbsp;3</a>) is also</p>
 <p><span id="eq-von-mises-yield-theory-unresolved"><span class="math display">
 \begin{aligned}
 \sigma_e &amp; =\sqrt{\frac 12\left[(\sigma_x-\sigma_y)^2+(\sigma_y-\sigma_z)^2+(\sigma_z-\sigma_x)^2+6\left(\tau_{xy}^2+\tau_{yz}^2+\tau_{xz}^2\right)\right]} \\
@@ -584,13 +584,13 @@ Figure&nbsp;3: Applied vs.&nbsp;total shear strain in proportional and nonpropor
 </section>
 <section id="torsional-strain-life-curve" class="level3">
 <h3 class="anchored" data-anchor-id="torsional-strain-life-curve">Torsional Strain-Life Curve</h3>
-<p>Equations (<a href="#eq-max-principal-stress-yield-theory" class="quarto-xref">1</a>) through (<a href="#eq-von-mises-yield-theory-unresolved" class="quarto-xref">4</a>) can be used to develop a torsional strain-life curve in terms of uniaxial fatigue properties.</p>
+<p>Equations (<a href="#eq-max-principal-stress-yield-theory" class="quarto-xref">Eqn.&nbsp;1</a>) through (<a href="#eq-von-mises-yield-theory-unresolved" class="quarto-xref">Eqn.&nbsp;4</a>) can be used to develop a torsional strain-life curve in terms of uniaxial fatigue properties.</p>
 <p><span id="eq-torsional-strain-life-general"><span class="math display">
 \frac {\Delta\gamma}2=\frac {\tau_f'}G(2N_f)^b+\gamma_f'(2N_f)^c
 \tag{6}</span></span></p>
 <section id="maximum-principal-stressstrain-1" class="level4">
 <h4 class="anchored" data-anchor-id="maximum-principal-stressstrain-1">Maximum Principal Stress/Strain</h4>
-<p>Using Eqn. (<a href="#eq-max-principal-stress-yield-theory" class="quarto-xref">1</a>) for stress, then <span class="math inline">\sigma_e</span> is</p>
+<p>Using Eqn. (<a href="#eq-max-principal-stress-yield-theory" class="quarto-xref">Eqn.&nbsp;1</a>) for stress, then <span class="math inline">\sigma_e</span> is</p>
 <p><span class="math display">
 \begin{aligned}
 \mathrm{Tension}\qquad\qquad\sigma_e &amp; =\sigma_1 \\
@@ -604,7 +604,7 @@ Figure&nbsp;3: Applied vs.&nbsp;total shear strain in proportional and nonpropor
 \mathrm{Torsion}\qquad\qquad\varepsilon_e &amp; =\varepsilon_1=\dfrac {\gamma}2
 \end{aligned}
 </span></p>
-<p>The torsional strain-life equation, Eqn. (<a href="#eq-torsional-strain-life-general" class="quarto-xref">6</a>) becomes</p>
+<p>The torsional strain-life equation, Eqn. (<a href="#eq-torsional-strain-life-general" class="quarto-xref">Eqn.&nbsp;6</a>) becomes</p>
 <p><span id="eq-torsional-strain-life-max-principal"><span class="math display">
 \frac {\Delta\gamma}2=\frac {\sigma_f'}G(2N_f)^b+2\varepsilon_f'(2N_f)^c
 \tag{7}</span></span></p>
@@ -654,7 +654,7 @@ Figure&nbsp;3: Applied vs.&nbsp;total shear strain in proportional and nonpropor
 </section>
 <section id="octahedral-criteria-1" class="level4">
 <h4 class="anchored" data-anchor-id="octahedral-criteria-1">Octahedral Criteria</h4>
-<p>Using von Mises on Eqn. (<a href="#eq-torsional-strain-life-general" class="quarto-xref">6</a>)</p>
+<p>Using von Mises on Eqn. (<a href="#eq-torsional-strain-life-general" class="quarto-xref">Eqn.&nbsp;6</a>)</p>
 <p><span id="eq-torsional-strain-life-von-mises"><span class="math display">
 \frac {\Delta\gamma}2=\frac {\sigma_f'}{G\sqrt3}(2N_f)^b+\varepsilon_f'\sqrt3(2N_f)^c
 \tag{9}</span></span></p>
@@ -677,11 +677,11 @@ Figure&nbsp;3: Applied vs.&nbsp;total shear strain in proportional and nonpropor
 \end{aligned}
 \tag{10}</span></span></p>
 <p>where <span class="math inline">P_1</span>, <span class="math inline">P_2</span>, and <span class="math inline">P_3</span> are the amplitudes of the alternating principal stresses; <span class="math inline">S_x</span>, <span class="math inline">S_y</span>, and <span class="math inline">S_z</span> are the orthogonal mean stresses; <span class="math inline">A</span> is a constant proportional to the reversed fatigue strength; and <span class="math inline">\alpha</span> is a constant that gives the variation of the allowed stress range with the static stress. Any coordinate system can be used to report the orthogonal static mean stresses and parameters <span class="math inline">A</span> and <span class="math inline">\alpha</span> are material properties determined for a given life.</p>
-<p>The first term in Eqn. (<a href="#eq-sines-model" class="quarto-xref">10</a>) is the octahedral shear stress, <span class="math inline">\tau_{\mathrm{oct}}</span>, and it averages the effect of shear stress on many differently oriented slip planes if present. The second term in Eqn. (<a href="#eq-sines-model" class="quarto-xref">10</a>) accounts for hydrostatic stress.</p>
-<p>For a given “class” of loading, <span class="math inline">A</span> and <span class="math inline">\alpha</span> can be determined from Eqn. (<a href="#eq-sines-model" class="quarto-xref">10</a>). For completely reversed uniaxial loading, <span class="math inline">\sigma_{\mathrm{min}}=-\sigma_{\mathrm{max}}</span> and <span class="math inline">R=-1</span>. Since the loading is uniaxial, assume the amplitude of the reversed axial stress, <span class="math inline">f_1</span> is in the direction of <span class="math inline">P_1</span> so <span class="math inline">P_2=P_3=0</span>. Additionally, since <span class="math inline">\sigma_{\mathrm m}=0</span>, then <span class="math inline">S_x=S_y=S_z=0</span>. Therefore <span class="math display">
+<p>The first term in Eqn. (<a href="#eq-sines-model" class="quarto-xref">Eqn.&nbsp;10</a>) is the octahedral shear stress, <span class="math inline">\tau_{\mathrm{oct}}</span>, and it averages the effect of shear stress on many differently oriented slip planes if present. The second term in Eqn. (<a href="#eq-sines-model" class="quarto-xref">Eqn.&nbsp;10</a>) accounts for hydrostatic stress.</p>
+<p>For a given “class” of loading, <span class="math inline">A</span> and <span class="math inline">\alpha</span> can be determined from Eqn. (<a href="#eq-sines-model" class="quarto-xref">Eqn.&nbsp;10</a>). For completely reversed uniaxial loading, <span class="math inline">\sigma_{\mathrm{min}}=-\sigma_{\mathrm{max}}</span> and <span class="math inline">R=-1</span>. Since the loading is uniaxial, assume the amplitude of the reversed axial stress, <span class="math inline">f_1</span> is in the direction of <span class="math inline">P_1</span> so <span class="math inline">P_2=P_3=0</span>. Additionally, since <span class="math inline">\sigma_{\mathrm m}=0</span>, then <span class="math inline">S_x=S_y=S_z=0</span>. Therefore <span class="math display">
 A=\frac {P_1\sqrt2}3=\frac {f_1\sqrt2}3
 </span></p>
-<p>Now, if the loading is from zero to max, <span class="math inline">R=0</span> and <span class="math inline">\sigma_{\mathrm{min}}=0</span> now. This is still the same “loading class” as both <span class="math inline">R=0</span> and <span class="math inline">R=-1</span> apply for uniaxial loads. This time, assuming the <span class="math inline">x</span> axis is axial, then <span class="math inline">S_x'=P_1'</span> and <span class="math inline">P_2'=P_3'=S_y'=S_z'=0</span>. Eqn. (<a href="#eq-sines-model" class="quarto-xref">10</a>) becomes</p>
+<p>Now, if the loading is from zero to max, <span class="math inline">R=0</span> and <span class="math inline">\sigma_{\mathrm{min}}=0</span> now. This is still the same “loading class” as both <span class="math inline">R=0</span> and <span class="math inline">R=-1</span> apply for uniaxial loads. This time, assuming the <span class="math inline">x</span> axis is axial, then <span class="math inline">S_x'=P_1'</span> and <span class="math inline">P_2'=P_3'=S_y'=S_z'=0</span>. Eqn. (<a href="#eq-sines-model" class="quarto-xref">Eqn.&nbsp;10</a>) becomes</p>
 <p><span class="math display">
 \frac {P_1'\sqrt2}3=A-\alpha P_1'
 </span></p>

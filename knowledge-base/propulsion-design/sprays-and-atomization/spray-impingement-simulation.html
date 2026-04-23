@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>External Flow – Frank’s Engineering Notebook</title>
+<title>Development of Methodology for Spray Impingement Simulation – Frank’s Engineering Notebook</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,23 +26,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../../../">
-<script src="../../../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../../site_libs/bootstrap/bootstrap-a44d1825680bf4d2a1237acfefc713aa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-a44d1825680bf4d2a1237acfefc713aa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,51 +71,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../../../../../styles.css">
+<link rel="stylesheet" href="../../../styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed quarto-light">
@@ -125,7 +82,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../../../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Frank’s Engineering Notebook</span>
     </a>
   </div>
@@ -136,7 +93,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../../../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -145,21 +102,21 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-knowledge-base">    
         <li>
-    <a class="dropdown-item" href="../../../../../knowledge-base/engineering-fundamentals/index.html">
+    <a class="dropdown-item" href="../../../knowledge-base/engineering-fundamentals/index.html">
  <span class="dropdown-text">Fundamentals of Engineering</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../../knowledge-base/propulsion-design/index.html">
+    <a class="dropdown-item" href="../../../knowledge-base/propulsion-design/index.html">
  <span class="dropdown-text">Propulsion Design</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../../../../notes/index.html"> 
+    <a class="nav-link" href="../../../notes/index.html"> 
 <span class="menu-text">Digital Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../../../projects/index.html"> 
+    <a class="nav-link" href="../../../projects/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
@@ -174,7 +131,7 @@ window.Quarto = {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">External Flow</h1>
+          <h1 class="quarto-secondary-nav-title">Development of Methodology for Spray Impingement Simulation</h1>
         </a>     
     </div>
   </nav>
@@ -188,185 +145,29 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
- <span class="menu-text">Standards</span></a>
+ <span class="menu-text">Injectors</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../../knowledge-base/engineering-fundamentals/standards/sae-as4395-37deg-flared-fitting.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">SAE AS4395 37° Flared Fitting</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
+          <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
- <span class="menu-text">CFD</span></a>
+ <span class="menu-text">Pintle Injector</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
- <span class="menu-text">Computational Fluid Mechanics and Heat Transfer</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../../knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-2-partial-differential-equations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapter 2. Partial Differential Equations</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../../knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-4-application-of-numerical-methods-to-model-equations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapter 4. Application of Numerical Methods to Model Equations</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../../knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-6-numerical-methods-for-inviscid-flows.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapter 6. Numerical Methods for Inviscid Flows</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../../knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-9-numerical-methods-for-navier-stokes-equations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapter 9. Numerical Methods for Navier-Stokes Equations</span></a>
+  <a href="../../../knowledge-base/propulsion-design/injector/pintle/design-procedures-moveable-pintle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Design Procedures for Moveable Pintle</span></a>
   </div>
 </li>
       </ul>
   </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../../knowledge-base/engineering-fundamentals/cfd/ausm-flux-splitting-scheme.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction to the AUSM Scheme</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Fluids</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
- <span class="menu-text">Convective Heat and Mass Transfer</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../../knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-4-internal-laminar-flow.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapter 4. Internal Laminar Flow</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../../knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-7-turbulent-and-transitional-internal-flow.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapter 7. Turbulent and Transitional Internal Flow</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../../knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-8-effects-of-transpiration.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapter 8. Effects of Transpiration</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../../knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-10-natural-convection.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapter 10. Natural Convection</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Fundamentals of Heat and Mass Transfer</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../../knowledge-base/engineering-fundamentals/fluids/fundamentals-of-heat-and-mass-transfer/chapters/chapter-7-external-flow.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Chapter 7. External Flow</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../../knowledge-base/engineering-fundamentals/fluids/forced-flows-correlations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Forced Flows Correlations</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../../knowledge-base/engineering-fundamentals/fluids/free-mixed-convection-correlations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Free and Mixed Convection Correlations</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
- <span class="menu-text">Structures</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
- <span class="menu-text">Fundamentals of Metal Fatigue Analysis</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../../knowledge-base/engineering-fundamentals/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-5-variable-amplitude-loading.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapter 5. Variable Amplitude Loading</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../../knowledge-base/engineering-fundamentals/structures/fundamentals-of-metal-fatigue-analysis/chapters/chapter-7-multiaxial-fatigue.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapter 7. Multiaxial Fatigue</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../../knowledge-base/engineering-fundamentals/structures/limits-and-fits.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Limits and Fits</span></a>
-  </div>
-</li>
       </ul>
   </li>
     </ul>
@@ -379,13 +180,9 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#impinging-jet" id="toc-impinging-jet" class="nav-link active" data-scroll-target="#impinging-jet">Impinging Jet</a>
-  <ul class="collapse">
-  <li><a href="#hydrodynamic-and-geometric-considerations" id="toc-hydrodynamic-and-geometric-considerations" class="nav-link" data-scroll-target="#hydrodynamic-and-geometric-considerations">Hydrodynamic and Geometric Considerations</a>
-  <ul class="collapse">
-  <li><a href="#round-nozzles" id="toc-round-nozzles" class="nav-link" data-scroll-target="#round-nozzles">Round Nozzles</a></li>
-  </ul></li>
-  </ul></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#literature-review" id="toc-literature-review" class="nav-link" data-scroll-target="#literature-review">Literature Review</a></li>
+  <li><a href="#model-formulation" id="toc-model-formulation" class="nav-link" data-scroll-target="#model-formulation">Model Formulation</a></li>
   </ul>
 </nav>
     </div>
@@ -394,7 +191,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">External Flow</h1>
+<h1 class="title d-none d-lg-block">Development of Methodology for Spray Impingement Simulation</h1>
 </div>
 
 
@@ -411,33 +208,16 @@ window.Quarto = {
 </header>
 
 
-<section id="impinging-jet" class="level1">
-<h1>Impinging Jet</h1>
-<p>A single or array of jets impinging normally to a surface may be used to enhance convective heat transfer. Applications include deicing systems on aircraft, cooling heated components in gas turbine engines, and annealing sheet metals.</p>
-<section id="hydrodynamic-and-geometric-considerations" class="level2">
-<h2 class="anchored" data-anchor-id="hydrodynamic-and-geometric-considerations">Hydrodynamic and Geometric Considerations</h2>
-<section id="round-nozzles" class="level3">
-<h3 class="anchored" data-anchor-id="round-nozzles">Round Nozzles</h3>
-<p>For a single round nozzle, the relative nozzle area is <span class="math inline">A_r=\frac {D^2}{4r^2}</span> and the average Nusselt number is</p>
-<p><span id="eq-impinging-jet-round-nozzle-martin"><span class="math display">
-\frac {\overline{\mathrm{Nu}}}{\mathrm{Pr}^{0.42}}=G\left(A_r,\frac HD\right)\left[2\mathrm{Re}^{1/2}\left(1+0.005\mathrm{Re}^{0.55}\right)^{1/2}\right]
-\tag{1}</span></span></p>
-<p>where <span class="math inline">G</span> is the function below.</p>
-<p><span id="eq-impinging-jet-round-nozzle-martin-g-definition"><span class="math display">
-G\left(A_r,\frac HD\right)=\frac {2A_r^{1/2}\left(1-2.2A_r^{1/2}\right)}{1+0.2\left(\frac HD-6\right)A_r^{1/2}}
-\tag{2}</span></span></p>
-<p>Eqn. (<a href="#eq-impinging-jet-round-nozzle-martin" class="quarto-xref">Eqn.&nbsp;1</a>) is valid for</p>
-<p><span class="math display">
-\begin{gathered}
-2\times10^3\lesssim\mathrm{Re}_D\lesssim4\times10^5 \\
-2\lesssim\frac HD\lesssim12 \\
-4\times10^{-3}\lesssim A_r\lesssim4\times10^{-2}
-\end{gathered}
-</span></p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+</section>
+<section id="literature-review" class="level1">
+<h1>Literature Review</h1>
+</section>
+<section id="model-formulation" class="level1">
+<h1>Model Formulation</h1>
 
 
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->

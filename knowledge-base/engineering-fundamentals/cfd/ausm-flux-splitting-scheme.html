@@ -249,7 +249,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../knowledge-base/engineering-fundamentals/cfd/ausm-flux-splitting-scheme.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">AUSM Flux Splitting Scheme</span></a>
+ <span class="menu-text">Introduction to the AUSM Scheme</span></a>
   </div>
 </li>
       </ul>
@@ -380,9 +380,8 @@ window.Quarto = {
    
   <ul>
   <li><a href="#derivation" id="toc-derivation" class="nav-link active" data-scroll-target="#derivation">Derivation</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
-</nav>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="files/Liou-1993-AUSM_Scheme-JCP-107.pdf"><i class="bi bi-file-pdf"></i>Liou and Steffen (1993)</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -462,7 +461,7 @@ M^{\pm}=\begin{cases}
 \frac 12(M\pm|M|) &amp; \qquad|M|&gt;1
 \end{cases}
 \tag{5}</span></span></p>
-<p>Note that <span class="math inline">M^+</span> and <span class="math inline">M^-</span> represent the flux contributions moving in the positive and negative axis directions respectively. They correspond to the left and right cell states respectively as well, as that is the direction the flux must travel to reach the cell boundary. The pressure flux term can also be decomposed in the same manner as Eqn. (<a href="#eq-advection-velocity-decomposition" class="quarto-xref">4</a>).</p>
+<p>Note that <span class="math inline">M^+</span> and <span class="math inline">M^-</span> represent the flux contributions moving in the positive and negative axis directions respectively. They correspond to the left and right cell states respectively as well, as that is the direction the flux must travel to reach the cell boundary. The pressure flux term can also be decomposed in the same manner as Eqn. (<a href="#eq-advection-velocity-decomposition" class="quarto-xref">Eqn.&nbsp;4</a>).</p>
 <p><span id="eq-pressure-decomposition"><span class="math display">
 p_{\frac 12}=p_{\mathrm L}^++p_{\mathrm R}^-
 \tag{6}</span></span></p>
@@ -494,7 +493,7 @@ p_1^{\pm}=\begin{cases}
 0 \\p_{\mathrm L}^++p_{\mathrm R}^- \\0 \\0
 \end{bmatrix}
 \tag{8}</span></span></p>
-<p>where <span class="math inline">\{\cdot\}_{\mathrm L/\mathrm R}=\{\cdot\}_{\mathrm R}-\{\cdot\}_{\mathrm L}</span>. As can be seen, the first term in Eqn. (<a href="#eq-ausm-flux-formulation" class="quarto-xref">8</a>) is a Mach number-weighted average of the left and right flux quantities. The second term is the numerical dissipation term that renders the flux formula upwinding.</p>
+<p>where <span class="math inline">\{\cdot\}_{\mathrm L/\mathrm R}=\{\cdot\}_{\mathrm R}-\{\cdot\}_{\mathrm L}</span>. As can be seen, the first term in Eqn. (<a href="#eq-ausm-flux-formulation" class="quarto-xref">Eqn.&nbsp;8</a>) is a Mach number-weighted average of the left and right flux quantities. The second term is the numerical dissipation term that renders the flux formula upwinding.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -512,9 +511,6 @@ Important
 </div>
 </div>
 <p>If viscous terms are present, <span class="math inline">\textbf E_v</span> and <span class="math inline">\textbf F_v</span> should be calculated using the typical central-average representation. The AUSM scheme retains the simplicity and efficiency of a standard flux-vector splitting (FVS) scheme, while also achieving a comparable level of superior accuracy as standard flux differencing splitting (FDS) schemes.</p>
-</section>
-<section id="references" class="level1">
-<h1>References</h1>
 
 
 </section>
