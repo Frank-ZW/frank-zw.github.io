@@ -52,7 +52,7 @@ The derived variable approach (using $\zeta$ and $\psi$), is rarely used when so
 
 #### General
 
-The nondimensional primitive form of Eqn. (@eq-incompressible-conservation-equations), ignoring energy, is
+The nondimensional primitive form of @eq-incompressible-conservation-equations, ignoring energy, is
 
 $$
 \begin{gathered}
@@ -111,7 +111,7 @@ v & =v_0-\frac A{2\Delta y}\left(p_{i,j+1}'-p_{i,j-1}'\right)
 \end{aligned}
 $$ {#eq-simple-correction-update-equations}
 
-4. Replace the $p_0$, $u_0$, and $v_0$ values calculated from Step 1 with the $p$, $u$, and $v$ calculated from Eqn. (@eq-simple-correction-update-equations) and return to Step 2. Repeat this process until the solution converges.
+4. Replace the $p_0$, $u_0$, and $v_0$ values calculated from Step 1 with the $p$, $u$, and $v$ calculated from @eq-simple-correction-update-equations and return to Step 2. Repeat this process until the solution converges.
 
 ::: {.callout-note title="Derivation of the SIMPLE Pressure Correction Equation" collapse=true}
 
@@ -124,7 +124,7 @@ $$
 \end{aligned}
 $$ {#eq-simple-velocity-correction-momentum-equations}
 
-Since for any given iteration, $u_k=u_{0,k}+u_k'$, then the previous iteration is $u_{k-1}=u_{0,k-1}$ and the correction term for the previous step is zero. Therefore, Eqn. (@eq-simple-velocity-correction-momentum-equations) can be written as
+Since for any given iteration, $u_k=u_{0,k}+u_k'$, then the previous iteration is $u_{k-1}=u_{0,k-1}$ and the correction term for the previous step is zero. Therefore, @eq-simple-velocity-correction-momentum-equations can be written as
 
 $$
 \begin{aligned}
@@ -133,20 +133,20 @@ v' & =-A\frac {\partial p'}{\partial y}
 \end{aligned}
 $$ {#eq-simple-velocity-correction-equations}
 
-where $A=\frac {\Delta t}{\rho}$. The $\Delta t$ in the $A$ equation is a fictitious time for steady flows relevant only to the iterative sequence. Substituting Eqn. (@eq-simple-velocity-correction-equations) and Eqn. (@eq-simple-property-decomposition) into mass conservation gives
+where $A=\frac {\Delta t}{\rho}$. The $\Delta t$ in the $A$ equation is a fictitious time for steady flows relevant only to the iterative sequence. Substituting @eq-simple-velocity-correction-equations and @eq-simple-property-decomposition into mass conservation gives
 
 $$
 \cancel{\frac {\partial u}{\partial x}+\frac {\partial v}{\partial y}}-\left(\frac {\partial u_0}{\partial x}+\frac {\partial v_0}{\partial y}\right)+\frac {\Delta t}{\rho}\left(\frac {\partial^2p'}{\partial x^2}+\frac {\partial^2p'}{\partial y^2}\right)=0
 $$
 
-The first term disappears since $\nabla\cdot\textbf V=0$ and rearranging the remaining terms gives Eqn. (@eq-simple-pressure-correction-equation).
+The first term disappears since $\nabla\cdot\textbf V=0$ and rearranging the remaining terms gives @eq-simple-pressure-correction-equation.
 
 :::
 
-In practice, Eqn. (@eq-simple-pressure-correction-equation) tends to overestimate the needed $p'$ to fully correct $u_0$ and $v_0$. To accelerate the rate of convergence, an underrelaxation constant, $\alpha_p$, is added to the pressure correction equation.
+In practice, @eq-simple-pressure-correction-equation tends to overestimate the needed $p'$ to fully correct $u_0$ and $v_0$. To accelerate the rate of convergence, an underrelaxation constant, $\alpha_p$, is added to the pressure correction equation.
 
 $$
 p=p_0+\alpha_p p'
 $$
 
-Two notable extensions of the SIMPLE algorithm are the revised (SIMPLER) scheme (Patankar, 1981) and the SIMPLEC scheme (van Doormal and Raithby, 1984). The SIMPLEC scheme uses a more complete approximation of the momentum equation to compute $p'$ to improve convergence. Recall that with SIMPLE, the convective and viscous (diffusive) terms of the velocity correction were neglected. Physically, SIMPLE assumes that all changes to the velocity are due to the error in the guessed pressure field. By incorporating some of these convective and diffusive terms back, the scheme more completely captures the changes in the flow field. This translates to a modification to the $A$ coefficient in Eqn. (@eq-simple-velocity-correction-equations). With this modification, van Doormal and Raithby reported that it was no longer needed to underrelax $p'$. SIMPLEC generally performs more efficiently than both SIMPLE and SIMPLER and is usually one of the default pressure correction schemes in most CFD softwares.
+Two notable extensions of the SIMPLE algorithm are the revised (SIMPLER) scheme (Patankar, 1981) and the SIMPLEC scheme (van Doormal and Raithby, 1984). The SIMPLEC scheme uses a more complete approximation of the momentum equation to compute $p'$ to improve convergence. Recall that with SIMPLE, the convective and viscous (diffusive) terms of the velocity correction were neglected. Physically, SIMPLE assumes that all changes to the velocity are due to the error in the guessed pressure field. By incorporating some of these convective and diffusive terms back, the scheme more completely captures the changes in the flow field. This translates to a modification to the $A$ coefficient in @eq-simple-velocity-correction-equations. With this modification, van Doormal and Raithby reported that it was no longer needed to underrelax $p'$. SIMPLEC generally performs more efficiently than both SIMPLE and SIMPLER and is usually one of the default pressure correction schemes in most CFD softwares.

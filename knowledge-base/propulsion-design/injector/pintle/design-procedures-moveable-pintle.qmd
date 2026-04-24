@@ -1,5 +1,13 @@
 ---
 title: Design Procedure of a Moveable Pintle Injector for LREs
+format:
+  html:
+    toc: true
+    toc-location: right
+    other-links:
+      - text: Son et. al (2017)
+        href: ../files/son_et_al-2017-Design_Procedure_Moveable_Pintle-JPP-33.pdf
+        icon: file-pdf
 ---
 
 The design parameters for a throttling gas-liquid pintle injector are shown in @fig-parameters-schematic. Three different pintle tips were tested with different tip angles, $\theta_{\mathrm{pt}}$, in this paper. The post angle, $\theta_{\mathrm{post}}$, was fixed to be 30&#176.

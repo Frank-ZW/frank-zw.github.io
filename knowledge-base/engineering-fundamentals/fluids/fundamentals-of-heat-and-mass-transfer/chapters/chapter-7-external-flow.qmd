@@ -22,7 +22,7 @@ $$
 G\left(A_r,\frac HD\right)=\frac {2A_r^{1/2}\left(1-2.2A_r^{1/2}\right)}{1+0.2\left(\frac HD-6\right)A_r^{1/2}}
 $$ {#eq-impinging-jet-round-nozzle-martin-g-definition}
 
-Eqn. (@eq-impinging-jet-round-nozzle-martin) is valid for
+@eq-impinging-jet-round-nozzle-martin is valid for
 
 $$
 \begin{gathered}

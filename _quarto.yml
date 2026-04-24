@@ -1,5 +1,7 @@
 project:
   type: website
+  resources:
+    - "**/files**/*"
   output-dir: docs
 
 website:
@@ -42,7 +44,7 @@ website:
                   href: knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-6-numerical-methods-for-inviscid-flows.qmd
                 - text: Chapter 9. Numerical Methods for Navier-Stokes Equations
                   href: knowledge-base/engineering-fundamentals/cfd/computational-fluid-mechanics-and-heat-transfer/chapters/chapter-9-numerical-methods-for-navier-stokes-equations.qmd
-            - text: AUSM Flux Splitting Scheme
+            - text: Introduction to the AUSM Scheme
               href: knowledge-base/engineering-fundamentals/cfd/ausm-flux-splitting-scheme.qmd
         - section: Fluids
           contents:
@@ -85,6 +87,12 @@ website:
               contents:
                 - text: Design Procedures for Moveable Pintle
                   href: knowledge-base/propulsion-design/injector/pintle/design-procedures-moveable-pintle.qmd
+        - section: Sprays and Atomization
+          contents:
+            - text: Spray Dropsize Correlations
+              href: knowledge-base/propulsion-design/sprays-and-atomization/spray-dropsize-correlations.qmd
+            - text: Spray Impingement Simulation
+              href: knowledge-base/propulsion-design/sprays-and-atomization/spray-impingement-simulation.qmd
 format:
   html:
     theme: cosmo
@@ -98,6 +106,7 @@ format:
     html-math-method: katex
 
 crossref:
-  eq-prefix: ""
+  eq-prefix: Eqn.
   eq-title: ""
-  fig-prefix: "Fig."
+  fig-prefix: Fig.
+  sec-prefix: Sec.

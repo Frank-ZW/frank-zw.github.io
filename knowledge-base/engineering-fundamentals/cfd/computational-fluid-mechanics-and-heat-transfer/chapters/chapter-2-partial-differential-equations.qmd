@@ -12,19 +12,19 @@ PDEs are classified based on their characteristic lines in 2D, or surfaces in 3D
 
 3. **Elliptic**, where equations admit solutions that are not wavelike
 
-Consider the general PDE below, where the coefficients only depend on $x$ and $y$ so Eqn. (@eq-pde-general-form) is linear.
+Consider the general PDE below, where the coefficients only depend on $x$ and $y$ so @eq-pde-general-form is linear.
 
 $$
 a\frac {\partial^2\phi}{\partial x^2}+b\frac {\partial^2\phi}{\partial x\partial y}+c\frac {\partial^2\phi}{\partial y^2}+d\frac {\partial\phi}{\partial x}+e\frac {\partial\phi}{\partial y}+f\phi=g(x,y)
 $$ {#eq-pde-general-form}
 
-Classifying PDEs only relies on the second order terms, so rearrange Eqn. (@eq-pde-general-form) into
+Classifying PDEs only relies on the second order terms, so rearrange @eq-pde-general-form into
 
 $$
 a\phi_{xx}+b\phi_{xy}+c\phi_{yy}=-d\phi_x-e\phi_y-f\phi+g=H
 $$ {#eq-pde-general-form-rearranged}
 
-The characteristics of this equation are the locus of points along which the second derivative terms are discontinuous. Along these curves, discontinuities such as shockwaves in supersonic flow can appear. These curves may be determined by observing Eqn. (@eq-pde-general-form-rearranged) for points where the solution is not uniquely determined. For a well-posed point, the second derivatives $\phi_{xx}$, $\phi_{xy}$, and $\phi_{yy}$ are uniquely determined for a given $\phi$, $\phi_x$, and $\phi_y$ by Eqn. (@eq-pde-general-form-rearranged). However, if two possible second derivative solutions exist for a given set of $(\phi, \phi_x, \phi_y)$, then the second derivatives are no longer continuous as approaching the point from the two sides can give valid, but different, results.
+The characteristics of this equation are the locus of points along which the second derivative terms are discontinuous. Along these curves, discontinuities such as shockwaves in supersonic flow can appear. These curves may be determined by observing @eq-pde-general-form-rearranged for points where the solution is not uniquely determined. For a well-posed point, the second derivatives $\phi_{xx}$, $\phi_{xy}$, and $\phi_{yy}$ are uniquely determined for a given $\phi$, $\phi_x$, and $\phi_y$ by @eq-pde-general-form-rearranged. However, if two possible second derivative solutions exist for a given set of $(\phi, \phi_x, \phi_y)$, then the second derivatives are no longer continuous as approaching the point from the two sides can give valid, but different, results.
 
 Let $\tau$ be a parameter that varies along a curve $C$ in the $x-y$ plane. Therefore, $x=x(\tau)$ and $y=y(\tau)$ along $C$. For convenience, define
 
@@ -36,7 +36,7 @@ $$
 \end{array}
 $$ {#eq-phi-tau-definitions}
 
-Eqn. (@eq-pde-general-form-rearranged) becomes
+@eq-pde-general-form-rearranged becomes
 
 $$
 au(\tau)+bv(\tau)+cw(\tau)=H
@@ -51,7 +51,7 @@ $$
 \end{aligned}
 $$ {#eq-phi-tau-chain-rule}
 
-Eqn. (@eq-pde-general-form-rearranged-tau) and Eqn. (@eq-phi-tau-chain-rule) form a $3\times3$ system to calculate second order derivatives from $\phi$ and its first derivatives along $C$.
+@eq-pde-general-form-rearranged-tau and @eq-phi-tau-chain-rule form a $3\times3$ system to calculate second order derivatives from $\phi$ and its first derivatives along $C$.
 
 $$
 \begin{bmatrix}
@@ -80,7 +80,7 @@ $$
 h=\frac {\mathrm dy}{\mathrm dx}=\frac {b\pm\sqrt{b^2-4ac}}{2a}
 $$ {#eq-pde-general-characteristics-differential}
 
-The curves $y(x)$ that satisfy Eqn. (@eq-pde-general-characteristics-differential) are the *characteristics* of the PDE. The discriminant $\Delta\equiv b^2-4ac$ plays an important role in determining the PDE's classification.
+The curves $y(x)$ that satisfy @eq-pde-general-characteristics-differential are the *characteristics* of the PDE. The discriminant $\Delta\equiv b^2-4ac$ plays an important role in determining the PDE's classification.
 
 1. If $\Delta>0$, then two distinct families of real characteristic curves exist and the PDE is **hyperbolic**.
 

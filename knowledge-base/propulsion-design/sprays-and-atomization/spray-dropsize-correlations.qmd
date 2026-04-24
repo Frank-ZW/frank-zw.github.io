@@ -1,0 +1,39 @@
+---
+title: "NASA-CR-125674: Correlation of Spray Dropsize Distribution and Injector Variables"
+format:
+  html:
+    other-links:
+      - text: Zajac (1971)
+        href: files/Zajac-1971-Correlation_Spray_Dropsize_Distribution-NASA-CR-125674.pdf
+        icon: file-pdf
+---
+
+# Atomization Characteristics
+
+For the experimental data, the parameters captured in the empirical correlations are
+
+$$
+\overline D=\overline D\left[\left(V_j, d_j, \gamma, \frac {p_c}{p_j},\frac {\psi_c}{p_j}, \frac {\Delta}{d_j}\right)_1, \left(P_{D_i}, \frac {d_{j_i}}{d_{j1}}, \frac {\psi_i}{p_{j1}},\frac {p_{c_i}}{p_{j1}}, \frac {\Delta_i}{d_{j1}}\right)_{i=2,\ldots n}\right]
+$$ {#eq-correlation-parameters}
+
+There are additional parameters not accounted for in @eq-correlation-parameters, most notably the flow conditions at the entrance of the injection orifice, the orifice length $L_0$, and the interaction between the impinging jet and the ambient surroundings across the jet free length $L_j$. @eq-correlation-parameters takes these factors into account through their effect on the velocity profile and turbulence.
+
+## Like-Doublet Atomization Characteristics
+
+For like-doublets, the parameters in @eq-correlation-parameters that relate one jet's characteristics with that of the other's is all one. The angle $\gamma$ is defined as the included angle between the jets and $\Delta$ is the distance between the jets at the impingement point. The simplified form of @eq-correlation-parameters becomes
+
+$$
+\overline D=CV_j^{\alpha_1}d_j^{\alpha_2}\left(\frac {p_c}{p_j}\right)^{\alpha_3}\left(\frac {\psi_c}{p_j}\right)^{\alpha_4}\gamma^{\alpha_5}\left(1-\frac {\Delta}{d_j}\right)^{\alpha_6}
+$$ {#eq-like-doublet-correlation-general}
+
+The factor $1-\frac {\Delta}{d_j}$ is used since it results in @eq-like-doublet-correlation-general being finite when $\Delta=0$. Using a least squares regression technique to determine $C$ and $\alpha_i$, @eq-like-doublet-correlation-general was curve fit to flow through a $0.081$ inch diameter orifice. For a laminar jet, the correlation is
+
+$$
+\overline D=4.85\times10^4V_j^{-0.75}d_j^{0.57}\left(\frac {p_c}{p_j}\right)^{-0.52}
+$$ {#eq-like-doublet-laminar-jet-correlation}
+
+For a turbulent jet, the empirical equation is
+
+$$
+\overline D=15.9\times10^4V_j^{-1.0}d_j^{0.57}\left(\frac {p_c}{p_j}\right)^{-0.10}
+$$ {#eq-like-doublet-turbulent-jet-correlation}

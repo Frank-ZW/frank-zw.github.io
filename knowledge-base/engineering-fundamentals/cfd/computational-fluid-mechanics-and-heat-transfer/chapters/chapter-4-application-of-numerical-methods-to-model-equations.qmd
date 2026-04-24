@@ -10,13 +10,13 @@ $$
 \frac {\partial u}{\partial t}+u\frac {\partial u}{\partial x}=\mu\frac {\partial^2u}{\partial x^2}
 $$ {#eq-burgers}
 
-When the viscous term is included, Eqn. (@eq-burgers) is parabolic. The inviscid Burgers' equation arises when viscous effects are zero, $\mu=0$.
+When the viscous term is included, @eq-burgers is parabolic. The inviscid Burgers' equation arises when viscous effects are zero, $\mu=0$.
 
 $$
 \frac {\partial u}{\partial t}+u\frac {\partial u}{\partial x}=0
 $$ {#eq-inviscid-burgers}
 
-Whereas the linear 1D convection equation models the simple case of a wave propagating at a constant speed, Eqn. (@eq-inviscid-burgers) may be viewed as a nonlinear wave equation that can model waves propagating at varying speeds. Since Burgers' equation can correctly model varying wave speeds, it can be used to model shocks as waves of differing speeds coalesce. This wave equation is similarly hyperbolic.
+Whereas the linear 1D convection equation models the simple case of a wave propagating at a constant speed, @eq-inviscid-burgers may be viewed as a nonlinear wave equation that can model waves propagating at varying speeds. Since Burgers' equation can correctly model varying wave speeds, it can be used to model shocks as waves of differing speeds coalesce. This wave equation is similarly hyperbolic.
 
 Nonlinear hyperbolic PDEs exhibit two types of solutions according to Lax (1954). Consider the general case of the equation below. The Jacobian $A=\frac {\partial F_i}{\partial u_j}$ is introduced from the chain rule. If $u$ and $F$ are both vectors, $A$ is a matrix.
 
@@ -35,7 +35,7 @@ $$ {#eq-lax-method-inviscid-burgers}
 The first term is $u_j^n$ averaged between its neighboring cells. This introduces artificial viscosity into the method that smooths out any instabilities or oscillations in the solution.
 
 ::: {.callout-note title="Derivation of the Lax Method" collapse="true"}
-Expand $u_j^{n+1}$ about $u_j^n$ using a Taylor series and substitute the time derivative term with the spatial derivative. From Eqn. (@eq-general-hyperbolic-pde), we have that $u_t=-F_x$. Therefore
+Expand $u_j^{n+1}$ about $u_j^n$ using a Taylor series and substitute the time derivative term with the spatial derivative. From @eq-general-hyperbolic-pde, we have that $u_t=-F_x$. Therefore
 
 $$
 \begin{aligned}
@@ -55,7 +55,7 @@ $$
 G=\cos\beta-i\frac {\Delta t}{\Delta x}A\sin\beta
 $$ {#eq-lax-method-inviscid-burgers-amplification-factor}
 
-where the dimensionless wave number $\beta$ is $k\Delta x$. For Burgers' equation, $F=u^2/2$, so the Jacobian is simply $A(u)=u$. Stability occurs when $|G|\leq1$. For the $G$ above, Eqn. (@eq-lax-method-inviscid-burgers-amplification-factor) reduces down to
+where the dimensionless wave number $\beta$ is $k\Delta x$. For Burgers' equation, $F=u^2/2$, so the Jacobian is simply $A(u)=u$. Stability occurs when $|G|\leq1$. For the $G$ above, @eq-lax-method-inviscid-burgers-amplification-factor reduces down to
 
 $$
 \left|\frac {\Delta t}{\Delta x}u_{\mathrm{max}}\right|\leq1
@@ -65,7 +65,7 @@ where $u_{\mathrm{max}}$ is the maximum eigenvalue of the Jacobian $A$.
 
 ## Lax-Wendroff Method
 
-The Lax-Wendroff method was one of the first second order finite difference methods derived for hyperbolic PDEs. Once again, consider the general form of the governing Eqn. (@eq-general-hyperbolic-pde). The Lax-Wendroff method is
+The Lax-Wendroff method was one of the first second order finite difference methods derived for hyperbolic PDEs. Once again, consider the general form of the governing @eq-general-hyperbolic-pde. The Lax-Wendroff method is
 
 $$
 u_j^{n+1}=u_j^n-\frac {\Delta t}{\Delta x}\frac {F_{j+1}^n-F_{j-1}^n}2+\frac 12\left(\frac {\Delta t}{\Delta x}\right)^2\left[A_{j+\frac 12}^n\left(F_{j+1}^n-F_j^n\right)-A_{j-\frac 12}^n\left(F_j^n-F_{j-1}^n\right)\right]
@@ -84,7 +84,7 @@ $$
 u(x,t+\Delta t)=u(x,t)+\left.\frac {\partial u}{\partial t}\right|_{x,t}\Delta t+\left.\frac {\partial^2u}{\partial t^2}\right|_{x,t}\frac {\Delta t^2}{2!}+\left.\frac {\partial^3u}{\partial t^3}\right|_{x,t}\frac {\Delta t^3}{3!}+\cdots
 $$
 
-Next, replace the time derivatives with spatial derivatives. From Eqn. (@eq-general-hyperbolic-pde), the first time derivative is
+Next, replace the time derivatives with spatial derivatives. From @eq-general-hyperbolic-pde, the first time derivative is
 
 $$
 \frac {\partial u}{\partial t}=-\frac {\partial F}{\partial x}
@@ -158,7 +158,7 @@ u_j^{n+1} & =\frac 12\left[u_j^n+u_j^{\overline{n+1}}-\frac {\Delta t}{\Delta x}
 \end{aligned}
 $$ {#eq-maccormack-method-inviscid-burgers}
 
-The amplification factor, Eqn. (@eq-lax-wendroff-method-inviscid-burgers-amplification-factor), and stability requirement, Eqn. (@eq-lax-wendroff-method-inviscid-burgers-stability), are the same as that of Lax-Wendroff. When compared to Lax-Wendroff for the example problem, the two solutions differ. This is due to the switched differencing in the predictor and corrector steps, as well as the nonlinear nature of the PDE. In general, MacCormack provides better resolution at discontinuities. For the best resolution, the difference in the predictor, $F_{j+1}-F_j$, should be in the same direction as the propagation direction of the discontinuity. If the wave is propagating to the left, then the difference should be $F_{j-1}-F_j$ instead.
+The amplification factor, @eq-lax-wendroff-method-inviscid-burgers-amplification-factor, and stability requirement, @eq-lax-wendroff-method-inviscid-burgers-stability, are the same as that of Lax-Wendroff. When compared to Lax-Wendroff for the example problem, the two solutions differ. This is due to the switched differencing in the predictor and corrector steps, as well as the nonlinear nature of the PDE. In general, MacCormack provides better resolution at discontinuities. For the best resolution, the difference in the predictor, $F_{j+1}-F_j$, should be in the same direction as the propagation direction of the discontinuity. If the wave is propagating to the left, then the difference should be $F_{j-1}-F_j$ instead.
 
 ::: {#fig-lax-wendroff-maccormack-solution-comparison-inviscid-burgers layout-ncol=2}
 
@@ -177,7 +177,7 @@ Consider the control volume shown below. The $x$ and $y$ axes are space and time
 
 ![Control volume for the Godunov scheme](../assets/chapter-4/lax-control-volume.png){width=550 .lightbox}
 
-Integrating Eqn. (@eq-general-hyperbolic-pde) across the control volume, then the volume-averaged $u$ and time-averaged flux $f$ are
+Integrating @eq-general-hyperbolic-pde across the control volume, then the volume-averaged $u$ and time-averaged flux $f$ are
 
 $$
 \begin{aligned}
@@ -187,7 +187,7 @@ $$ {#eq-godunov-scheme-inviscid-burgers-conservation-equation}
 
 ::: {.callout-note title="Derivation of the averaged approximatione quation" collapse=true}
 
-Integrating Eqn. (@eq-general-hyperbolic-pde) and swapping the integration order, then
+Integrating @eq-general-hyperbolic-pde and swapping the integration order, then
 
 $$
 \int\limits_t^{t+\Delta t}\int\limits_{x-\Delta x/2}^{x+\Delta x/2}\frac {\partial u}{\partial t}+\frac {\partial F}{\partial x}=\int\limits_{x-\Delta x/2}^{x+\Delta x/2}u(x,t+\Delta t)-u(x,t)\,\mathrm dx+\int\limits_t^{t+\Delta t}F\left(x+\frac {\Delta x}2,t\right)-F\left(x-\frac {\Delta x}2,t\right)\,\mathrm dt=0
@@ -208,7 +208,7 @@ $$
 \Delta x\left(\overline u_j^{n+1}-\overline u_j^n\right)+\Delta t\left(f_{j+\frac 12}^n-f_{j-\frac 12}^n\right)=0
 $$
 
-Solving for $\overline u_j^{n+1}$ completes the proof for Eqn. (@eq-godunov-scheme-inviscid-burgers-conservation-equation).
+Solving for $\overline u_j^{n+1}$ completes the proof for @eq-godunov-scheme-inviscid-burgers-conservation-equation.
 
 :::
 
@@ -239,7 +239,7 @@ $$
 c_{j+\frac 12}=\left.\frac {\mathrm dx}{\mathrm dt}\right|_{j+\frac 12}=\frac {u_j+u_{j+1}}2
 $$
 
-then the solution to the Riemann problem for Eqn. (@eq-general-hyperbolic-pde) is: for shocks ($u_j>u_{j+1}$)
+then the solution to the Riemann problem for @eq-general-hyperbolic-pde is: for shocks ($u_j>u_{j+1}$)
 
 $$
 \begin{aligned}
@@ -284,13 +284,13 @@ $$
 \end{aligned}
 $$
 
-Eqn. (@eq-inviscid-burgers) becomes, after normalizing by $a$,
+@eq-inviscid-burgers becomes, after normalizing by $a$,
 
 $$
 \frac {\partial u}{\partial t'}+u\frac {\partial u}{\partial x'}=0
 $$
 
-Therefore, Eqn. (@eq-inviscid-burgers) has no inherent time or length scale. If $u(x,t)$ is a solution to Eqn. (@eq-inviscid-burgers), then $u(ax,at)$ must also be a solution to the PDE in the scaled coordinate system. Invariance can also be shown for the initial condition by inspecting $u(ax,0)$. Taking $u(ax,0)$ at the $j+\frac 12$ cell boundary, then
+Therefore, @eq-inviscid-burgers has no inherent time or length scale. If $u(x,t)$ is a solution to @eq-inviscid-burgers, then $u(ax,at)$ must also be a solution to the PDE in the scaled coordinate system. Invariance can also be shown for the initial condition by inspecting $u(ax,0)$. Taking $u(ax,0)$ at the $j+\frac 12$ cell boundary, then
 
 $$
 u(ax,0)=\begin{cases}
@@ -315,7 +315,7 @@ $$
 \left|\frac {\Delta t}{\Delta x}u_{\mathrm{max}}\right|\leq\frac 12
 $$
 
-Using Equations (@eq-godunov-scheme-inviscid-burgers-shock-solution) and (@eq-godunov-scheme-inviscid-burgers-expansion-solution) in Eqn. (@eq-godunov-scheme-inviscid-burgers-conservation-equation) to obtain a solution. As shown below, the solution is superior for shock propagation than the methods discussed before and manages to capture the sharp discontinuity very well. This method is also capable of capturing expansion waves with comparable fidelity.
+Using Equations (@eq-godunov-scheme-inviscid-burgers-shock-solution) and (@eq-godunov-scheme-inviscid-burgers-expansion-solution) in @eq-godunov-scheme-inviscid-burgers-conservation-equation to obtain a solution. As shown below, the solution is superior for shock propagation than the methods discussed before and manages to capture the sharp discontinuity very well. This method is also capable of capturing expansion waves with comparable fidelity.
 
 ![Godunov scheme applied to a shock problem](../assets/chapter-4/godunov-solution-example.png){width=550 .lightbox}
 
