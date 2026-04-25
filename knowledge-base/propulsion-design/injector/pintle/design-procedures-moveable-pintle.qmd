@@ -6,7 +6,7 @@ format:
     toc-location: right
     other-links:
       - text: Son et. al (2017)
-        href: ../files/son_et_al-2017-Design_Procedure_Moveable_Pintle-JPP-33.pdf
+        href: ../files/Son_et_al-2017-Design_Procedure_Moveable_Pintle-JPP-33.pdf
         icon: file-pdf
 ---
 
