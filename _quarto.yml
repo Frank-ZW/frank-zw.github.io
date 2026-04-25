@@ -93,6 +93,7 @@ website:
               href: knowledge-base/propulsion-design/sprays-and-atomization/spray-dropsize-correlations.qmd
             - text: Spray Impingement Simulation
               href: knowledge-base/propulsion-design/sprays-and-atomization/spray-impingement-simulation.qmd
+
 format:
   html:
     theme: cosmo

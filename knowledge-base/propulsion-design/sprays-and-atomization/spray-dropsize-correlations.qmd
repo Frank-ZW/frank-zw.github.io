@@ -4,7 +4,7 @@ format:
   html:
     other-links:
       - text: Zajac (1971)
-        href: files/Zajac-1971-Correlation_Spray_Dropsize_Distribution-NASA-CR-125674.pdf
+        href: "@FILES_BASE_URL@/knowledge-base/propulsion-design/sprays-and-atomization/files/Zajac-1971-Correlation_Spray_Dropsize_Distribution-NASA-CR-125674.pdf"
         icon: file-pdf
 ---
 
