@@ -48,7 +48,7 @@ $$
 
 ### Heat Transfer Coefficient
 
-#### Laminar Flow
+#### Laminar Flow {#sec-natural-vertical-plate-heat-transfer-coefficient-laminar}
 
 **Analytical:** Calculate $\mathrm{Nu}_l$ using any applicable correlation.
 
@@ -99,8 +99,8 @@ $$
 
 $$
 \begin{aligned}
-\mathrm{Nu}_{x,\mathrm{UHF}} & =0.60\left(\mathrm{Ra}_x^*\right)^{1/5}\qquad\qquad10^5\mathrm{Ra}_x^*<10^{13} \\
-\langle\mathrm{Nu}_{l,\mathrm{UHF}}\rangle_l & =1.25\mathrm{Nu}_l\qquad\qquad\qquad10^5\mathrm{Ra}_x^*<10^{11}
+\mathrm{Nu}_{x,\mathrm{UHF}} & =0.60\left(\mathrm{Ra}_x^*\right)^{1/5}\qquad\qquad10^5<\mathrm{Ra}_x^*<10^{13} \\
+\langle\mathrm{Nu}_{l,\mathrm{UHF}}\rangle_l & =1.25\mathrm{Nu}_l\qquad\qquad\qquad10^5<\mathrm{Ra}_x^*<10^{11}
 \end{aligned}\tag{10.6.7}
 $$
 
@@ -110,7 +110,7 @@ $$
 \langle\mathrm{Nu}_{l,\mathrm{UHF}}\rangle_l=0.55\left(\mathrm{Ra}_l^*\right)^{1/5}\tag{10.6.12}
 $$
 
-#### Turbulent Flow
+#### Turbulent Flow {#sec-natural-vertical-plate-heat-transfer-coefficient-turbulent}
 
 **Oosthuizen and Naylor (1999):** Smooth surface, $\frac 17$ power law velocity profile, valid for $\mathrm{Pr}=0.7$, Grashof number defined as $\mathrm{Gr}_x=\frac {g\beta x^3(T_s-T_{\infty})}{\nu}$
 
@@ -175,5 +175,81 @@ $$
 #### Turbulent Flow
 
 ## Horizontal Flat Plate
+
+### Heat Transfer Coefficient
+
+#### Laminar Flow
+
+**McAdams (1954):** Uniform wall temperature, cooled upward-facing surfaces and heated downward-facing surfaces, valid for $10^5\lesssim\mathrm{Ra}_{l_c}\lesssim10^{10}$
+
+$$
+\langle\mathrm{Nu}_{l_c}\rangle=0.27\mathrm{Ra}_{l_c}^{1/4}\tag{10.7.2}
+$$
+
+where $l_c=\frac Ap$ is the total plate surface area normalized by its perimeter.
+
+**McAdams (1954):** Uniform wall temperature, cooled upward-facing surfaces and heated downward-facing surfaces
+
+$$
+\begin{aligned}
+\langle\mathrm{Nu}_{l_c}\rangle & =0.54\mathrm{Ra}_{l_c}^{1/4}\qquad\qquad\qquad10^5\lesssim\mathrm{Ra}_{l_c}\lesssim10^7 \\
+\langle\mathrm{Nu}_{l_c}\rangle & =0.15\mathrm{Ra}_{l_c}^{1/3}\qquad\qquad\qquad10^7\lesssim\mathrm{Ra}_{l_c}\lesssim10^{11}
+\end{aligned}\tag{10.7.3}
+$$
+
+**Fujii and Imura (1972):** Uniform heat flux, cooled upward-facing surfaces and heated downward-facing surfaces
+
+$$
+\langle\mathrm{Nu}_{l_c}\rangle & =0.16\mathrm{Ra}_{l_c}^{1/3}\qquad\qquad\qquad\mathrm{Ra}_{l_c}<2\times10^8 \\
+\langle\mathrm{Nu}_{l_c}\rangle & =0.13\mathrm{Ra}_{l_c}^{1/3}\qquad\qquad\qquad\mathrm{Ra}_{l_c}>5\times10^8
+$$
+
+## Inclined Flat Plate
+
+**Turbulence Transition, Lloyd and Sparrow (1970):** Uniform wall temperature
+
+|    $\phi$    	| $\mathrm{Ra}_x$ 	|
+|:------------:	|:---------------:	|
+|  $0^{\circ}$ 	| $8.7\times10^8$ 	|
+| $20^{\circ}$ 	| $2.5\times10^8$ 	|
+| $45^{\circ}$ 	| $1.7\times10^7$ 	|
+| $60^{\circ}$ 	| $7.7\times10^5$ 	|
+
+**Turbulence Transition, Vliet (1969):** Uniform heat flux
+
+|    $\phi$    	|     $\mathrm{Ra}_x^*$    	|
+|:------------:	|:------------------------:	|
+|  $0^{\circ}$ 	| $5\times10^{12}-10^{14}$ 	|
+| $30^{\circ}$ 	| $3\times10^{10}-10^{12}$ 	|
+| $60^{\circ}$ 	|    $6\times10^7-10^9$    	|
+
+### Heat Transfer Coefficient
+
+#### Laminar Flow {#sec-natural-inclined-plate-heat-transfer-coefficient-laminar}
+
+All correlations for natural convection on vertical flat surfaces are applicable provided that $g$ is replaced with $g\cos\phi$, where $\phi$ is the inclination angle from the vertical, for all of these models. See @sec-natural-vertical-plate-heat-transfer-coefficient-laminar for relevant correlations.
+
+#### Intermittent Flow
+
+**Jaluria (2003):** Uniform heat flux, upward-facing inclined surface, valid for $10^5<\mathrm{Ra}_l\cos\phi<10^{11}$ where $15^{\circ}<\phi<75^{\circ}$ and $\mathrm{Gr}_l>\mathrm{Gr}_{\mathrm{cr}}$, average Nusselt number definition based on $\left|\langle T_s\rangle_l-T_{\infty}\right|$
+
+$$
+\langle\mathrm{Nu}_l\rangle_l=0.14\left[\mathrm{Ra}_l^{1/3}-\mathrm{Ra}_{\mathrm{cr}}^{1/3}\right]+0.56\left(\mathrm{Ra}_{\mathrm{cr}}\cos\phi\right)^{1/4}\tag{10.8.1}
+$$
+
+The critical Rayleigh number is $\mathrm{Ra}_{\mathrm{cr}}=\mathrm{Gr}_{\mathrm{cr}}\mathrm{Pr}$ where $\mathrm{Gr}_{\mathrm{cr}}$ is the critical Grashof number. From **Fujii and Imura (1972)**
+
+$$
+\mathrm{Gr}_{\mathrm{cr}}=\begin{cases}
+5\times10^9 & \qquad\qquad\phi=15^{\circ} \\
+2\times10^9 & \qquad\qquad\phi=30^{\circ} \\
+10^8 & \qquad\qquad\phi=60^{\circ} \\
+10^6 & \qquad\qquad\phi=70^{\circ}
+\end{cases}\tag{10.8.4}
+$$
+
+#### Turbulent Flow {#sec-natural-inclined-plate-heat-transfer-coefficient-turbulent}
+
+All correlations for natural convection on vertical flat surfaces are applicable provided that $g$ is replaced with $g\cos\phi$, where $\phi$ is the inclination angle from the vertical, for all of these models. See @sec-natural-inclined-plate-heat-transfer-coefficient-turbulent for relevant correlations.
 
 # Mixed Convection
