@@ -37,13 +37,13 @@ $$
 **Analytical:** Uniform heat flux, modified Grashof number defined as $\mathrm{Gr}_x^*=\frac {g\beta q_s''x^4}{k\nu^2}$
 
 $$
-\frac {\delta}x & =\left[\frac {360(\mathrm{Pr}+0.8)}{\mathrm{Pr}^2\mathrm{Gr}_x^*}\right]^{1/5}\tag{10.5.34}
+\frac {\delta}x=\left[\frac {360(\mathrm{Pr}+0.8)}{\mathrm{Pr}^2\mathrm{Gr}_x^*}\right]^{1/5}\tag{10.5.34}
 $$
 
 **Analytical:** Uniform heat flux, modified Grashof number defined as $\mathrm{Gr}_x^*=\frac {g\beta q_s''x^4}{k\nu^2}$
 
 $$
-T_s-T_{\infty} & =\frac {1.622q_s''x}k\left(\frac {\mathrm{Pr}+0.8}{\mathrm{Pr}^2\mathrm{Gr}_x^*}\right)^{1/5}\tag{10.5.37}
+T_s-T_{\infty}=\frac {1.622q_s''x}k\left(\frac {\mathrm{Pr}+0.8}{\mathrm{Pr}^2\mathrm{Gr}_x^*}\right)^{1/5}\tag{10.5.37}
 $$
 
 ### Heat Transfer Coefficient
@@ -74,8 +74,7 @@ $$
 **Analytical:** Uniform heat flux, modified Grashof number defined as $\mathrm{Gr}_x^*=\frac {g\beta q_s''x^4}{k\nu^2}$
 
 $$
-\mathrm{Nu}_{x,\mathrm{UHF}} & =0.62\left(\frac {\mathrm{Pr}^2\mathrm{Gr}_x^*}{\mathrm{Pr}+0.8}\right)^{1/5}\tag{10.5.35}
-\end{aligned}
+\mathrm{Nu}_{x,\mathrm{UHF}}=0.62\left(\frac {\mathrm{Pr}^2\mathrm{Gr}_x^*}{\mathrm{Pr}+0.8}\right)^{1/5}\tag{10.5.35}
 $$
 
 **McAdams (1954):** Uniform wall temperature, for $\mathrm{Pr}\approx1$, for $10^4<\mathrm{Ra}_l<10^9$, Rayleigh number defined as $\mathrm{Ra}_x=\mathrm{Pr}\mathrm{Gr}_x=\frac {g\beta x^3(T_s-T_{\infty})}{\nu\alpha}$, calculate fluid properties at $T_{\mathrm{film}}=\frac 12(T_s+T_{\infty})$
