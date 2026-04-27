@@ -539,25 +539,25 @@ $$
 
 ## Fully Developed Flow
 
-### Hagen-Poiseuille Flow
+### Profiles
 
-Center defined as midplane, both surfaces are a distance $b$ from the center line. If a smooth surface and $U_m=\frac 1{3\mu}\left(-\frac {\mathrm dP}{\mathrm dx}\right)$
-
-$$
-u(y)=\frac {b^2}{2\mu}\left(-\frac {\mathrm dP}{\mathrm dx}\right)\left[1-\left(\frac yb\right)\right]\tag{4.3.11}
-$$
-
-If $\mathrm{Re}_{D_H}=\frac {U_mD_H}{\nu}$
+**Hagen-Poiseuille (1840):** Smooth surface, center defined as midplane with both surfaces a distance $b$ from the center line
 
 $$
-C_f\mathrm{Re}_{D_H}=24\tag{4.3.13}
+u(y)=\frac {b^2}{2\mu}\left(-\frac {\mathrm dP}{\mathrm dx}\right)\left[1-\left(\frac yb\right)^2\right]=\frac 32U_m\left[1-\left(\frac yb\right)^2\right]\tag{4.3.11}
 $$
 
 ### Friction Factor
 
 #### Laminar Flow
 
-**Shah and London (1978):** Smooth surface, Reynolds number defined as $\mathrm{Re}_{D_H}=\frac {U_mD_H}{\nu}$
+**Hagen-Poiseuille (1840):** Smooth surface
+
+$$
+C_f\mathrm{Re}_{D_H}=24\tag{4.3.13}
+$$
+
+**Shah and London (1978):** Smooth surface
 
 $$
 C_{f,\mathrm{app},x}\mathrm{Re}_{D_H}=\frac {3.44}{(x^*)^{1/2}}+\frac {24+\frac {0.674}{4x^*}-\frac {3.44}{(x^*)^{1/2}}}{1+0.000029(x^*)^{-2}}\tag{4.2.16}
@@ -680,13 +680,13 @@ $$
 \end{aligned}\tag{4.5.128}
 $$
 
-**Gnielinski (2010):** Smooth surface, negligible axial conduction, negligible viscous dissipation, $\frac {D_H\mathrm{Re}_{D_H}\mathrm{Pr}}x\gg1$
+**Gnielinski (2010):** Smooth surface, negligible axial conduction, negligible viscous dissipation, if $x^*=\frac x{D_H\mathrm{Re}_{D_H}\mathrm{Pr}}\ll1$
 
 $$
 \begin{aligned}
 \langle\mathrm{Nu}_{D_H,\mathrm{UWT}}\rangle_x & =\left[\mathrm{Nu}_{D_H,\mathrm{UWT},1}^3+\mathrm{Nu}_{D_H,\mathrm{UWT},2}^3(x)\right]^{1/3} \\
 \mathrm{Nu}_{D_H,\mathrm{UWT},1} & =7.5407 \\
-\mathrm{Nu}_{D_H,\mathrm{UWT},2}(x) & =1.841\left(\frac {D_H\mathrm{Re}_{D_H}\mathrm{Pr}}x\right)^{1/3}
+\mathrm{Nu}_{D_H,\mathrm{UWT},2}(x) & =1.841\left(x^*\right)^{-1/3}
 \end{aligned}\tag{4.5.143}
 $$
 
@@ -696,15 +696,13 @@ $$
 
 ## Fully Developed Flow
 
-### Hagen-Poiseuille Flow
+### Profiles
 
-Smooth surface, if $R_i$ and $R_0$ are the inner and outer radii respectively
+**Hagen-Poiseuille (1840):** Smooth surface, if $R_i$ and $R_0$ are the inner and outer radii respectively
 
 $$
 u(r)=\left[R_0^2-r^2+(R_0^2-R_i^2)\frac {\ln\left(r/R_0\right)}{\ln\left(R_0/R_i\right)}\right]\left(-\frac 1{4\mu}\frac {\mathrm dP}{\mathrm dx}\right)\tag{4.3.31}
 $$
-
-Mean velocity
 
 # General Duct Geometries
 
