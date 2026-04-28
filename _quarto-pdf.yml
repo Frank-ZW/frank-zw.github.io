@@ -4,6 +4,7 @@ project:
 format:
   pdf:
     toc: true
+    toc-depth: 6
     callout-appearance: simple
     number-sections: true
     colorlinks: true
