@@ -250,6 +250,58 @@ $$
 
 #### Turbulent Flow {#sec-natural-inclined-plate-heat-transfer-coefficient-turbulent}
 
-All correlations for natural convection on vertical flat surfaces are applicable provided that $g$ is replaced with $g\cos\phi$, where $\phi$ is the inclination angle from the vertical, for all of these models. See @sec-natural-inclined-plate-heat-transfer-coefficient-turbulent for relevant correlations.
+All correlations for natural convection on vertical flat surfaces are applicable provided that $g$ is replaced with $g\cos\phi$, where $\phi$ is the inclination angle from the vertical, for all of these models. See @sec-natural-vertical-plate-heat-transfer-coefficient-turbulent for relevant correlations.
+
+## Submerged Bodies
+
+**Turbulence Transition:** Rayleigh number defined as $\mathrm{Ra}_D=\frac {g\beta\left|T_s-T_{\infty}\right|D^3}{\nu\alpha}$
+
+$$
+\mathrm{Ra}_D\gtrsim10^9
+$$
+
+### Heat Transfer Coefficient
+
+#### Laminar Flow
+
+## General Geometries
+
+### Heat Transfer Coefficient
+
+#### Laminar Flow
+
+**Yovanovich (1987):** Reference @fig-yovanovich-submerged-bodies-geometries for submerged body geometries, valid for $\mathrm{Ra}_{l_c}<10^8$, characteristic length $l_c=\sqrt A$ where $A$ is the total surface area.
+
+![](assets/yovanovich-submerged-bodies-geometries.png){#fig-yovanovich-submerged-bodies-geometries .lightbox}
+
+The coefficient $G_{l_c}$ is a geometric parameter and $\langle\mathrm{Nu}_{l_c}\rangle_{\mathrm{Ra}_{l_c}\to0}$ is average Nusselt number under pure conduction.
+
+$$
+\langle\mathrm{Nu}_{l_c}\rangle=\langle\mathrm{Nu}_{l_c}\rangle_{\mathrm{Ra}_{l_c}\to0}+\frac {0.67G_{l_c}\mathrm{Ra}_{l_c}^{1/4}}{\left[1+\left(0.492/\mathrm{Pr}\right)^{9/16}\right]^{4/9}}\tag{10.9.2}
+$$
+
+See @tbl-yovanovich-submerged-bodies-geometries for $G_{l_c}$ and $\langle\mathrm{Nu}_{l_c}\rangle_{\mathrm{Ra}_{l_c}\to0}$.
+
+|           Body Shape          	| $G_{l_c}$ 	| $\langle\mathrm{Nu}_{l_c}\rangle_{\mathrm{Ra}_{l_c}\to0}$ 	|
+|:-----------------------------:	|:---------:	|:---------------------------------------------------------:	|
+|             Sphere            	|  $1.023$  	|                          $3.545$                          	|
+|           Bi-sphere           	|  $0.928$  	|                          $3.475$                          	|
+|             Cube 1            	|  $0.951$  	|                          $3.338$                          	|
+|             Cube 2            	|  $0.990$  	|                          $3.338$                          	|
+|             Cube 3            	|  $1.014$  	|                          $3.338$                          	|
+|       Vertical Cylinder       	|  $0.967$  	|                          $3.444$                          	|
+|      Horizontal Cylinder      	|  $1.019$  	|                          $3.444$                          	|
+|    Cylinder at $45^{\circ}$   	|  $1.004$  	|                          $3.444$                          	|
+| Prolate Spheroid ($C/B=1.93$) 	|  $1.012$  	|                          $3.566$                          	|
+|  Prolate Spheroid ($C/B=0.5$) 	|  $0.973$  	|                          $3.529$                          	|
+|  Oblate Spheroid ($C/B=0.1$)  	|  $0.768$  	|                          $3.342$                          	|
+
+: Correlation coefficients for submerged bodies {#tbl-yovanovich-submerged-bodies-geometries}
+
+**Churchill and Chu (1975):** Long horizontal cylinders, valid for all $\mathrm{Pr}$ and $10^{-5}\leq\mathrm{Re}_D\leq10^{12}$
+
+$$
+\langle\mathrm{Nu}_D\rangle=\frac {\langle h\rangle D}k=\left\{0.6+\frac {0.387\mathrm{Ra}_D^{1/6}}{\left[1+\left(0.559/\mathrm{Pr}\right)^{9/16}\right]^{8/27}}\right\}^2\tag{10.9.5}
+$$
 
 # Mixed Convection

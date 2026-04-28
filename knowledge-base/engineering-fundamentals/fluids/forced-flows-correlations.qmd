@@ -704,7 +704,7 @@ $$
 u(r)=\left[R_0^2-r^2+(R_0^2-R_i^2)\frac {\ln\left(r/R_0\right)}{\ln\left(R_0/R_i\right)}\right]\left(-\frac 1{4\mu}\frac {\mathrm dP}{\mathrm dx}\right)\tag{4.3.31}
 $$
 
-# General Duct Geometries
+# General Geometries
 
 ## Friction Factor
 
