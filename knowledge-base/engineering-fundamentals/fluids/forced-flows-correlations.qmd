@@ -449,9 +449,9 @@ $$
 \mathrm{Sh}_x=\frac {0.5f\mathrm{Re}_{D_H}\mathrm{Sc}\mathrm{Sc}_{\mathrm{tu}}^{-1}}{1+5\sqrt{\frac {C_f}2}\left\{\left(\mathrm{Sc}\mathrm{Sc}_{\mathrm{tu}}^{-1}-1\right)+\ln\left[1+\frac 56\left(\mathrm{Sc}\mathrm{Sc}_{\mathrm{tu}}^{-1}-1\right)\right]\right\}}\tag{9.4.9}
 $$
 
-## Developed Hydrodynamic, Thermal Entrance Region
+## Developed Hydrodynamic, Developing Thermal Entrance
 
-This section covers developed hydrodynamic, thermally developing flows.
+This section covers the case where the hydrodynamic boundary layer is fully developed and the thermal boundary layer is developing. These correlations are applicable for flows where $\mathrm{Pr}\gg1$. For the cases of $\mathrm{Pr}\eqsim1$ or $\mathrm{Pr}\lesssim1$, see @sec-circular-combined-entrance-region for the appropriate correlations.
 
 ### Heat Transfer Coefficient
 
@@ -518,7 +518,103 @@ $$
 \end{aligned}\tag{4.5.137}
 $$
 
-## Combined Entrance Region
+## Combined Entrance Region {#sec-circular-combined-entrance-region}
+
+### Heat Transfer Coefficient
+
+#### Laminar Flow
+
+**Churchill and Ozoe (1973):** Smooth surface, uniform heat flux, valid for $0.1\leq\mathrm{Pr}\leq1000$ and all $\mathrm{Re}_D$, if the Graetz number is defined as $\mathrm{Gz}=\frac {\pi}{4x^*}$ and $x^*=\frac x{D\mathrm{Re}_D\mathrm{Pr}}$
+
+$$
+\frac {\mathrm{Nu}_{D,\mathrm{UHF}(x^*)+1}}{5.364\left[1+(\mathrm{Gz}/55)^{10/9}\right]^{3/10}}=\left\{1+\left(\frac {\mathrm{Gz}/28.8}{\left[1+(\mathrm{Pr}/0.0207)^{2/3}\right]^{1/2}\left[1+(\mathrm{Gz}/55)^{10/9}\right]^{3/5}}\right)^{5/3}\right\}^{3/10}\tag{4.6.1}
+$$
+
+**Churchill and Ozoe (1973):** Smooth surface, uniform wall temperature, valid for $0.1\leq\mathrm{Pr}\leq1000$ and all $\mathrm{Re}_D$, if the Graetz number is defined as $\mathrm{Gz}=\frac {\pi}{4x^*}$ and $x^*=\frac x{D\mathrm{Re}_D\mathrm{Pr}}$
+
+$$
+\frac {\mathrm{Nu}_{D,\mathrm{UHF}(x^*)+1.7}}{5.357\left[1+(\mathrm{Gz}/97)^{8/9}\right]^{3/8}}=\left\{1+\left(\frac {\mathrm{Gz}/71}{\left[1+(\mathrm{Pr}/0.0.0468)^{2/3}\right]^{1/2}\left[1+(\mathrm{Gz}/97)^{8/9}\right]^{3/4}}\right)^{4/3}\right\}^{3/8}\tag{4.6.2}
+$$
+
+**Gnielinski (2010):** Smooth surface, uniform wall temperature, valid for $\frac xD\ll1$, if $x^*=\frac x{D\mathrm{Re}_D\mathrm{Pr}}$
+
+$$
+\mathrm{Nu}_{D,\mathrm{UWT}}(x)=\left[\mathrm{Nu}_{D,\mathrm{UWT},1}^3+0.7^3+\left(\mathrm{Nu}_{D,\mathrm{UWT},2}-0.7\right)^3+\mathrm{Nu}_{D,\mathrm{UWT},3}^3\right]^{1/3}\tag{4.6.9}
+$$
+
+where
+
+$$
+\begin{aligned}
+\mathrm{Nu}_{D,\mathrm{UWT},1} & =3.6568 \\
+\mathrm{Nu}_{D,\mathrm{UWT},2} & =1.077(x^*)^{-1/3} \\
+\mathrm{Nu}_{D,\mathrm{UWT},3} & =\frac 12\left(\frac 2{1+22\mathrm{Pr}}\right)^{1/6}(x^*)^{-1/2}
+\end{aligned}\tag{4.6.10}
+$$
+
+**Gnielinski (2010):** Smooth surface, uniform wall temperature, valid for $\frac lD\ll1$, if $l^*=\frac l{D\mathrm{Re}_D\mathrm{Pr}}$
+
+$$
+\langle\mathrm{Nu}_{D,\mathrm{UWT}}\rangle_l=\left[\mathrm{Nu}_{D,\mathrm{UWT},1}^3+0.7^3+\left(\langle\mathrm{Nu}_{D,\mathrm{UWT},2}\rangle_l-0.7\right)^3+\langle\mathrm{Nu}_{D,\mathrm{UWT},3}\rangle_l^3\right]^{1/3}\tag{4.6.11}
+$$
+
+where
+
+$$
+\begin{aligned}
+\mathrm{Nu}_{D,\mathrm{UWT},1} & =3.6568 \\
+\langle\mathrm{Nu}_{D,\mathrm{UWT},2}\rangle_l & =1.615(l^*)^{-1/3}\\
+\langle\mathrm{Nu}_{D,\mathrm{UWT},3}\rangle_l & =\left(\frac 2{1+22\mathrm{Pr}}\right)^{1/6}(l^*)^{-1/2}
+\end{aligned}\tag{4.6.12}
+$$
+
+**Gnielinski (2010):** Smooth surface, uniform heat flux, valid for $0.7<\mathrm{Pr}<1000$, if $x^*=\frac x{D\mathrm{Re}_D\mathrm{Pr}}$
+
+$$
+\mathrm{Nu}_{D,\mathrm{UHF}}(x)=\left[\mathrm{Nu}_{D,\mathrm{UHF},1}^3+(\mathrm{Nu}_{D,\mathrm{UHF},2}-1)^3+\mathrm{Nu}_{D,\mathrm{UHF},3}^3\right]^{1/3}\tag{4.6.13}
+$$
+
+where
+
+$$
+\begin{aligned}
+\mathrm{Nu}_{D,\mathrm{UHF},1} & =4.364 \\
+\mathrm{Nu}_{D,\mathrm{UHF},2} & =1.302(x^*)^{-1/3} \\
+\mathrm{Nu}_{D,\mathrm{UHF},3} & =0.462\mathrm{Pr}^{1/3}(x^*\mathrm{Pr})^{-1/2}
+\end{aligned}\tag{4.6.14}
+$$
+
+**Gnielinski (2010):** Smooth surface, uniform heat flux, valid for $0.7<\mathrm{Pr}<1000$, if $l^*=\frac l{D\mathrm{Re}_D\mathrm{Pr}}$
+
+$$
+\langle\mathrm{Nu}_{D,\mathrm{UHF}}\rangle_l=\left[\mathrm{Nu}_{D,\mathrm{UHF},1}^3+0.6^3+\left(\langle\mathrm{Nu}_{D,\mathrm{UHF},2}\rangle_l-0.6\right)^3+\langle\mathrm{Nu}_{D,\mathrm{UHF},3}\rangle^3\right]^{1/3}
+$$
+
+where
+
+$$
+\begin{aligned}
+\mathrm{Nu}_{D,\mathrm{UHF},1} & =4.364 \\
+\mathrm{Nu}_{D,\mathrm{UHF},2} & =1.953(l^*)^{-1/3} \\
+\mathrm{Nu}_{D,\mathrm{UHF},3} & =0.924\mathrm{Pr}^{1/3}(l^*\mathrm{Pr})^{-1/2}
+\end{aligned}\tag{4.6.16}
+$$
+
+where
+
+#### Turbulent Flow
+
+**Churchill and Ozoe (1973):** Smooth surface, uniform heat flux, valid for $0.1\leq\mathrm{Pr}\leq1000$ and all $\mathrm{Re}_D$, if the Graetz number is defined as $\mathrm{Gz}=\frac {\pi}{4x^*}$ and $x^*=\frac x{D\mathrm{Re}_D\mathrm{Pr}}$
+
+$$
+\frac {\mathrm{Nu}_{D,\mathrm{UHF}(x^*)+1}}{5.364\left[1+(\mathrm{Gz}/55)^{10/9}\right]^{3/10}}=\left\{1+\left(\frac {\mathrm{Gz}/28.8}{\left[1+(\mathrm{Pr}/0.0207)^{2/3}\right]^{1/2}\left[1+(\mathrm{Gz}/55)^{10/9}\right]^{3/5}}\right)^{5/3}\right\}^{3/10}\tag{4.6.1}
+$$
+
+**Churchill and Ozoe (1973):** Smooth surface, uniform wall temperature, valid for $0.1\leq\mathrm{Pr}\leq1000$ and all $\mathrm{Re}_D$, if the Graetz number is defined as $\mathrm{Gz}=\frac {\pi}{4x^*}$ and $x^*=\frac x{D\mathrm{Re}_D\mathrm{Pr}}$
+
+$$
+\frac {\mathrm{Nu}_{D,\mathrm{UHF}(x^*)+1.7}}{5.357\left[1+(\mathrm{Gz}/97)^{8/9}\right]^{3/8}}=\left\{1+\left(\frac {\mathrm{Gz}/71}{\left[1+(\mathrm{Pr}/0.0.0468)^{2/3}\right]^{1/2}\left[1+(\mathrm{Gz}/97)^{8/9}\right]^{3/4}}\right)^{4/3}\right\}^{3/8}\tag{4.6.2}
+$$
 
 # Rectangular Channel
 
@@ -576,6 +672,36 @@ $$
 $$
 
 # Flat Channel
+
+**Laminar, Couette (1890):** If the top plate is moving at a velocity of $U$, and both plates are a distance $b$ from the center line, then
+
+$$
+\mathrm{Re}_{2b}\lesssim3000
+$$
+
+**Turbulent, Couette (1890):** If the top plate is moving at a velocity of $U$, and both plates are a distance $b$ from the center line, then
+
+$$
+\mathrm{Re}_{2b}\gtrsim3000
+$$
+
+**Laminar, Poiseuille (1840):** If both plates are stationary and $D_H=4b$, then
+
+$$
+\mathrm{Re}_{D_H}\lesssim2200
+$$
+
+**Transition, Poiseuille (1840):** If both plates are stationary and $D_H=4b$, then
+
+$$
+2200\lesssim\mathrm{Re}_{D_H}\lesssim3400
+$$
+
+**Turbulent, Poiseuille (1840):** If both plates are stationary and $D_H=4b$, then
+
+$$
+\mathrm{Re}_{D_H}\gtrsim3400
+$$
 
 ## Entrance Lengths
 
@@ -699,7 +825,9 @@ $$
 
 #### Turbulent Flow
 
-## Developed Hydrodynamic, Thermal Entrance Region
+## Developed Hydrodynamic, Developing Thermal Entrance
+
+This section covers the case where the hydrodynamic boundary layer is fully developed and the thermal boundary layer is developing. These correlations are applicable for flows where $\mathrm{Pr}\gg1$. For the cases of $\mathrm{Pr}\eqsim1$ or $\mathrm{Pr}\lesssim1$, see @sec-channel-combined-entrance-region for the appropriate correlations.
 
 ### Heat Transfer Coefficient
 
@@ -756,6 +884,26 @@ $$
 
 #### Turbulent Flow
 
+## Combined Entrance Region {#sec-channel-combined-entrance-region}
+
+### Heat Transfer Coefficient
+
+#### Laminar Flow
+
+**Stephan (1959):** Smooth surface, uniform wall temperature, if $x^*=\frac x{D\mathrm{Re}_D\mathrm{Pr}}$
+
+$$
+\langle\mathrm{Nu}_{D,\mathrm{UWT}}\rangle_x=7.55+\frac {0.024(x^*)^{-1.14}}{1+0.0358\mathrm{Pr}^{0.17}(x^*)^{-0.64}}\tag{4.6.3}
+$$
+
+**Stephan (1959):** Smooth surface, uniform wall temperature, if $x^*=\frac x{D\mathrm{Re}_D\mathrm{Pr}}$
+
+$$
+\mathrm{Nu}_{D,\mathrm{UWT}}(x^*)=7.55+\frac {0.024(x^*)^{-1.14}\left[0.0179\mathrm{Pr}^{0.17}(x^*)^{-0.64}-0.14\right]}{\left[1+0.0358\mathrm{Pr}^{0.17}(x^*)^{-0.64}\right]^2}\tag{4.6.4}
+$$
+
+#### Turbulent Flow
+
 # Concentric Annular Duct
 
 ## Fully Developed Flow
@@ -774,8 +922,29 @@ $$
 
 ### Laminar Flow
 
-**Muzychka and Yovanovich (2004):** Smooth surface, Reynolds number defined as $\mathrm{Re}_{\sqrt A}=\frac {U_m\sqrt A}{\nu}$, dimensionless distance defined as $x^*=\frac x{\sqrt A\mathrm{Re}_{\sqrt A}}$, accurate to within $\pm10\%$
+**Muzychka and Yovanovich (2004):** Smooth surface, dimensionless distance defined as $x^*=\frac x{\sqrt A\mathrm{Re}_{\sqrt A}}$, accurate to within $\pm10\%$
 
 $$
 C_{f,\mathrm{app},x}\mathrm{Re}_{\sqrt A}=\sqrt{\left(\frac {12}{\sqrt{\alpha^*}(1+\alpha^*)\left[1-\frac {192\alpha^*}{\pi^5}\tanh\left(\frac {\pi}{2\alpha^*}\right)\right]}\right)^2+\left(\frac {3.44}{\sqrt{x^*}}\right)^2}\tag{4.2.17}
 $$
+
+## Heat Transfer Coefficient
+
+### Laminar Flow
+
+**Muzychka and Yovanovich (2004):** Smooth surface, both uniform wall temperature and uniform heat flux, if $x^*=\frac x{\sqrt A\mathrm{Re}_{\sqrt A}\mathrm{Pr}}$
+
+$$
+\mathrm{Nu}_{\sqrt A}=\left[\left(\frac {C_ff(\mathrm{Pr})}{\sqrt{x^*}}\right)^m+\left(\left[C_2C_3\left(\frac {C_f\mathrm{Re}_{\sqrt A}}{x^*}\right)^{1/3}\right]^5+\left(\frac {C_1C_f\mathrm{Re}_{\sqrt A}}{8\sqrt{\pi}(\alpha^*)^{\gamma}}\right)^5\right)^{m/5}\right]^{1/m}\tag{4.6.5}
+$$
+
+where the blending parameter, $m$, and Fanning friction factor, $C_f$, are
+
+$$
+\begin{aligned}
+m & =2.27+1.65\mathrm{Pr}^{1/3} \\
+C_f\mathrm{Re}_{\sqrt A} & =\frac 12{\sqrt{\alpha^*}(1+\alpha^*)\left[1-\frac {192\alpha^*}{\pi^5}\tanh\left(\frac {\pi}{2\alpha^*}\right)\right]}
+\end{aligned}\tag{4.6.7}
+$$
+
+The aspect ratio, $\alpha^*$, is defined in . The shape factor, $\gamma$, varies from $-\frac 3{10}\leq\gamma\leq\frac 1{10}$. For rectangular and ellipsoid channels, $\gamma=\frac 1{10}$. For rhombus, isosceles, and right triangles, $\gamma=-\frac 3{10}$. The correlation is accurate to within $\pm25\%$.

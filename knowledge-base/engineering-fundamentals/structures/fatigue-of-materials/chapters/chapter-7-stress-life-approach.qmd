@@ -61,6 +61,6 @@ $$
 \frac {\Delta\sigma_e}2=\left.\frac {\Delta\sigma_e}2\right|_{\sigma_{im}=0}\left(1-\frac {\sigma_{m,e}}{\sigma_{\mathrm{TS}}}\right)
 $$ {#eq-goodman-equation-multiaxial}
 
-The subscript $\sigma_{im}=0$ simply means there is no mean principal stress for $i=1,2,3$. With the equivalent fully reversed value of $\frac {\Delta\sigma_e}2$ determined, @eq-eq-basquin-multiaxial-cyclic may be used to calculate $N_f$.
+The subscript $\sigma_{im}=0$ simply means there is no mean principal stress for $i=1,2,3$. With the equivalent fully reversed value of $\frac {\Delta\sigma_e}2$ determined, @eq-basquin-multiaxial-cyclic may be used to calculate $N_f$.
 
 One of the major drawbacks with applying the uniaxial equations to multiaxial fatigue through an effective stress quantity is that the difference in tensile and compressive mean stresses in multiaxial fatigue tests are not accurately captured. Additionally, the orientation of the fatigue crack with respect to the loading axes is essentially neglected. From experiments, normal stresses play an important role in influencing fatigue lives in multiaxial loading by keeping the crack open or close.
