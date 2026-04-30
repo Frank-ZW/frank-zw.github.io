@@ -6,21 +6,27 @@ title: Free Shear Flows
 
 ## Turbulent Kinetic Energy Budget
 
-Recall the general form of the turbulent kinetic energy, where the substantial derivative is defined as $\frac {\overline{\mathrm D}}{\mathrm Dt}=\frac {\partial}{\partial t}+\overline U_j\frac {\partial}{x_j}$.
+Recall the general form of the turbulent kinetic energy
 
 $$
 \frac {\overline{\mathrm D}}{\mathrm Dt}\left(\frac 12\overline{u_iu_i}\right)=-\frac {\partial}{\partial x_j}\left[\frac {\overline{u_jp}}{\rho}+\frac 12\overline{u_iu_iu_j}-2\nu\overline{u_i\mathfrak s_{ij}}\right]-\overline{u_iu_j}\overline{S_{ij}}-2\nu\overline{s_{ij}s_{ij}}
 $$ {#eq-wakes-turbulent-kinetic-energy}
 
+where the substantial derivative is defined as
+
+$$
+\frac {\overline{\mathrm D}}{\mathrm Dt}=\frac {\partial}{\partial t}+\overline U_j\frac {\partial}{x_j}
+$$
+
 Now, make the following assumptions:
 
-1. Statistically stationary, so the statistics of the fluctuations do not vary across time and $\frac {\partial}{\partial t}(\overline{\ldots})=0$.
+1. Statistically stationary, so the statistics of the fluctuations do not vary across time and $\frac {\partial}{\partial t}(\overline{\hspace{5mm}})=0$.
 
 2. The wake is *thin*, meaning the spanwise thickness, $\ell$, is much smaller than the streamwise length, $L$.
 
 3. Stream-wise mean flow is much larger than the cross-stream flow, $\overline U_1\gg\overline U_2$
 
-4. Homogeneity in $x_1$ approximately and $x_3$
+4. Approximately homogeneous in the $x_1$ direction and completely homogeneous in the $x_3$ direction
 
 The simplification of @eq-wakes-turbulent-kinetic-energy from order of magnitude analysis becomes
 
@@ -28,7 +34,7 @@ $$
 -U_{\infty}\frac {\partial}{\partial x}\left(\frac 12\overline{q^2}\right)-\frac {\partial}{\partial y}\left(\frac {\overline{vp}}{\rho}+\frac 12\overline{vq^2}\right)-\overline{uv}\frac {\partial\overline U}{\partial y}-\varepsilon=0
 $$ {#eq-wakes-simplified-turbulent-kinetic-energy}
 
-::: {.callout-note title="Order of Magnitude Analysis", collapse=true}
+::: {.callout-note title="Order of Magnitude Analysis" collapse=true}
 
 Starting from @eq-wakes-turbulent-kinetic-energy, the substantial derivative is purely composed of the spatial convective derivative terms due to statistical stationarity. When expanded out, then we get
 
