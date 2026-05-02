@@ -58,6 +58,8 @@ website:
                   href: knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-8-effects-of-transpiration.qmd
                 - text: Chapter 10. Natural Convection
                   href: knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-10-natural-convection.qmd
+                - text: Chapter 13. Miniature Flow Passages
+                  href: knowledge-base/engineering-fundamentals/fluids/convective-heat-and-mass-transfer/chapters/chapter-13-miniature-flow-passages.qmd
             - section: Fundamentals of Heat and Mass Transfer
               contents:
                 - text: Chapter 7. External Flow

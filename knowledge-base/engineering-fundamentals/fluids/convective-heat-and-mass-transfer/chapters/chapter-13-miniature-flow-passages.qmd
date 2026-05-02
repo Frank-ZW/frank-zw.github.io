@@ -1,0 +1,146 @@
+---
+title: Flows Through Miniature Flow Passages
+---
+
+# Size Classification
+
+There is no universal classification for "miniature" in miniature flow passages, but the most popular one is
+
+$$
+\begin{aligned}
+D_H & =10-100\mathrm{\,\mu m} & \mathrm{microchannels} \\
+D_H & =100\mathrm{\,\mu m}-1\mathrm{\,mm} & \mathrm{minichannels} \\
+D_H & =1-3\mathrm{\,mm} & \mathrm{macrochannels} \\
+D_H & >6\mathrm{\,mm} & \mathrm{conventional}
+\end{aligned}
+$$
+
+And for heat exchangers
+
+$$
+\begin{aligned}
+D_H & =1-100\mathrm{\,\mu m} & \text{microheat exchangers} \\
+D_H & =100\mathrm{\,\mu m}-1\mathrm{\,mm} & \text{mesoheat exchangers} \\
+D_H & =1-6\mathrm{\,mm} & \text{compact heat exchangers} \\
+D_H & >6\mathrm{\,mm} & \text{conventional}
+\end{aligned}
+$$
+
+Classical fluid mechanics makes the continuum assumption, where fluids may be treated as homogeneous and continuous. For miniature flow passages, this assumption may begin to break down at the smallest $D_H$ length scales. For a fluid to be treated as a continuum, there must be
+
+1. Sufficient molecules such that the flow is molecularly chaotic. This is typically satisfied when there are $\sim100$ molecules across the smallest dimension of the flow passage and is typically not the limiting condition governing the applicability of the continuum assumption.
+
+2. More frequent molecule-molecule interactions than molecule-wall interactions. The molecular behavior must be dominated by random, molecular collisions between molecules rather than with the solid boundaries.
+
+Condition $2$ is more likely to be violated for small flow passages as the intermolecular distance becomes a non-negligible quantity when compared to the flow passage dimension. When molecular-wall interactions reach the same order of magnitude as molecular interaction, the continuum assumption partially breaks down. And when molecule-wall dominates over molecular interaction, the continuum is no longer valid.
+
+The continuum approximation is more likely to break down for gases than it is for liquids. Recall that the molecular mean free path $\lambda_{\mathrm{mol}}$ is the average distance a molecule will travel before colliding with another molecule. For gases, this equation may be written in terms of the specific gas constant $R$.
+
+$$
+\lambda_{\mathrm{mol}}=\nu\sqrt{\frac {\pi}{2RT}}
+$$ {#eq-gases-molecular-mean-free-path}
+
+The Knudsen number compares $\lambda_{\mathrm{mol}}$ to a length scale of the flow passage, $l_c$.
+
+$$
+\mathrm{Kn}_{l_c}=\frac {\lambda_{\mathrm{mol}}}{l_c}
+$$ {#eq-knudsen-number}
+
+For continuum to be valid, $\mathrm{Kn}_{l_c}\ll1$. For liquids, intermolecular distances are much smaller than in gases, roughly $\sim1$ nm. Therefore, continuum is less likely to break down since each molecule is in a constant state of collision with its neighbor. The key effect to consider for liquid flows in this case is the effect of surface forces near the boundaries. These effects are negligible in conventional, large scale flow passages since the surface area-to-volume ratio is small. But as the passage size decreases, this ratio increases, and liquid-surface force effects are no longer negligible. When this is the case, continuum mechanics may still be applied, but must be modified to include these surface effects.
+
+# Regimes in Gas-Carrying Vessels
+
+# Slip Flow and Temperature Jump Regime
+
+This flow regime occurs when the gas flow is rarified and may occur if the channel is sufficiently small. The distinguishing features for this flow regime compared to the flow of rarified gas through a larger channel are
+
+1. Viscous forces become more dominant due to the larger surface area-to-volume ratios present in small microchannels.
+
+2. Large density variations may occur across the microchannel, augmented by pressure and temperature variations down the channel. For adiabatic and moderately-heated channel flows, variations in pressure are a significant driving force behind large density variations.
+
+3. Axial heat conduction down the length of the channel is non-negligible due to the small volumes present in microchannels. While for larger channels, axial heat conduction could be neglected if $\mathrm{Pe}_{D_H}\gtrsim100$, this is not the case for applications with microchannels. Neglecting axial heat conduction in theoretical analysis may lead to significant error when compared to experimental data.
+
+Conventional fluid mechanics assumes no-slip boundary conditions and thermal equilibrium at the wall for viscous fluids. This is not necessarily the case for flows of rarified gases
+
+::: {.callout-important title="No-Slip Boundaries and Thermal Equilibrium Wall Conditions for Rarified Flows"}
+
+The conventional no-slip and thermal equilibrium assumption at the wall boundaries is not necessarily true for rarified flows. This is because conventional fluid mechanics assumes the gas and the wall are at interfacial equilibrium at large scales. This assumption begins to break down as we approach the field of rarified flows.
+
+In conventional fluid mechanics, we assume that gas molecules colliding with the wall exchange their momentum and energy with the wall's molecules, and that when leaving the wall, the molecule's momentum and energy (and therefore, temperature) are statistically adjusted to match that of the wall's molecules. This kind of reasoning holds for large scale flows since gas molecules collide more frequently with each other than with the wall. The intermolecular path for these flows is so small relative to the length scale of the flow passage that they, statistically speaking, are more likely to hit another molecule upon leaving the wall rather than the other wall boundary of the flow passage. This is what is meant by the condition $\mathrm{Kn}\ll1$.
+
+The case is different for flows in microchannels, where the collision rate is now much lower on account of the intermolecular path, $\lambda_{\mathrm{mol}}$, being close to the same order of magnitude as the characteristic passage length. Gas molecules in this case do not collide with each other frequently enough near the wall to fully equilibrate with the wall before moving back into the core flow. Because the wall and gas immediately next to each other do not share the same velocity and temperature, the wall and gas are in nonequilibrium and we have
+
+$$
+\begin{aligned}
+u_g\neq U_s \\
+T_g\neq T_s
+\end{aligned}
+$$
+
+The subscripts $s$ and $g$ mean the property is applied to the wall surface or gas respectively. When this occurs, there is a velocity slip and temperature jump at the boundaries. 
+
+:::
+
+# Slip Couette Flow
+
+The Couette flow model derived in [](chapter-4-internal-laminar-flow.qmd#couette-flow) assumed no velocity slip and temperature jump. This is only valid when $\mathrm{Ma}\mathrm{Kn}_{l_c}\ll1$ as all streamwise derivative terms are negligible except pressure gradient. For consistency, use the following definitions for the Couette flow model, where the top surface is moving with velocity $U$.
+
+::: {layout-ncol=2}
+
+![Hydrodynamics](../assets/chapter-13/slip-couette-flow-definitions-hydrodynamics.png){#fig-couette-flow-definitions-hydrodynamics fig-align=center width=100% .lightbox}
+
+![Heat Transfer](../assets/chapter-13/slip-couette-flow-definitions-heat-transfer.png){#fig-couette-flow-definitions-heat-transfer fig-align=center width=100% .lightbox}
+
+Definitions for the slip Couette flow model
+:::
+
+Apply the same reduction as shown in [](chapter-4-internal-laminar-flow.qmd#couette-flow), the momentum and energy equations reduce down to
+
+$$
+\begin{aligned}
+ & \frac {\partial^2u}{\partial y^2}=0 \\
+ & k\frac {\partial^2T}{\partial y^2}+\mu\left(\frac {\partial u}{\partial y}\right)^2=0
+\end{aligned}
+$$ {#eq-slip-couette-model-simplified-pdes}
+
+The boundary conditions at the bottom and top plates are
+
+$$
+\begin{aligned}
+u(0) & =\beta_v\lambda_{\mathrm{mol}}\frac {\partial u}{\partial y} \\
+u(H) & =U-\beta_v\lambda_{\mathrm{mol}}\frac {\partial u}{\partial y}
+\end{aligned}
+$$ {#eq-slip-couette-model-boundary-conditions}
+
+The hydrodynamic solution (momentum equation) with the boundary conditions applied is
+
+$$
+\frac uU=\frac 1{1+2\beta_v\mathrm{Kn}_H}\left(\frac yH+\beta_v\mathrm{Nu}_H\right)
+$$ {#eq-slip-couette-model-momentum-solution}
+
+The Knudsen number uses the channel height as the characteristic length, $\mathrm{Kn}_H=\lambda_{\mathrm{mol}}/H$. The profile for $u(y)$ is still linear, but the slope is larger when compared to the no-slip condition.
+
+![Velocity profile comparison between slip and no-slip Couette flow models](../assets/chapter-13/slip-couette-flow-velocity-profile-comparison.png){#fig-fig-couette-flow-velocity-profiles width=550 .lightbox}
+
+The volumetric flow rate per unit depth is identical to the no-slip condition, $Q=\int\limits_0^Hu\,\mathrm du=\frac 12HU$. The Fanning friction factor, or skin friction coefficient, for the bottom plate is
+
+$$
+C_f=\frac {\tau_0}{\frac 12\rho U^2}=\frac 2{\mathrm{Re}_H\left(1+2\beta_{\nu}\mathrm{Kn}_H\right)}=\frac 2{\mathrm{Re}_H+2\sqrt{\frac {\pi\gamma}2}\beta_{\nu}\mathrm{Ma}}
+$$ {#eq-slip-couette-model-fanning-friction-factor}
+
+where $\tau_0=\mu\left(\mathrm du/\mathrm dy\right)_{y=0}$ is the shear stress at the bottom plate and $\mathrm{Re}_H=UH/\nu$. If we define the Poiseuille number as $\mathrm{Po}=C_f\mathrm{Re}_{D_H}=2C_f\mathrm{Re}_H$, then the ratios between the slip and no-slip Poiseuille numbers become
+
+$$
+\frac {\mathrm{Po}_{\mathrm{slip}}}{\mathrm{Po}_{\mathrm{no-slip}}}=\frac 1{1+2\beta_{\nu}\mathrm{Kn}_H}=\frac 1{1+2\beta_{\nu}\sqrt{\frac {\pi\gamma}2}\frac {\mathrm{Ma}}{\mathrm{Re}_H}}
+$$ {#eq-slip-couette-model-poiseuille-number-ratio}
+
+The Poiseuille number ratio is a measure of how the skin friction coefficient changes between the slip and no-slip conditions ($\mathrm{Re}_H$ is constant between the two cases). As a result, @eq-slip-couette-model-poiseuille-number-ratio shows that velocity slip reduces the wall friction.
+
+Now, use @fig-couette-flow-definitions-heat-transfer to calculate the heat transfer coefficient. If we assume the bottom plate is adiabatic and the top plate experiences a heat flux along the outer surface, then the boundary conditions become
+
+$$
+\begin{aligned}
+ & \left.\frac {\mathrm dT}{\mathrm dy}\right|_{y=0}=0 \\
+ & \left.-k\frac {\mathrm dT}{\mathrm dy}\right|_{y=H}=h_0(T-T_{\infty})
+\end{aligned}
+$$
