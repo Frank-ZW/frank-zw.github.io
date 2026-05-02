@@ -1,0 +1,177 @@
+---
+title: "Module 8 Formulas: Series and Sequences"
+---
+
+# Sequence
+
+**Sequences:** A sequence is a list of numbers, or terms, arranged in an orderly fashion. They are usually denoted by curly brackets, $\{\}$ and written either explicitly as $\{a_1,a_2,\ldots,a_n,\ldots\}$ or $\{a_n\}$. The subscript $n$ is called the sequence's *index* and can be any variable; $n$ is commonly used, but $i$ or $k$ can also be used instead. Some examples include
+
+$$
+\begin{aligned}
+\left\{\frac 1{n^2}\right\}_{n=1}^{\infty} & =\left\{1,\frac 14,\frac 19,\frac 1{16},\ldots,\frac 1{n^2},\ldots\right\} \\
+\left\{\frac n{2n+1}\right\}_{k=0}^{N} & =\left\{0,\frac 13,\frac 25,\frac 37,\ldots,\frac N{2N+1},\ldots\right\}
+\end{aligned}
+$$
+
+Notice how the second sequence starts from $k=0$ and ends at $k=N$. This sequence is *finite* whereas the first sequence starts from $n=1$ and goes indefinitely up until $k\to+\infty$; this sequence is *infinite*. In fact, sequences have a certain behavior as $n\to+\infty$: they may either *converge* or *diverge*, like any other function! For a sequence $\{a_n\}$ to converge, $\lim\limits_{n\to+\infty}a_n=L$ must exist and be a single number. If a single value for $L$ does not exist, then the sequence is said to *diverge*.
+
+**Squeeze Theorem:** If $b_n\leq a_n\leq c_n$ for some $n\geq n_0$, and $L=\lim\limits_{n\to+\infty}b_n=\lim\limits_{n\to+\infty}c_n$, then
+
+$$
+\lim\limits_{n\to+\infty}a_n=L
+$$ {#eq-squeeze-theorem}
+
+For the squeeze theorem to apply, $b_n$ and $c_n$ must *both* converge to the same $L$ value as $n\to+\infty$, otherwise the final value of $a_n$ as $n\to+\infty$ is indeterminant.
+
+::: {.callout-note title="Review on Factorials"}
+
+Certain sequences will contain a function known as a "factorial". These are special functions that can be recursively defined using itself. For a factorial $n!$, then the definition is
+
+$$
+n!=\prod\limits_{k=1}^nk=n\times(n-1)\times(n-2)\times(n-3)\times\ldots\times2\times1
+$$ {#eq-factorial-definition}
+
+@eq-factorial-definition is recursive since we can notice that the boxed portion below is another instance of the factorial function!
+
+$$
+n!=n\times\boxed{(n-1)\times(n-2)\times(n-3)\times\ldots\times2\times1}=n\times(n-1)!
+$$ {#eq-factorial-recursive-definition}
+
+Notice how $(\cdot)!$ appears on the left *and* right-hand side of @eq-factorial-recursive-definition. This is what "recursive" is describing above. This definition allows us to simplify terms involving factorials like so.
+
+$$
+\frac {k!}{(k+2)!}=\frac {k!}{(k+2)(k+1)\color{blue}{k(k-1)(k-2)\ldots1}}=\frac {k!}{(k+2)(k+1)\color{blue}{k!}}=\frac 1{(k+1)(k+2)}
+$$
+
+:::
+
+# Series {#sec-series}
+
+**Geometric Series:** The radius of convergence is $|r|<1$ for @eq-geometric-series to converge. In other words, if $|r|\geq1$, then @eq-geometric-series will diverge.
+$$
+\sum\limits_{n=1}^{+\infty}ar^{n-1}=\frac a{1-r}
+$$ {#eq-geometric-series}
+
+**Divergence Test:** For a series $\sum a_n$, if $L$ is defined as
+
+$$
+L=\lim\limits_{n\to+\infty}a_n
+$$
+
+then if $|L|>0$, then the series is automatically *divergent*. If $L=0$, the test is inconclusive and the series may be either convergent or divergent.
+
+# Convergence Tests
+
+**Ratio Test:** If $\sum\left|a_n\right|$ is convergent, then $\sum a_n$ is *absolutely convergent*. If $L$ is defined as
+
+$$
+L=\lim\limits_{n\to+\infty}\left|\frac {a_{n+1}}{a_n}\right|
+$$
+
+then $L<1$ means the series is *absolutely convergent* and therefore, convergent. If $L>1$, then the series is *divergent*. And if $L=1$, the case is inconclusive and a different convergence test will be needed.
+
+# Power Series
+
+**Power Series:** A series of the form below is referred to as a power series
+
+$$
+\sum\limits_{n=0}^{+\infty}c_n(x-a)^n=c_0+c_1(x-a)+c_2(x-a)^2+\ldots
+$$ {#eq-power-series}
+
+where $c_n$ is the power series' coefficients and $a$ is the center.
+
+**Radius of Convergence:** Unfortunately, not all values of $x$ may lead to a power series converging. The interval containing all possible values of $x$ that results in the power series converging is called the *interval of convergence* and is written as $|x-a|<R$. The value for $R$ is called the *radius of convergence*. This interval describes a region that is centered on $a$, with either endpoints spaced a distance $R$ from $a$. Therefore, the endpoints for the interval above are $(a-R, a+R)$.
+
+1. If the series converges for *all* $x$, then $R=\infty$ (the radius of the interval a distance from the center $a$) and the physical interval is $(-\infty, +\infty)$.
+
+2. If the series converges for *some values* of $x$, then the radius $R$ is a real number such that $|x-a|<R$ results in a converging series and $|x-a|>R$ results in a diverging series.
+
+3. If the series converges for a *single value* of $x$, then $R=0$ and the physical interval only contains the center $\{a\}$.
+
+If the interval of convergence is unknown for a brand new series, then apply the Ratio Test to derive the interval. That is, write $L=\lim\limits_{n\to+\infty}\left|\frac {a_{n+1}}{a_n}\right|<1$ and evaluate the limit to rewrite into the form $|x-a|<R$.
+
+::: {.callout-important title="Convergence at the Endpoints of the Interval"}
+
+You may have noticed that both intervals of convergence shown in point $2$ only show a $<$ or $>$ sign, **not** a $\leq$ or $\geq$ sign. This is because if the interval of convergence is being created, whether or not the endpoints are included must be determined by substituting in the value for $x$ at the endpoint and testing whether the series converges. That is, if the interval of convergence is currently $|x-a|<R$, then whether the endpoints $x=a-R$ and $x=a+R$ should be included in the interval can only be determined by substituting $x=a\pm R$ and using any convergence test to determine if the series converges.
+
+Again, you only need to do this if you are **unsure** of the radius or interval of convergence. If the radius or convergence interval is *already known*, then plugging in the endpoints is **not** needed.
+
+:::
+
+# Functions as Power Series
+
+**Geometric Series:** As mentioned in @sec-series, if $|x|<1$ and $a=1$, then
+
+$$
+\frac 1{1-x}=\sum\limits_{n=0}^{+\infty}x^n
+$$
+
+This in and of itself is sneakily a power series centered on $x=0$ with constant coefficients $c_n=1$. The radius of convergence is $R=1$ since $|x|<1$.
+
+**Natural Logarithm:** If $|x|<1$, then
+
+$$
+\ln(1+x)=\sum\limits_{n=1}^{+\infty}(-1)^{n-1}\frac {x^n}n=x-\frac {x^2}2+\frac {x^3}3-\frac {x^4}4+\ldots
+$$ {#eq-natural-log-power-series}
+
+**Arctangent:** If $|x|<1$, then
+
+$$
+\arctan x=\sum\limits_{n=0}^{+\infty}(-1)^n\frac {x^{2n+1}}{2n+1}=x-\frac {x^3}3+\frac {x^5}5-\frac {x^7}7+\frac {x^9}9-\ldots
+$$ {#eq-arctan-power-series}
+
+# Taylor and Maclaurin Series
+
+**Taylor Series:** A special case of the power series occurs when the coefficients can be calculated based off the function's $n$th derivative. For a function $f(x)$ centered on $x=a$, it's Taylor Series expansion is
+
+$$
+f(x)=\sum\limits_{n=0}^{+\infty}\frac {f^{(n)}(a)}{n!}(x-a)^n=f(a)+\frac {f'(a)}{1!}(x-a)+\frac {f''(a)'}{2!}(x-a)^2+\ldots+\frac {f^{(n)}(a)}{n!}(x-a)^n+\ldots
+$$ {#eq-taylor-series}
+
+**Taylor Polynomial:** If @eq-taylor-series is truncated at some finite point, then the resulting sum is called the Taylor polynomial. For instance, a $3$rd order Taylor polynomial for @eq-taylor-series is
+
+$$
+T_3(x)=f(a)+\frac {f'(a)}{1!}(x-a)+\frac {f''(a)}{2!}(x-a)^2+\frac {f'''(a)}{3!}(x-a)^3
+$$
+
+**Maclaurin Series:** A special case of the Taylor Series, when $a=0$, then
+
+$$
+f(x)=\sum\limits_{n=0}^{+\infty}\frac {f^{(n)}(0)}{n!}x^n=f(0)+\frac {f'(0)}{1!}x+\frac {f''(0)'}{2!}x^2+\ldots+\frac {f^{(n)}(0)}{n!}x^n+\ldots
+$$ {#eq-maclaurin-series}
+
+**Exponential Function Maclaurin Series:** The radius of convergence is $R=+\infty$ (this series converges for any $x$).
+
+$$
+e^x=\sum\limits_{n=0}^{+\infty}\frac {x^n}{n!}=1+x+\frac {x^2}{2!}+\frac {x^3}{3!}+\ldots+\frac {x^n}{n!}+\ldots
+$$ {#eq-exponential-maclaurin-series}
+
+**Sine Function Maclaurin Series:** The radius of convergence is $R=+\infty$ (this series converges for any $x$).
+
+$$
+\sin x=\sum\limits_{n=0}^{+\infty}\frac {(-1)^n}{(2n+1)!}x^{2n+1}=x-\frac {x^3}{3!}+\frac {x^5}{5!}-\frac {x^7}{7!}+\ldots+(-1)^n\frac {x^{2n+1}}{(2n+1)!}+\ldots
+$$ {#eq-sine-maclaurin-series}
+
+**Cosine Function Maclaurin Series:** The radius of convergence is $R=+\infty$ (this series converges for any $x$).
+
+$$
+\cos x=\sum\limits_{n=0}^{+\infty}\frac {(-1)^n}{(2n)!}x^{2n}=1-\frac {x^2}{2!}+\frac {x^4}{4!}-\frac {x^6}{6!}+\ldots+(-1)^n\frac {x^{2n}}{(2n)!}+\ldots
+$$ {#eq-cosine-maclaurin-series}
+
+**Binomial Series:** If $|x|<1$ (i.e., the radius of convergence is $R=1$), then
+
+$$
+(1+x)^k=\sum\limits_{n=0}^{+\infty}\binom knx^n=\binom k0+\binom k1x+\binom k2x^2+\ldots=1+kx+\frac {k(k-1)}{2!}x^2+\frac {k(k-1)(k-2)}{3!}x^3+\ldots
+$$ {#eq-binomial-series}
+
+**Binomial Coefficient:** The coefficient $\binom kn$ in @eq-binomial-series is called the *binomial coefficient* and is defined as
+
+$$
+\binom kn=\frac {k!}{n!(k-n)!}=\frac {k(k-1)(k-2)\ldots(k-n+1)}{n!}=\binom k{k-n}
+$$ {#eq-binomial-coefficient}
+
+A shortcut for evaluating @eq-binomial-coefficient is to start with $k$ and successively subtract $1$ from $k$ until a total of $k$ factors are obtained, then divide by $n!$. For instance, with
+
+$$
+\binom 74=\frac {\overbrace{7\cdot6\cdot5\cdot4}^{\text{4 copies}}}{4!}=\frac {840}{24}=35
+$$

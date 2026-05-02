@@ -114,6 +114,14 @@ website:
                   href: notes/gatech/ae-6012/free-shear-flows.qmd
         - section: Arizona State University
           contents:
+            - section: MAT 266
+              contents:
+                - section: Homeworks
+                  contents:
+                    - text: Section 7.4 Problems
+                      href: notes/asu/mat-266/homeworks/section-7.4.qmd
+                - text: Module 8 Formulas
+                  href: notes/asu/mat-266/module-8-formulas.qmd
             - text: Trigonometric Handbook
               href: notes/asu/trigonometry-handbook.qmd
 

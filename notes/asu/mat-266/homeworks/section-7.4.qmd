@@ -1,0 +1,253 @@
+---
+title: MAT 266 Section 7.4 Homework
+---
+
+# Introduction
+
+The arc length of any continuous and smooth (no discontinuities) function can be determined by dividing up the interval $a\leq x\leq b$ into $n$ equal subintervals each with width $\Delta x$. An example of a random function is given below, divided into $n=9$ subintervals.
+
+![Arc length contributions for an arbitrary function](assets/sec-7.4-arc-length-derivation.png){#fig-arc-length-derivation width=550 .lightbox}
+
+Let's take a look at any line segment, $P_4$ to $P_5$ for instance. By the Pythagorean theorem, the length of the line segment $L_4$ is simply the hypotenuse of the right triangle of horizontal width $\Delta x$ and vertical height $\Delta y$. The lengths can be calculated from the $x$ and $y$ coordinates of the function. With points $P_4$ and $P_5$ for instance, the horizontal and vertical lengths are
+
+$$
+\begin{aligned}
+\Delta x & =x_5-x_4 \\
+\Delta y_4 & =y_5-y_4
+\end{aligned}
+$$
+
+For the right triangle then, the approximate arc length $L_4$ is
+
+$$
+L_4=\sqrt{\Delta x^2+\Delta y_4^2}=\sqrt{(x_5-x_4)^2+(y_5-y_4)^2}
+$$
+
+The change in $y$ is annoying - how can we somehow rewrite this in terms of change in $x$? The answer is through the mean value theorem.
+
+::: {.callout-important title="Mean Value Theorem"}
+
+The mean value theorem simply states that if $f(x)$ is a function that is both
+
+1. Continuous on the interval $a\leq x\leq b$
+
+2. Differentiable on the interval $a<x<b$
+
+Then there exists a number $c$ between $a<c<b$ where
+
+$$
+f'(c)=\frac {f(b)-f(a)}{b-a}
+$$ {#eq-mean-value-theorem-slope}
+
+Rewriting Eqn. (@eq-mean-value-theorem-slope) as a line in point-slope form, then
+
+$$
+f(b)-f(a)=f'(c)(b-a)
+$$ {#eq-mean-value-theorem-point-slope}
+
+:::
+
+Using Eqn. (@eq-mean-value-theorem-point-slope) allows us to rewrite $\Delta y_4$ in terms of $\Delta x$. Since the theorem only *guarantees* that a point will exist (i.e., the actual value of the point is still unknown), let $c_4$ be this special point. From the Mean Value Theorem, then
+
+$$
+f(x_5)-f(x_4)=f'(c_4)(x_5-x_4)=f'(c_4)\Delta x
+$$
+
+Therefore, the length, $L_4$, can be written as
+
+$$
+\begin{aligned}
+L_4 & =\sqrt{(x_5-x_4)^2+(y_5-y_4)^2}=\sqrt{\Delta x^2+\left[f'(c_4)\right]^2\Delta x^2}=\Delta x\sqrt{1+\left[f'(c_4)\right]^2}
+\end{aligned}
+$$
+
+Of course, there is nothing special about the points $P_4$ and $P_5$. In fact, we can extend this to any point $x_k$ where $0\leq k\leq n-1$. In general, for any $k$ value within that range, the estimated arc length, $L_k$, is
+
+$$
+L_k=\Delta x\sqrt{1+\left[f'(c_k)\right]^2}
+$$
+
+If we sum up all the contributions of $L_k$, then we should get a value that is close to the function's arc length. That is, in @fig-arc-length-derivation, if we sum up $L_0+L_1+\ldots+L_8$, then we should have a somewhat reasonable approximation for the length of $f(x)$ between $x\in[a, b]$.
+
+$$
+L\approx L_0+L_1+L_2+\cdots+L_{n-1}=\sum\limits_{k=0}^{n-1}L_k=\sum\limits_{k=0}^{n-1}\Delta x\sqrt{1+\left[f'(c_k)\right]^2}
+$$ {#eq-arc-length-approximation-riemann-sum}
+
+This accuracy will obviously improve as the number of rectangles, $n$, increases. As the width of each subinterval, $\Delta x$, becomes infinitesimally small, the error between each line segment $L_k$ and the actual arc of the function $f(x)$ will get smaller as well. As a result, the approximation in Eqn. (@eq-arc-length-approximation-riemann-sum) becomes an exact equality as $n\to+\infty$. This is where the integral comes into play: we are summing the infinitesimally small subintervals between $a\leq x\leq b$ that calculate the arc length of $f(x)$ at each interval.
+
+$$
+L=\lim\limits_{n\to+\infty}\sum\limits_{k=0}^{n-1}\sqrt{1+\left[f'(c_k)\right]^2}\Delta x=\int\limits_a^b\sqrt{1+\left[f'(x)\right]^2}\,\mathrm dx
+$$
+
+A more convenient way of writing the arc length formula is in terms of $f'(x)=\frac {\mathrm dy}{\mathrm dx}$. Furthermore, the same process above can be applied to a function $x=g(y)$ between the interval $c\leq y\leq d$. Use this other formula if the problem gives the function as $x$ in terms of $y$ (e.g., $x=y^2+\sqrt y$).
+
+$$
+\begin{aligned}
+L & =\int\limits_a^b\sqrt{1+\left(\frac {\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx \\
+L & =\int\limits_c^d\sqrt{1+\left(\frac {\mathrm dx}{\mathrm dy}\right)^2}\,\mathrm dy
+\end{aligned}
+$$ {#eq-arc-length-integral}
+
+# Problem 1
+
+**Problem:** Which of the following integrals represents the length of the curve $y=\cos x$ for $0\leq x\leq2\pi$?
+
+A.  $\displaystyle\int\limits_0^{2\pi}\sqrt{1+\sin x}\,\mathrm dx$
+
+B.  $\displaystyle\int\limits_0^{2\pi}\sqrt{1+\cos x}\,\mathrm dx$
+
+C.  $\displaystyle\int\limits_0^{2\pi}\sqrt{1-\cos^2x}\,\mathrm dx$
+
+D.  $\displaystyle\int\limits_0^{2\pi}\sqrt{1+\cos^2x}\,\mathrm dx$
+
+E.  $\displaystyle\int\limits_0^{2\pi}\sqrt{1-\sin^2x}\,\mathrm dx$
+
+F.  $\displaystyle\int\limits_0^{2\pi}\sqrt{1+\sin^2x}\,\mathrm dx$
+
+**Answer:** Since $y$ is given in terms of $x$, we should integrate across $x$ for the arc length. If $y=\cos x$, then $\frac {\mathrm dy}{\mathrm dx}=-\sin x$, so
+
+$$
+\int\limits_0^{2\pi}\sqrt{1+\left(\frac {\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx=\int\limits_0^{2\pi}\sqrt{1+\sin^2 x}\,\mathrm dx
+$$
+
+Therefore, the answer is **F**.
+
+# Problem 2
+
+**Problem:** Which of the following integrals represents the length of the curve $x=y+y^3$ for $1\leq y\leq4$?
+
+A.  $\displaystyle\int\limits_1^4\sqrt{1+(1+5y^4)^2}\,\mathrm dy$
+
+B.  $\displaystyle\int\limits_1^4\sqrt{1+(1+y^2)^2}\,\mathrm dy$
+
+C.  $\displaystyle\int\limits_1^4\sqrt{1+(1+3y^2)^2}\,\mathrm dy$
+
+D.  $\displaystyle\int\limits_1^4\sqrt{1+(1+2y)^2}\,\mathrm dy$
+
+E.  $\displaystyle\int\limits_1^4\sqrt{1+(1+y^3)^2}\,\mathrm dy$
+
+F.  $\displaystyle\int\limits_1^4\sqrt{1+(1+4y^3)^2}\,\mathrm dy$
+
+**Answer:** Since $x$ is given in terms of $y$, we should integrate across $y$. If $x=y+y^3$, then $\frac {\mathrm dx}{\mathrm dy}=1+3y^2$. Therefore
+
+$$
+\int\limits_c^d\sqrt{1+\left(\frac {\mathrm dx}{\mathrm dy}\right)^2}\,\mathrm dy=\int\limits_1^4\sqrt{1+(1+3y^2)^2}\,\mathrm dy
+$$
+
+Therefore, the answer is **C**.
+
+# Problem 3
+
+**Problem:** To find the length of the curve defined by $y=4x^6+7x$ from $(0,0)$ to $(4,16412)$, you'd have to compute
+
+$$
+\int\limits_a^bf(x)\,\mathrm dx
+$$
+
+What are $a$, $b$, and $f(x)$?
+
+**Answer:** Since $y$ is given as a function of $x$, we should integrate across $x$. The range of $x$ values to consider is $0\leq x\leq4$ from the problem. The derivative is $\frac {\mathrm dy}{\mathrm dx}=24x^5+7$ from the power rule. Putting everything together, then
+
+$$
+L=\int\limits_0^4\sqrt{1+(24x^5+7)^2}\,\mathrm dx
+$$
+
+Therefore, $a=0$, $b=4$, and $f(x)=\sqrt{1+(24x^5+7)^2}$.
+
+# Problem 4
+
+**Problem:** Given the equation $xy=30$, set up the integral to find the length of the path from $a\leq x\leq b$ and enter the integrand.
+
+**Answer:** The function given does not explicitly express $y$ as a function of $x$ or vice versa. In fact, we can easily solve for one variable and express it as a function of the other variable. For instance, if we divide both sides by $x$, then $y=\frac {30}x$ and we can express $y$ as a function of $x$. However, we could have just as easily divided by sides by $y$ so $x=\frac {30}y$ and express $x$ as a function of $y$. For this problem, it does not matter which we choose. However, since the $x$ range is given as $a\leq x\leq b$, we should probably integrate across $x$.
+
+Since $y=\frac {30}x$, then $\frac {\mathrm dy}{\mathrm dx}=-\frac {30}{x^2}$ from the power rule. Therefore, the integrand (portion that is enclosed by the integral) is
+
+$$
+\sqrt{1+\left(\frac {\mathrm dy}{\mathrm dx}\right)^2}=\sqrt{1+\left(-\frac {30}{x^2}\right)^2}=\sqrt{1+\frac {900}{x^4}}
+$$
+
+# Problem 5
+
+**Problem:** Find the arc length formed by $y=\frac 18\left(-2x^2+4\ln x\right)$ from $2\leq x\leq5$.
+
+**Answer:** Since $y$ is given in terms of $x$, we should integrate across $x$ (i.e., use the first equation in Eqn. (@eq-arc-length-integral)). Using the fact that the derivative of $x^n$ is $nx^{n-1}$, and that the derivative of $\ln x$ is $\frac 1x$, the derivative of $y(x)$ is
+
+$$
+\frac {\mathrm dy}{\mathrm dx}=-\frac x2+\frac 1{2x}=\frac 12\left(\frac 1x-x\right)
+$$
+
+The arc length is
+
+$$
+L=\int\limits_2^5\sqrt{1+\left[\frac 12\left(\frac 1x-x\right)\right]^2}\,\mathrm dx=\int\limits_2^5\sqrt{1+\frac 14\left(\frac 1x-x\right)^2}\,\mathrm dx
+$$
+
+This integral may seem difficult, but note that if the binomial $\left(\frac 1x-x\right)^2$ is expanded, then
+
+$$\left(\frac 1x-x\right)^2=\frac 1{x^2}-2+x^2=\frac {x^4+1}{x^2}-2$$
+
+Substituting this into the integral gives
+
+$$
+L=\int\limits_2^5\sqrt{1+\frac 14\left(\frac {x^4+1}{x^2}-2\right)}\,\mathrm dx=\int\limits_2^5\sqrt{\frac {x^4+1}{4x^2}+\frac 12}=\int\limits_2^5\sqrt{\frac {x^4+2x^2+1}{4x^2}}\,\mathrm dx
+$$
+
+The expression inside the square root can be written as a single square.
+
+$$
+\sqrt{\frac {x^4+2x^2+1}{4x^2}}=\sqrt{\frac {(x^2+1)^2}{4x^2}}=\frac {x^2+1}{2x}
+$$
+
+Therefore, the integral reduces down to
+
+$$
+L=\int\limits_2^5\frac {x^2+1}{2x}\,\mathrm dx=\frac 12\left[\int\limits_2^5 x\,\mathrm dx+\int\limits_2^5\frac {\mathrm dx}x\right]=\frac {21}4+\frac 12\ln\left(\frac 52\right)
+$$
+
+# Problem 6
+
+**Problem:** Find the exact length of the curve $y=\frac {x^3}6+\frac 1{2x}$ for $\frac 12\leq x\leq 1$.
+
+**Answer:** The derivative is $\frac {\mathrm dy}{\mathrm dx}=\frac {x^2}2-\frac 1{2x^2}=\frac 12\left(x^2-\frac 1{x^2}\right)$. The integrand is of the arc length formula is
+
+$$
+\sqrt{1+\left(\frac {\mathrm dy}{\mathrm dx}\right)^2}=\sqrt{1+\frac 14\left(\frac {x^4-1}{x^2}\right)^2}=\sqrt{\frac {4x^4+(x^4-1)^2}{4x^4}}=\sqrt{\frac {x^8+2x^4+1}{4x^4}}=\sqrt{\frac {(x^4+1)^2}{4x^4}}=\frac {x^4+1}{2x^2}=\frac {x^2+x^{-2}}2
+$$
+
+Therefore, integrating and using the power rule for antiderivatives gives
+
+$$
+L=\frac 12\int\limits_{1/2}^1x^2+x^{-2}\,\mathrm dx=\frac {31}{48}
+$$
+
+# Problem 7
+
+**Problem:** Find the length of the curve $y=3x^{3/2}-7$ from $2\leq x\leq 9$.
+
+**Answer:** The derivative is $\frac {\mathrm dy}{\mathrm dx}=\frac 92x^{1/2}$ via the power rule: $(x^n)'=nx^{n-1}$. Therefore
+
+$$
+L=\int\limits_2^9\sqrt{1+\left(\frac {\mathrm dy}{\mathrm dx}\right)^2}\,\mathrm dx=\int\limits_2^9\sqrt{1+\frac {81x}4}\,\mathrm dx
+$$
+
+This integral might seem complicated at first, but note that it's just the square root of a linear term. It would be a lot easier to integrate something like $\sqrt u$ rather than $\sqrt{1+\frac {81x}4}$. Therefore, we can use u-substitution to recast the integral into a simple power rule. Let $u=1+\frac {81x}4$ so $\mathrm du=\frac {81}4\,\mathrm dx$. Then
+
+$$
+L=\frac 4{81}\int\limits_{41.5}^{183.25}u^{1/2}\,\mathrm du=\frac {733^{3/2}-166^{3/2}}{243}
+$$
+
+# Problem 8
+
+**Problem:** Find the length of the curve $x=\frac 13\sqrt y(y-3)$ from $1\leq y\leq 9$.
+
+**Answer:** Since $x$ is given in terms of $y$, we should use the second equation in Eqn. (@eq-arc-length-integral). Since $y=\frac 13y^{3/2}-y^{1/2}$, then the derivative is $\frac {\mathrm dx}{\mathrm dy}=\frac 12y^{1/2}-\frac 12y^{-1/2}=\frac 12\left(y^{1/2}-y^{-1/2}\right)$. The integrand is
+
+$$
+\sqrt{1+\left(\frac {\mathrm dx}{\mathrm dy}\right)^2}=\sqrt{1+\frac 14\left(\frac {y-1}{y^{1/2}}\right)^2}=\sqrt{\frac {4y+(y-1)^2}{4y}}=\frac {y+1}{2\sqrt y}=\frac {y^{1/2}+y^{-1/2}}2
+$$
+
+Integrate this to get
+
+$$
+L=\frac 12\int\limits_1^9y^{1/2}+y^{-1/2}\,\mathrm dy=\frac 12\left.\left(\frac 23y^{3/2}+2\sqrt y\right)\right|_1^9=\frac {32}3
+$$
