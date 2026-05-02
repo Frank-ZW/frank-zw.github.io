@@ -81,11 +81,114 @@ The subscripts $s$ and $g$ mean the property is applied to the wall surface or g
 
 :::
 
+Let the wall surface velocity and temperature be $U_s$ and $T_s$ respectively. Under slip and thermal nonequilibrium conditions, the fluid-side boundary conditions will be a corrected $U_s^*$ and $T_s^*$ property that is related to the actual wall $U_s$ and $T_s$ boundary values. This is done by assuming that at some distance $g$ normal to the wall, the velocity and temperature are constant and equal to the corrected values mentioned.
+
+::: {#fig-boundary-conditions-gas-solid-interface title="Velocity and Thermal Boundary Conditions for No-Slip and Slip Flows"}
+
+![No-slip boundary conditions](../assets/chapter-13/boundary-conditions-gas-solid-interface-no-slip.png){#fig-boundary-conditions-gas-solid-interface-no-slip height=400 fig-align=center .lightbox}
+
+![Slip boundary conditions](../assets/chapter-13/boundary-conditions-gas-solid-interface-slip.png){#fig-boundary-conditions-gas-solid-interface-slip height=400 fig-align=center .lightbox}
+
+Velocity and thermal boundary conditions for both no-slip and slip flows at the gas-solid interface
+:::
+
+The distance from the wall for both velocity and thermal boundaries is approximated using the kinetic theory of gases.
+
+$$
+\begin{aligned}
+g & \approx\frac {2-\alpha_{\mathrm{th}}}{\alpha_{\mathrm{th}}}\frac {2\gamma}{\gamma+1}\frac {\lambda_{\mathrm{mol}}}{\mathrm{Pr}} \\
+g & \approx\frac {2-\alpha}{\alpha}\lambda_{\mathrm{mol}}
+\end{aligned}
+$$ {#eq-gas-interface-g}
+
+where $\alpha$ is the tangential momentum accommodation coefficient (or specular reflection coefficient) and $\alpha_{\mathrm{th}}$ is the thermal energy accommodation coefficient. The corrected fluid-side interface velocity is
+
+$$
+U_s^*-U_s=\frac {2-\alpha}{\alpha}\lambda_{\mathrm{mol}}\left(\frac {\partial u}{\partial y}\right)_{y=0}+\frac 34\frac {\mu}{\rho T_s}\left(\frac {\partial T}{\partial x}\right)_{y=0}-C_1\lambda_{\mathrm{mol}}^2\left[\frac {\partial^2u}{\partial y^2}+\frac 12\frac {\partial^2u}{\partial x^2}+\frac 12\frac {\partial^2u}{\partial z^2}\right]_{y=0}
+$$ {#eq-gas-interface-corrected-velocity}
+
+The corrected fluid-side interface temperature is
+
+$$
+T_s^*-T_s=\frac {2-\alpha_{\mathrm{th}}}{\alpha_{\mathrm{th}}}\frac {2\gamma}{\gamma+1}\frac {\lambda_{\mathrm{mol}}}{\mathrm{Pr}}\left(\frac {\partial T}{\partial y}\right)_{y=0}-C_2\lambda_{\mathrm{mol}}^2\left[\frac {\partial^2T}{\partial y^2}+\frac 12\frac {\partial^2T}{\partial x^2}+\frac 12\frac {\partial^2T}{\partial z^2}\right]_{y=0}
+$$ {#eq-gas-interface-corrected-temperature}
+
+The coefficients $C_1$ and $C_2$ may be calculated using
+
+$$
+\begin{aligned}
+C_1 & =\frac 98 \\
+C_2 & =\frac 9{128}\frac {177\gamma-145}{\gamma+1}
+\end{aligned}
+$$
+
+The second term in @eq-gas-interface-corrected-velocity is referred to as *thermal creep*. In most cases, where the flow is moderately rarified, the second-order terms can be neglected. This results in the following simplifications for $U_s^*$ and $T_s^*$.
+
+$$
+\begin{aligned}
+U_s^*-U_s & =\frac {2-\alpha}{\alpha}\lambda_{\mathrm{mol}}\left(\frac {\partial u}{\partial y}\right)_{y=0}+3\sqrt{\frac {R_uT}{8\pi}}\frac {\lambda_{\mathrm{mol}}}T\left(\frac {\partial T}{\partial s}\right)_{y=0} \\
+T_s^*-T_s & =\frac {2-\alpha_{\mathrm{th}}}{\alpha_{\mathrm{th}}}\frac {2\gamma}{\gamma+1}\frac {\lambda_{\mathrm{mol}}}{\mathrm{Pr}}\left(\frac {\partial T}{\partial y}\right)_{y=0}
+\end{aligned}
+$$ {#eq-corrected-velocity-temperature-moderate-rarification}
+
+The subscript $s$ denotes the fluid motion path and $\left(\partial T/\partial y\right)_{y=0}$ is the tangential gas temperature gradient at the wall. Let $\Omega$ and $E$ be the momentum and energy fluxes associated with the gas molecules. Furthermore, let $\mathrm{in}$ denote incident, $\mathrm{refl}$ denote reflected, and $s$ denote reflected for gas molecules that have reached equilibrium with the wall. We may express the accommodation coefficients in terms of their momentum and energy fluxes as
+
+$$
+\begin{aligned}
+\alpha & =\frac {\Omega_{\mathrm{refl}}-\Omega_{\mathrm{in}}}{\Omega_s-\Omega_{\mathrm{in}}} \\
+\alpha_{\mathrm{th}} & =\frac {E_{\mathrm{refl}}-E_{\mathrm{in}}}{E_s-E_{\mathrm{in}}}
+\end{aligned}
+$$ {#eq-gas-molecule-momentum-energy-fluxes}
+
+These definitions for $\alpha$ and $\alpha_{\mathrm{th}}$ aren't the most useful in a practical sense. Using @eq-gas-molecule-momentum-energy-fluxes, they must be determined experimentally. However, for most gases and solid boundaries, their accommodation coefficients are close to one: $\alpha=\alpha_{\mathrm{th}}\approx1$. Song and Yovanovich (1987) proposed an empirical correlation for $\alpha_{\mathrm{th}}$ for metallic surfaces where $273\leq T_s\leq1250$ K.
+
+$$
+\alpha_{\mathrm{th}}=F\frac {M_G}{6.8+M_G}+(1-F)\frac {2.4\xi}{(1+\xi)^2}
+$$ {#eq-thermal-accommodation-coefficient-song-yovanovich}
+
+where
+
+$$
+\begin{aligned}
+\xi & =\frac {M_G}{M_{\mathrm{solid}}} \\
+F & =\exp\left[-0.57\left(\frac {T_s}{273}-1\right)\right]
+\end{aligned}
+$$
+
+For nearly all applications, $g\ll l_c$ and $g_{\mathrm{th}}\ll l_c$ so the boundary conditions for **slip conditions** and **thermal nonequilibrium** at the wall surface are
+
+$$
+\begin{aligned}
+U(0) & =U_s^* \\
+T(0) & =T_s^*
+\end{aligned}
+$$
+
+We can shorten @eq-corrected-velocity-temperature-moderate-rarification by substituting
+
+$$
+\begin{aligned}
+\beta_v & =\frac {2-\alpha}{\alpha} \\
+\beta_T & =\frac {2-\alpha_{\mathrm{th}}}{\alpha_{\mathrm{th}}}\frac {2\gamma}{\gamma+1}\frac 1{\mathrm{Pr}}
+\end{aligned}
+$$ {#eq-beta-coefficients}
+
+Therefore, @eq-corrected-velocity-temperature-moderate-rarification becomes
+
+$$
+\begin{aligned}
+U_s^*-U_s & =\beta_v\lambda_{\mathrm{mol}}\left(\frac {\partial u}{\partial y}\right)_s+3\sqrt{\frac {R_uT}{8\pi}}\frac {\lambda_{\mathrm{mol}}}T\left(\frac {\partial T}{\partial s}\right)_s \\
+T_s^*-T_s & =\beta_T\lambda_{\mathrm{mol}}\left(\frac {\partial T}{\partial y}\right)_s
+\end{aligned}
+$$
+
+The slip flow regime is nearly always laminar and as such, analytical solutions are possible for many different geometries and boundary conditions.
+
 # Slip Couette Flow
 
 The Couette flow model derived in [](chapter-4-internal-laminar-flow.qmd#couette-flow) assumed no velocity slip and temperature jump. This is only valid when $\mathrm{Ma}\mathrm{Kn}_{l_c}\ll1$ as all streamwise derivative terms are negligible except pressure gradient. For consistency, use the following definitions for the Couette flow model, where the top surface is moving with velocity $U$.
 
-::: {layout-ncol=2}
+::: {#fig-couette-flow-definitions layout-ncol=2}
 
 ![Hydrodynamics](../assets/chapter-13/slip-couette-flow-definitions-hydrodynamics.png){#fig-couette-flow-definitions-hydrodynamics fig-align=center width=100% .lightbox}
 
@@ -97,10 +200,10 @@ Definitions for the slip Couette flow model
 Apply the same reduction as shown in [](chapter-4-internal-laminar-flow.qmd#couette-flow), the momentum and energy equations reduce down to
 
 $$
-\begin{aligned}
- & \frac {\partial^2u}{\partial y^2}=0 \\
- & k\frac {\partial^2T}{\partial y^2}+\mu\left(\frac {\partial u}{\partial y}\right)^2=0
-\end{aligned}
+\begin{gathered}
+\frac {\partial^2u}{\partial y^2}=0 \\
+k\frac {\partial^2T}{\partial y^2}+\mu\left(\frac {\partial u}{\partial y}\right)^2=0
+\end{gathered}
 $$ {#eq-slip-couette-model-simplified-pdes}
 
 The boundary conditions at the bottom and top plates are
@@ -122,16 +225,16 @@ The Knudsen number uses the channel height as the characteristic length, $\mathr
 
 ![Velocity profile comparison between slip and no-slip Couette flow models](../assets/chapter-13/slip-couette-flow-velocity-profile-comparison.png){#fig-fig-couette-flow-velocity-profiles width=550 .lightbox}
 
-The volumetric flow rate per unit depth is identical to the no-slip condition, $Q=\int\limits_0^Hu\,\mathrm du=\frac 12HU$. The Fanning friction factor, or skin friction coefficient, for the bottom plate is
+The volumetric flow rate per unit depth is determined by integrating $u(y)$ from $y=0$ to $y=H$. The result of $Q=\frac 12HU$ is identical to the no-slip flow rate for conventional channels. The Fanning friction factor, or skin friction coefficient, for the bottom plate is
 
 $$
-C_f=\frac {\tau_0}{\frac 12\rho U^2}=\frac 2{\mathrm{Re}_H\left(1+2\beta_{\nu}\mathrm{Kn}_H\right)}=\frac 2{\mathrm{Re}_H+2\sqrt{\frac {\pi\gamma}2}\beta_{\nu}\mathrm{Ma}}
+C_f=\frac {\tau_0}{\frac 12\rho U^2}=\frac 2{\mathrm{Re}_H\left(1+2\beta_v\mathrm{Kn}_H\right)}=\frac 2{\mathrm{Re}_H+2\sqrt{\frac {\pi\gamma}2}\beta_v\mathrm{Ma}}
 $$ {#eq-slip-couette-model-fanning-friction-factor}
 
 where $\tau_0=\mu\left(\mathrm du/\mathrm dy\right)_{y=0}$ is the shear stress at the bottom plate and $\mathrm{Re}_H=UH/\nu$. If we define the Poiseuille number as $\mathrm{Po}=C_f\mathrm{Re}_{D_H}=2C_f\mathrm{Re}_H$, then the ratios between the slip and no-slip Poiseuille numbers become
 
 $$
-\frac {\mathrm{Po}_{\mathrm{slip}}}{\mathrm{Po}_{\mathrm{no-slip}}}=\frac 1{1+2\beta_{\nu}\mathrm{Kn}_H}=\frac 1{1+2\beta_{\nu}\sqrt{\frac {\pi\gamma}2}\frac {\mathrm{Ma}}{\mathrm{Re}_H}}
+\frac {\mathrm{Po}_{\mathrm{slip}}}{\mathrm{Po}_{\mathrm{no-slip}}}=\frac 1{1+2\beta_v\mathrm{Kn}_H}=\frac 1{1+2\beta_v\sqrt{\frac {\pi\gamma}2}\frac {\mathrm{Ma}}{\mathrm{Re}_H}}
 $$ {#eq-slip-couette-model-poiseuille-number-ratio}
 
 The Poiseuille number ratio is a measure of how the skin friction coefficient changes between the slip and no-slip conditions ($\mathrm{Re}_H$ is constant between the two cases). As a result, @eq-slip-couette-model-poiseuille-number-ratio shows that velocity slip reduces the wall friction.
@@ -139,8 +242,16 @@ The Poiseuille number ratio is a measure of how the skin friction coefficient ch
 Now, use @fig-couette-flow-definitions-heat-transfer to calculate the heat transfer coefficient. If we assume the bottom plate is adiabatic and the top plate experiences a heat flux along the outer surface, then the boundary conditions become
 
 $$
-\begin{aligned}
- & \left.\frac {\mathrm dT}{\mathrm dy}\right|_{y=0}=0 \\
- & \left.-k\frac {\mathrm dT}{\mathrm dy}\right|_{y=H}=h_0(T-T_{\infty})
-\end{aligned}
+\begin{gathered}
+\left.\frac {\mathrm dT}{\mathrm dy}\right|_{y=0}=0 \\
+\left.-k\frac {\mathrm dT}{\mathrm dy}\right|_{y=H}=h_0(T-T_{\infty})
+\end{gathered}
 $$
+
+Differentiating @eq-slip-couette-model-momentum-solution and substituting into the energy equation in @eq-slip-couette-model-simplified-pdes, we get
+
+$$
+T=-\frac 12\varphi y^2+\frac {kH\varphi}{h_0}+\frac {H^2\varphi}2+\beta_T\mathrm{Kn}_HH^2\varphi+T_{\infty}
+$$ {#eq-slip-couette-model-energy-solution}
+
+where $\varphi=\mu\Phi/k$ is a parameter that is related to the viscous dissipation.
