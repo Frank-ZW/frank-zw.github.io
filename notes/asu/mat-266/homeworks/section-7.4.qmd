@@ -6,7 +6,7 @@ title: MAT 266 Section 7.4 Homework
 
 The arc length of any continuous and smooth (no discontinuities) function can be determined by dividing up the interval $a\leq x\leq b$ into $n$ equal subintervals each with width $\Delta x$. An example of a random function is given below, divided into $n=9$ subintervals.
 
-![Arc length contributions for an arbitrary function](assets/sec-7.4-arc-length-derivation.png){#fig-arc-length-derivation width=550 .lightbox}
+![Arc length contributions for an arbitrary function](../assets/sec-7.4-arc-length-derivation.png){#fig-arc-length-derivation width=550 .lightbox}
 
 Let's take a look at any line segment, $P_4$ to $P_5$ for instance. By the Pythagorean theorem, the length of the line segment $L_4$ is simply the hypotenuse of the right triangle of horizontal width $\Delta x$ and vertical height $\Delta y$. The lengths can be calculated from the $x$ and $y$ coordinates of the function. With points $P_4$ and $P_5$ for instance, the horizontal and vertical lengths are
 
