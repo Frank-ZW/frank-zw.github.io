@@ -96,7 +96,7 @@ The distance from the wall for both velocity and thermal boundaries is approxima
 
 $$
 \begin{aligned}
-g & \approx\frac {2-\alpha_{\mathrm{th}}}{\alpha_{\mathrm{th}}}\frac {2\gamma}{\gamma+1}\frac {\lambda_{\mathrm{mol}}}{\mathrm{Pr}} \\
+g_{\mathrm{th}} & \approx\frac {2-\alpha_{\mathrm{th}}}{\alpha_{\mathrm{th}}}\frac {2\gamma}{\gamma+1}\frac {\lambda_{\mathrm{mol}}}{\mathrm{Pr}} \\
 g & \approx\frac {2-\alpha}{\alpha}\lambda_{\mathrm{mol}}
 \end{aligned}
 $$ {#eq-gas-interface-g}
@@ -190,9 +190,9 @@ The Couette flow model derived in [](chapter-4-internal-laminar-flow.qmd#couette
 
 ::: {#fig-couette-flow-definitions layout-ncol=2}
 
-![Hydrodynamics](../assets/chapter-13/slip-couette-flow-definitions-hydrodynamics.png){#fig-couette-flow-definitions-hydrodynamics fig-align=center width=100% .lightbox}
+![Hydrodynamics](../assets/chapter-13/slip-couette-flow-definitions-hydrodynamics.png){#fig-couette-flow-definitions-hydrodynamics fig-align=center width=80% .lightbox}
 
-![Heat Transfer](../assets/chapter-13/slip-couette-flow-definitions-heat-transfer.png){#fig-couette-flow-definitions-heat-transfer fig-align=center width=100% .lightbox}
+![Heat Transfer](../assets/chapter-13/slip-couette-flow-definitions-heat-transfer.png){#fig-couette-flow-definitions-heat-transfer fig-align=center width=80% .lightbox}
 
 Definitions for the slip Couette flow model
 :::
