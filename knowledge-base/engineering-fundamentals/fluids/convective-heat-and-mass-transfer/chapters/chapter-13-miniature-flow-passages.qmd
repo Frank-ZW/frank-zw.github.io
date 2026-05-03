@@ -83,7 +83,7 @@ The subscripts $s$ and $g$ mean the property is applied to the wall surface or g
 
 Let the wall surface velocity and temperature be $U_s$ and $T_s$ respectively. Under slip and thermal nonequilibrium conditions, the fluid-side boundary conditions will be a corrected $U_s^*$ and $T_s^*$ property that is related to the actual wall $U_s$ and $T_s$ boundary values. This is done by assuming that at some distance $g$ normal to the wall, the velocity and temperature are constant and equal to the corrected values mentioned.
 
-::: {#fig-boundary-conditions-gas-solid-interface title="Velocity and Thermal Boundary Conditions for No-Slip and Slip Flows"}
+::: {#fig-boundary-conditions-gas-solid-interface title="Velocity and Thermal Boundary Conditions for No-Slip and Slip Flows" layout-ncol=2}
 
 ![No-slip boundary conditions](../assets/chapter-13/boundary-conditions-gas-solid-interface-no-slip.png){#fig-boundary-conditions-gas-solid-interface-no-slip height=400 fig-align=center .lightbox}
 
